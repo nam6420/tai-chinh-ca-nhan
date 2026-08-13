@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local exports and large data payloads. Keep provenance manifests in Git.
+data/raw/payloads/
+data/processed/payloads/
+exports/
+
+# Personal financial notes must not enter a shared/public repository.
+journal/private/
+
+# Ghi chú cá nhân của Qwen Code, không chia sẻ qua git.
+.qwen/QWEN.local.md
