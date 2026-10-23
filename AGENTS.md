@@ -52,7 +52,7 @@ Hỗ trợ người Việt học kinh doanh, doanh nghiệp, thị trường và
 
 ## Điều phối agent
 
-Với nghiên cứu không đơn giản, dùng custom agent của dự án: bản Qwen Code trong `.qwen/agents/` hoặc bản Codex trong `.codex/agents/`. Hai bộ khai báo cùng vai trò và chính sách; khi sửa một bên phải đồng bộ bên còn lại:
+Với nghiên cứu không đơn giản, dùng vai trò chuyên môn của dự án. Ba bộ khai báo cùng vai trò và chính sách; khi sửa một bên phải đồng bộ cả ba:
 
 1. `research_coordinator` lập phạm vi và sở hữu bản tổng hợp.
 2. Giao các nhánh độc lập, thiên về đọc, cho đúng agent chuyên môn.
@@ -61,6 +61,20 @@ Với nghiên cứu không đơn giản, dùng custom agent của dự án: bả
 5. Chờ các agent cần thiết, xử lý mâu thuẫn và giữ lại ý kiến bất đồng.
 
 Chỉ một agent được ghi vào mỗi tài liệu nghiên cứu. Agent chuyên môn chỉ đọc. Không tuyên bố báo cáo đã kiểm duyệt nếu hai bước kiểm nguồn và phản biện rủi ro chưa thực sự hoàn tất.
+
+### DeepSeek Harness (bản native)
+
+- Vai trò là project skill trong `.agents/skills/<ten-vai-tro>/SKILL.md`, được DeepSeek Harness tự nạp theo tên kebab-case: `research-coordinator`, `business-tutor`, `macro-market-researcher`, `company-analyst`, `source-fact-checker`, `risk-bear-reviewer`.
+- Giao việc bằng Agent Teams: `spawn_teammate` cho từng nhánh độc lập, shared task để biết ai giữ phần nào, `writeScopes` chỉ cấp cho điều phối viên trên tài liệu của mình. Không có Agent Teams thì dùng `subagent` hoặc tự làm tuần tự và nói rõ nhánh nào chưa được kiểm độc lập.
+- Ba lệnh tắt do con người gọi: `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh` (skill `user-invocable`, không hiện trong danh mục cho model).
+- Skill không giới hạn được công cụ như `tools` của Qwen Code hay `sandbox_mode` của Codex. Quy tắc "năm vai trò chuyên môn chỉ đọc, điều phối viên là người ghi duy nhất" là ràng buộc hướng dẫn ở bản native, phải tự kiểm khi giao việc và khi nhận kết quả.
+
+### Bản Qwen Code và Codex
+
+- Qwen Code: `.qwen/agents/` (vai trò) và `.qwen/commands/` (lệnh tắt).
+- Codex: `.codex/agents/` và `.codex/config.toml`.
+
+Tên vai trò giữa ba bản: `research_coordinator` ↔ `research-coordinator`, `business_tutor` ↔ `business-tutor`, tương tự cho bốn vai trò còn lại (dấu gạch dưới ↔ gạch nối).
 
 ## Nơi lưu tài liệu
 

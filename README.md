@@ -20,9 +20,12 @@ Trong một phiên Codex mới, yêu cầu: `Hãy spawn business_tutor, chờ ag
 
 Trong một phiên Qwen Code mới, yêu cầu tương tự: `Hãy spawn business_tutor, chờ agent hoàn tất rồi cho tôi biết tên vai trò của agent đó.` Sau đó dùng `/agents manage` và xác nhận có `business_tutor`. Việc chỉ liệt kê tệp trong `.qwen/agents/` không chứng minh custom agent đã được nạp hoặc spawn thành công. Ba lệnh tắt của dự án: `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh`.
 
+Trong một phiên DeepSeek Harness (DSH) mới, các vai trò là project skill native: gõ `/` để thấy `hoc`, `nghien-cuu-doanh-nghiep`, `nghien-cuu-nganh` và chọn, hoặc nhờ agent nạp skill `business-tutor`. Để kiểm tra Agent Teams, yêu cầu: `Hãy spawn một teammate tên business-tutor, bảo nó đọc skill business-tutor rồi trả lời tôi nó giữ vai trò gì.` Xác nhận trong danh sách thành viên nhóm có `business-tutor`. Việc chỉ liệt kê tệp trong `.agents/skills/` không chứng minh skill đã được nạp hoặc teammate đã spawn thành công.
+
 ## Cấu trúc
 
 ```text
+.agents/skills/      Vai trò và lệnh tắt native của DeepSeek Harness
 .codex/agents/       Custom agent của dự án (bản Codex)
 .qwen/agents/        Custom agent của dự án (bản Qwen Code)
 .qwen/commands/      Lệnh tắt slash của dự án cho Qwen Code

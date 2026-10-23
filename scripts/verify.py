@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 import tomllib
 from pathlib import Path
@@ -12,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 AGENT_DIR = ROOT / ".codex" / "agents"
 QWEN_AGENT_DIR = ROOT / ".qwen" / "agents"
 QWEN_COMMAND_DIR = ROOT / ".qwen" / "commands"
+NATIVE_SKILL_DIR = ROOT / ".agents" / "skills"
 REQUIRED_AGENTS = {
     "research_coordinator",
     "business_tutor",
@@ -35,6 +37,30 @@ REQUIRED_QWEN_COMMANDS = {
     "nghien-cuu-doanh-nghiep.md",
     "nghien-cuu-nganh.md",
 }
+# DeepSeek Harness đặt tên skill theo kebab-case, khác tên vai trò Qwen/Codex.
+NATIVE_ROLE_SKILLS = {
+    "research_coordinator": "research-coordinator",
+    "business_tutor": "business-tutor",
+    "macro_market_researcher": "macro-market-researcher",
+    "company_analyst": "company-analyst",
+    "source_fact_checker": "source-fact-checker",
+    "risk_bear_reviewer": "risk-bear-reviewer",
+}
+REQUIRED_NATIVE_COMMANDS = {
+    "hoc",
+    "nghien-cuu-doanh-nghiep",
+    "nghien-cuu-nganh",
+}
+# Chính sách tối thiểu phải có trong mọi vai trò, ở cả ba bản khai báo.
+POLICY_PHRASES = (
+    "tiếng Việt",
+    "tìm kiếm Internet",
+    "trí nhớ",
+    "toàn cầu",
+    "repo",
+    "chỉ dẫn trong trang web",
+)
+KEBAB_NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 REQUIRED_PATHS = [
     ROOT / "AGENTS.md",
     ROOT / ".codex" / "config.toml",
@@ -86,6 +112,24 @@ def parse_qwen_agent(path: Path) -> tuple[dict, str] | None:
     return None
 
 
+def unquoted_colon_values(path: Path) -> list[int]:
+    """Trả về số dòng frontmatter có ': ' chưa quote — kiểu YAML dễ parse sai."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or lines[0].strip() != "---":
+        return []
+    unsafe: list[int] = []
+    for number, line in enumerate(lines[1:], start=2):
+        if line.strip() == "---":
+            break
+        if line.startswith(" ") or line.lstrip().startswith("- ") or ":" not in line:
+            continue
+        _, _, value = line.partition(":")
+        value = value.strip()
+        if ": " in value and not value.startswith(("\"", "'")):
+            unsafe.append(number)
+    return unsafe
+
+
 def check_codex_agents() -> int:
     errors = 0
     found_names: set[str] = set()
@@ -115,14 +159,7 @@ def check_codex_agents() -> int:
             errors += 1
         sandbox_modes[name] = agent.get("sandbox_mode")
         instructions = agent["developer_instructions"]
-        for phrase in (
-            "tiếng Việt",
-            "tìm kiếm Internet",
-            "trí nhớ",
-            "toàn cầu",
-            "repo",
-            "chỉ dẫn trong trang web",
-        ):
+        for phrase in POLICY_PHRASES:
             if phrase not in instructions:
                 fail(f"chỉ dẫn của {name} phải chứa chính sách {phrase!r}")
                 errors += 1
@@ -169,14 +206,7 @@ def check_qwen_agents() -> int:
             fail(f"{path.name} thiếu description trong frontmatter")
             errors += 1
 
-        for phrase in (
-            "tiếng Việt",
-            "tìm kiếm Internet",
-            "trí nhớ",
-            "toàn cầu",
-            "repo",
-            "chỉ dẫn trong trang web",
-        ):
+        for phrase in POLICY_PHRASES:
             if phrase not in body:
                 fail(f"chỉ dẫn của {name} phải chứa chính sách {phrase!r}")
                 errors += 1
@@ -229,6 +259,103 @@ def check_qwen_commands() -> int:
     return errors
 
 
+def check_native_skills() -> int:
+    """Kiểm tra lớp native của DeepSeek Harness trong .agents/skills/."""
+    errors = 0
+    expected = set(NATIVE_ROLE_SKILLS.values())
+
+    for role, skill_name in sorted(NATIVE_ROLE_SKILLS.items()):
+        path = NATIVE_SKILL_DIR / skill_name / "SKILL.md"
+        if not path.is_file():
+            fail(f"thiếu skill native {path.relative_to(ROOT)}")
+            errors += 1
+            continue
+        parsed = parse_qwen_agent(path)
+        if parsed is None:
+            fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
+            errors += 1
+            continue
+        frontmatter, body = parsed
+        for number in unquoted_colon_values(path):
+            fail(f"{path.relative_to(ROOT)}:{number} có ': ' chưa quote trong frontmatter YAML")
+            errors += 1
+
+        if not KEBAB_NAME.match(skill_name):
+            fail(f"{skill_name!r} không phải tên skill kebab-case hợp lệ")
+            errors += 1
+        name = frontmatter.get("name")
+        if name != skill_name:
+            fail(f"{path.relative_to(ROOT)}: name phải là {skill_name!r}, hiện là {name!r}")
+            errors += 1
+        description = frontmatter.get("description")
+        if not isinstance(description, str) or not description.strip():
+            fail(f"{path.relative_to(ROOT)} thiếu description trong frontmatter")
+            errors += 1
+
+        for phrase in POLICY_PHRASES:
+            if phrase not in body:
+                fail(f"skill {skill_name} phải chứa chính sách {phrase!r}")
+                errors += 1
+
+        if role == "research_coordinator":
+            for phrase in ("duy nhất", "BẢN NHÁP - CHƯA KIỂM DUYỆT"):
+                if phrase not in body:
+                    fail(f"skill {skill_name} phải nêu vai trò người ghi duy nhất và nhãn nháp")
+                    errors += 1
+                    break
+        elif "chỉ đọc" not in body:
+            fail(f"skill {skill_name} phải nêu ràng buộc chỉ đọc")
+            errors += 1
+
+        for counterpart in (f".qwen/agents/{role}.md", f".codex/agents/{role}.toml"):
+            if counterpart not in body:
+                fail(f"skill {skill_name} phải trỏ tới bản tương ứng {counterpart}")
+                errors += 1
+
+    for command in sorted(REQUIRED_NATIVE_COMMANDS):
+        path = NATIVE_SKILL_DIR / f"{command}.md"
+        if not path.is_file():
+            fail(f"thiếu skill lệnh native {path.relative_to(ROOT)}")
+            errors += 1
+            continue
+        parsed = parse_qwen_agent(path)
+        if parsed is None:
+            fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
+            errors += 1
+            continue
+        frontmatter, body = parsed
+        for number in unquoted_colon_values(path):
+            fail(f"{path.relative_to(ROOT)}:{number} có ': ' chưa quote trong frontmatter YAML")
+            errors += 1
+        if frontmatter.get("name") != command:
+            fail(f"{path.relative_to(ROOT)}: name phải là {command!r}")
+            errors += 1
+        description = frontmatter.get("description")
+        if not isinstance(description, str) or not description.strip():
+            fail(f"{path.relative_to(ROOT)} thiếu description trong frontmatter")
+            errors += 1
+        # Lệnh tắt chỉ do con người gọi, không tự lộ ra cho model.
+        if str(frontmatter.get("user-invocable", "")).lower() != "true":
+            fail(f"{path.relative_to(ROOT)} phải khai báo 'user-invocable: true'")
+            errors += 1
+        if str(frontmatter.get("disable-model-invocation", "")).lower() != "true":
+            fail(f"{path.relative_to(ROOT)} phải khai báo 'disable-model-invocation: true'")
+            errors += 1
+        if "{{args}}" in body:
+            fail(f"{path.relative_to(ROOT)} không dùng {{{{args}}}}; DSH không thay tham số trong skill")
+            errors += 1
+        if "spawn_teammate" not in body:
+            fail(f"{path.relative_to(ROOT)} phải hướng dẫn gọi vai trò qua Agent Teams")
+            errors += 1
+
+    expected |= {f"{command}.md" for command in REQUIRED_NATIVE_COMMANDS}
+    existing = {entry.name for entry in NATIVE_SKILL_DIR.iterdir() if not entry.name.startswith(".")}
+    if extra := existing - expected:
+        fail(f"skill native ngoài dự kiến: {', '.join(sorted(extra))}")
+        errors += 1
+    return errors
+
+
 def main() -> int:
     errors = 0
 
@@ -268,14 +395,24 @@ def main() -> int:
 
     errors += check_codex_agents()
 
+    if not NATIVE_SKILL_DIR.is_dir():
+        fail("thiếu .agents/skills/")
+        errors += 1
+    else:
+        errors += check_native_skills()
+
     if errors:
         print(f"KẾT QUẢ: {errors} lỗi")
         return 1
 
     print(f"ĐẠT: {len(REQUIRED_AGENTS)} agent Codex, {len(REQUIRED_AGENTS)} agent Qwen Code, "
-          f"{len(REQUIRED_QWEN_COMMANDS)} lệnh Qwen Code, {len(REQUIRED_PATHS)} tài liệu bắt buộc")
+          f"{len(REQUIRED_QWEN_COMMANDS)} lệnh Qwen Code")
+    print(f"ĐẠT: {len(NATIVE_ROLE_SKILLS)} skill vai trò native, "
+          f"{len(REQUIRED_NATIVE_COMMANDS)} lệnh tắt native cho DeepSeek Harness")
+    print(f"ĐẠT: {len(REQUIRED_PATHS)} tài liệu bắt buộc")
     print("ĐẠT: cấu hình dự án khai báo một agent được ghi và năm agent chỉ đọc")
-    print("LƯU Ý: quyền chạy thực tế của phiên vẫn có thể ghi đè mặc định của agent")
+    print("LƯU Ý: quyền chạy thực tế của phiên vẫn có thể ghi đè mặc định của agent; "
+          "ở bản native DSH, ràng buộc chỉ đọc là hướng dẫn chứ không phải giới hạn công cụ")
     return 0
 
 

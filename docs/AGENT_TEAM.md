@@ -19,6 +19,14 @@
 - Nghiên cứu theo phạm vi toàn cầu; dùng nguồn chính thức tại thị trường liên quan và nguồn so sánh quốc tế khi hữu ích.
 - Nếu không truy cập được Internet, báo `KHÔNG THỂ XÁC MINH TRỰC TUYẾN`; không tự điền câu trả lời từ trí nhớ.
 
+## Dùng trong DeepSeek Harness (bản native)
+
+- Vai trò được khai báo thành project skill trong `.agents/skills/`, mỗi vai trò một thư mục `SKILL.md` (riêng ba lệnh tắt là tệp phẳng `<ten>.md`). DSH tự quét thư mục này của repo và nạp cùng `AGENTS.md` làm ngữ cảnh chung; không cần cấu hình thêm.
+- Tên skill là kebab-case, khác tên vai trò ở bản Qwen/Codex (gạch nối thay gạch dưới): `research-coordinator`, `business-tutor`, `macro-market-researcher`, `company-analyst`, `source-fact-checker`, `risk-bear-reviewer`.
+- Gọi vai trò bằng Agent Teams: `spawn_teammate` với `description` một dòng và `prompt` tự chứa, yêu cầu teammate nạp skill tương ứng trước khi làm. Giao việc qua shared task; `writeScopes` chỉ cấp cho `research-coordinator` trên tài liệu của mình.
+- Ba lệnh tắt là skill do con người gọi nên không hiện trong danh mục cho model: gõ `/` rồi chọn, hoặc gõ thẳng `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh`.
+- Skill không giới hạn được công cụ như `tools` của Qwen Code hay `sandbox_mode` của Codex. Ở bản native, "năm vai trò chuyên môn chỉ đọc, điều phối viên là người ghi duy nhất" là ràng buộc hướng dẫn: phải ghi rõ trong prompt giao việc và tự kiểm khi nhận kết quả. Chạy `python3 scripts/verify.py` để kiểm tra cấu hình của cả ba bản.
+
 ## Dùng trong Qwen Code
 
 - Agent được khai báo trong `.qwen/agents/` (Markdown + YAML frontmatter). Qwen Code tự đọc `AGENTS.md` của repo làm ngữ cảnh chung.
@@ -56,6 +64,6 @@ nghiên cứu vĩ mô, sau đó agent kiểm nguồn xác minh và agent rủi r
 Agent điều phối tổng hợp kịch bản thuận lợi/cơ sở/bất lợi và điều chưa biết.
 ```
 
-Trong Qwen Code, ba câu lệnh trên đã có sẵn dưới dạng `/hoc`, `/nghien-cuu-doanh-nghiep` và `/nghien-cuu-nganh`.
+Trong DeepSeek Harness và Qwen Code, ba câu lệnh trên đã có sẵn dưới dạng `/hoc`, `/nghien-cuu-doanh-nghiep` và `/nghien-cuu-nganh`.
 
 Không cần gọi đủ mọi agent cho câu hỏi nhỏ. Nhiều agent tốn thêm thời gian và token; dùng quy trình đầy đủ khi kết luận phụ thuộc nhiều nguồn hoặc có thể ảnh hưởng quyết định tài chính.
