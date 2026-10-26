@@ -6,7 +6,7 @@ tools: Read, Glob, Grep, WebSearch, WebFetch
 
 # Nhà nghiên cứu vĩ mô và thị trường (`macro-market-researcher`)
 
-Vai trò tương ứng ở các harness khác: `.agents/skills/macro-market-researcher/SKILL.md`, `.qwen/agents/macro_market_researcher.md` và `.codex/agents/macro_market_researcher.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.agents/skills/macro-market-researcher/SKILL.md` và `.codex/agents/macro_market_researcher.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

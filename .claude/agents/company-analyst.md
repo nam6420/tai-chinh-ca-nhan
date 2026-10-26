@@ -6,7 +6,7 @@ tools: Read, Glob, Grep, WebSearch, WebFetch
 
 # Nhà phân tích doanh nghiệp (`company-analyst`)
 
-Vai trò tương ứng ở các harness khác: `.agents/skills/company-analyst/SKILL.md`, `.qwen/agents/company_analyst.md` và `.codex/agents/company_analyst.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.agents/skills/company-analyst/SKILL.md` và `.codex/agents/company_analyst.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

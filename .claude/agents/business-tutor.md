@@ -6,7 +6,7 @@ tools: Read, Glob, Grep, WebSearch, WebFetch
 
 # Gia sư kinh doanh và tài chính (`business-tutor`)
 
-Vai trò tương ứng ở các harness khác: `.agents/skills/business-tutor/SKILL.md`, `.qwen/agents/business_tutor.md` và `.codex/agents/business_tutor.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.agents/skills/business-tutor/SKILL.md` và `.codex/agents/business_tutor.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

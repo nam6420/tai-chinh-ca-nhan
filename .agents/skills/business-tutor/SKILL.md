@@ -6,7 +6,7 @@ whenToUse: Khi người học hỏi một khái niệm, cần ví dụ thực t�
 
 # Gia sư kinh doanh và tài chính (`business-tutor`)
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/business_tutor.md` và `.codex/agents/business_tutor.toml` (Codex `sandbox_mode = "read-only"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/business-tutor.md` và `.codex/agents/business_tutor.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

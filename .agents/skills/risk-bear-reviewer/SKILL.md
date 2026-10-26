@@ -6,7 +6,7 @@ whenToUse: Khi cần biên bản phản biện rủi ro độc lập cho một b
 
 # Người phản biện rủi ro (`risk-bear-reviewer`)
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/risk_bear_reviewer.md` và `.codex/agents/risk_bear_reviewer.toml` (Codex `sandbox_mode = "read-only"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/risk-bear-reviewer.md` và `.codex/agents/risk_bear_reviewer.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

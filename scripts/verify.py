@@ -11,8 +11,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 AGENT_DIR = ROOT / ".codex" / "agents"
-QWEN_AGENT_DIR = ROOT / ".qwen" / "agents"
-QWEN_COMMAND_DIR = ROOT / ".qwen" / "commands"
 NATIVE_SKILL_DIR = ROOT / ".agents" / "skills"
 CLAUDE_AGENT_DIR = ROOT / ".claude" / "agents"
 CLAUDE_COMMAND_DIR = ROOT / ".claude" / "commands"
@@ -24,8 +22,6 @@ REQUIRED_AGENTS = {
     "risk_bear_reviewer",
     "source_fact_checker",
 }
-# Agent được ghi tài liệu; các agent còn lại chỉ đọc.
-WRITE_TOOLS = {"write_file", "edit"}
 # Agent chỉ đọc tuyệt đối: không cả shell. source_fact_checker được chạy
 # shell để tái tính và kiểm mã băm nhưng không được ghi tệp.
 NO_SHELL_AGENTS = {
@@ -34,12 +30,7 @@ NO_SHELL_AGENTS = {
     "macro_market_researcher",
     "risk_bear_reviewer",
 }
-REQUIRED_QWEN_COMMANDS = {
-    "hoc.md",
-    "nghien-cuu-doanh-nghiep.md",
-    "nghien-cuu-nganh.md",
-}
-# DeepSeek Harness đặt tên skill theo kebab-case, khác tên vai trò Qwen/Codex.
+# DeepSeek Harness đặt tên skill theo kebab-case, khác tên vai trò Codex.
 NATIVE_ROLE_SKILLS = {
     "research_coordinator": "research-coordinator",
     "business_tutor": "business-tutor",
@@ -90,7 +81,7 @@ def fail(message: str) -> None:
     print(f"KHÔNG ĐẠT: {message}")
 
 
-def parse_qwen_agent(path: Path) -> tuple[dict, str] | None:
+def parse_frontmatter(path: Path) -> tuple[dict, str] | None:
     """Trả về (frontmatter, body) của tệp agent Markdown, hoặc None nếu thiếu frontmatter."""
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
@@ -189,84 +180,6 @@ def check_codex_agents() -> int:
     return errors
 
 
-def check_qwen_agents() -> int:
-    errors = 0
-    found_names: set[str] = set()
-    for path in sorted(QWEN_AGENT_DIR.glob("*.md")):
-        parsed = parse_qwen_agent(path)
-        if parsed is None:
-            fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
-            errors += 1
-            continue
-        frontmatter, body = parsed
-
-        name = frontmatter.get("name")
-        if not isinstance(name, str) or not name.strip():
-            fail(f"{path.name} thiếu name trong frontmatter")
-            errors += 1
-            continue
-        found_names.add(name)
-        if path.stem != name:
-            fail(f"tên tệp {path.name} phải khớp tên agent {name}")
-            errors += 1
-        description = frontmatter.get("description")
-        if not isinstance(description, str) or not description.strip():
-            fail(f"{path.name} thiếu description trong frontmatter")
-            errors += 1
-
-        for phrase in POLICY_PHRASES:
-            if phrase not in body:
-                fail(f"chỉ dẫn của {name} phải chứa chính sách {phrase!r}")
-                errors += 1
-
-        tools = frontmatter.get("tools")
-        if not isinstance(tools, list) or not tools:
-            fail(f"{name} phải khai báo danh sách tools để giới hạn quyền")
-            errors += 1
-            continue
-        if name == "research_coordinator":
-            if not WRITE_TOOLS.issubset(tools):
-                fail(f"{name} phải có {sorted(WRITE_TOOLS)} vì là agent duy nhất được ghi")
-                errors += 1
-        else:
-            granted_write = WRITE_TOOLS.intersection(tools)
-            if granted_write:
-                fail(f"{name} chỉ đọc, không được có {sorted(granted_write)}")
-                errors += 1
-            if name in NO_SHELL_AGENTS and "run_shell_command" in tools:
-                fail(f"{name} chỉ đọc tuyệt đối, không được có run_shell_command")
-                errors += 1
-
-    missing_agents = REQUIRED_AGENTS - found_names
-    extra_agents = found_names - REQUIRED_AGENTS
-    if missing_agents:
-        fail(f"thiếu agent Qwen Code: {', '.join(sorted(missing_agents))}")
-        errors += 1
-    if extra_agents:
-        fail(f"agent Qwen Code ngoài dự kiến: {', '.join(sorted(extra_agents))}")
-        errors += 1
-    return errors
-
-
-def check_qwen_commands() -> int:
-    errors = 0
-    for filename in sorted(REQUIRED_QWEN_COMMANDS):
-        path = QWEN_COMMAND_DIR / filename
-        if not path.is_file():
-            fail(f"thiếu lệnh {path.relative_to(ROOT)}")
-            errors += 1
-            continue
-        text = path.read_text(encoding="utf-8")
-        if "{{args}}" not in text:
-            fail(f"{filename} phải dùng {{{{args}}}} để nhận tham số")
-            errors += 1
-        parts = text.split("---", 2)
-        if len(parts) < 3 or "description:" not in parts[1]:
-            fail(f"{filename} phải có description trong frontmatter")
-            errors += 1
-    return errors
-
-
 def check_native_skills() -> int:
     """Kiểm tra lớp native của DeepSeek Harness trong .agents/skills/."""
     errors = 0
@@ -278,7 +191,7 @@ def check_native_skills() -> int:
             fail(f"thiếu skill native {path.relative_to(ROOT)}")
             errors += 1
             continue
-        parsed = parse_qwen_agent(path)
+        parsed = parse_frontmatter(path)
         if parsed is None:
             fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
             errors += 1
@@ -315,7 +228,7 @@ def check_native_skills() -> int:
             fail(f"skill {skill_name} phải nêu ràng buộc chỉ đọc")
             errors += 1
 
-        for counterpart in (f".qwen/agents/{role}.md", f".codex/agents/{role}.toml"):
+        for counterpart in (f".claude/agents/{skill_name}.md", f".codex/agents/{role}.toml"):
             if counterpart not in body:
                 fail(f"skill {skill_name} phải trỏ tới bản tương ứng {counterpart}")
                 errors += 1
@@ -326,7 +239,7 @@ def check_native_skills() -> int:
             fail(f"thiếu skill lệnh native {path.relative_to(ROOT)}")
             errors += 1
             continue
-        parsed = parse_qwen_agent(path)
+        parsed = parse_frontmatter(path)
         if parsed is None:
             fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
             errors += 1
@@ -373,7 +286,7 @@ def check_claude() -> int:
 
     found: set[str] = set()
     for path in sorted(CLAUDE_AGENT_DIR.glob("*.md")):
-        parsed = parse_qwen_agent(path)
+        parsed = parse_frontmatter(path)
         if parsed is None:
             fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
             errors += 1
@@ -433,7 +346,7 @@ def check_claude() -> int:
             fail(f"thiếu lệnh {path.relative_to(ROOT)}")
             errors += 1
             continue
-        parsed = parse_qwen_agent(path)
+        parsed = parse_frontmatter(path)
         if parsed is None or not str(parsed[0].get("description", "")).strip():
             fail(f"{path.relative_to(ROOT)} phải có description trong frontmatter")
             errors += 1
@@ -469,18 +382,6 @@ def main() -> int:
         fail(f".codex/config.toml không hợp lệ: {exc}")
         errors += 1
 
-    if not QWEN_AGENT_DIR.is_dir():
-        fail("thiếu .qwen/agents/")
-        errors += 1
-    else:
-        errors += check_qwen_agents()
-
-    if not QWEN_COMMAND_DIR.is_dir():
-        fail("thiếu .qwen/commands/")
-        errors += 1
-    else:
-        errors += check_qwen_commands()
-
     errors += check_codex_agents()
 
     if not NATIVE_SKILL_DIR.is_dir():
@@ -499,8 +400,7 @@ def main() -> int:
         print(f"KẾT QUẢ: {errors} lỗi")
         return 1
 
-    print(f"ĐẠT: {len(REQUIRED_AGENTS)} agent Codex, {len(REQUIRED_AGENTS)} agent Qwen Code, "
-          f"{len(REQUIRED_QWEN_COMMANDS)} lệnh Qwen Code")
+    print(f"ĐẠT: {len(REQUIRED_AGENTS)} agent Codex")
     print(f"ĐẠT: {len(NATIVE_ROLE_SKILLS)} skill vai trò native, "
           f"{len(REQUIRED_NATIVE_COMMANDS)} lệnh tắt native cho DeepSeek Harness")
     print(f"ĐẠT: {len(NATIVE_ROLE_SKILLS)} agent Claude Code, "

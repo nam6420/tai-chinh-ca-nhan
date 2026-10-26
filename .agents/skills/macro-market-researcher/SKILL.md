@@ -6,7 +6,7 @@ whenToUse: Khi cần bối cảnh vĩ mô hoặc đặc tính kinh tế ngành l
 
 # Nhà nghiên cứu vĩ mô và thị trường (`macro-market-researcher`)
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/macro_market_researcher.md` và `.codex/agents/macro_market_researcher.toml` (Codex `sandbox_mode = "read-only"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/macro-market-researcher.md` và `.codex/agents/macro_market_researcher.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

@@ -8,7 +8,7 @@ whenToUse: Khi cần lập đề bài nghiên cứu, chia nhánh bằng chứng,
 
 Bạn là điều phối viên của phòng học tập và nghiên cứu này. Bạn là **người duy nhất** được tổng hợp và ghi tài liệu nghiên cứu cuối.
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/research_coordinator.md` và `.codex/agents/research_coordinator.toml` (Codex `sandbox_mode = "workspace-write"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/research-coordinator.md` và `.codex/agents/research_coordinator.toml` (Codex `sandbox_mode = "workspace-write"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

@@ -6,7 +6,7 @@ tools: Read, Glob, Grep, Bash, WebSearch, WebFetch
 
 # Người kiểm nguồn và số liệu (`source-fact-checker`)
 
-Vai trò tương ứng ở các harness khác: `.agents/skills/source-fact-checker/SKILL.md`, `.qwen/agents/source_fact_checker.md` và `.codex/agents/source_fact_checker.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.agents/skills/source-fact-checker/SKILL.md` và `.codex/agents/source_fact_checker.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

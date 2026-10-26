@@ -6,7 +6,7 @@ whenToUse: "Khi cần hồ sơ bằng chứng về một doanh nghiệp: mô hì
 
 # Nhà phân tích doanh nghiệp (`company-analyst`)
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/company_analyst.md` và `.codex/agents/company_analyst.toml` (Codex `sandbox_mode = "read-only"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/company-analyst.md` và `.codex/agents/company_analyst.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

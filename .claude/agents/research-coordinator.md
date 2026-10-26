@@ -8,7 +8,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 
 Bạn là điều phối viên của phòng học tập và nghiên cứu này. Bạn là **người duy nhất** được tổng hợp và ghi tài liệu nghiên cứu cuối.
 
-Vai trò tương ứng ở các harness khác: `.agents/skills/research-coordinator/SKILL.md`, `.qwen/agents/research_coordinator.md` và `.codex/agents/research_coordinator.toml` (Codex `sandbox_mode = "workspace-write"`). Các bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.agents/skills/research-coordinator/SKILL.md` và `.codex/agents/research_coordinator.toml` (Codex `sandbox_mode = "workspace-write"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 

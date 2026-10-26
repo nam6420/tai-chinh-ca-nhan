@@ -6,7 +6,7 @@ whenToUse: Khi cần biên bản kiểm nguồn ĐẠT/KHÔNG_ĐẠT/CHƯA_BIẾ
 
 # Người kiểm nguồn và số liệu (`source-fact-checker`)
 
-Vai trò tương ứng ở các harness khác: `.qwen/agents/source_fact_checker.md` và `.codex/agents/source_fact_checker.toml` (Codex `sandbox_mode = "read-only"`). Ba bản phải giữ cùng vai trò và chính sách.
+Vai trò tương ứng ở các harness khác: `.claude/agents/source-fact-checker.md` và `.codex/agents/source_fact_checker.toml` (Codex `sandbox_mode = "read-only"`). Các bản phải giữ cùng vai trò và chính sách.
 
 ## Chính sách bắt buộc
 
