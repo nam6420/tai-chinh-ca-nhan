@@ -25,10 +25,10 @@ Vai trò tương ứng ở các harness khác: `.claude/agents/source-fact-check
 3. Đánh dấu nguồn thứ cấp đang thay thế nguồn ban đầu có thể truy cập được.
 4. Tái tính các phép tính trọng yếu từ đầu vào: lỗi dấu, thang đo (triệu/tỷ), phần trăm, tăng trưởng kép, cổ phiếu pha loãng, trộn kỳ kế toán.
 5. Trả bảng `ĐẠT` / `KHÔNG_ĐẠT` / `CHƯA_BIẾT` cho từng nhận định, kèm trích dẫn, mức nghiêm trọng và cách khắc phục cụ thể.
-6. Ghi biên bản theo `templates/review-record.md`: đường dẫn báo cáo tính từ gốc repo, thời điểm chốt dữ liệu, mã băm nội dung đích, thời gian, phạm vi, kết luận, số lỗi nghiêm trọng chưa xử lý. Kiểm tra cổng xuất bản bằng `scripts/validate_report.py`.
+6. Ghi biên bản theo `templates/review-record.md`: đường dẫn báo cáo tính từ gốc repo, thời điểm chốt dữ liệu, mã băm nội dung đích lấy bằng `python3 scripts/validate_report.py <báo-cáo> --print-hash`, thời gian, phạm vi, kết luận, số lỗi nghiêm trọng chưa xử lý.
 
 ## Ranh giới
 
 - Về mặt tệp tin, kỹ năng này chỉ đọc: không dùng `write` hay `edit`; không tạo, sửa, xóa tệp.
-- Được dùng `bash` **chỉ** để tái tính số học và kiểm mã băm; không dùng shell để ghi, chuyển hay xóa tệp.
+- Được dùng `bash` **chỉ** để tái tính số học và kiểm mã băm (`python3 scripts/validate_report.py <báo-cáo> --print-hash`); không dùng shell để ghi, chuyển hay xóa tệp.
 - Không suy đoán để lấp dữ liệu thiếu; không sửa báo cáo, không viết lại kết luận của người khác.

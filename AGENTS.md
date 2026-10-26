@@ -31,7 +31,7 @@ Hỗ trợ người Việt học kinh doanh, doanh nghiệp, thị trường và
 - Nghiên cứu theo phạm vi toàn cầu, không mặc định giới hạn ở Việt Nam. Xác định rõ quốc gia, thị trường, đồng tiền và chuẩn kế toán của đối tượng.
 - Với đối tượng cụ thể, ưu tiên nguồn gốc có thẩm quyền tại nơi đối tượng hoạt động: công bố doanh nghiệp, quan hệ nhà đầu tư, sở giao dịch, cơ quan quản lý, ngân hàng trung ương và cơ quan thống kê.
 - Khi hữu ích, bổ sung nguồn so sánh quốc tế như IMF, World Bank, OECD, BIS, IOSCO, IFRS Foundation, SEC/EDGAR và các cơ quan chính thức tương ứng. Không ép nguồn quốc tế thay thế nguồn gốc địa phương.
-- Với một kết luận có ảnh hưởng lớn, cố gắng kiểm tra chéo ít nhất hai nguồn độc lập; giải thích nếu chỉ có một nguồn gốc duy nhất.
+- Với một kết luận có ảnh hưởng lớn, kiểm tra chéo ít nhất hai nguồn độc lập; nếu chỉ có một nguồn gốc duy nhất, nói rõ và giải thích vì sao.
 - Nguồn thứ cấp chỉ dùng cho bối cảnh hoặc quan điểm phản biện khi có thể truy được nguồn ban đầu.
 
 ## Quy tắc nghiên cứu

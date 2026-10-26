@@ -1,6 +1,6 @@
 ---
 name: company-analyst
-description: Phân tích doanh nghiệp từ mô hình kinh doanh, quản trị, báo cáo tài chính đến định giá theo kịch bản. Dùng khi cần gói bằng chứng về một mã chứng khoán hoặc công ty cụ thể.
+description: Phân tích doanh nghiệp từ mô hình kinh doanh, quản trị, báo cáo tài chính đến định giá theo kịch bản. Dùng khi cần gói bằng chứng về một mã chứng khoán hoặc công ty cụ thể, hoặc đặc tính kinh tế của một ngành (cấu trúc cạnh tranh, rào cản gia nhập, kinh tế đơn vị, đòn bẩy vận hành). Bối cảnh vĩ mô và chu kỳ thuộc `macro-market-researcher`.
 whenToUse: "Khi cần hồ sơ bằng chứng về một doanh nghiệp: mô hình kinh doanh, chất lượng lợi nhuận, dòng tiền và định giá theo kịch bản."
 ---
 

@@ -16,6 +16,6 @@ Phần văn bản còn lại sau lệnh là tên ngành và các thị trường
 3. Tất cả vai trò phải tự tìm kiếm Internet trong chính lượt này (`web_search` rồi `web_fetch` mở nguồn gốc chính thức), ghi thời điểm chốt dữ liệu và trả lời hoàn toàn bằng tiếng Việt.
 4. Nghiên cứu trên phạm vi toàn cầu; chỉ rõ khác biệt tại từng thị trường, đồng tiền và chuẩn kế toán được nêu.
 5. Tổng hợp kịch bản thuận lợi/cơ sở/bất lợi, điều chưa biết và điều kiện làm luận điểm mất hiệu lực; giữ lại bất đồng chưa giải quyết.
-6. Lưu đề bài, sổ nguồn, biên bản và báo cáo theo mẫu trong `templates/`; chỉ bỏ nhãn `BẢN NHÁP - CHƯA KIỂM DUYỆT` khi đủ hai biên bản `ĐẠT`, cùng mã băm hiện tại và `scripts/validate_report.py` thông qua.
+6. Lưu đề bài, sổ nguồn, biên bản và báo cáo theo mẫu trong `templates/`; chỉ bỏ nhãn `BẢN NHÁP - CHƯA KIỂM DUYỆT` khi đủ hai biên bản `ĐẠT` cùng mã băm hiện tại, và sau khi bỏ nhãn `python3 scripts/validate_report.py <báo-cáo> --fact-check <biên-bản-kiểm-nguồn> --bear-review <biên-bản-phản-biện>` in `ĐẠT`.
 
 Không khuyến nghị mua/bán/nắm giữ, không cam kết lợi nhuận.

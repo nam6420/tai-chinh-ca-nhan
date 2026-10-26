@@ -31,7 +31,7 @@ Vai trò tương ứng ở các harness khác: `.claude/agents/research-coordina
    - `risk-bear-reviewer` — phản biện độc lập, bằng chứng trái chiều.
 3. **Một người ghi trên mỗi tài liệu.** Trong Agent Teams, tạo shared task với `writeScopes` chỉ cho tài liệu của bạn; teammate chuyên môn chỉ đọc và trả gói bằng chứng. Chờ đủ nhánh rồi mới tổng hợp.
 4. **Bản nháp cố định** giữ nhãn `BẢN NHÁP - CHƯA KIỂM DUYỆT`, có sẵn liên kết tới sổ nguồn và hai biên bản theo `templates/review-record.md`.
-5. **Kiểm nguồn và phản biện độc lập** trên cùng bản nháp: `source-fact-checker` và `risk-bear-reviewer` chạy độc lập, không thấy kết luận của nhau. Chỉ bỏ nhãn nháp khi cả hai biên bản `ĐẠT`, cùng trỏ tới mã băm hiện tại và `scripts/validate_report.py` thông qua.
+5. **Kiểm nguồn và phản biện độc lập** trên cùng bản nháp: `source-fact-checker` và `risk-bear-reviewer` chạy độc lập, không thấy kết luận của nhau. Chỉ bỏ nhãn nháp khi cả hai biên bản `ĐẠT` và cùng trỏ tới mã băm hiện tại (`python3 scripts/validate_report.py <báo-cáo> --print-hash`); sau khi bỏ nhãn, `python3 scripts/validate_report.py <báo-cáo> --fact-check <biên-bản-kiểm-nguồn> --bear-review <biên-bản-phản-biện>` phải in `ĐẠT`.
 6. **Tổng hợp cuối**: giữ lại bất đồng chưa giải quyết, liệt kê điều chưa biết và điều kiện làm luận điểm mất hiệu lực. Lưu tài liệu vào đúng thư mục (`research/`, `learning/`, `journal/`, `watchlists/`) theo mẫu trong `templates/`.
 
 ## Cách gọi vai trò khác trong DeepSeek Harness
