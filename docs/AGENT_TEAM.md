@@ -25,7 +25,15 @@
 - Tên skill là kebab-case, khác tên vai trò ở bản Qwen/Codex (gạch nối thay gạch dưới): `research-coordinator`, `business-tutor`, `macro-market-researcher`, `company-analyst`, `source-fact-checker`, `risk-bear-reviewer`.
 - Gọi vai trò bằng Agent Teams: `spawn_teammate` với `description` một dòng và `prompt` tự chứa, yêu cầu teammate nạp skill tương ứng trước khi làm. Giao việc qua shared task; `writeScopes` chỉ cấp cho `research-coordinator` trên tài liệu của mình.
 - Ba lệnh tắt là skill do con người gọi nên không hiện trong danh mục cho model: gõ `/` rồi chọn, hoặc gõ thẳng `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh`.
-- Skill không giới hạn được công cụ như `tools` của Qwen Code hay `sandbox_mode` của Codex. Ở bản native, "năm vai trò chuyên môn chỉ đọc, điều phối viên là người ghi duy nhất" là ràng buộc hướng dẫn: phải ghi rõ trong prompt giao việc và tự kiểm khi nhận kết quả. Chạy `python3 scripts/verify.py` để kiểm tra cấu hình của cả ba bản.
+- Skill không giới hạn được công cụ như `tools` của Qwen Code hay `sandbox_mode` của Codex. Ở bản native, "năm vai trò chuyên môn chỉ đọc, điều phối viên là người ghi duy nhất" là ràng buộc hướng dẫn: phải ghi rõ trong prompt giao việc và tự kiểm khi nhận kết quả. Chạy `python3 scripts/verify.py` để kiểm tra cấu hình của cả bốn bản.
+
+## Dùng trong Claude Code
+
+- `CLAUDE.md` nạp `AGENTS.md` bằng `@AGENTS.md`, nên Claude Code dùng chung toàn bộ chính sách dự án.
+- Vai trò là subagent trong `.claude/agents/`, tên kebab-case giống bản DSH. Quyền được buộc bằng trường `tools`: năm vai trò chuyên môn không có `Write`/`Edit`; riêng `source-fact-checker` có `Bash` để tái tính và kiểm mã băm. `research-coordinator` là vai trò duy nhất có `Write`/`Edit`.
+- Subagent không gọi được subagent khác, nên khi nghiên cứu nhiều nhánh **phiên chính** đóng vai điều phối viên và giao nhánh bằng công cụ `Agent`; các nhánh độc lập chạy song song.
+- Lệnh tắt trong `.claude/commands/`: `/hoc <khái niệm>`, `/nghien-cuu-doanh-nghiep <mã, thị trường>`, `/nghien-cuu-nganh <ngành, thị trường>`.
+- `.claude/settings.json` cho phép sẵn `WebSearch`, `WebFetch` và các lệnh kiểm tra của repo; chặn đọc `.env` và `journal/private/`. Cấu hình cá nhân để ở `.claude/settings.local.json` (đã gitignore).
 
 ## Dùng trong Qwen Code
 
@@ -64,6 +72,6 @@ nghiên cứu vĩ mô, sau đó agent kiểm nguồn xác minh và agent rủi r
 Agent điều phối tổng hợp kịch bản thuận lợi/cơ sở/bất lợi và điều chưa biết.
 ```
 
-Trong DeepSeek Harness và Qwen Code, ba câu lệnh trên đã có sẵn dưới dạng `/hoc`, `/nghien-cuu-doanh-nghiep` và `/nghien-cuu-nganh`.
+Trong DeepSeek Harness, Claude Code và Qwen Code, ba câu lệnh trên đã có sẵn dưới dạng `/hoc`, `/nghien-cuu-doanh-nghiep` và `/nghien-cuu-nganh`.
 
 Không cần gọi đủ mọi agent cho câu hỏi nhỏ. Nhiều agent tốn thêm thời gian và token; dùng quy trình đầy đủ khi kết luận phụ thuộc nhiều nguồn hoặc có thể ảnh hưởng quyết định tài chính.

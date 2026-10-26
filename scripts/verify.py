@@ -14,6 +14,8 @@ AGENT_DIR = ROOT / ".codex" / "agents"
 QWEN_AGENT_DIR = ROOT / ".qwen" / "agents"
 QWEN_COMMAND_DIR = ROOT / ".qwen" / "commands"
 NATIVE_SKILL_DIR = ROOT / ".agents" / "skills"
+CLAUDE_AGENT_DIR = ROOT / ".claude" / "agents"
+CLAUDE_COMMAND_DIR = ROOT / ".claude" / "commands"
 REQUIRED_AGENTS = {
     "research_coordinator",
     "business_tutor",
@@ -51,6 +53,10 @@ REQUIRED_NATIVE_COMMANDS = {
     "nghien-cuu-doanh-nghiep",
     "nghien-cuu-nganh",
 }
+# Claude Code dùng tên công cụ viết hoa; Bash chỉ dành cho điều phối viên
+# và người kiểm nguồn.
+CLAUDE_WRITE_TOOLS = {"Write", "Edit", "NotebookEdit"}
+CLAUDE_REQUIRED_WEB_TOOLS = {"WebSearch", "WebFetch"}
 # Chính sách tối thiểu phải có trong mọi vai trò, ở cả ba bản khai báo.
 POLICY_PHRASES = (
     "tiếng Việt",
@@ -63,6 +69,7 @@ POLICY_PHRASES = (
 KEBAB_NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 REQUIRED_PATHS = [
     ROOT / "AGENTS.md",
+    ROOT / "CLAUDE.md",
     ROOT / ".codex" / "config.toml",
     ROOT / "docs" / "WORKFLOW.md",
     ROOT / "docs" / "RESEARCH_STANDARD.md",
@@ -357,6 +364,86 @@ def check_native_skills() -> int:
     return errors
 
 
+def check_claude() -> int:
+    """Kiểm tra lớp native của Claude Code trong .claude/."""
+    errors = 0
+    if "@AGENTS.md" not in (ROOT / "CLAUDE.md").read_text(encoding="utf-8"):
+        fail("CLAUDE.md phải nạp @AGENTS.md để dùng chung chính sách")
+        errors += 1
+
+    found: set[str] = set()
+    for path in sorted(CLAUDE_AGENT_DIR.glob("*.md")):
+        parsed = parse_qwen_agent(path)
+        if parsed is None:
+            fail(f"{path.relative_to(ROOT)} thiếu YAML frontmatter hợp lệ")
+            errors += 1
+            continue
+        frontmatter, body = parsed
+        for number in unquoted_colon_values(path):
+            fail(f"{path.relative_to(ROOT)}:{number} có ': ' chưa quote trong frontmatter YAML")
+            errors += 1
+        name = frontmatter.get("name")
+        if not isinstance(name, str) or path.stem != name:
+            fail(f"{path.relative_to(ROOT)}: name phải khớp tên tệp {path.stem!r}")
+            errors += 1
+            continue
+        found.add(name)
+        description = frontmatter.get("description")
+        if not isinstance(description, str) or not description.strip():
+            fail(f"{path.relative_to(ROOT)} thiếu description trong frontmatter")
+            errors += 1
+        for phrase in POLICY_PHRASES:
+            if phrase not in body:
+                fail(f"agent Claude {name} phải chứa chính sách {phrase!r}")
+                errors += 1
+
+        tools_value = frontmatter.get("tools")
+        if not isinstance(tools_value, str) or not tools_value.strip():
+            fail(f"agent Claude {name} phải khai báo tools để giới hạn quyền")
+            errors += 1
+            continue
+        tools = {tool.strip() for tool in tools_value.split(",")}
+        if missing_web := CLAUDE_REQUIRED_WEB_TOOLS - tools:
+            fail(f"agent Claude {name} thiếu công cụ Internet {sorted(missing_web)}")
+            errors += 1
+        role = name.replace("-", "_")
+        if role == "research_coordinator":
+            if not {"Write", "Edit"}.issubset(tools):
+                fail(f"agent Claude {name} phải có Write/Edit vì là vai trò duy nhất được ghi")
+                errors += 1
+        else:
+            if granted := CLAUDE_WRITE_TOOLS & tools:
+                fail(f"agent Claude {name} chỉ đọc, không được có {sorted(granted)}")
+                errors += 1
+            if role in NO_SHELL_AGENTS and "Bash" in tools:
+                fail(f"agent Claude {name} chỉ đọc tuyệt đối, không được có Bash")
+                errors += 1
+
+    expected = set(NATIVE_ROLE_SKILLS.values())
+    if missing := expected - found:
+        fail(f"thiếu agent Claude Code: {', '.join(sorted(missing))}")
+        errors += 1
+    if extra := found - expected:
+        fail(f"agent Claude Code ngoài dự kiến: {', '.join(sorted(extra))}")
+        errors += 1
+
+    for command in sorted(REQUIRED_NATIVE_COMMANDS):
+        path = CLAUDE_COMMAND_DIR / f"{command}.md"
+        if not path.is_file():
+            fail(f"thiếu lệnh {path.relative_to(ROOT)}")
+            errors += 1
+            continue
+        parsed = parse_qwen_agent(path)
+        if parsed is None or not str(parsed[0].get("description", "")).strip():
+            fail(f"{path.relative_to(ROOT)} phải có description trong frontmatter")
+            errors += 1
+            continue
+        if "$ARGUMENTS" not in parsed[1]:
+            fail(f"{path.relative_to(ROOT)} phải dùng $ARGUMENTS để nhận tham số")
+            errors += 1
+    return errors
+
+
 def main() -> int:
     errors = 0
 
@@ -402,6 +489,12 @@ def main() -> int:
     else:
         errors += check_native_skills()
 
+    if not CLAUDE_AGENT_DIR.is_dir() or not CLAUDE_COMMAND_DIR.is_dir():
+        fail("thiếu .claude/agents/ hoặc .claude/commands/")
+        errors += 1
+    else:
+        errors += check_claude()
+
     if errors:
         print(f"KẾT QUẢ: {errors} lỗi")
         return 1
@@ -410,6 +503,8 @@ def main() -> int:
           f"{len(REQUIRED_QWEN_COMMANDS)} lệnh Qwen Code")
     print(f"ĐẠT: {len(NATIVE_ROLE_SKILLS)} skill vai trò native, "
           f"{len(REQUIRED_NATIVE_COMMANDS)} lệnh tắt native cho DeepSeek Harness")
+    print(f"ĐẠT: {len(NATIVE_ROLE_SKILLS)} agent Claude Code, "
+          f"{len(REQUIRED_NATIVE_COMMANDS)} lệnh Claude Code")
     print(f"ĐẠT: {len(REQUIRED_PATHS)} tài liệu bắt buộc")
     print("ĐẠT: cấu hình dự án khai báo một agent được ghi và năm agent chỉ đọc")
     print("LƯU Ý: quyền chạy thực tế của phiên vẫn có thể ghi đè mặc định của agent; "

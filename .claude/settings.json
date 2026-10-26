@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(python3 scripts/verify.py)",
+      "Bash(python3 scripts/validate_report.py:*)",
+      "Bash(python3 -m unittest:*)",
+      "Bash(shasum:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./journal/private/**)"
+    ]
+  }
+}
