@@ -4,7 +4,28 @@
 
 Thời lượng gợi ý: 20-30 phút.
 
-Chốt dữ liệu lúc: 2026-08-10 16:45:03 UTC+7.
+Chốt dữ liệu lúc: 2026-08-10 16:45:03 UTC+7. Cập nhật bổ sung ngày `2026-10-26` (hộp IFRS 18 dưới đây).
+
+## Cập nhật quan trọng: từ kỳ báo cáo 2027, cách đọc báo cáo kết quả kinh doanh thay đổi
+
+`SỰ_THẬT` Theo [IFRS 18 — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/) (trang chuẩn mở ngày `2026-10-26`, HTTP 200; ban hành `2024-04`), IFRS 18 **thay thế IAS 1** và có hiệu lực với kỳ báo cáo năm **bắt đầu từ hoặc sau `2027-01-01`**, cho phép áp dụng sớm. `SUY_LUẬN` Với doanh nghiệp có năm tài chính theo năm dương lịch, báo cáo năm đầu tiên lập theo IFRS 18 là báo cáo năm 2027, thường chỉ được công bố vào **đầu 2028**.
+
+Ba thay đổi ảnh hưởng trực tiếp tới người đọc báo cáo:
+
+1. `SỰ_THẬT` Báo cáo kết quả kinh doanh phải trình bày **hai tiểu tổng mới**: **lợi nhuận hoạt động** (operating profit) và **lợi nhuận trước tài chính và thuế thu nhập** (profit before financing and income taxes).
+2. `SỰ_THẬT` Doanh nghiệp phải công bố **thước đo do ban điều hành tự định nghĩa** (management-defined performance measures — MPM): các tiểu tổng thu nhập/chi phí **không do IFRS quy định** nhưng được dùng trong truyền thông công khai. Đây là công cụ để kiểm tra "lợi nhuận điều chỉnh" (xem [Bài 007](007-notes-and-accounting-red-flags.md)).
+3. `SỰ_THẬT` Chuẩn thêm **nguyên tắc mới về gộp và tách khoản mục**; một số đoạn của IAS 1 được chuyển sang **IAS 8** (đã đổi tên thành *Basis of Preparation of Financial Statements*) và **IFRS 7**.
+
+`SỰ_THẬT` Kéo theo, IAS 7 (báo cáo lưu chuyển tiền tệ) được sửa để buộc dùng **lợi nhuận hoạt động làm điểm xuất phát** của phương pháp gián tiếp, kèm yêu cầu mới về phân loại dòng tiền **lãi vay và cổ tức** — với đa số doanh nghiệp, lãi vay đã trả chuyển sang dòng tiền tài chính (xem [Bài 004](004-cash-flow-and-earnings-quality.md)).
+
+Cách dùng hộp này khi học:
+
+- Khi đọc báo cáo của kỳ năm bắt đầu **trước** `2027-01-01` (trừ khi doanh nghiệp áp dụng sớm): vẫn theo IAS 1, chưa có hai tiểu tổng mới.
+- Khi đọc báo cáo lập theo IFRS 18: dòng "lợi nhuận hoạt động" là mốc mới để tính các tỷ lệ (biên hoạt động, ROIC); đừng lấy "lợi nhuận thuần" như mốc duy nhất nữa. `SUY_LUẬN` Nhưng "lợi nhuận hoạt động" của IFRS 18 không mặc nhiên bằng EBIT bạn tự tính; phải đọc nó gồm những khoản nào.
+- Khi **so sánh** báo cáo cũ và mới: điểm xuất phát của cầu nối lợi nhuận → tiền đã khác, nên phải nói rõ đang so hai chuẩn trình bày khác nhau.
+
+`CHƯA_BIẾT` Với báo cáo lập theo **VAS** (Việt Nam), cách trình bày và tên chỉ tiêu khác với IFRS; bài này không nêu chi tiết vì lượt này chưa mở được văn bản hướng dẫn hiện hành của Bộ Tài chính. Khi áp vào hồ sơ Việt Nam, phải đọc thông tư/chế độ kế toán đang áp dụng và đối chiếu tên chỉ tiêu.
+
 
 ## Mục tiêu
 
@@ -212,6 +233,7 @@ Khi gặp bài “lợi nhuận khác dòng tiền”, có thể dùng mẫu sá
 
 ## Nguồn Internet đã mở và kiểm tra khi cập nhật lời giải
 
+- [IFRS 18 - Presentation and Disclosure in Financial Statements, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/): trang chuẩn "Standard 2026 Issued", mở ngày 2026-10-26 (HTTP 200); ban hành tháng 4-2024, hiệu lực kỳ báo cáo năm từ hoặc sau 2027-01-01; xác nhận việc thay thế IAS 1, hai tiểu tổng mới, yêu cầu công bố MPM, nguyên tắc gộp/tách khoản mục, và việc chuyển một số đoạn sang IAS 8 (đổi tên *Basis of Preparation of Financial Statements*) và IFRS 7.
 - [IAS 7 - Statement of Cash Flows, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/): trang chuẩn hiện hành được truy cập ngày 2026-08-10; xác nhận phương pháp gián tiếp điều chỉnh lợi nhuận cho giao dịch phi tiền mặt, dồn tích và các khoản liên quan tới dòng tiền đầu tư hoặc tài chính. Trang ghi nhận các sửa đổi do IFRS 18 ban hành tháng 4-2024.
 - [IAS 7, đoạn 18-20 - bản PDF IFRS Foundation](https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-7-statement-of-cash-flows.pdf?bypass=onStatement): bản PDF phát hành năm 2022, truy cập ngày 2026-08-10; liệt kê cụ thể tồn kho, khoản phải thu, khoản phải trả và các khoản phi tiền mặt trong cầu nối dòng tiền gián tiếp. Khi có khác biệt, trang chuẩn hiện hành phía trên được ưu tiên vì phản ánh các sửa đổi mới hơn.
 - [Beginners' Guide to Financial Statements, U.S. SEC](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements): cập nhật gần nhất ngày 2017-02-06, truy cập ngày 2026-08-10; giải thích báo cáo dòng tiền đối chiếu lợi nhuận với tiền thực tế thông qua khoản phi tiền mặt và tài sản, nợ hoạt động.

@@ -30,3 +30,7 @@ Giả định tôi là người mới, dùng một ví dụ đơn giản, có b�
 Chọn một doanh nghiệp hoặc ngành, tạo đề bài từ [mẫu](../templates/research-brief.md), chạy quy trình đầy đủ và ghi bài học vào `journal/`.
 
 Không cần học theo đúng tốc độ trên. Mỗi tuần nên kết thúc bằng một note theo [mẫu bài học](../templates/learning-note.md).
+
+## Ánh xạ bài học cụ thể
+
+Lộ trình chi tiết 13 bài tiếp theo (Bài 004 → 016), chuẩn định dạng mỗi bài, nhịp ôn tập và mốc dữ kiện phải cập nhật nằm ở [lộ trình bài giảng](../learning/roadmap.md). Bài 001–003 đã có trong `learning/lessons/`. Ba đợt: Đợt 1 (004–008) chất lượng lợi nhuận, dòng tiền, nợ, quản trị, vĩ mô; Đợt 2 (009–012) bội số, chi phí vốn, DCF, biên an toàn; Đợt 3 (013–016) ngân hàng, chu kỳ ngành, tâm lý, capstone.

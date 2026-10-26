@@ -97,7 +97,13 @@ Chi phí vốn là một **ước tính phụ thuộc giả định** (lãi su�
 Tăng trưởng lợi nhuận ≈ Tỷ lệ tái đầu tư × ROIC
 ```
 
-trong đó tỷ lệ tái đầu tư là phần lợi nhuận hoạt động sau thuế được tái đầu tư trở lại doanh nghiệp (phần không trả cổ tức/mua lại cổ phiếu). Suy ra:
+trong đó tỷ lệ tái đầu tư là phần lợi nhuận hoạt động sau thuế được tái đầu tư trở lại hoạt động kinh doanh:
+
+```text
+Tỷ lệ tái đầu tư = (Capex − Khấu hao + Thay đổi vốn lưu động phi tiền mặt) / NOPAT
+```
+
+`SUY_LUẬN` Đây **không** phải "tỷ lệ lợi nhuận giữ lại" (phần không chia cổ tức): doanh nghiệp có thể giữ lại lợi nhuận mà chỉ để tiền nằm trong két, hoặc tái đầu tư bằng tiền đi vay. ROIC trong công thức cũng nên hiểu là lợi nhuận trên **đồng vốn mới**, không phải ROIC trung bình của toàn bộ vốn cũ. Suy ra:
 
 ```text
 Tỷ lệ tái đầu tư cần thiết ≈ Tốc độ tăng trưởng mong muốn / ROIC
@@ -151,7 +157,8 @@ Ví dụ thứ hai — vì sao lợi nhuận một năm gây hiểu nhầm:
 `KỊCH_BẢN` `MINH HỌA` Công ty C (hư cấu, mang tính chu kỳ) có 50 triệu cổ phiếu, giá 24. Lợi nhuận 5 năm gần nhất: 20, 25, 22, 100, 30 (năm thứ tư bùng nổ do giá bán tăng đột biến, năm sau đã rơi về vùng cũ).
 
 - `PHÉP_TÍNH` Nếu nhìn đúng năm đỉnh: vốn hóa = 24 × 50 = 1.200; P/E = 1.200/100 = 12 lần — trông "rẻ".
-- `PHÉP_TÍNH` Nếu dùng lợi nhuận đại diện quanh 25: P/E = 1.200/25 = 48 lần — thực tế là đắt.
+- `PHÉP_TÍNH` Nếu dùng lợi nhuận đại diện bằng **trung vị** 5 năm (`20, 22, 25, 30, 100` → 25): P/E = 1.200/25 = 48 lần — thực tế là đắt.
+- `PHÉP_TÍNH` Nếu dùng **bình quân** cả 5 năm, kể cả năm đỉnh: `(20 + 25 + 22 + 100 + 30)/5 = 39,4`, P/E = `1.200/39,4 = 30,5` lần; nếu bình quân 4 năm bỏ năm đỉnh: `97/4 = 24,25`, P/E = `49,5` lần. Cách chuẩn hoá đổi kết quả rất nhiều, nên phải ghi rõ đã dùng cách nào.
 
 `SUY_LUẬN` P/E 12 ở đây là ảo giác của chu kỳ: mẫu số (lợi nhuận) đang ở đỉnh tạm thời. Bài 002 gọi đây là bẫy P/E thấp; bài này cho thấy cơ chế của nó nằm ở việc **lợi nhuận đỉnh chu kỳ thổi phồng NOPAT và cả ROIC**, nên phải kiểm tra cả P/E lẫn ROIC trên dữ liệu nhiều năm.
 

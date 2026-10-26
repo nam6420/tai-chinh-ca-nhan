@@ -73,6 +73,7 @@ REQUIRED_PATHS = [
     ROOT / "templates" / "source-register.md",
     ROOT / "templates" / "review-record.md",
     ROOT / "learning" / "glossary.md",
+    ROOT / "learning" / "roadmap.md",
     ROOT / "learning" / "lessons" / "001-business-financial-statements.md",
     ROOT / "scripts" / "validate_report.py",
 ]
