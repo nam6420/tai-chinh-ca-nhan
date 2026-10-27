@@ -1,14 +1,23 @@
 # Sổ kiểm duyệt bài học
 
 - Cập nhật: `2026-10-27`.
-- **13 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
-- Cổng cấu trúc của repo đã đối chiếu13/13 bài mới với26 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
+- **21 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
+- Cổng cấu trúc của repo đã đối chiếu21/21 bài mới với42 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
+- **Đợt 2 đang làm:** V3–V5, B1–B2, L1–L3 đã qua hai nhánh. Phản biện V5 còn một điểm trung bình về quy mô ảnh hưởng của room; xem biên bản.
 - **Đợt 1:** B3, P1–P3, V1–V2 đã qua hai nhánh trên phiên bản ở bảng. Các mục `CHƯA_BIẾT` vẫn là giới hạn nội dung, không được hiểu là đã xác minh.
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [V3](../lessons/V3-corporate-actions.md) | Đã soạn | [ĐẠT](V3-fact-check.md) | [ĐẠT](V3-risk-review.md) | `407eff684ca5…` |
+| [V4](../lessons/V4-disclosure-and-source-tracing.md) | Đã soạn | [ĐẠT](V4-fact-check.md) | [ĐẠT](V4-risk-review.md) | `7d65b22c73c8…` |
+| [V5](../lessons/V5-index-foreign-room-upgrade.md) | Đã soạn | [ĐẠT](V5-fact-check.md) | [ĐẠT](V5-risk-review.md) | `2d3bfe38c78f…` |
+| [B1](../lessons/B1-broker-fees-custody.md) | Đã soạn | [ĐẠT](B1-fact-check.md) | [ĐẠT](B1-risk-review.md) | `f749dce8337f…` |
+| [B2](../lessons/B2-margin-leverage.md) | Đã soạn | [ĐẠT](B2-fact-check.md) | [ĐẠT](B2-risk-review.md) | `42338ff511e4…` |
+| [L1](../lessons/L1-insider-trading-manipulation-disclosure.md) | Đã soạn | [ĐẠT](L1-fact-check.md) | [ĐẠT](L1-risk-review.md) | `1d77c6d7fbbd…` |
+| [L2](../lessons/L2-minority-shareholder-rights.md) | Đã soạn | [ĐẠT](L2-fact-check.md) | [ĐẠT](L2-risk-review.md) | `a45f281c9ad9…` |
+| [L3](../lessons/L3-personal-income-tax-reporting.md) | Đã soạn | [ĐẠT](L3-fact-check.md) | [ĐẠT](L3-risk-review.md) | `1ae218402b9a…` |
 | [B3](../lessons/B3-account-security-scams.md) | Đã soạn | [ĐẠT](B3-fact-check.md) | [ĐẠT](B3-risk-review.md) | `6e63d8d9fae5…` |
 | [P1](../lessons/P1-budget-emergency-fund-insurance.md) | Đã soạn | [ĐẠT](P1-fact-check.md) | [ĐẠT](P1-risk-review.md) | `089cda636e1e…` |
 | [P2](../lessons/P2-personal-debt.md) | Đã soạn | [ĐẠT](P2-fact-check.md) | [ĐẠT](P2-risk-review.md) | `e9675a0e3d88…` |

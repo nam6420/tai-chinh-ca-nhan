@@ -148,3 +148,12 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 | Quỹ khẩn cấp | Tiền để riêng cho chi phí bất ngờ hoặc tình huống tài chính khẩn cấp; mức cần có tùy hoàn cảnh | [P1](lessons/P1-budget-emergency-fund-insurance.md); [CFPB](https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/) |
 | Khả năng chịu rủi ro (risk capacity) | Mức rủi ro có thể chịu về mặt tài chính | [P3](lessons/P3-goals-risk-ips.md); [OSC Investor Office](https://www.getsmarteraboutmoney.ca/learning-path/building-your-investing-strategy/how-to-make-an-investment-policy-statement/) |
 | Mức sẵn lòng chịu rủi ro (risk tolerance) | Mức rủi ro một người sẵn lòng chấp nhận; một số nguồn dùng thuật ngữ rộng hơn | [P3](lessons/P3-goals-risk-ips.md); [OSC Investor Office](https://www.getsmarteraboutmoney.ca/learning-path/building-your-investing-strategy/how-to-make-an-investment-policy-statement/) |
+
+## Thuật ngữ cơ học và pháp lý từ Đợt 2
+
+- **Ngày đăng ký cuối cùng:** mốc xác định danh sách người sở hữu để thực hiện quyền; xem [V3](lessons/V3-corporate-actions.md), đối chiếu thông báo từng sự kiện.
+- **Room ngoại:** phần giới hạn sở hữu nước ngoài còn có thể sử dụng trong phạm vi quy định và số đã sở hữu; không suy mức của một mã từ ví dụ, xem [V5](lessons/V5-index-foreign-room-upgrade.md).
+- **Ký quỹ (margin):** vay từ công ty chứng khoán để mua chứng khoán theo hợp đồng, làm thay đổi rủi ro vốn và tạo nghĩa vụ nợ; xem [B2](lessons/B2-margin-leverage.md).
+- **Thông tin nội bộ:** thông tin chưa công bố thuộc phạm vi luật, có thể ảnh hưởng lớn đến giá nếu được công bố; chi tiết và điều kiện xem [L1](lessons/L1-insider-trading-manipulation-disclosure.md).
+- **Cổ đông phổ thông:** người sở hữu cổ phần phổ thông; có các quyền theo luật và điều lệ, một số quyền bổ sung có ngưỡng; xem [L2](lessons/L2-minority-shareholder-rights.md).
+- **Giá chuyển nhượng chứng khoán:** cơ sở tính thuế trong ví dụ được giới hạn ở [L3](lessons/L3-personal-income-tax-reporting.md), không đồng nghĩa lợi nhuận ròng.

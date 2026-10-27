@@ -169,3 +169,16 @@ Quỹ dự kiến = số tháng tự chọn × chi thiết yếu hằng tháng. 
 ## Nguồn và giới hạn
 
 Các bảng là `Ý_KIẾN` về thiết kế học tập và `KỊCH_BẢN` hư cấu, được tổng hợp từ bài004–016/N8. Khung DCF mở lại từ nguồn NYU nêu ở mục4 trong lượt26/10/2026. Các dữ kiện công ty thật phải dùng nguồn gốc tại thời điểm thực hành; bảng này không điền hộ số công ty. Mẫu vĩ mô riêng tại [đây](../../data/processed/macro-observation-template.md). Chưa có dữ liệu chứng minh bảng kiểm giúp tăng lợi nhuận.
+
+## Phiếu thực hành cơ học và pháp lý Đợt 2
+
+Đây là phiếu trống để đặt câu hỏi, không xác định nghĩa vụ cho một trường hợp cụ thể. Kiểm trạng thái và giới hạn trong [sổ kiểm duyệt](../reviews/README.md).
+
+| Chủ đề | Dữ liệu cần thu thập | Điều cần kiểm |
+|---|---|---|
+| Sự kiện quyền | Văn bản quyết định, mã, ngày đăng ký cuối cùng, điều khoản và phiên bản | Khả năng thực hiện hoặc chuyển nhượng; không suy tiền đã nhận chỉ từ thông báo |
+| Giao dịch và phí | Kênh, biểu phí, hợp đồng, giá trị mua/bán, thuế theo loại thu nhập | Ngày hiệu lực và khoản thu hộ; lãi/phí nào chưa tính |
+| Ký quỹ | Vốn tự có, dư nợ, tài sản bảo đảm, lãi, tỷ lệ và thời hạn theo hợp đồng | Khả năng bổ sung, bán tài sản và dư nợ còn lại; ngưỡng giả định không là ngưỡng thực tế |
+| Chỉ số và room | Nhà cung cấp, kỳ phân loại, mã, ngày tra room và điều kiện rổ | Đánh giá thị trường không bảo đảm từng mã đủ điều kiện; dự báo không là dòng vốn đã vào |
+| Quyền cổ đông | Loại/số cổ phần, điều lệ, ngày chốt, tài liệu họp | Quyền cơ bản và quyền có ngưỡng; điều kiện, ngoại lệ và chứng cứ |
+| Thuế và thông tin | Loại thu nhập, quốc gia, cư trú, sao kê/khấu trừ; nguồn và ngày công bố tin | Quy định hiện hành, nghĩa vụ cụ thể và tính công khai; hỏi cơ quan có thẩm quyền khi cần |

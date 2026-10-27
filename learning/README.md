@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
 - Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **30 mã bài đã soạn**: 001–016, N1–N8 và sáu bài Đợt 1. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+- Hiện có **38 mã bài đã soạn**: 001–016, N1–N8, sáu bài Đợt 1 và tám bài Đợt 2. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -46,6 +46,8 @@ Sáu bài Đợt 1 đã qua hai nhánh kiểm duyệt; các mục chưa biết v
 1. [P1 — Ngân sách, quỹ khẩn cấp, bảo hiểm](lessons/P1-budget-emergency-fund-insurance.md) → [P2 — Nợ cá nhân](lessons/P2-personal-debt.md) → [P3 — Mục tiêu và chính sách cá nhân](lessons/P3-goals-risk-ips.md).
 2. [B3 — Bảo mật tài khoản và lừa đảo](lessons/B3-account-security-scams.md): học trước khi chuyển tiền cho bên tự nhận là đơn vị đầu tư.
 3. [V1 — Cấu trúc thị trường Việt Nam](lessons/V1-vietnam-market-structure.md) → [V2 — Quy tắc giao dịch](lessons/V2-vietnam-trading-rules.md). Quy tắc thay đổi theo thời gian; kiểm lại nguồn hiện hành trước khi áp dụng.
+
+Đợt 2: [V3 — Sự kiện doanh nghiệp](lessons/V3-corporate-actions.md), [V4 — Công bố thông tin](lessons/V4-disclosure-and-source-tracing.md), [V5 — Chỉ số và room](lessons/V5-index-foreign-room-upgrade.md), [B1 — Phí và lưu ký](lessons/B1-broker-fees-custody.md), [B2 — Ký quỹ](lessons/B2-margin-leverage.md) đã qua hai nhánh; [L1 — Thông tin nội bộ](lessons/L1-insider-trading-manipulation-disclosure.md), [L2 — Quyền cổ đông](lessons/L2-minority-shareholder-rights.md), [L3 — Thuế và hồ sơ](lessons/L3-personal-income-tax-reporting.md) cũng đã qua hai nhánh.
 
 Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đầu nhật ký học hoặc quyết định bằng [mẫu nhật ký](../templates/decision-journal.md).
 
