@@ -174,3 +174,10 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 - **TWR / MWR:** lợi suất ghép theo thời gian / lợi suất tính theo dòng tiền, trả lời các câu hỏi khác nhau; xem [H4](lessons/H4-twr-mwr-benchmark.md).
 - **Backtest và overfitting:** kiểm quy tắc trên lịch sử và nguy cơ điều chỉnh quá sát dữ liệu đã thấy; xem [H5](lessons/H5-statistics-backtest-overfitting.md).
 - **Spread:** chênh lệch giữa giá chào bán và giá chào mua; xem phạm vi, khối lượng và phí tại [H6](lessons/H6-technical-analysis-market-microstructure.md).
+
+## Thuật ngữ phân tích nâng cao từ Đợt 5
+
+- **Mô hình ba báo cáo:** dự phóng kết quả kinh doanh, dòng tiền và bảng cân đối có liên kết; số cân đối không tự chứng minh giả định đúng, xem [F1](lessons/F1-three-statement-model-sensitivity.md).
+- **DDM / lợi nhuận thặng dư / SOTP:** các cách ước lượng vốn chủ từ cổ tức, lợi nhuận vượt chi phí vốn chủ hoặc giá trị các bộ phận; xem phạm vi tại [F2](lessons/F2-valuation-ddm-residual-sotp.md).
+- **NIM / CIR / CAR:** biên lãi ròng, chi phí hoạt động trên thu nhập và tỷ lệ an toàn vốn theo khuôn khổ cụ thể; xem [F4](lessons/F4-vietnam-bank-analysis.md).
+- **Giao dịch bên liên quan:** giao dịch giữa các bên có quan hệ cần công bố/đánh giá theo chuẩn áp dụng; không tự là vi phạm, xem [F6](lessons/F6-governance-related-party-audit.md).

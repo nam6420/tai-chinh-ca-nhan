@@ -205,3 +205,15 @@ Ghi tỷ trọng đầu kỳ/cuối kỳ, dòng tiền mới, mục tiêu và ch
 | Backtest và giá khớp? | CHƯA_BIẾT | CHƯA_BIẾT | Quy tắc đã thử, ngoài mẫu, spread và thanh khoản | CHƯA_BIẾT |
 
 Các ô để trống để tự ghi, không phải dự báo hoặc ngưỡng áp dụng chung; xem [M1–M3, H1–H6](../README.md#vĩ-mô-hành-vi-và-rủi-ro--đợt-4) và [biên bản](../reviews/README.md).
+
+## Phiếu phân tích nâng cao — Đợt 5
+
+| Câu hỏi | Dữ kiện/kỳ/đơn vị | Công thức hoặc tài liệu gốc | Điều kiện và phản chứng |
+|---|---|---|---|
+| Ba báo cáo có cân và cầu nối tiền có khớp? | CHƯA_BIẾT | CHƯA_BIẾT | Giả định và phân loại từng dòng |
+| Phương pháp định giá nào và có trừ nợ trùng? | CHƯA_BIẾT | CHƯA_BIẾT | Kịch bản xấu, pha loãng, giá trị còn lại |
+| Tồn kho dự án, lịch nợ và pháp lý? | CHƯA_BIẾT | CHƯA_BIẾT | Giá trị thu hồi và tiến độ chưa chắc |
+| NIM, NPL, dự phòng và CAR cùng phạm vi? | CHƯA_BIẾT | CHƯA_BIẾT | Mẫu số, chuẩn, kỳ, chỉ tiêu trái chiều |
+| Giao dịch bên liên quan / sự kiện đã hoàn tất? | CHƯA_BIẾT | CHƯA_BIẾT | Phê duyệt, dòng tiền và chứng cứ sau giao dịch |
+
+Phiếu là khung đặt câu hỏi; xem [F1–F7](../README.md#phân-tích-nâng-cao--đợt-5) và [biên bản](../reviews/README.md) trước khi dùng. Số ví dụ hư cấu không là dữ liệu doanh nghiệp.

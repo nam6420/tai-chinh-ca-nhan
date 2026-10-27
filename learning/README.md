@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
 - Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **52 mã bài đã soạn**: 001–016, N1–N8 và các bài Đợt 1–4. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+- Hiện có **59 mã bài đã soạn**: 001–016, N1–N8 và các bài Đợt 1–5. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -60,6 +60,10 @@ Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đ�
 [M1 — Tiền tệ, lãi suất và tín dụng](lessons/M1-monetary-policy-rates-fx-credit.md) → [M2 — Chu kỳ tín dụng và bất động sản](lessons/M2-credit-real-estate-cycle.md) → [M3 — Dòng vốn và thương mại](lessons/M3-capital-trade-geopolitics.md).
 
 [H1 — Thiên kiến hành vi](lessons/H1-behavioral-biases.md) → [H2 — Quyết định khi bất định](lessons/H2-decisions-stress-position-size.md) → [H3 — Đo rủi ro](lessons/H3-risk-volatility-drawdown-liquidity.md) → [H4 — TWR và MWR](lessons/H4-twr-mwr-benchmark.md) → [H5 — Thống kê và backtest](lessons/H5-statistics-backtest-overfitting.md) → [H6 — Phân tích kỹ thuật và vi cấu trúc](lessons/H6-technical-analysis-market-microstructure.md). Chín bài đã qua hai nhánh; xem [các giới hạn và phản biện](reviews/README.md) trước khi dùng.
+
+## Phân tích nâng cao — Đợt 5
+
+[F1 — Mô hình ba báo cáo](lessons/F1-three-statement-model-sensitivity.md) → [F2 — Định giá nâng cao](lessons/F2-valuation-ddm-residual-sotp.md) → [F3 — Bất động sản](lessons/F3-vietnam-property-developers.md) → [F4 — Ngân hàng](lessons/F4-vietnam-bank-analysis.md) → [F5 — Khung sáu ngành](lessons/F5-vietnam-industry-research-framework.md) → [F6 — Quản trị](lessons/F6-governance-related-party-audit.md) → [F7 — Sự kiện đặc biệt](lessons/F7-special-situations-restructuring.md). Các bài qua hai nhánh; các hạn chế nguồn và điểm mở được giữ trong [sổ kiểm duyệt](reviews/README.md).
 
 ## Nhánh chuyên ngành — chọn khi cần
 

@@ -1,10 +1,11 @@
 # Sổ kiểm duyệt bài học
 
 - Cập nhật: `2026-10-27`.
-- **35 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
-- Cổng cấu trúc của repo đã đối chiếu35/35 bài mới với70 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
+- **42 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
+- Cổng cấu trúc của repo đã đối chiếu42/42 bài mới với84 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
+- **Đợt 5:** F1–F7 đã qua hai nhánh; F4 và F7 còn điểm phản biện mức trung bình, F5 còn giới hạn khung ngành.
 - **Đợt 4:** M1–M3, H1–H6 đã qua hai nhánh; phản biện M2, M3, H1 còn điểm trung bình và M1, H3, H6 còn điểm thấp, xem biên bản.
 - **Đợt 3:** A1–A5 đã qua hai nhánh; A3, A4, A5 còn điểm phản biện chưa xử lý, xem biên bản.
 - **Đợt 2:** V3–V5, B1–B2, L1–L3 đã qua hai nhánh. Phản biện V5 còn một điểm trung bình về quy mô ảnh hưởng của room; xem biên bản.
@@ -12,6 +13,13 @@
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [F1](../lessons/F1-three-statement-model-sensitivity.md) | Đã soạn | [ĐẠT](F1-fact-check.md) | [ĐẠT](F1-risk-review.md) | `2fe7fb3aa2c1…` |
+| [F2](../lessons/F2-valuation-ddm-residual-sotp.md) | Đã soạn | [ĐẠT](F2-fact-check.md) | [ĐẠT](F2-risk-review.md) | `2bb6551e6dc9…` |
+| [F3](../lessons/F3-vietnam-property-developers.md) | Đã soạn | [ĐẠT](F3-fact-check.md) | [ĐẠT](F3-risk-review.md) | `1956dcc04ee7…` |
+| [F4](../lessons/F4-vietnam-bank-analysis.md) | Đã soạn | [ĐẠT](F4-fact-check.md) | [ĐẠT](F4-risk-review.md) | `4cbad2b67bbf…` |
+| [F5](../lessons/F5-vietnam-industry-research-framework.md) | Đã soạn | [ĐẠT](F5-fact-check.md) | [ĐẠT](F5-risk-review.md) | `5da2dcecdeef…` |
+| [F6](../lessons/F6-governance-related-party-audit.md) | Đã soạn | [ĐẠT](F6-fact-check.md) | [ĐẠT](F6-risk-review.md) | `a578a828fce3…` |
+| [F7](../lessons/F7-special-situations-restructuring.md) | Đã soạn | [ĐẠT](F7-fact-check.md) | [ĐẠT](F7-risk-review.md) | `e79742eb0858…` |
 | [M1](../lessons/M1-monetary-policy-rates-fx-credit.md) | Đã soạn | [ĐẠT](M1-fact-check.md) | [ĐẠT](M1-risk-review.md) | `96d43e00bc57…` |
 | [M2](../lessons/M2-credit-real-estate-cycle.md) | Đã soạn | [ĐẠT](M2-fact-check.md) | [ĐẠT](M2-risk-review.md) | `593cf2be2e8c…` |
 | [M3](../lessons/M3-capital-trade-geopolitics.md) | Đã soạn | [ĐẠT](M3-fact-check.md) | [ĐẠT](M3-risk-review.md) | `7c95dae89eee…` |
