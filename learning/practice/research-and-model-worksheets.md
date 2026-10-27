@@ -217,3 +217,11 @@ Các ô để trống để tự ghi, không phải dự báo hoặc ngưỡng �
 | Giao dịch bên liên quan / sự kiện đã hoàn tất? | CHƯA_BIẾT | CHƯA_BIẾT | Phê duyệt, dòng tiền và chứng cứ sau giao dịch |
 
 Phiếu là khung đặt câu hỏi; xem [F1–F7](../README.md#phân-tích-nâng-cao--đợt-5) và [biên bản](../reviews/README.md) trước khi dùng. Số ví dụ hư cấu không là dữ liệu doanh nghiệp.
+
+## Phiếu hậu kiểm và hồ sơ mẫu — Đợt 6
+
+| Mốc | Tài liệu công khai khi đó / ngày nguồn | Luận điểm và điều chưa biết | Phản chứng có thể kiểm | Điều xảy ra sau đó / nguồn |
+|---|---|---|---|---|
+| CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT |
+
+Điền mốc theo tài liệu gốc, không dùng phán quyết hậu kỳ như điều đã biết trước sự kiện. Phân biệt cáo buộc với kết quả tố tụng. Xem [K2](../lessons/K2-failure-case-postmortem.md), [mẫu watchlist](../../watchlists/template.md) và [hồ sơ Apple mẫu](../../research/companies/US/AAPL/report.md).

@@ -181,3 +181,8 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 - **DDM / lợi nhuận thặng dư / SOTP:** các cách ước lượng vốn chủ từ cổ tức, lợi nhuận vượt chi phí vốn chủ hoặc giá trị các bộ phận; xem phạm vi tại [F2](lessons/F2-valuation-ddm-residual-sotp.md).
 - **NIM / CIR / CAR:** biên lãi ròng, chi phí hoạt động trên thu nhập và tỷ lệ an toàn vốn theo khuôn khổ cụ thể; xem [F4](lessons/F4-vietnam-bank-analysis.md).
 - **Giao dịch bên liên quan:** giao dịch giữa các bên có quan hệ cần công bố/đánh giá theo chuẩn áp dụng; không tự là vi phạm, xem [F6](lessons/F6-governance-related-party-audit.md).
+
+## Thuật ngữ thực hành từ Đợt 6
+
+- **Watchlist:** danh sách đối tượng và câu hỏi cần nghiên cứu, không phải khuyến nghị hay lệnh; xem [K1](lessons/K1-screening-watchlist.md).
+- **Hậu kiểm:** so thông tin đã có tại một mốc với diễn biến sau đó, giữ riêng cáo buộc, kết luận và điều chưa biết; xem [K2](lessons/K2-failure-case-postmortem.md).

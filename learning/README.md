@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
 - Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **59 mã bài đã soạn**: 001–016, N1–N8 và các bài Đợt 1–5. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+- Hiện có **61 mã bài đã soạn**: 001–016, N1–N8 và 37 bài Đợt 1–6. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -64,6 +64,10 @@ Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đ�
 ## Phân tích nâng cao — Đợt 5
 
 [F1 — Mô hình ba báo cáo](lessons/F1-three-statement-model-sensitivity.md) → [F2 — Định giá nâng cao](lessons/F2-valuation-ddm-residual-sotp.md) → [F3 — Bất động sản](lessons/F3-vietnam-property-developers.md) → [F4 — Ngân hàng](lessons/F4-vietnam-bank-analysis.md) → [F5 — Khung sáu ngành](lessons/F5-vietnam-industry-research-framework.md) → [F6 — Quản trị](lessons/F6-governance-related-party-audit.md) → [F7 — Sự kiện đặc biệt](lessons/F7-special-situations-restructuring.md). Các bài qua hai nhánh; các hạn chế nguồn và điểm mở được giữ trong [sổ kiểm duyệt](reviews/README.md).
+
+## Thực hành — Đợt 6
+
+[K1 — Sàng lọc và watchlist](lessons/K1-screening-watchlist.md) → [K2 — Hậu kiểm Enron](lessons/K2-failure-case-postmortem.md); [danh sách đọc](reading-list.md), [mẫu watchlist](../watchlists/template.md), [hướng dẫn nhật ký](../journal/README.md) và [hồ sơ Apple mẫu](../research/companies/US/AAPL/report.md). K1–K2 và hồ sơ Apple có hai biên bản độc lập; các điểm còn mở xem trong từng biên bản. Khung ngành tại F5 chưa thay thế sáu hồ sơ ngành riêng.
 
 ## Nhánh chuyên ngành — chọn khi cần
 

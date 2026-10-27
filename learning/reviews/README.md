@@ -1,10 +1,11 @@
 # Sổ kiểm duyệt bài học
 
 - Cập nhật: `2026-10-27`.
-- **42 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
-- Cổng cấu trúc của repo đã đối chiếu42/42 bài mới với84 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
+- **52 bài trong bảng** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung. Ngoài bảng, [hồ sơ Apple mẫu](../../research/companies/US/AAPL/report.md) có hai biên bản riêng.
+- Đã chạy cổng cấu trúc cho 52 bài trong bảng với 104 biên bản và hồ sơ Apple với hai biên bản riêng. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
+- **Đợt 6:** K1–K2 và hồ sơ Apple qua hai nhánh; K2 còn điểm phản biện trung bình về bối cảnh 8-K, hồ sơ Apple còn hai điểm trung bình về chuỗi cung ứng và App Store.
 - **Đợt 5:** F1–F7 đã qua hai nhánh; F4 và F7 còn điểm phản biện mức trung bình, F5 còn giới hạn khung ngành.
 - **Đợt 4:** M1–M3, H1–H6 đã qua hai nhánh; phản biện M2, M3, H1 còn điểm trung bình và M1, H3, H6 còn điểm thấp, xem biên bản.
 - **Đợt 3:** A1–A5 đã qua hai nhánh; A3, A4, A5 còn điểm phản biện chưa xử lý, xem biên bản.
@@ -13,6 +14,8 @@
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [K1](../lessons/K1-screening-watchlist.md) | Đã soạn | [ĐẠT](K1-fact-check.md) | [ĐẠT](K1-risk-review.md) | `63a29010c308…` |
+| [K2](../lessons/K2-failure-case-postmortem.md) | Đã soạn | [ĐẠT](K2-fact-check.md) | [ĐẠT](K2-risk-review.md) | `50c2292f7720…` |
 | [F1](../lessons/F1-three-statement-model-sensitivity.md) | Đã soạn | [ĐẠT](F1-fact-check.md) | [ĐẠT](F1-risk-review.md) | `2fe7fb3aa2c1…` |
 | [F2](../lessons/F2-valuation-ddm-residual-sotp.md) | Đã soạn | [ĐẠT](F2-fact-check.md) | [ĐẠT](F2-risk-review.md) | `2bb6551e6dc9…` |
 | [F3](../lessons/F3-vietnam-property-developers.md) | Đã soạn | [ĐẠT](F3-fact-check.md) | [ĐẠT](F3-risk-review.md) | `1956dcc04ee7…` |
