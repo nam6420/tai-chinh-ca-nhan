@@ -1,16 +1,26 @@
 # Sổ kiểm duyệt bài học
 
 - Cập nhật: `2026-10-27`.
-- **26 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
-- Cổng cấu trúc của repo đã đối chiếu26/26 bài mới với52 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
+- **35 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
+- Cổng cấu trúc của repo đã đối chiếu35/35 bài mới với70 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
+- **Đợt 4:** M1–M3, H1–H6 đã qua hai nhánh; phản biện M2, M3, H1 còn điểm trung bình và M1, H3, H6 còn điểm thấp, xem biên bản.
 - **Đợt 3:** A1–A5 đã qua hai nhánh; A3, A4, A5 còn điểm phản biện chưa xử lý, xem biên bản.
 - **Đợt 2:** V3–V5, B1–B2, L1–L3 đã qua hai nhánh. Phản biện V5 còn một điểm trung bình về quy mô ảnh hưởng của room; xem biên bản.
 - **Đợt 1:** B3, P1–P3, V1–V2 đã qua hai nhánh trên phiên bản ở bảng. Các mục `CHƯA_BIẾT` vẫn là giới hạn nội dung, không được hiểu là đã xác minh.
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [M1](../lessons/M1-monetary-policy-rates-fx-credit.md) | Đã soạn | [ĐẠT](M1-fact-check.md) | [ĐẠT](M1-risk-review.md) | `96d43e00bc57…` |
+| [M2](../lessons/M2-credit-real-estate-cycle.md) | Đã soạn | [ĐẠT](M2-fact-check.md) | [ĐẠT](M2-risk-review.md) | `593cf2be2e8c…` |
+| [M3](../lessons/M3-capital-trade-geopolitics.md) | Đã soạn | [ĐẠT](M3-fact-check.md) | [ĐẠT](M3-risk-review.md) | `7c95dae89eee…` |
+| [H1](../lessons/H1-behavioral-biases.md) | Đã soạn | [ĐẠT](H1-fact-check.md) | [ĐẠT](H1-risk-review.md) | `e7fbb0af3df1…` |
+| [H2](../lessons/H2-decisions-stress-position-size.md) | Đã soạn | [ĐẠT](H2-fact-check.md) | [ĐẠT](H2-risk-review.md) | `9ffcffd48e3b…` |
+| [H3](../lessons/H3-risk-volatility-drawdown-liquidity.md) | Đã soạn | [ĐẠT](H3-fact-check.md) | [ĐẠT](H3-risk-review.md) | `7dac5d06fd65…` |
+| [H4](../lessons/H4-twr-mwr-benchmark.md) | Đã soạn | [ĐẠT](H4-fact-check.md) | [ĐẠT](H4-risk-review.md) | `bb8e025a413b…` |
+| [H5](../lessons/H5-statistics-backtest-overfitting.md) | Đã soạn | [ĐẠT](H5-fact-check.md) | [ĐẠT](H5-risk-review.md) | `cd1cac9443a0…` |
+| [H6](../lessons/H6-technical-analysis-market-microstructure.md) | Đã soạn | [ĐẠT](H6-fact-check.md) | [ĐẠT](H6-risk-review.md) | `7892d145a3d7…` |
 | [A1](../lessons/A1-deposits-government-corporate-bonds.md) | Đã soạn | [ĐẠT](A1-fact-check.md) | [ĐẠT](A1-risk-review.md) | `bd4073d72bbd…` |
 | [A2](../lessons/A2-mutual-funds-etfs-fees.md) | Đã soạn | [ĐẠT](A2-fact-check.md) | [ĐẠT](A2-risk-review.md) | `c0c31fbe6257…` |
 | [A3](../lessons/A3-gold-currency-property-crypto.md) | Đã soạn | [ĐẠT](A3-fact-check.md) | [ĐẠT](A3-risk-review.md) | `afabf7d47089…` |

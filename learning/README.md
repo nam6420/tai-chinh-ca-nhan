@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
 - Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **43 mã bài đã soạn**: 001–016, N1–N8, sáu bài Đợt 1, tám bài Đợt 2 và năm bài Đợt 3. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+- Hiện có **52 mã bài đã soạn**: 001–016, N1–N8 và các bài Đợt 1–4. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -54,6 +54,12 @@ Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đ�
 ## Loại tài sản và phân bổ — Đợt 3
 
 [A1 — Tiền gửi và trái phiếu](lessons/A1-deposits-government-corporate-bonds.md) → [A2 — Quỹ mở và ETF](lessons/A2-mutual-funds-etfs-fees.md) → [A3 — Vàng, ngoại tệ, bất động sản và tài sản mã hóa](lessons/A3-gold-currency-property-crypto.md) → [A4 — Phân bổ và tái cân bằng](lessons/A4-allocation-correlation-rebalancing.md) → [A5 — Đầu tư nước ngoài](lessons/A5-international-investing-currency-tax.md). Năm bài đã qua hai nhánh, nhưng thông tin pháp lý cụ thể và các điểm còn mở cần xem [sổ kiểm duyệt](reviews/README.md).
+
+## Vĩ mô, hành vi và rủi ro — Đợt 4
+
+[M1 — Tiền tệ, lãi suất và tín dụng](lessons/M1-monetary-policy-rates-fx-credit.md) → [M2 — Chu kỳ tín dụng và bất động sản](lessons/M2-credit-real-estate-cycle.md) → [M3 — Dòng vốn và thương mại](lessons/M3-capital-trade-geopolitics.md).
+
+[H1 — Thiên kiến hành vi](lessons/H1-behavioral-biases.md) → [H2 — Quyết định khi bất định](lessons/H2-decisions-stress-position-size.md) → [H3 — Đo rủi ro](lessons/H3-risk-volatility-drawdown-liquidity.md) → [H4 — TWR và MWR](lessons/H4-twr-mwr-benchmark.md) → [H5 — Thống kê và backtest](lessons/H5-statistics-backtest-overfitting.md) → [H6 — Phân tích kỹ thuật và vi cấu trúc](lessons/H6-technical-analysis-market-microstructure.md). Chín bài đã qua hai nhánh; xem [các giới hạn và phản biện](reviews/README.md) trước khi dùng.
 
 ## Nhánh chuyên ngành — chọn khi cần
 

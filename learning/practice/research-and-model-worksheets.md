@@ -193,3 +193,15 @@ Các bảng là `Ý_KIẾN` về thiết kế học tập và `KỊCH_BẢN` hư
 | Tài sản nước ngoài | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | Quốc gia, tỷ giá, tư cách, luật và thuế |
 
 Ghi tỷ trọng đầu kỳ/cuối kỳ, dòng tiền mới, mục tiêu và chi phí trước khi thử tái cân bằng. Giá đầu vào chỉ là giả định; không suy giấy phép, khả năng bán hoặc nghĩa vụ cá nhân từ phiếu này. Xem [A1–A5](../README.md#loại-tài-sản-và-phân-bổ--đợt-3) và các điểm còn mở trong [biên bản](../reviews/README.md).
+
+## Phiếu vĩ mô, hành vi và đo rủi ro — Đợt 4
+
+| Câu hỏi | Dữ liệu / giả định | Kỳ, đơn vị, nguồn | Phản chứng / chưa biết | Kiểm lại khi nào |
+|---|---|---|---|---|
+| Tín dụng/lãi suất/tỷ giá tác động qua đâu? | CHƯA_BIẾT | CHƯA_BIẾT | Chi phí, kỳ hạn, phòng hộ | CHƯA_BIẾT |
+| Thương mại hay luồng vốn thuộc chỉ tiêu nào? | CHƯA_BIẾT | CHƯA_BIẾT | So cùng kỳ, đăng ký hay thực hiện | CHƯA_BIẾT |
+| Cú giảm giả định và phục hồi? | CHƯA_BIẾT | CHƯA_BIẾT | Thiệt hại có thể vượt giả định | CHƯA_BIẾT |
+| TWR/MWR và chuẩn tham chiếu? | CHƯA_BIẾT | CHƯA_BIẾT | Dòng tiền, phí, cổ tức, tiền tệ | CHƯA_BIẾT |
+| Backtest và giá khớp? | CHƯA_BIẾT | CHƯA_BIẾT | Quy tắc đã thử, ngoài mẫu, spread và thanh khoản | CHƯA_BIẾT |
+
+Các ô để trống để tự ghi, không phải dự báo hoặc ngưỡng áp dụng chung; xem [M1–M3, H1–H6](../README.md#vĩ-mô-hành-vi-và-rủi-ro--đợt-4) và [biên bản](../reviews/README.md).

@@ -165,3 +165,12 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 - **Tracking difference và tracking error:** chênh lệch lợi suất một kỳ so với chỉ số và độ biến động của chênh lệch qua nhiều kỳ; phương pháp phải ghi rõ, xem A2.
 - **Tái cân bằng:** đưa tỷ trọng danh mục về đích đã chọn bằng giao dịch hoặc dòng tiền mới, có xét phí và thuế; xem [A4](lessons/A4-allocation-correlation-rebalancing.md).
 - **VND/USD:** số đồng Việt Nam cho một đô la Mỹ; kết quả quy đổi cần tính đồng thời thay đổi tài sản và tỷ giá, xem [A5](lessons/A5-international-investing-currency-tax.md).
+
+## Thuật ngữ vĩ mô và rủi ro từ Đợt 4
+
+- **Tăng từ đầu năm:** mức thay đổi từ cuối năm trước đến ngày đo; không tự là tăng so cùng kỳ 12 tháng, xem [M1](lessons/M1-monetary-policy-rates-fx-credit.md).
+- **Cán cân hàng hóa:** xuất khẩu trừ nhập khẩu hàng hóa theo kỳ, không đồng nghĩa toàn bộ cán cân vãng lai; xem [M3](lessons/M3-capital-trade-geopolitics.md).
+- **Drawdown:** mức giảm từ đỉnh trước đó đến điểm sau đó; mức tối đa phụ thuộc cửa sổ và dữ liệu, xem [H3](lessons/H3-risk-volatility-drawdown-liquidity.md).
+- **TWR / MWR:** lợi suất ghép theo thời gian / lợi suất tính theo dòng tiền, trả lời các câu hỏi khác nhau; xem [H4](lessons/H4-twr-mwr-benchmark.md).
+- **Backtest và overfitting:** kiểm quy tắc trên lịch sử và nguy cơ điều chỉnh quá sát dữ liệu đã thấy; xem [H5](lessons/H5-statistics-backtest-overfitting.md).
+- **Spread:** chênh lệch giữa giá chào bán và giá chào mua; xem phạm vi, khối lượng và phí tại [H6](lessons/H6-technical-analysis-market-microstructure.md).
