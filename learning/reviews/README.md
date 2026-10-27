@@ -1,15 +1,21 @@
 # Sổ kiểm duyệt bài học
 
 - Cập nhật: `2026-10-27`.
-- **21 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
-- Cổng cấu trúc của repo đã đối chiếu21/21 bài mới với42 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
+- **26 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
+- Cổng cấu trúc của repo đã đối chiếu26/26 bài mới với52 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
-- **Đợt 2 đang làm:** V3–V5, B1–B2, L1–L3 đã qua hai nhánh. Phản biện V5 còn một điểm trung bình về quy mô ảnh hưởng của room; xem biên bản.
+- **Đợt 3:** A1–A5 đã qua hai nhánh; A3, A4, A5 còn điểm phản biện chưa xử lý, xem biên bản.
+- **Đợt 2:** V3–V5, B1–B2, L1–L3 đã qua hai nhánh. Phản biện V5 còn một điểm trung bình về quy mô ảnh hưởng của room; xem biên bản.
 - **Đợt 1:** B3, P1–P3, V1–V2 đã qua hai nhánh trên phiên bản ở bảng. Các mục `CHƯA_BIẾT` vẫn là giới hạn nội dung, không được hiểu là đã xác minh.
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [A1](../lessons/A1-deposits-government-corporate-bonds.md) | Đã soạn | [ĐẠT](A1-fact-check.md) | [ĐẠT](A1-risk-review.md) | `bd4073d72bbd…` |
+| [A2](../lessons/A2-mutual-funds-etfs-fees.md) | Đã soạn | [ĐẠT](A2-fact-check.md) | [ĐẠT](A2-risk-review.md) | `c0c31fbe6257…` |
+| [A3](../lessons/A3-gold-currency-property-crypto.md) | Đã soạn | [ĐẠT](A3-fact-check.md) | [ĐẠT](A3-risk-review.md) | `afabf7d47089…` |
+| [A4](../lessons/A4-allocation-correlation-rebalancing.md) | Đã soạn | [ĐẠT](A4-fact-check.md) | [ĐẠT](A4-risk-review.md) | `0d49859d4b92…` |
+| [A5](../lessons/A5-international-investing-currency-tax.md) | Đã soạn | [ĐẠT](A5-fact-check.md) | [ĐẠT](A5-risk-review.md) | `fbe8247a3637…` |
 | [V3](../lessons/V3-corporate-actions.md) | Đã soạn | [ĐẠT](V3-fact-check.md) | [ĐẠT](V3-risk-review.md) | `407eff684ca5…` |
 | [V4](../lessons/V4-disclosure-and-source-tracing.md) | Đã soạn | [ĐẠT](V4-fact-check.md) | [ĐẠT](V4-risk-review.md) | `7d65b22c73c8…` |
 | [V5](../lessons/V5-index-foreign-room-upgrade.md) | Đã soạn | [ĐẠT](V5-fact-check.md) | [ĐẠT](V5-risk-review.md) | `2d3bfe38c78f…` |

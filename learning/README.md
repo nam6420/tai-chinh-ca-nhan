@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
 - Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **38 mã bài đã soạn**: 001–016, N1–N8, sáu bài Đợt 1 và tám bài Đợt 2. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+- Hiện có **43 mã bài đã soạn**: 001–016, N1–N8, sáu bài Đợt 1, tám bài Đợt 2 và năm bài Đợt 3. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -50,6 +50,10 @@ Sáu bài Đợt 1 đã qua hai nhánh kiểm duyệt; các mục chưa biết v
 Đợt 2: [V3 — Sự kiện doanh nghiệp](lessons/V3-corporate-actions.md), [V4 — Công bố thông tin](lessons/V4-disclosure-and-source-tracing.md), [V5 — Chỉ số và room](lessons/V5-index-foreign-room-upgrade.md), [B1 — Phí và lưu ký](lessons/B1-broker-fees-custody.md), [B2 — Ký quỹ](lessons/B2-margin-leverage.md) đã qua hai nhánh; [L1 — Thông tin nội bộ](lessons/L1-insider-trading-manipulation-disclosure.md), [L2 — Quyền cổ đông](lessons/L2-minority-shareholder-rights.md), [L3 — Thuế và hồ sơ](lessons/L3-personal-income-tax-reporting.md) cũng đã qua hai nhánh.
 
 Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đầu nhật ký học hoặc quyết định bằng [mẫu nhật ký](../templates/decision-journal.md).
+
+## Loại tài sản và phân bổ — Đợt 3
+
+[A1 — Tiền gửi và trái phiếu](lessons/A1-deposits-government-corporate-bonds.md) → [A2 — Quỹ mở và ETF](lessons/A2-mutual-funds-etfs-fees.md) → [A3 — Vàng, ngoại tệ, bất động sản và tài sản mã hóa](lessons/A3-gold-currency-property-crypto.md) → [A4 — Phân bổ và tái cân bằng](lessons/A4-allocation-correlation-rebalancing.md) → [A5 — Đầu tư nước ngoài](lessons/A5-international-investing-currency-tax.md). Năm bài đã qua hai nhánh, nhưng thông tin pháp lý cụ thể và các điểm còn mở cần xem [sổ kiểm duyệt](reviews/README.md).
 
 ## Nhánh chuyên ngành — chọn khi cần
 

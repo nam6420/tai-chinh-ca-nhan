@@ -182,3 +182,14 @@ Các bảng là `Ý_KIẾN` về thiết kế học tập và `KỊCH_BẢN` hư
 | Chỉ số và room | Nhà cung cấp, kỳ phân loại, mã, ngày tra room và điều kiện rổ | Đánh giá thị trường không bảo đảm từng mã đủ điều kiện; dự báo không là dòng vốn đã vào |
 | Quyền cổ đông | Loại/số cổ phần, điều lệ, ngày chốt, tài liệu họp | Quyền cơ bản và quyền có ngưỡng; điều kiện, ngoại lệ và chứng cứ |
 | Thuế và thông tin | Loại thu nhập, quốc gia, cư trú, sao kê/khấu trừ; nguồn và ngày công bố tin | Quy định hiện hành, nghĩa vụ cụ thể và tính công khai; hỏi cơ quan có thẩm quyền khi cần |
+
+## Phiếu so sánh loại tài sản — Đợt 3
+
+| Loại/đối tượng | Ai giữ tài sản hoặc nợ ai | Nguồn lợi ích và kỳ hạn | Giá/chi phí/thuế | Rủi ro mất vốn hoặc không bán được | Nguồn và việc cần kiểm |
+|---|---|---|---|---|---|
+| Tiền gửi/trái phiếu | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | Điều khoản, bảo hiểm và pháp lý |
+| Quỹ/ETF | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | Cáo bạch, NAV, chỉ số, phí |
+| Vàng/ngoại tệ/nhà đất/tài sản mã hóa | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | Quyền sở hữu, người giữ, giấy phép |
+| Tài sản nước ngoài | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | CHƯA_BIẾT | Quốc gia, tỷ giá, tư cách, luật và thuế |
+
+Ghi tỷ trọng đầu kỳ/cuối kỳ, dòng tiền mới, mục tiêu và chi phí trước khi thử tái cân bằng. Giá đầu vào chỉ là giả định; không suy giấy phép, khả năng bán hoặc nghĩa vụ cá nhân từ phiếu này. Xem [A1–A5](../README.md#loại-tài-sản-và-phân-bổ--đợt-3) và các điểm còn mở trong [biên bản](../reviews/README.md).

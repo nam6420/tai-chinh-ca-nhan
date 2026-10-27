@@ -157,3 +157,11 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 - **Thông tin nội bộ:** thông tin chưa công bố thuộc phạm vi luật, có thể ảnh hưởng lớn đến giá nếu được công bố; chi tiết và điều kiện xem [L1](lessons/L1-insider-trading-manipulation-disclosure.md).
 - **Cổ đông phổ thông:** người sở hữu cổ phần phổ thông; có các quyền theo luật và điều lệ, một số quyền bổ sung có ngưỡng; xem [L2](lessons/L2-minority-shareholder-rights.md).
 - **Giá chuyển nhượng chứng khoán:** cơ sở tính thuế trong ví dụ được giới hạn ở [L3](lessons/L3-personal-income-tax-reporting.md), không đồng nghĩa lợi nhuận ròng.
+
+## Thuật ngữ loại tài sản từ Đợt 3
+
+- **Trái phiếu:** chứng khoán thể hiện nghĩa vụ nợ của bên phát hành theo điều khoản, khác tiền gửi; xem [A1](lessons/A1-deposits-government-corporate-bonds.md).
+- **NAV/đơn vị:** giá trị tài sản ròng của quỹ chia số đơn vị lưu hành; giá giao dịch ETF có thể khác NAV, xem [A2](lessons/A2-mutual-funds-etfs-fees.md).
+- **Tracking difference và tracking error:** chênh lệch lợi suất một kỳ so với chỉ số và độ biến động của chênh lệch qua nhiều kỳ; phương pháp phải ghi rõ, xem A2.
+- **Tái cân bằng:** đưa tỷ trọng danh mục về đích đã chọn bằng giao dịch hoặc dòng tiền mới, có xét phí và thuế; xem [A4](lessons/A4-allocation-correlation-rebalancing.md).
+- **VND/USD:** số đồng Việt Nam cho một đô la Mỹ; kết quả quy đổi cần tính đồng thời thay đổi tài sản và tỷ giá, xem [A5](lessons/A5-international-investing-currency-tax.md).
