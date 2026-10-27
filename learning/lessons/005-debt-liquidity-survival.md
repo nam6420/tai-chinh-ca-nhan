@@ -35,6 +35,14 @@ Trả lời trước khi đọc tiếp. Đáp án ở mục 9.
 | So sánh vay với phát hành cổ phiếu bằng số học | Không khuyến nghị doanh nghiệp nên vay hay nên phát hành |
 | Dạy đọc điều khoản vay và hạn mức tín dụng | Không phân tích ngân hàng (Bài 013) |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 3, 4. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 3; phiên B làm câu 4.
+
+`Ý_KIẾN` Phiên A: mục 1–3, phân biệt nợ và dựng một tình huống trả lãi. Phiên B: điều khoản vay, gốc đến hạn, vay/phát hành và dự phòng thanh khoản; nối với bảng nợ thực hành, không dừng ở một hệ số trả lãi.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Nợ trông như thế nào trên báo cáo
 
 `SUY_LUẬN` Nợ phải trả trên bảng cân đối gồm nhiều thứ rất khác nhau về mức độ nguy hiểm. Cách đọc thực dụng: phân loại theo **ba câu hỏi** — có trả lãi không, khi nào phải trả, và có thể bị gọi nợ trước hạn không.
@@ -266,6 +274,9 @@ Bạn nhận một hồ sơ có: nợ ròng/EBITDA 2,1 lần; hệ số trả l�
 
 ## 13. Nguồn Internet đã mở
 
+<details>
+<summary>Nguồn chi tiết và lịch sử kiểm — giữ mốc dữ liệu gốc</summary>
+
 Tất cả mở ngày `2026-10-26`.
 
 - [IFRS 16 Leases — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/) — HTTP 200; trang chuẩn "Standard 2026 Issued"; hiệu lực kỳ báo cáo năm từ hoặc sau `2019-01-01`; phạm vi: chuẩn mực IFRS toàn cầu; không có đơn vị tiền. Cung cấp: một mô hình kế toán cho bên đi thuê; ghi nhận tài sản quyền sử dụng và nợ thuê cho hợp đồng thuê trên 12 tháng, trừ tài sản giá trị thấp.
@@ -276,3 +287,6 @@ Tất cả mở ngày `2026-10-26`.
 - [Deloitte DART — 7.6 Leases](https://dart.deloitte.com/USDART/home/codification/presentation/asc230-10/roadmap-statement-cash-flow/chapter-7-common-issues-related-cash/7-6-leases) — HTTP 200; mở `2026-10-26`; **nguồn thứ cấp** trích ASC 842-20-45-5. Dùng cho khác biệt US GAAP ở mục 1.
 
 **Trạng thái kiểm nguồn**: bài này đã qua một lượt `source-fact-checker` độc lập ngày `2026-10-26`; biên bản đầu tiên kết luận **KHÔNG ĐẠT** vì 2 lỗi số học trong bảng ngưỡng mục 2 (đã sửa: điều kiện mất khả năng trả lãi phải là EBIT giảm **hơn 50%**, không phải 40%; và ở hệ số 1,33 thì giảm 25% là **vừa đủ**, không phải "không đủ"). Bản đã sửa (hash `36f17d40c9fbce57…`) sau đó **được kiểm lại độc lập và kết luận ĐẠT, 0 lỗi nghiêm trọng** trong 13 nhóm phép tính tái lập; còn một lỗi nhãn "nợ ngắn hạn" lẫn với "nợ vay ngắn hạn" đã được sửa nốt. Biên bản chi tiết ở mục 16 của [lộ trình](../roadmap.md#16-nhật-ký-kiểm-duyệt). Bài **chưa** qua `risk_bear_reviewer` nên vẫn giữ trạng thái bản nháp về kiểm duyệt. Lượt review ngày `2026-10-26` sửa tiếp: câu "dưới 2 lần" trong bảng ngưỡng (chỉ đúng tại 2,0 lần), mô tả tỷ lệ dự phòng thanh khoản, khác biệt US GAAP về thuê, và ghi `CHƯA_BIẾT` cho nguồn của các ngưỡng; hash đã đổi nên cần kiểm nguồn lại.
+
+
+</details>

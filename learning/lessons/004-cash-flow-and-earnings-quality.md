@@ -35,6 +35,14 @@ Trả lời bằng lời của bạn, không nhìn tài liệu. Đáp án ở m�
 | Chỉ ra vì sao dòng tiền tự do có nhiều định nghĩa và mỗi định nghĩa trả lời câu hỏi khác nhau | Không định giá doanh nghiệp (Đợt 2) |
 | Dạy cách đọc dòng tiền của doanh nghiệp thật qua một ví dụ đã đối chiếu với 10-K gốc | Không dạy dựng mô hình tài chính ba báo cáo |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 2, 7. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 2; phiên B làm câu 7.
+
+`Ý_KIẾN` Phiên A: mục 1, 2.1 và ví dụ mục 3; tự dựng cầu nối lợi nhuận–tiền. Phiên B: chu kỳ tiền mặt, các định nghĩa FCF và ví dụ thật; chỉ sang tiếp khi nói được mỗi thước đo trả lời câu hỏi gì.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Vì sao lợi nhuận và tiền lại lệch nhau
 
 `SỰ_THẬT` Theo IAS 7 của IFRS Foundation (trang chuẩn, mở ngày `2026-10-26`), báo cáo lưu chuyển tiền tệ chia dòng tiền của một kỳ thành **ba loại hoạt động**: hoạt động kinh doanh (operating), đầu tư (investing) và tài chính (financing). Chuẩn cho phép trình bày dòng tiền hoạt động kinh doanh theo **phương pháp trực tiếp** (liệt kê các khoản thu, chi tiền gộp) hoặc **phương pháp gián tiếp** (điều chỉnh lợi nhuận bằng các khoản không phải tiền và các thay đổi vốn lưu động).

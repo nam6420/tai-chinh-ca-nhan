@@ -1,3 +1,52 @@
+# Lộ trình học hiện hành
+
+- Cập nhật: `2026-10-26`.
+- Có **24 mã bài đã soạn**: 16 bài số và 8 bài nền. Có 13 bài mới trong đợt triển khai này; trạng thái kiểm riêng ở [sổ kiểm duyệt](reviews/README.md).
+- Thứ tự đọc và nhánh quỹ dùng [một danh sách tại README](README.md). Không học theo thứ tự số mã.
+- [Review và kế hoạch được yêu cầu triển khai](review-and-expansion-plan-2026-10-26.md); [bảng thực hành](practice/research-and-model-worksheets.md).
+
+## Các chặng và điều kiện chuyển tiếp
+
+| Chặng | Bài | Tự kiểm |
+|---|---|---|
+| Thị trường và kinh doanh | N1,N6 | Chỉ ra ai nhận tiền; tính phần đóng góp và hòa vốn |
+| Ngôn ngữ báo cáo | 001,N2,N8,N3A,002 | Truy được chỉ tiêu, kỳ, đơn vị và phân biệt giá/giá trị |
+| Thời gian và chất lượng | N4,003–007 | Giải thích tiền, nợ, hiệu quả vốn và dữ liệu cần kiểm |
+| Bối cảnh và so sánh | 008,009,N3B,N7,N5 | Tránh so khác kỳ, chuẩn, phạm vi và mẫu số |
+| Định giá | 010–012 | Ghép đúng dòng tiền/tỷ lệ; tính độ nhạy, ba kịch bản, phí và điều kiện bác bỏ |
+| Vận dụng | 015,016; thêm013/014 khi cần | Nộp hồ sơ truy nguồn và phép tính, giữ lại phản chứng |
+
+Đọc báo cáo thật có hướng dẫn ngay từ các bài nền; không cần hoàn tất mọi bài mới được mở hồ sơ. Tại003, chi phí vốn là giả định cho sẵn; tự ước tính ở010. N3A không chứa yêu cầu kiến thức004–009; N3B chỉ học sau009. Nhánh ngắn quỹ xem README.
+
+## Chuẩn bài học sau đợt triển khai
+
+`Ý_KIẾN` Đây là quy ước thiết kế để thử, không phải định luật về thời lượng học:
+
+- Đầu bài: mục tiêu đo được, điều kiện học, câu hỏi cốt lõi, thời điểm chốt, trạng thái kiểm nguồn/phản biện.
+- Trực giác → ví dụ đầy đủ đầu vào → công thức → trường hợp công thức/diễn giải không còn đúng.
+- Có kiểm tra đầu vào/ôn cũ; một bài đầu tiên không bị buộc hỏi kiến thức chưa dạy.
+- Có ví dụ công ty thật hoặc trường hợp/công cụ chính thức phù hợp chủ đề, ghi kỳ, tiền tệ, đơn vị, phạm vi và giới hạn.
+- Bài mới có **3 câu cốt lõi + 3 câu luyện thêm**, đủ lời giải; câu mở có tiêu chí chấm. Bài chuyên biệt có thể thêm câu, không xóa năng lực cần học chỉ để giảm số câu.
+- Đáp án để sau bài tự làm. Bài chuyển giao khác ví dụ mẫu, không kiểm việc chép lại.
+- Có năm câu hỏi đọc, lỗi thường gặp, điều chưa biết và ranh giới an toàn. Nguồn sát nhận định trọng yếu và có sổ nguồn cuối bài.
+- Chi tiết chuẩn mực, ví dụ dài và lịch sử kiểm ở phần đọc thêm. Các bài cũ giữ số câu hiện có; dùng hướng dẫn chọn phần cốt lõi, không buộc hoàn thành tất cả mỗi phiên.
+- Không chốt thời lượng toàn khóa theo số dòng tệp. Ghi nền tảng/mục tiêu, thử ba phiên rồi tiếp tục hiệu chỉnh ở các chặng sau.
+
+Hướng chia bước, ví dụ mẫu, ôn cách quãng và câu hỏi nhớ lại được đối chiếu trong lượt triển khai với [AERO](https://www.edresearch.edu.au/guides-resources/practice-guides/explicit-instruction-practice-guide-full-publication) và [IES](https://ies.ed.gov/ncee/wwc/PracticeGuide/1). Chúng không chứng minh giáo trình này đã hiệu quả với người học cụ thể.
+
+## Kiểm duyệt và dữ liệu
+
+Mỗi bài mới có hai biên bản riêng, cùng mã băm nội dung: kiểm nguồn và phản biện. Chỉ bỏ nhãn nháp khi cả hai ĐẠT và cổng cấu trúc thông qua. Bài cũ được sửa cách học không vì thế được coi là đã kiểm lại toàn bộ dữ kiện.
+
+Bảng số vĩ mô được tách khỏi thân bài008: [mẫu cập nhật](../data/processed/macro-observation-template.md); [bảng lịch sử chưa xác minh lại](../data/raw/macro-lesson-008-legacy-2026-10-26.md). Mẫu dữ liệu không tự chạy hay tự cập nhật.
+
+## Lịch sử lộ trình trước triển khai
+
+Phần dưới chỉ giữ lịch sử: số bài, trạng thái “chưa soạn”, thời lượng, kế hoạch A/B/C và các giả định khi lập tài liệu **không mô tả hiện trạng hiện nay**. Dùng README và sổ kiểm duyệt ở trên cho hiện trạng. Giữ nguyên nội dung cũ để truy dấu các quyết định và lỗi đã sửa.
+
+<details>
+<summary>Mở lịch sử kế hoạch và các lượt review cũ</summary>
+
 # Lộ trình bài giảng tiếp theo: Bài 004 → 016
 
 - Ngày lập: `2026-10-26`
@@ -131,6 +180,20 @@ Kèm theo, mỗi bài nộp một bản ghi chú theo `templates/learning-note.m
 
 `SUY_LUẬN` Quy ước mỗi bài = **2 phiên**: phiên đọc 25–45 phút và phiên bài tập/chữa 30–45 phút. Con số này là **giả thuyết**, phải hiệu chỉnh sau Bài 004 bằng dữ liệu đo thật (xem mục 9.1), vì Bài 003 hiện dài 268 dòng và đã vượt xa định mức một phiên 35 phút.
 
+### 5.1 Bài nền bổ sung (N1–N5) — thêm sau review `2026-10-26`
+
+`Ý_KIẾN` Review tổng thể ngày `2026-10-26` (mục 17) cho thấy năm khoảng trống mà bảng trên chưa có. Để **không đánh số lại** 010–016 (các bài 004–009 đã dẫn chéo tới những số này ở khoảng 40 chỗ), các bài mới dùng mã **N**. Mã không phải thứ tự đọc; thứ tự đọc nằm ở cột cuối và trong `learning/README.md`.
+
+| Mã | Tên bài | Câu hỏi cốt lõi | Đọc ở đâu | Trạng thái |
+|---|---|---|---|---|
+| N1 | Thị trường chứng khoán vận hành thế nào | Khi tôi mua một cổ phiếu, tôi sở hữu gì và giá được tạo ra thế nào? | Trước 001 | Đã soạn (xem [sổ kiểm duyệt](reviews/README.md)) |
+| N2 | [Đọc từng dòng ba báo cáo tài chính](lessons/N2-statement-line-items.md) | Mỗi con số nằm ở tầng nào và đến từ giao dịch nào? | Sau 001, trước N8 | Đã soạn (xem [sổ kiểm duyệt](reviews/README.md)) |
+| N3 | [Đọc báo cáo tài chính Việt Nam theo VAS](lessons/N3-vietnam-vas-statements.md) | Chỉ tiêu IFRS mà khóa học dùng nằm ở dòng nào trên báo cáo VAS? | Phần A sau N8, trước 002; phần B sau 009 | Đã soạn (xem [sổ kiểm duyệt](reviews/README.md)) |
+| N4 | Giá trị thời gian của tiền và lợi suất | Một đồng nhận sau 5 năm đáng giá bao nhiêu hôm nay? | Xem `learning/README.md` | Đã soạn (xem [sổ kiểm duyệt](reviews/README.md)) |
+| N5 | Danh mục, đa dạng hóa và đầu tư theo chỉ số | Nếu không chọn cổ phiếu, mốc so sánh của tôi là gì? | Xem `learning/README.md` | Đã soạn (xem [sổ kiểm duyệt](reviews/README.md)) |
+
+Thứ tự đọc: **bảng ở đầu tài liệu này và `learning/README.md` là nguồn chuẩn** (ví dụ `001 → N2 → N8 → N3A → 002 …`, N3B sau 009). Bảng §5.1 chỉ giữ lịch sử quyết định; các bài N6–N8 được thêm sau.
+
 ## 6. Đợt 1 — "Tiền có thật không?" (Bài 004–008), chi tiết
 
 ### Bài 004 — Dòng tiền và chất lượng lợi nhuận
@@ -197,7 +260,7 @@ Kèm theo, mỗi bài nộp một bản ghi chú theo `templates/learning-note.m
 
 - **Câu hỏi cốt lõi**: Lãi suất, lạm phát, tỷ giá và chu kỳ đi vào báo cáo tài chính qua đường nào?
 - **Nội dung chính**:
-  1. Ba kênh truyền dẫn nội tại: doanh thu (cầu, giá), chi phí (đầu vào, lương, lãi vay), cấu trúc tài chính (kỳ hạn nợ, lãi thả nổi). `Ý_KIẾN` Kênh thứ tư — bội số — **cố ý để sang Bài 009/010**, để Bài 008 không phải dùng khái niệm chưa định nghĩa.
+  1. Bốn kênh truyền dẫn (cách đếm của bài đã soạn): giá đầu vào/giá bán, lãi vay, tỷ giá, chu kỳ tín dụng. `Ý_KIẾN` Kênh thứ năm — bội số — **cố ý để sang Bài 009/010**, để Bài 008 không phải dùng khái niệm chưa định nghĩa.
   2. Lạm phát: khác biệt giữa doanh nghiệp **định giá được** (pricing power) và doanh nghiệp bị ép giá — nối Bài 003.
   3. Tỷ giá: doanh nghiệp xuất khẩu, nhập khẩu, có nợ ngoại tệ; ví dụ số học với ba loại.
   4. Chu kỳ lãi suất và chu kỳ lợi nhuận; vì sao cùng một tin vĩ mô cho hai kết luận trái ngược ở hai ngành.
@@ -468,3 +531,48 @@ Một lượt review toàn bộ Bài 001–009, glossary và tài liệu này (c
 Việc còn lại: chạy lại `source-fact-checker` trên hash hiện tại của **Bài 001 và 003–009** (hash đã đổi sau lượt sửa này), rồi chạy `risk_bear_reviewer`. Chưa làm: khung đối chiếu VAS ↔ IFRS (mục 10) và đối chiếu số Apple TTM của Bài 009 với 10-Q.
 
 **Trạng thái hiện tại**: `BẢN NHÁP - CHƯA KIỂM DUYỆT ĐỘC LẬP`. Biên bản trên **không** hiệu lực cho bản đã sửa; bản hiện tại không tự khai hash (sẽ tự vô hiệu sau mỗi lần sửa) — lấy bằng `shasum -a 256 learning/roadmap.md` tại thời điểm kiểm. Theo `docs/WORKFLOW.md` §6, muốn bỏ nhãn nháp phải chạy lại bước kiểm nguồn trên bản hiện tại và tạo biên bản mới theo `templates/review-record.md`. Người lập đã tự sửa và tự kiểm lại các phép tính (đếm ngày bằng `python3`, tổng phút, tổng giờ), nhưng **tự kiểm không thay thế kiểm độc lập**.
+
+## 17. Review cách dạy và kế hoạch bổ sung (`2026-10-26`)
+
+Chốt lúc `2026-10-26 16:05 +07`. Lượt review này xét **cách dạy và tính nhất quán nội bộ** của Bài 001–009; nó không phải biên bản của `source-fact-checker` hay `risk_bear_reviewer`.
+
+### 17.1 Kết luận
+
+| Tiêu chí | Mức | Lý do chính |
+|---|---|---|
+| Logic | Tốt | Thứ tự 001→009 hợp lý, dẫn chéo và câu xen kẽ có chủ đích; không thấy phép tính sai kết quả |
+| Dễ hiểu | Trung bình | Bài dày, nhiều chuẩn mực và thuật ngữ tiếng Anh, nhãn gắn ở gần như mọi câu |
+| Dễ học | Khá từ Bài 004 | Khung 13 mục, ôn đầu bài, bài tập chia mức; Bài 001–003 chưa theo khung |
+
+### 17.2 Vấn đề và cách xử lý
+
+| # | Vấn đề | Mức | Xử lý | Trạng thái |
+|---|---|---|---|---|
+| R1 | Thiếu bài "từ điển dòng": các tầng lợi nhuận, phương trình kế toán, bút toán kép, EBITDA, ROE; Bài 004 ôn bài hỏi "bút toán" chưa từng dạy | Cao | Bài N2 | ✅ `2026-10-26` |
+| R2 | Chưa có bài VAS, chưa có ví dụ doanh nghiệp Việt Nam | Cao | Bài N3 | ✅ `2026-10-26` |
+| R3 | Thiếu giá trị thời gian của tiền trước 010/011 | Cao | Bài N4 | Giai đoạn B |
+| R4 | Hộp IFRS 18 nằm đầu Bài 001, trước cả mục tiêu | Cao | Chuyển xuống cuối thành "Đọc thêm"; thêm khối đầu chuẩn và 5 bài tập | ✅ `2026-10-26` |
+| R5 | Bài 004–009 dài 260–330 dòng; Bài 003 chưa tách phụ lục | Trung bình | Tách bài chính / phụ lục | Giai đoạn A, còn lại |
+| R6 | Gắn nhãn cả câu giảng giải; khối "trạng thái kiểm nguồn" chen thân bài | Trung bình | Chỉ gắn nhãn nhận định trọng yếu (đúng `AGENTS.md`); chuyển trạng thái kiểm xuống phụ lục. N2 là bài mẫu theo cách này | Giai đoạn A, còn lại |
+| R7 | Bài 008 trộn số liệu sống với khái niệm | Trung bình | Tách bảng §13 thành tệp theo dõi trong `data/processed/` | Giai đoạn A, còn lại |
+| R8 | Bài 002 có "lộ trình 4 tuần" mâu thuẫn lộ trình này; Bài 003 trỏ "tuần 5-6" | Trung bình | Sửa trỏ về N/010/011 | ✅ `2026-10-26` |
+| R9 | Mục "Điều tôi vẫn chưa hiểu" hỏi lại sở thích người học ở mọi bài; §14 chưa được trả lời | Trung bình | Trả lời §14 một lần; viết lại mục này thành câu hỏi khái niệm (N2 và 001 đã làm) | Chờ người học |
+| R10 | Sản phẩm hứa ở mục 6 chưa có (bảng tính nợ, theo dõi vĩ mô, checklist 20 câu, checklist quản trị 12 điểm, hai bài kiểm tra khối); `data/` trống | Trung bình | Làm cùng Giai đoạn B | Giai đoạn B |
+| R11 | Bài 008: "bốn kênh + kênh thứ năm" lệch với mục 6 ("ba kênh + kênh thứ tư") | Thấp | Mục 6 của lộ trình sửa theo cách đếm của bài (bốn kênh + bội số là kênh thứ năm) | ✅ `2026-10-26` |
+| R12 | Bài 009 §5: cùng EV 600, vốn hoá 500 (nợ ròng 100) nhưng lợi nhuận ròng = EBIT/2 ở cả ba — chỉ đúng khi lãi vay 0 và thuế 50% | Thấp | Sửa số: lãi vay 10, thuế 20% → lợi nhuận 56/40/24, P/E 8,9/12,5/20,8 | ✅ `2026-10-26` |
+| R13 | Đáp án ôn bài số 4 của Bài 006 dẫn tới Bài 007 (chưa học) | Thấp | Đổi ví dụ | ✅ `2026-10-26` |
+
+### 17.3 Ba giai đoạn
+
+- **Giai đoạn A — vá nền**: N2, N3, sửa Bài 001 (đã xong); còn R5–R7 và thêm ví dụ doanh nghiệp Việt Nam vào Bài 004, 005, 007.
+- **Giai đoạn B — Đợt 2**: N4 → 010 → 011 → 012; làm các sản phẩm ở R10.
+- **Giai đoạn C**: N1, N5, 013 → 016. Bài ngắn tùy chọn (đã được người học hỏi trong các bài): thuế hoãn lại, trái phiếu doanh nghiệp, lạm phát và tồn kho, bất động sản.
+
+Mỗi bài mới: soạn theo chuẩn mục 4, mở lại nguồn trong lượt soạn, chạy `source_fact_checker` và `risk_bear_reviewer` độc lập trên cùng hash, cập nhật `glossary.md` và `README.md`.
+
+
+</details>
+
+### 17.4 Kết quả kiểm duyệt N2, N3, 001 (`2026-10-26`)
+
+N2 và N3 đã qua `source_fact_checker` và `risk_bear_reviewer` độc lập qua ba vòng; bản cuối **ĐẠT** cả hai nhánh và qua cổng `scripts/validate_report.py` (mã băm N2 `a9d024fae646…`, N3 `4a9358fa8819…`). Bài 001 đạt kiểm nguồn cho phần đổi trong đợt này (`45eb073f910d…`), **chưa** qua phản biện rủi ro. Lỗi đáng ghi: hai lần mốc "chốt dữ liệu" bị ghi ở tương lai — đã sửa, và từ nay mốc chốt phải lấy từ đồng hồ hệ thống. Biên bản và trạng thái: [sổ kiểm duyệt](reviews/README.md).

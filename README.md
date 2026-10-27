@@ -49,4 +49,4 @@ scripts/             Kiểm tra cấu hình và cổng xuất bản
 - Mọi báo cáo doanh nghiệp phải có luận điểm thuận, nghịch và điều kiện làm luận điểm mất hiệu lực.
 - Không biến định giá thành khuyến nghị mua/bán.
 
-Xem bài [Khởi đầu 30 phút](learning/lessons/001-business-financial-statements.md) và [bảng thuật ngữ](learning/glossary.md) nếu bạn bắt đầu từ con số 0.
+Bắt đầu từ [mục lục 24 bài và hai đường học](learning/README.md). Nếu mới hoàn toàn, đọc [N1 — thị trường](learning/lessons/N1-market-basics.md) và [N6 — doanh nghiệp kiếm tiền](learning/lessons/N6-business-model-unit-economics.md), rồi tới ba báo cáo tài chính. Xem [bảng thuật ngữ](learning/glossary.md) và [sổ kiểm duyệt](learning/reviews/README.md) khi cần.

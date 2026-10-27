@@ -35,6 +35,14 @@ Vì vậy học vĩ mô không phải học thuộc con số. Học vĩ mô là 
 | Dạy cách đọc bảng số vĩ mô có kỳ và đơn vị rõ ràng | Không dạy cách chọn bội số theo chu kỳ — Bài 009 |
 | Nêu số liệu thật của Việt Nam và thế giới tại ngày chốt | Không đưa ra nhận định về một doanh nghiệp cụ thể |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 2, 4, 8. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 2; phiên B làm câu 4, 8.
+
+`Ý_KIẾN` Phiên A: bốn kênh truyền dẫn và một tình huống hư cấu. Phiên B: bài tập và đọc số thực theo mẫu kỳ/đơn vị; số thời sự giữ mốc cũ, không học thuộc hoặc coi là đã cập nhật hôm nay.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Bốn kênh truyền dẫn
 
 `Ý_KIẾN` Kênh thứ năm — **bội số định giá** — cố ý để sang Bài 009 và Bài 010, vì muốn dùng nó phải biết bội số là gì và chi phí vốn là gì.
@@ -237,33 +245,16 @@ Sau: doanh thu `2.000 × 1,02 = 2.040`; giá vốn `1.400 × 1,06 = 1.484`; gộ
 3. Bạn muốn bảng theo dõi 8 chỉ tiêu vĩ mô ở dạng tệp để tự điền hằng tháng không?
 4. Bạn đang theo dõi doanh nghiệp xuất khẩu hay phục vụ thị trường trong nước? (quyết định kênh tỷ giá có quan trọng với bạn không)
 
-## 13. Bảng theo dõi: số liệu đã chốt và cách cập nhật
+## 13. Bảng theo dõi: tách số liệu khỏi khái niệm
 
-`SỰ_THẬT` Số dưới đây đã mở trang gốc ngày `2026-10-26`. **Không dùng lại cho lần đọc sau** — cập nhật theo hướng dẫn ở cột cuối.
+Dùng [mẫu cập nhật](../../data/processed/macro-observation-template.md) để ghi số mới cùng kỳ, đơn vị, mốc so sánh, phiên bản và nguồn. Mẫu không tự thu thập dữ liệu và không dùng0 thay số chưa biết.
 
-| Chỉ tiêu | Số | Kỳ/ngày | Đơn vị | Cập nhật ở đâu |
-|---|---|---|---|---|
-| CPI so tháng trước | +0,62 | tháng 9/2026 | % | `nso.gov.vn`, mục CPI tháng |
-| CPI so cùng kỳ | +5,08 | tháng 9/2026 | % | `nso.gov.vn`, mục CPI tháng |
-| CPI bình quân lũy kế | +4,52 | 9 tháng 2026 | % | `nso.gov.vn`, mục CPI tháng |
-| Lạm phát cơ bản | +4,26 | 9 tháng 2026 | % | `nso.gov.vn`, mục CPI tháng |
-| Chỉ số giá USD | −0,69 / −1,34 / +1,01 | tháng 9 (mom/yoy) và 9 tháng | % | `nso.gov.vn`, mục CPI tháng — giá USD bán lẻ bình quân tháng, **không phải tỷ giá trung tâm** |
-| Giá nguyên/nhiên/vật liệu đầu vào | +5,12 | 9 tháng 2026 | % yoy | `nso.gov.vn`, báo cáo KT-XH quý III |
-| Giá xuất khẩu | +2,38 | 9 tháng 2026 | % yoy | `nso.gov.vn`, báo cáo KT-XH quý III |
-| GDP quý III | +9,95 | quý III/2026 | % yoy | `nso.gov.vn`, báo cáo KT-XH |
-| GDP lũy kế | +9,01 | 9 tháng 2026 | % yoy, theo giá so sánh | `nso.gov.vn`, báo cáo KT-XH |
-| Xuất khẩu / nhập khẩu | +24,5 / +36,7 | 9 tháng 2026 | % yoy | `nso.gov.vn`, báo cáo KT-XH |
-| Nhập siêu | 19,42 | 9 tháng 2026 | tỷ USD | `nso.gov.vn`, báo cáo KT-XH |
-| Tín dụng toàn hệ thống | 20,75 triệu tỷ (+11,59% YTD) | 30/09/2026 | VND | `sbv.gov.vn` hoặc cổng NHNN khu vực |
-| Mục tiêu lạm phát bình quân | ~4,5 | năm 2026 | % | cổng NHNN Khu vực 1 |
-| Mục tiêu tăng trưởng tín dụng | `CHƯA_BIẾT` | năm 2026 | % | văn bản gốc của NHNN chưa mở được; trang NHNN Khu vực 1 **không** nêu con số |
-| Fed — lãi suất mục tiêu | 3,75–4,00 | FOMC 15–16/09/2026 | %/năm | `federalreserve.gov` |
-| Lợi suất 10 năm Mỹ | 4,96 | kỳ quan sát 22/10/2026 | %/năm | `fred.stlouisfed.org/series/DGS10` |
-| ECB — tiền gửi / tái cấp vốn | 2,50 / 2,65 | hiệu lực 16/09/2026 | %/năm | `ecb.europa.eu` |
-| FTSE — Việt Nam | Secondary Emerging, hiệu lực 21/09/2026, bốn đợt tới 9/2027 | xác nhận 2026 | — | `lseg.com` (trang HTML; **PDF không đọc được** bằng công cụ) |
-| MSCI — Việt Nam | ngoài watch list (nguồn thứ cấp) | review 24/06/2026 | — | `msci.com` **bị chặn**; cần trình duyệt |
+[Bảng lịch sử được tách nguyên văn](../../data/raw/macro-lesson-008-legacy-2026-10-26.md) chỉ để truy dấu. Các số của bảng đó chưa được xác minh lại trong lượt chỉnh cách học này. Ví dụ thời sự còn trong các mục khác cũng giữ mốc gốc; khi áp dụng phải mở lại nguồn, không coi việc tách tệp là cập nhật dữ liệu.
 
 ## 14. Nguồn Internet đã mở
+
+<details>
+<summary>Nguồn chi tiết và lịch sử kiểm — giữ mốc dữ liệu gốc</summary>
 
 Tất cả mở ngày `2026-10-26`.
 
@@ -281,3 +272,6 @@ Tất cả mở ngày `2026-10-26`.
 - `CHƯA_BIẾT` Tỷ giá trung tâm USD/VND: `sbv.gov.vn` trả **HTTP 403** trong lượt này; không dùng nguồn tổng hợp thứ cấp làm số chính. Cách xác minh: mở trang tỷ giá trung tâm của NHNN bằng trình duyệt, ghi ngày.
 
 **Trạng thái kiểm nguồn**: đã qua một lượt `source-fact-checker` độc lập ngày `2026-10-26`, kết luận **KHÔNG ĐẠT** với **2 lỗi nghiêm trọng**: (a) so CPI tháng 9 (+5,08% **so cùng kỳ**) với mục tiêu **bình quân năm** 4,5% — sai mốc; so đúng mốc là bình quân 9 tháng 4,52% so 4,5% = **+0,02 điểm %**; (b) nêu "mục tiêu tăng trưởng tín dụng ~15%" như số liệu của trang NHNN, trong khi trang đó **không có con số này** → đã hạ xuống `CHƯA_BIẾT` và **bỏ** phép tính "dư địa 3,41 điểm %". Đã sửa thêm 3 lỗi "cần sửa" (giải thích lệch hai nguồn tín dụng, nhãn MSCI, lỗi chính tả) và làm rõ chỗ **không được** lấy GDP trừ CPI để suy ra tăng trưởng thực. Số liệu vĩ mô khác (CPI, GDP, giá XK/NK, XNK, nhập siêu, tín dụng 11,59%, Fed, DGS10, ECB, FTSE) đều khớp nguồn gốc. Lượt review sau đó cùng ngày sửa thêm: cách đọc chỉ số giá USD theo phương pháp của Cục Thống kê; chốt GDP tính theo giá so sánh (bỏ `CHƯA_BIẾT`); thống nhất cách tính nén biên giữa mục 2 và đáp án Bài 2; bảng mục 13 còn sót "mục tiêu tín dụng ~15%" đã hạ về `CHƯA_BIẾT`. Bản hiện tại **chưa có biên bản mới** cho hash sau khi sửa.
+
+
+</details>

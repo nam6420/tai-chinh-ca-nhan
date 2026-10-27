@@ -35,6 +35,14 @@ Vì vậy câu hỏi đúng không phải "bội số này cao hay thấp", mà 
 | Dạy chọn nhóm so sánh (cùng mô hình, cùng chu kỳ, cùng cấu trúc vốn) | Không kết luận "đắt/rẻ" cho một cổ phiếu cụ thể |
 | Dạy đọc bội số của doanh nghiệp thật và giới hạn của nguồn thứ cấp | Không dạy giao dịch, không khuyến nghị mua/bán |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 2, 7. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 2; phiên B làm câu 7.
+
+`Ý_KIẾN` Phiên A: cầu nối EV, tử/mẫu cùng người hưởng lợi và ví dụ chọn nhóm. Phiên B: chu kỳ, khoản một lần, pha loãng, thuê và ví dụ thật. Sau bài quay lại N3 phần B, rồi N7; chưa cần tự ước tính WACC trước bài010.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Cầu nối từ vốn hoá sang giá trị doanh nghiệp (EV)
 
 `PHÉP_TÍNH` Công thức dùng trong bài này:
@@ -127,22 +135,22 @@ EV (enterprise value) = Vốn hoá thị trường
 
 ## 5. Ví dụ số học: cùng doanh thu, cùng EV, ba kết luận khác nhau
 
-`KỊCH_BẢN` Ba doanh nghiệp hư cấu A, B, C: cùng doanh thu 500, cùng EV 600, cùng EBITDA 100, nhưng biên hoạt động khác nhau (khấu hao khác nhau). Giả định vốn hoá 500 cho cả ba.
+`KỊCH_BẢN` Ba doanh nghiệp hư cấu A, B, C: cùng doanh thu 500, cùng EV 600, cùng EBITDA 100, nhưng biên hoạt động khác nhau (khấu hao khác nhau). Giả định đơn giản: vốn hoá 500 cho cả ba, không có tiền mặt nên nợ vay = nợ ròng = 100; lãi vay 10 (10%/năm) và thuế suất 20% cho cả ba.
 
 | Chỉ tiêu | A | B | C |
 |---|---:|---:|---:|
 | Doanh thu | 500 | 500 | 500 |
 | EBITDA | 100 | 100 | 100 |
 | EBIT | 80 | 60 | 40 |
-| Lợi nhuận sau thuế | 40 | 30 | 20 |
+| Lợi nhuận sau thuế `(EBIT − 10) × 0,8` | 56 | 40 | 24 |
 | EV/Sales | 1,20 | 1,20 | 1,20 |
 | EV/EBITDA | 6,0 | 6,0 | 6,0 |
 | **EV/EBIT** | **7,5** | **10,0** | **15,0** |
-| **P/E** | **12,5** | **16,7** | **25,0** |
+| **P/E** | **8,9** | **12,5** | **20,8** |
 
-`SUY_LUẬN` EV/Sales và EV/EBITDA nói "ba doanh nghiệp giống nhau"; EV/EBIT và P/E nói "khác nhau rất nhiều". Sự thật là: A tạo ra nhiều lợi nhuận hoạt động hơn trên cùng doanh thu và cùng EV — tức thị trường **chưa** trả giá cao hơn cho chất lượng đó, hoặc đang định giá ba doanh nghiệp như nhau vì lý do khác (rủi ro, tăng trưởng, thanh khoản). Bài tập phải chỉ ra **cả hai khả năng**, không chỉ một.
+`SUY_LUẬN` EV/Sales và EV/EBITDA nói "ba doanh nghiệp giống nhau"; EV/EBIT và P/E nói "khác nhau rất nhiều". Điều này cho thấy: A tạo ra nhiều lợi nhuận hoạt động hơn trên cùng doanh thu và cùng EV — tức thị trường **chưa** trả giá cao hơn cho chất lượng đó, hoặc đang định giá ba doanh nghiệp như nhau vì lý do khác (rủi ro, tăng trưởng, thanh khoản). Khi phân tích (và khi làm Bài 5, Bài 8 ở mục 8), phải chỉ ra **cả hai khả năng**, không chỉ một.
 
-`SUY_LUẬN` Đây là câu trả lời cho "bội số nào có nghĩa": với ba doanh nghiệp này, **EV/EBIT hoặc P/E** mới phân biệt được; EV/Sales dùng để so quy mô, không dùng để kết luận đắt/rẻ.
+`SUY_LUẬN` Đây là câu trả lời cho "bội số nào có nghĩa": với ba doanh nghiệp này, **EV/EBIT hoặc P/E** phân biệt được — **với điều kiện** khấu hao phản ánh đúng nhu cầu chi tái đầu tư. Nếu khấu hao cao của C chủ yếu là phân bổ tài sản vô hình từ một thương vụ mua lại (không cần chi tiền để duy trì), EV/EBIT và P/E lại phạt C oan; kiểm bằng chi tiêu vốn và dòng tiền tự do (Bài 004). EV/Sales là một tỷ lệ, không đo quy mô; nó chỉ hữu ích khi doanh nghiệp chưa có lãi hoặc khi đọc kèm biên lợi nhuận, không dùng để kết luận đắt/rẻ.
 
 ## 6. Doanh nghiệp thật: bội số của Apple và ba điều đọc được
 
@@ -288,6 +296,9 @@ Bốn doanh nghiệp: (1) bán lẻ thực phẩm, sở hữu cửa hàng; (2) b
 
 ## 13. Nguồn Internet đã mở
 
+<details>
+<summary>Nguồn chi tiết và lịch sử kiểm — giữ mốc dữ liệu gốc</summary>
+
 Tất cả mở ngày `2026-10-26`.
 
 - [Apple statistics — stockanalysis.com](https://stockanalysis.com/stocks/aapl/statistics/) — HTTP 200; giá đóng cửa `2026-10-23`; trang ghi "Last updated: Oct 26, 2026"; dữ liệu **TTM**, đơn vị USD (T = nghìn tỷ, B = tỷ); **nguồn thứ cấp** (trang dẫn nguồn dữ liệu thị trường của bên thứ ba). Dùng cho mục 6.
@@ -297,3 +308,6 @@ Tất cả mở ngày `2026-10-26`.
 - `CHƯA_BIẾT` Công thức EV từ một nguồn học thuật/chuẩn: lượt này không mở được giáo trình hay trang chuẩn nào định nghĩa EV; công thức ở mục 1 là `PHÉP_TÍNH` khớp với số liệu công bố của nguồn dữ liệu, **không phải** trích dẫn chuẩn. Cách xác minh: mở giáo trình định giá (Damodaran, `variable.htm`) hoặc sách giáo khoa tài chính doanh nghiệp.
 
 **Trạng thái kiểm nguồn**: **chưa có biên bản `source-fact-checker` độc lập**. Lượt review ngày `2026-10-26` đã sửa: P/E dùng lợi nhuận thuộc cổ đông công ty mẹ; khác biệt US GAAP về thuê ở mục 3.4; giải thích lại chênh lệch P/E và EV/EBITDA của Apple; dữ kiện tự mâu thuẫn ở Bài 5 (lợi nhuận ròng bằng EBITDA); mốc áp dụng MPM. Số liệu Apple TTM vẫn là nguồn thứ cấp chưa đối chiếu 10-Q.
+
+
+</details>

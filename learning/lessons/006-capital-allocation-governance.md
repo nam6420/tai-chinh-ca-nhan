@@ -33,6 +33,14 @@
 | Dạy đọc bốn điểm quản trị bằng bằng chứng từ thuyết minh | Không đánh giá con người, không suy đoán động cơ |
 | Dạy nhận diện dấu hiệu mua lại cổ phiếu đáng ngờ | Không kết luận mua lại cổ phiếu là tốt hay xấu (phụ thuộc giá — Bài 009/012) |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 2, 4, 6. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 4; phiên B làm câu 2, 6.
+
+`Ý_KIẾN` Phiên A: các lựa chọn dùng vốn và ví dụ mua lại. Phiên B: pha loãng và quản trị; dùng bảng kiểm 12 câu để ghi bằng chứng, không cộng thành điểm mua/bán.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Năm lựa chọn phân bổ vốn và dấu vết của chúng
 
 `SUY_LUẬN` Mỗi đồng tiền doanh nghiệp tạo ra chỉ có năm đường đi. Bảng dưới đây là công cụ tra nhanh: muốn biết ban điều hành ưu tiên gì, tìm dấu vết tương ứng.
@@ -233,7 +241,7 @@ Câu hỏi gợi ý: (a) vốn tái đầu tư có tạo ROIC trên chi phí v�
 1. `ROIC = NOPAT / Vốn đầu tư đầu kỳ`; phải so với chi phí vốn vì ROIC thấp hơn chi phí vốn nghĩa là mỗi đồng tái đầu tư phá huỷ giá trị (Bài 003).
 2. Ghi vào **goodwill** trên bảng cân đối (IFRS 3); nếu mua rẻ thì phần chênh lệch ghi vào lãi lỗ ngay.
 3. Vì số cổ phiếu lưu hành có thể tăng nhanh hơn lợi nhuận (pha loãng).
-4. Ví dụ: kéo dài thời gian trả nhà cung cấp, bán phải thu (factoring), hoặc cắt capex cần thiết (Bài 004, mục 2.3 và Bài 007).
+4. Ví dụ: kéo dài thời gian trả nhà cung cấp (DPO tăng), hoặc cắt capex cần thiết (Bài 004, mục 2.2 và 2.3).
 
 ## 10. Lỗi thường gặp
 
@@ -261,6 +269,9 @@ Câu hỏi gợi ý: (a) vốn tái đầu tư có tạo ROIC trên chi phí v�
 
 ## 13. Nguồn Internet đã mở
 
+<details>
+<summary>Nguồn chi tiết và lịch sử kiểm — giữ mốc dữ liệu gốc</summary>
+
 Tất cả mở ngày `2026-10-26`.
 
 - [IFRS 3 Business Combinations — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-3-business-combinations/) — HTTP 200; trang chuẩn "Standard 2026 Issued"; phạm vi: chuẩn mực IFRS toàn cầu; không có đơn vị tiền. Cung cấp: đo chi phí thương vụ theo giá trị hợp lý của khoản thanh toán; phân bổ cho tài sản/nợ xác định được; phần còn lại vào goodwill; mua rẻ ghi ngay vào lãi lỗ; yêu cầu thuyết minh để đánh giá bản chất và ảnh hưởng tài chính của thương vụ.
@@ -268,3 +279,6 @@ Tất cả mở ngày `2026-10-26`.
 - [Apple Inc. Form 10-K FY2025 — SEC EDGAR](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) — HTTP 200 khi gửi User-Agent khai báo; **triệu USD**, năm tài chính tháng 10 → tháng 9; nguồn **gốc**. Dùng cho một dữ kiện có thật ở mục 3: chi phí cổ phiếu thưởng (SBC) FY2025 là **12.863 triệu USD**, được cộng lại trong dòng tiền hoạt động.
 - **Trạng thái kiểm nguồn**: đã qua một lượt `source-fact-checker` độc lập ngày `2026-10-26`, kết luận **ĐẠT** với 0 lỗi nghiêm trọng; các phép tính ROIC hợp nhất, pha loãng và mua lại cổ phiếu đều được tái lập khớp. Hai lỗi mức "cần sửa" (đề bài Bài 4 tự mâu thuẫn với đáp án; mốc thời gian) đã sửa. Lượt review sau đó cùng ngày sửa thêm câu giả định của ví dụ mua lại (1.200 **đã gồm** tiền mặt, khớp với phép tính) và đáp án Bài 3 (phải so lợi nhuận 10% của thương vụ với chi phí vốn, không so ROIC hợp nhất); hash đã đổi nên cần kiểm nguồn lại.
 - `CHƯA_BIẾT` Quy định pháp lý về cấu trúc hai lớp cổ phiếu và quyền cổ đông thiểu số theo từng thị trường: bài này không nêu, và phiên này không mở văn bản pháp lý tương ứng. Cách xác minh: đọc điều lệ doanh nghiệp, quy chế của sở giao dịch nơi niêm yết, và văn bản pháp luật hiện hành của thị trường đó.
+
+
+</details>

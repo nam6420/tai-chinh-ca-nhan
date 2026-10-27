@@ -1,36 +1,30 @@
-# Lộ trình khởi động
+# Bắt đầu học
 
-## Tuần 1-2: Ngôn ngữ của kinh doanh
+`Ý_KIẾN` Chọn một trong hai đường, không cần học mọi ngành:
 
-- Doanh thu, chi phí, lợi nhuận và dòng tiền khác nhau thế nào.
-- Bảng cân đối kế toán, báo cáo kết quả kinh doanh, lưu chuyển tiền tệ.
-- Mô hình kinh doanh, khách hàng, giá trị cung cấp và hiệu quả kinh tế trên một đơn vị sản phẩm.
+- **Hiểu doanh nghiệp/phân tích cổ phiếu:** bắt đầu [N1](../learning/lessons/N1-market-basics.md) → [N6](../learning/lessons/N6-business-model-unit-economics.md) → [001](../learning/lessons/001-business-financial-statements.md), rồi theo [danh sách đọc](../learning/README.md).
+- **Danh mục/quỹ:** N1 → N5A → N4 → N7 → N5B; bài tổng kết riêng nằm trong N5, không bắt buộc kế toán hay DCF.
+
+## Một phiên đầu tiên
+
+1. Nêu bằng lời: cổ phiếu là gì, ai nhận tiền khi mua lại cổ phần cũ?
+2. Đọc N1; làm ba câu cốt lõi trước khi mở đáp án.
+3. Ghi câu nào vướng và dữ kiện nào cần tìm; không cần hoàn thành cả bộ bài tập.
+4. Phiên sau ôn lại bằng lời mình, rồi học tiếp khi giải thích được kết quả.
+
+Ba phiên đầu chỉ dùng để quan sát nền tảng, thời gian và lỗi; không ép lịch sáu tuần khi chưa có dữ liệu học thực tế. N2 và003 đã chia phiên; N3A học sớm chỉ tìm đường trên báo cáo, N3B quay lại sau009.
 
 Prompt gợi ý:
 
 ```text
-Dùng business_tutor dạy tôi cách ba báo cáo tài chính liên kết với nhau.
-Giả định tôi là người mới, dùng một ví dụ đơn giản, có bài tập và đáp án.
+Dùng business_tutor dạy tôi bài N1 theo giáo trình hiện có.
+Tìm và mở nguồn trực tuyến trong lượt này trước khi dạy.
+Cho tôi tự trả lời từng câu cốt lõi rồi mới chữa; ghi chỗ tôi chưa hiểu.
 ```
 
-## Tuần 3-4: Chất lượng doanh nghiệp
+## Thực hành
 
-- Lợi thế cạnh tranh và khả năng tái đầu tư.
-- Tỷ suất lợi nhuận trên vốn đầu tư (ROIC), biên lợi nhuận, vốn lưu động và chất lượng lợi nhuận.
-- Quản trị, phân bổ vốn, pha loãng và giao dịch bên liên quan.
-
-## Tuần 5-6: Thị trường và định giá
-
-- Lãi suất, lạm phát, tỷ giá và chu kỳ tác động thế nào.
-- Định giá theo hệ số, chiết khấu dòng tiền (DCF), biên an toàn và phân tích kịch bản.
-- Vì sao doanh nghiệp tốt chưa chắc là khoản đầu tư tốt ở mọi mức giá.
-
-## Sau tuần 6: Nghiên cứu có hệ thống
-
-Chọn một doanh nghiệp hoặc ngành, tạo đề bài từ [mẫu](../templates/research-brief.md), chạy quy trình đầy đủ và ghi bài học vào `journal/`.
-
-Không cần học theo đúng tốc độ trên. Mỗi tuần nên kết thúc bằng một note theo [mẫu bài học](../templates/learning-note.md).
-
-## Ánh xạ bài học cụ thể
-
-Lộ trình chi tiết 13 bài tiếp theo (Bài 004 → 016), chuẩn định dạng mỗi bài, nhịp ôn tập và mốc dữ kiện phải cập nhật nằm ở [lộ trình bài giảng](../learning/roadmap.md). Bài 001–003 đã có trong `learning/lessons/`. Ba đợt: Đợt 1 (004–008) chất lượng lợi nhuận, dòng tiền, nợ, quản trị, vĩ mô; Đợt 2 (009–012) bội số, chi phí vốn, DCF, biên an toàn; Đợt 3 (013–016) ngân hàng, chu kỳ ngành, tâm lý, capstone.
+- [Bảng thực hành và mô hình](../learning/practice/research-and-model-worksheets.md).
+- [Mẫu ghi chú](../templates/learning-note.md) và [nhật ký mô phỏng](../templates/decision-journal.md).
+- Khi làm016, chọn một câu hỏi hẹp về một doanh nghiệp; theo [quy trình nghiên cứu](WORKFLOW.md), không biến bài tổng kết thành khuyến nghị mua/bán.
+- Xem [sổ kiểm duyệt](../learning/reviews/README.md): bài đã viết, bài đã kiểm nguồn và hiệu quả học thực tế là các trạng thái khác nhau.

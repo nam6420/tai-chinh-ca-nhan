@@ -35,6 +35,14 @@ Cả hai cách làm đều có thể **hợp pháp**, nhưng không phải vì d
 | Dạy đọc MPM (thước đo ban điều hành tự định nghĩa) và bốn loại ý kiến kiểm toán | Không dạy phân tích định lượng chuyên sâu về chất lượng lợi nhuận (đã có Bài 004) |
 | Cho bài tập "tính lại lợi nhuận theo cách thận trọng hơn" | Không định giá ảnh hưởng của các điều chỉnh đó (Đợt 2) |
 
+## Cách chia phiên và chọn phần cốt lõi
+
+**Bài cốt lõi trong bộ bài tập:** 1, 2, 7. Các câu còn lại là luyện thêm; không bỏ kiến thức bắt buộc của thân bài. Phiên A làm câu 1, 2; phiên B làm câu 7.
+
+`Ý_KIẾN` Phiên A: bản đồ thuyết minh và ví dụ số; tự chỉ ra điều gì thay đổi lợi nhuận. Phiên B: đối chiếu chính sách/ước tính, thước đo điều chỉnh và ý kiến kiểm toán; ngoại lệ chuẩn mực quay lại sau khi hiểu cơ chế.
+
+Làm câu cốt lõi theo mục tiêu phiên trước khi xem đáp án; câu xen kẽ/chuyển giao kiểm hiểu sâu. Có thể dừng giữa bài; thời lượng ban đầu chưa được đo với người học. [Bảng thực hành và hai bài ôn](../practice/research-and-model-worksheets.md).
+
 ## 1. Bản đồ thuyết minh: đọc theo thứ tự nào
 
 `SUY_LUẬN` Thuyết minh của một doanh nghiệp lớn thường dài 50–200 trang (ước lượng thực hành, khác theo quy mô và thị trường), nên phải đọc có thứ tự. Thứ tự đề xuất:
@@ -243,6 +251,9 @@ Doanh nghiệp công bố "lợi nhuận hoạt động điều chỉnh 420", EB
 
 ## 13. Nguồn Internet đã mở
 
+<details>
+<summary>Nguồn chi tiết và lịch sử kiểm — giữ mốc dữ liệu gốc</summary>
+
 Tất cả mở ngày `2026-10-26`; câu chữ trích dẫn giữ nguyên tiếng Anh để đối chiếu.
 
 - [IFRS 18 Presentation and Disclosure in Financial Statements — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/) — HTTP 200; ban hành `2024-04`; hiệu lực kỳ báo cáo năm từ hoặc sau `2027-01-01`. Cung cấp mô tả MPM ("subtotals of income and expenses not specified by IFRS Accounting Standards that are used in public communications…"). **Giới hạn**: toàn văn chuẩn nằm sau đăng nhập IFRS Digital; định nghĩa Appendix A và các đoạn yêu cầu đối chiếu **CHƯA** mở được.
@@ -257,3 +268,6 @@ Tất cả mở ngày `2026-10-26`; câu chữ trích dẫn giữ nguyên tiến
 - `CHƯA_BIẾT` Ví dụ thuyết minh chính sách kế toán của **doanh nghiệp thật** ở dạng HTML đọc được: trong lượt này không mở được (báo cáo thường niên thường là PDF; EDGAR bị chặn tự động). Vì vậy bài dùng **thuyết minh giả lập tự viết** và ghi rõ là ví dụ minh hoạ. Cách xác minh đề nghị: mở 10-K/20-F bằng trình duyệt, tìm mục "Note — Significant Accounting Policies".
 
 **Trạng thái kiểm nguồn**: đã qua một lượt `source-fact-checker` độc lập ngày `2026-10-26`, kết luận **KHÔNG ĐẠT** với **1 lỗi nghiêm trọng** — đáp án Bài 1(a) phân loại sai: đổi **phương pháp khấu hao** là **thay đổi ước tính** (IAS 16/IAS 8), không phải thay đổi chính sách, nên **không hồi tố**. Đã sửa cùng 4 lỗi mức "cần sửa" (một ký tự lạ trong câu, mâu thuẫn "ba/bốn loại ý kiến", câu chữ AUASB chưa kiểm được, tách nhãn cho nhận định về động cơ). Lượt review sau đó cùng ngày sửa thêm: phạm vi hoàn nhập tổn thất theo IAS 36 (chỉ goodwill bị cấm), cách diễn đạt vốn hoá chi phí phát triển theo IAS 38, ngoại lệ MPM của IFRS 18 cho EBITDA "thuần", mốc báo cáo năm đầu tiên theo IFRS 18, và bỏ nguồn IFRS 9 không dùng trong bài. Bản hiện tại **chưa có biên bản mới** cho hash sau khi sửa. Các dẫn chuẩn mực trong bài đều trích từ trang IFRS Foundation mở ngày `2026-10-26`, trừ phần ghi rõ là nguồn thứ cấp (RSM UK cho yêu cầu đối chiếu MPM).
+
+
+</details>

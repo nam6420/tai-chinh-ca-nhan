@@ -141,29 +141,18 @@ Bộ lọc chỉ tạo một hàng đợi để nghiên cứu, không tạo tín
 
 Một nhóm ba đến năm doanh nghiệp dùng để nghiên cứu không phải là một danh mục đa dạng hóa.
 
-## Lộ trình học đề xuất trong bốn tuần
+## Học tiếp theo thứ tự nào
 
-### Tuần 1: hiểu một doanh nghiệp
+Bốn câu hỏi của bài này được dạy kỹ ở các bài sau — xem thứ tự đọc đầy đủ trong [lộ trình](../roadmap.md#51-bài-nền-bổ-sung-n1n5--thêm-sau-review-2026-10-26):
 
-Viết một trang về khách hàng, sản phẩm, cách thu tiền, ba chi phí lớn, một đối thủ và ba rủi ro.
+| Câu hỏi | Bài dạy |
+|---|---|
+| Đọc từng dòng báo cáo, EBITDA, ROE | [Bài N2](N2-statement-line-items.md) |
+| Doanh nghiệp có chất lượng không | [Bài 003](003-business-quality-moat-and-roic.md) |
+| Lợi nhuận có thành tiền không, nợ có an toàn không | [Bài 004](004-cash-flow-and-earnings-quality.md), [Bài 005](005-debt-liquidity-survival.md) |
+| Giá có thấp so với giá trị không: EV, bội số, nhóm so sánh | [Bài 009](009-valuation-multiples.md), rồi Bài 010–012 |
 
-### Tuần 2: nối ba báo cáo tài chính
-
-Lập bảng nhiều năm và trả lời:
-
-- Lợi nhuận có chuyển thành tiền không?
-- Nợ tăng để tài trợ điều gì?
-- Giá trị trên mỗi cổ phần có bị pha loãng không?
-
-### Tuần 3: sàng lọc và so sánh
-
-So sánh các doanh nghiệp tương đồng về P/E hoặc tỷ số phù hợp ngành, tăng trưởng, biên lợi nhuận, nợ, dòng tiền và mức pha loãng. Ghi rõ lý do chọn hoặc loại từng doanh nghiệp khỏi nhóm so sánh.
-
-### Tuần 4: kịch bản và phản biện
-
-Lập ba kịch bản; viết năm bằng chứng chống lại luận điểm, ba điều chưa biết và ba điều kiện làm luận điểm mất hiệu lực.
-
-Bốn tuần này chỉ tạo khả năng đọc hồ sơ và dựng giả thuyết. Nó không chứng nhận người học đã sẵn sàng chọn cổ phiếu bằng tiền thật.
+Đọc hết các bài trên chỉ tạo khả năng đọc hồ sơ và dựng giả thuyết. Nó không chứng nhận người học đã sẵn sàng chọn cổ phiếu bằng tiền thật.
 
 ## Lỗi thường gặp
 

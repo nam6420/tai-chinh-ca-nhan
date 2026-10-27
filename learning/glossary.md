@@ -72,6 +72,69 @@ Các định nghĩa dưới đây được mở lại từ trang chuẩn của I
 - **Nhóm so sánh (peer group):** các doanh nghiệp cùng mô hình kinh doanh, cùng pha chu kỳ, cùng cấu trúc vốn và cách hạch toán; không chọn theo nhãn ngành (Bài 009).
 - **Pha loãng ảnh hưởng tới bội số:** EPS pha loãng dùng số cổ phiếu bình quân pha loãng, còn vốn hoá dùng số cổ phiếu hiện hành — chênh lệch là thông tin, không phải lỗi (Bài 009).
 
+## Thuật ngữ bổ sung từ Bài N2
+
+Nguồn mở ngày `2026-10-26`; chi tiết ở phần nguồn cuối Bài N2.
+
+- **Phương trình kế toán:** `Tài sản = Nợ phải trả + Vốn chủ sở hữu`; luôn cân vì mỗi giao dịch thay đổi ít nhất hai dòng (nguồn: SEC — Beginners' Guide to Financial Statements, Bài N2).
+- **Tài sản / nợ phải trả (định nghĩa Khung khái niệm IFRS 2018):** tài sản là nguồn lực kinh tế hiện tại do doanh nghiệp kiểm soát, phát sinh từ sự kiện quá khứ; nợ phải trả là nghĩa vụ hiện tại phải chuyển giao một nguồn lực kinh tế, phát sinh từ sự kiện quá khứ (dẫn qua ACCA — nguồn thứ cấp, Bài N2).
+- **Bút toán kép (double entry, mức trực giác):** mỗi giao dịch được ghi ở ít nhất hai chỗ sao cho phương trình kế toán vẫn cân (Bài N2).
+- **Lợi nhuận giữ lại (retained earnings):** lợi nhuận tích lũy chưa chia; là sợi dây nối báo cáo kết quả kinh doanh với vốn chủ sở hữu; có thể âm (lỗ lũy kế) khi trả lại cho cổ đông nhiều hơn lợi nhuận tạo ra (Bài N2, ví dụ Apple).
+- **Lợi nhuận gộp / lợi nhuận hoạt động / lợi nhuận ròng:** ba tầng của báo cáo kết quả kinh doanh — sau giá vốn; sau chi phí hoạt động; sau lãi vay và thuế (nguồn: SEC, Bài N2).
+- **EBIT:** lợi nhuận trước lãi vay và thuế; "lợi nhuận hoạt động" trên báo cáo không mặc nhiên bằng EBIT tự tính (Bài N2).
+- **EBITDA:** EBIT cộng lại khấu hao và phân bổ; không phải chỉ tiêu chuẩn mực; theo nhân viên SEC, điều chỉnh thêm bất cứ khoản nào khác thì không được gọi là EBITDA (C&DI 103.01, dẫn qua thư góp ý SEC 2023-12-22, Bài N2).
+- **EPS (earnings per share):** lợi nhuận thuộc cổ đông công ty mẹ chia số cổ phiếu (thường bình quân; có bản cơ bản và pha loãng) (Bài N2, Bài 009).
+- **Biên gộp / biên hoạt động / biên ròng:** lợi nhuận gộp / lợi nhuận hoạt động / lợi nhuận sau thuế chia doanh thu thuần (Bài N2).
+- **ROA:** lợi nhuận sau thuế chia tổng tài sản (Bài N2).
+- **ROE:** lợi nhuận ròng năm t chia vốn chủ sổ sách đầu kỳ (theo Damodaran); phải ghi rõ dùng đầu kỳ, bình quân hay cuối kỳ (Bài N2); với tập đoàn, dùng lợi nhuận thuộc công ty mẹ chia vốn chủ đã trừ lợi ích cổ đông không kiểm soát (Bài N2, N3).
+- **Phân rã DuPont:** `ROE = biên ròng × vòng quay tài sản × hệ số nhân vốn chủ (tài sản/vốn chủ)`; cho biết ROE cao do biên, do vòng quay hay do vốn chủ mỏng; hệ số nhân vốn chủ gồm cả nợ không chịu lãi nên không đồng nghĩa "vay nhiều"; ROE vô nghĩa khi vốn chủ âm hoặc rất nhỏ (Bài N2).
+
+## Thuật ngữ bổ sung từ Bài N3
+
+Nguồn mở ngày `2026-10-26`; chi tiết ở phần nguồn cuối Bài N3.
+
+- **VAS (Vietnamese Accounting Standards):** chuẩn mực kế toán Việt Nam; báo cáo doanh nghiệp Việt Nam lập theo VAS và chế độ kế toán của Bộ Tài chính (Bài N3).
+- **Chế độ kế toán doanh nghiệp (Thông tư 99/2025/TT-BTC):** thay Thông tư 200/2014/TT-BTC cho năm tài chính bắt đầu từ 01/01/2026; báo cáo hợp nhất theo Thông tư 43/2026/TT-BTC (sửa Thông tư 202/2014) (nguồn: văn bản TT 99; trang tóm tắt TT 43 — Bài N3).
+- **Báo cáo tình hình tài chính (B 01-DN):** tên mới của "bảng cân đối kế toán" theo TT 99 (Bài N3).
+- **Mã số chỉ tiêu:** tọa độ cố định của mỗi dòng trên mẫu biểu; không được đánh lại trong cùng một mẫu, nhưng đổi giữa mẫu cũ và mới (ví dụ tổng tài sản 270 → 280) (Bài N3).
+- **Lợi nhuận thuần từ hoạt động kinh doanh (mã 30, B02):** đã trừ chi phí tài chính (gồm lãi vay) và cộng doanh thu tài chính — **không** phải EBIT; EBIT xấp xỉ = mã 50 + chi phí lãi vay (Bài N3).
+- **Lợi ích cổ đông không kiểm soát (mã 429):** phần vốn chủ của cổ đông thiểu số ở công ty con, nằm trong vốn chủ hợp nhất (Bài N3).
+
 Bảng này là điểm xuất phát. Mỗi bài học mới nên bổ sung thuật ngữ theo ngữ cảnh và dẫn nguồn khi định nghĩa có tính quy chuẩn.
 
 Nguồn khung toàn cầu đã mở khi tạo bản đầu ngày 2026-08-10: [Khung khái niệm báo cáo tài chính của IFRS](https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/). Agent vẫn phải mở và xác minh lại nguồn trong mỗi lượt sử dụng.
+
+
+## Thuật ngữ bổ sung cho N1, N4–N8 và 010–016
+
+- Cập nhật định nghĩa và mở nguồn trong lượt: `2026-10-26`; các dữ liệu thị trường cụ thể không áp dụng ở bảng này.
+- Đây là thuật ngữ nhập môn; định nghĩa báo cáo/quy định có thể khác theo quốc gia. Bảng cũ phía trên giữ nguồn và mốc riêng.
+
+| Thuật ngữ | Giải thích ngắn | Nơi học và nguồn định nghĩa |
+|---|---|---|
+| Thị trường sơ cấp/thứ cấp | Phát hành chứng khoán mới để huy động vốn / giao dịch chứng khoán đã phát hành | N1; [Investor.gov Stocks](https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks) |
+| Thanh khoản | Khả năng mua/bán nhanh mà không gây thay đổi giá đáng kể; không chỉ số lượng khớp | N1; [SEC](https://www.investor.gov/introduction-investing/investing-basics/glossary/liquidity-or-marketability) |
+| Định phí/biến phí | Chi phí không đổi trong phạm vi công suất xét / chi phí biến theo lượng hoạt động; khoản thực có thể hỗn hợp | N6; [SBA](https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point) |
+| Phần đóng góp và hòa vốn | Giá bán trừ biến phí mỗi đơn vị; hòa vốn lượng bằng định phí chia phần đóng góp dương trong mô hình đơn sản phẩm | N6; [SBA](https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs/break-even-point) |
+| PV/FV | Giá trị hiện tại/tương lai; quy đổi theo thời gian và tỷ lệ giả định | N4; [California BOE](https://www.boe.ca.gov/info/tvm/lesson1.html) |
+| Lãi kép, lợi suất kép theo năm | Lãi nhập gốc tiếp tục tạo lãi; tỷ lệ năm tương đương cho tăng trưởng từ giá trị đầu tới cuối, không góp/rút | N4; [BOE](https://www.boe.ca.gov/info/tvm/lesson1.html) |
+| Điểm phần trăm | Chênh hai tỷ lệ; từ10% lên12% là+2 điểm phần trăm, tăng tương đối20% | N7; phép tính hư cấu giải đầy đủ trong bài |
+| Trung bình/trung vị | Tổng chia số phần tử / giá trị giữa sau sắp xếp; khi số phần tử chẵn, trung vị là bình quân hai phần tử giữa | N7; [NIST](https://itl.nist.gov/div898/handbook/eda/section3/eda351.htm) |
+| Phiên bản dữ liệu theo thời điểm (vintage) | Tập số từng được công bố/biết ở một ngày; bản sửa mới có thể khác | N7; [ALFRED](https://alfred.stlouisfed.org/help) |
+| Quỹ ETF/quỹ chỉ số | ETF giao dịch trên sàn; quỹ chỉ số tìm cách theo dõi chỉ số; hai khái niệm không đồng nhất | N5; [Investor.gov](https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-4) |
+| Tái cân bằng | Điều chỉnh cơ cấu trở lại mục tiêu đã đặt, phải xét chi phí/thuế; không là bảo đảm lợi nhuận | N5; [Investor.gov](https://www.investor.gov/introduction-investing/getting-started/asset-allocation) |
+| Mốc so sánh (benchmark) | Chuẩn phù hợp để đặt kết quả vào bối cảnh; cần khớp kỳ, tiền tệ, cổ tức và phạm vi | N5; [Fidelity](https://www.fidelity.com/webcontent/ap002390-mlo-content/20.04/help/learn_performancereporting.shtml) |
+| Lợi suất theo thời gian/theo tiền | Cách tách tác động góp/rút khi đo đầu tư / cách phản ánh lượng và thời điểm tiền của người đầu tư | N5; [Fidelity](https://www.fidelity.com/webcontent/ap002390-mlo-content/20.04/help/learn_performancereporting.shtml) |
+| Lợi suất giá/tổng lợi suất | Chỉ phản ánh giá / thêm cổ tức hoặc phân phối tái đầu tư theo phương pháp chỉ số | N5; [S&P Dow Jones Indices](https://www.spglobal.com/spdji/en/research-insights/index-literacy/methodology-matters/) |
+| CAPM, beta, ERP | Mô hình ke=Rf+beta×ERP; beta là độ nhạy theo mô hình thị trường; ERP là phần bù rủi ro vốn cổ phần | 010; [Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/definitions.html) |
+| WACC | Chi phí vốn bình quân gia quyền giữa nợ và vốn chủ, cần giải thích trọng số và thuế | 010; [Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/definitions.html) |
+| FCFF/FCFE | Dòng tiền cho mọi người cấp vốn / riêng cổ đông; ghép lần lượt với WACC / chi phí vốn cổ đông | 011; [Damodaran](https://pages.stern.nyu.edu/adamodar/New_Home_Page/lectures/approach.html) |
+| Giá trị cuối kỳ (terminal value) | Giá trị ở cuối giai đoạn dự báo của các dòng tiền sau đó; còn phải chiết khấu về hôm nay | 011; [Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/val.html) |
+| Định giá ngược (reverse DCF) | Bắt đầu từ giá/EV và tìm tổ hợp giả định dòng tiền/rủi ro/tăng trưởng tương thích, không đọc được duy nhất suy nghĩ thị trường | 011; phép đảo mô hình được giải trong bài |
+| NIM | Thu nhập lãi ròng trên tài sản sinh lãi, thường dùng bình quân; phải khớp định nghĩa/điều chỉnh thuế khi so báo cáo | 013; [Federal Reserve IFDP1197](https://www.federalreserve.gov/econresdata/ifdp/2017/files/ifdp1197.pdf) |
+| CET1/RWA | Vốn cổ phần phổ thông cấp1 theo quy định / tài sản có trọng số rủi ro; khác vốn chủ/tổng tài sản kế toán | 013; [JPMorgan FY2025](https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/corp-10k-2025.pdf) |
+| Tỷ lệ kết hợp (combined ratio) | Tỷ lệ tổn thất cộng tỷ lệ chi phí, với cơ sở đo phù hợp; dùng trong phân tích phi nhân thọ | 013; [NAIC](https://content.naic.org/glossary-insurance-terms) |
+| Float bảo hiểm | Nguồn tiền thuần giữ trước khi thực hiện nghĩa vụ bảo hiểm, không tự là vốn miễn phí | 013; [Berkshire FY2025](https://www.berkshirehathaway.com/2025ar/2025ar.pdf) |
+| Hệ số lấp đầy hàng không | Nhu cầu hành khách nhân quãng đường / công suất ghế nhân quãng đường; không tự cho tỷ lệ hòa vốn | 014; [IATA](https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/) |
+
+Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và nhật ký không phải ngưỡng chứng minh hiệu quả đầu tư. Mở lại nguồn trước khi dùng các định nghĩa vào trường hợp cụ thể.

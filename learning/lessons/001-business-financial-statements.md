@@ -1,35 +1,13 @@
 # Bài 001: Một doanh nghiệp đi qua ba báo cáo tài chính
 
-> Đây là ví dụ minh họa cấu trúc học tập, không phải nguồn dữ kiện. Trước khi dạy bài này, agent phải tìm kiếm Internet trong lượt hiện tại, mở nguồn chính thức toàn cầu và cập nhật phần giải thích nếu chuẩn hiện hành thay đổi.
+- Ngày: `2026-08-10` (sửa cấu trúc `2026-10-26`)
+- Chốt dữ liệu lúc: `2026-08-10 16:45 UTC+7`; hộp IFRS 18 ở cuối bài chốt trước `2026-10-26 16:29 UTC+7` (nguồn IFRS 18 và KPMG mở lại trong phiên `2026-10-26`).
+- Mục tiêu: Phân biệt được doanh thu, lợi nhuận và tiền mặt; nói được mỗi báo cáo trong ba báo cáo trả lời câu hỏi gì; tính được khoảng cách giữa dòng tiền hoạt động và lợi nhuận, rồi nêu giả thuyết kèm dữ liệu cần kiểm.
+- Thời lượng: 25 phút đọc + 35 phút bài tập (2 phiên)
+- Bài sau: [Bài N2](N2-statement-line-items.md) (từng dòng của ba báo cáo), rồi [Bài 002](002-finding-a-cheap-stock.md).
+- Câu hỏi cốt lõi: **Doanh nghiệp báo lãi, nhưng tiền thật đã về chưa — và nếu chưa thì đang nằm ở đâu?**
 
-Thời lượng gợi ý: 20-30 phút.
-
-Chốt dữ liệu lúc: 2026-08-10 16:45:03 UTC+7. Cập nhật bổ sung ngày `2026-10-26` (hộp IFRS 18 dưới đây).
-
-## Cập nhật quan trọng: từ kỳ báo cáo 2027, cách đọc báo cáo kết quả kinh doanh thay đổi
-
-`SỰ_THẬT` Theo [IFRS 18 — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/) (trang chuẩn mở ngày `2026-10-26`, HTTP 200; ban hành `2024-04`), IFRS 18 **thay thế IAS 1** và có hiệu lực với kỳ báo cáo năm **bắt đầu từ hoặc sau `2027-01-01`**, cho phép áp dụng sớm. `SUY_LUẬN` Với doanh nghiệp có năm tài chính theo năm dương lịch, báo cáo năm đầu tiên lập theo IFRS 18 là báo cáo năm 2027, thường chỉ được công bố vào **đầu 2028**.
-
-Ba thay đổi ảnh hưởng trực tiếp tới người đọc báo cáo:
-
-1. `SỰ_THẬT` Báo cáo kết quả kinh doanh phải trình bày **hai tiểu tổng mới**: **lợi nhuận hoạt động** (operating profit) và **lợi nhuận trước tài chính và thuế thu nhập** (profit before financing and income taxes).
-2. `SỰ_THẬT` Doanh nghiệp phải công bố **thước đo do ban điều hành tự định nghĩa** (management-defined performance measures — MPM): các tiểu tổng thu nhập/chi phí **không do IFRS quy định** nhưng được dùng trong truyền thông công khai. Đây là công cụ để kiểm tra "lợi nhuận điều chỉnh" (xem [Bài 007](007-notes-and-accounting-red-flags.md)).
-3. `SỰ_THẬT` Chuẩn thêm **nguyên tắc mới về gộp và tách khoản mục**; một số đoạn của IAS 1 được chuyển sang **IAS 8** (đã đổi tên thành *Basis of Preparation of Financial Statements*) và **IFRS 7**.
-
-`SỰ_THẬT` Kéo theo, IAS 7 (báo cáo lưu chuyển tiền tệ) được sửa để buộc dùng **lợi nhuận hoạt động làm điểm xuất phát** của phương pháp gián tiếp, kèm yêu cầu mới về phân loại dòng tiền **lãi vay và cổ tức** — với đa số doanh nghiệp, lãi vay đã trả chuyển sang dòng tiền tài chính (xem [Bài 004](004-cash-flow-and-earnings-quality.md)).
-
-Cách dùng hộp này khi học:
-
-- Khi đọc báo cáo của kỳ năm bắt đầu **trước** `2027-01-01` (trừ khi doanh nghiệp áp dụng sớm): vẫn theo IAS 1, chưa có hai tiểu tổng mới.
-- Khi đọc báo cáo lập theo IFRS 18: dòng "lợi nhuận hoạt động" là mốc mới để tính các tỷ lệ (biên hoạt động, ROIC); đừng lấy "lợi nhuận thuần" như mốc duy nhất nữa. `SUY_LUẬN` Nhưng "lợi nhuận hoạt động" của IFRS 18 không mặc nhiên bằng EBIT bạn tự tính; phải đọc nó gồm những khoản nào.
-- Khi **so sánh** báo cáo cũ và mới: điểm xuất phát của cầu nối lợi nhuận → tiền đã khác, nên phải nói rõ đang so hai chuẩn trình bày khác nhau.
-
-`CHƯA_BIẾT` Với báo cáo lập theo **VAS** (Việt Nam), cách trình bày và tên chỉ tiêu khác với IFRS; bài này không nêu chi tiết vì lượt này chưa mở được văn bản hướng dẫn hiện hành của Bộ Tài chính. Khi áp vào hồ sơ Việt Nam, phải đọc thông tư/chế độ kế toán đang áp dụng và đối chiếu tên chỉ tiêu.
-
-
-## Mục tiêu
-
-Sau bài này, bạn phân biệt được doanh thu, lợi nhuận và tiền mặt; đồng thời hiểu ba báo cáo tài chính kể ba phần khác nhau của cùng một câu chuyện.
+> Đây là bài học nền tảng, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Ví dụ số học là hư cấu. Khi dạy lại bài này, agent phải tìm kiếm Internet trong lượt hiện tại và cập nhật phần giải thích nếu chuẩn hiện hành thay đổi.
 
 ## Hiểu bài này trong 1 phút
 
@@ -231,11 +209,77 @@ Khi gặp bài “lợi nhuận khác dòng tiền”, có thể dùng mẫu sá
 - Chỉ lấy số dư cuối kỳ trừ số dư đầu kỳ rồi coi kết quả là tác động tiền. Mua bán công ty con, tỷ giá, xóa nợ và phân loại lại cũng có thể làm số dư thay đổi; phải ưu tiên bảng đối chiếu dòng tiền và thuyết minh.
 - Dùng một kỳ duy nhất để kết luận doanh nghiệp tốt hoặc xấu. Cần so sánh nhiều kỳ và xét mùa vụ, tăng trưởng cùng đặc điểm ngành.
 
+## Bài tập luyện thêm (5 câu)
+
+`KỊCH_BẢN` Số liệu hư cấu, cùng một kỳ, đơn vị tiền.
+
+Bài tập chính ở trên được tính là Bài 1.
+
+### Bài 2 (nhớ lại) — báo cáo nào?
+Muốn biết (a) tiền mặt cuối năm; (b) lãi hay lỗ trong năm; (c) tiền đã chi mua máy; (d) khách còn nợ bao nhiêu; (e) tiền đã trả cổ tức — mở báo cáo nào?
+
+### Bài 3 (vận dụng) — dựng cầu nối
+Lợi nhuận sau thuế 50; khấu hao 15; phải thu tăng 30; tồn kho giảm 10; phải trả người bán tăng 5. Tính dòng tiền hoạt động.
+
+### Bài 4 (phát hiện lỗi) — mua máy
+"Năm nay lợi nhuận 40, dòng tiền hoạt động 60, nhưng công ty mua máy 200 bằng tiền mặt nên dòng tiền hoạt động thật ra là −140." Câu này sai ở đâu?
+
+### Bài 5 (phát hiện lỗi) — lãi là có tiền
+"Lợi nhuận năm nay 30 nên tiền trong tài khoản chắc chắn tăng 30." Nêu hai lý do câu này có thể sai.
+
+### Bài 6 (chuyển giao) — hai năm liền
+Năm 1: lợi nhuận 20, dòng tiền hoạt động −10, phải thu tăng 25. Năm 2: lợi nhuận 25, dòng tiền hoạt động 35, phải thu giảm 10. Nhìn cả hai năm, bạn rút ra được gì, và còn phải kiểm gì?
+
+### Đáp án bài luyện thêm
+
+- **Bài 2**: (a) bảng cân đối (hoặc dòng cuối của báo cáo lưu chuyển tiền tệ); (b) báo cáo kết quả kinh doanh; (c) báo cáo lưu chuyển tiền tệ, phần đầu tư; (d) bảng cân đối, dòng phải thu; (e) báo cáo lưu chuyển tiền tệ, **thường** ở phần tài chính (trước IFRS 18, IAS 7 cho phép chọn xếp vào hoạt động hay tài chính). Câu này kiểm: mỗi câu hỏi có một "nhà" riêng.
+- **Bài 3**: `PHÉP_TÍNH` `50 + 15 − 30 + 10 + 5 = 50`. Câu này kiểm chiều dấu: tồn kho **giảm** là **cộng**.
+- **Bài 4**: Mua máy thuộc **dòng tiền đầu tư**, nên dòng tiền hoạt động vẫn là 60. Con số −140 (`60 − 200`) là thay đổi tiền **trước** dòng tiền tài chính (nếu không có khoản đầu tư nào khác), không phải dòng tiền hoạt động. Câu này kiểm: bạn có phân biệt ba phần của báo cáo lưu chuyển tiền tệ.
+- **Bài 5**: (1) lợi nhuận có thể nằm trong phải thu hoặc tồn kho chưa thành tiền; (2) tiền còn chịu dòng tiền đầu tư và tài chính (mua máy, trả nợ, trả cổ tức). Ngoài ra khấu hao làm **dòng tiền hoạt động** cao hơn lợi nhuận — nên lệch có thể theo cả hai chiều.
+- **Bài 6**: `SUY_LUẬN` Năm 2 thu hồi một phần phải thu của năm 1 nên dòng tiền vượt lợi nhuận; cộng hai năm: lợi nhuận 45, dòng tiền 25, chênh `25 − 45 = −20`. `PHÉP_TÍNH` Phải thu tăng ròng `25 − 10 = 15` chỉ giải thích được −15; còn **−5 chưa giải thích** (năm 1 chênh −30 mà phải thu chỉ −25). Lệch có thể chỉ là **thời điểm**, nhưng chưa hết. Còn phải kiểm: tuổi nợ của 15 còn lại, dự phòng, năm 3 có lặp lại không, và khoản −5 đến từ tồn kho, phải trả hay khoản phi tiền mặt nào. Câu này kiểm: nhìn nhiều kỳ thay vì một kỳ.
+
+## Ranh giới an toàn
+
+- Bài này là khung đọc báo cáo, **không** phải khuyến nghị mua/bán/nắm giữ.
+- Mọi ví dụ là hư cấu; không suy ra kết luận về doanh nghiệp thật từ bài này.
+- Một tín hiệu (dòng tiền âm, phải thu tăng) chỉ là câu hỏi, không phải kết luận.
+
+## Điều tôi vẫn chưa hiểu
+
+Câu hỏi mở để bạn tự trả lời, dùng làm đầu vào cho Bài N2:
+
+1. Nếu mua máy không làm giảm lợi nhuận ngay, thì chi phí của chiếc máy đi vào lợi nhuận bằng cách nào?
+2. Một doanh nghiệp có thể **lỗ** mà dòng tiền hoạt động vẫn **dương** không? Cho một ví dụ.
+3. Vì sao phương trình "tài sản = nợ + vốn chủ" luôn cân, dù mỗi ngày có hàng nghìn giao dịch?
+
+## Đọc thêm: từ kỳ báo cáo 2027, cách đọc báo cáo kết quả kinh doanh thay đổi (IFRS 18)
+
+> Phần này dành cho lần đọc thứ hai, sau khi đã học Bài N2 và Bài 004. Lần đầu có thể bỏ qua.
+
+`SỰ_THẬT` Theo [IFRS 18 — IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/) (trang chuẩn mở ngày `2026-10-26`, HTTP 200; ban hành `2024-04`), IFRS 18 **thay thế IAS 1** và có hiệu lực với kỳ báo cáo năm **bắt đầu từ hoặc sau `2027-01-01`**, cho phép áp dụng sớm. `SUY_LUẬN` Với doanh nghiệp có năm tài chính theo năm dương lịch, báo cáo năm đầu tiên lập theo IFRS 18 là báo cáo năm 2027, thường chỉ được công bố vào **đầu 2028**.
+
+Ba thay đổi ảnh hưởng trực tiếp tới người đọc báo cáo:
+
+1. `SỰ_THẬT` Báo cáo kết quả kinh doanh phải trình bày **hai tiểu tổng mới**: **lợi nhuận hoạt động** (operating profit) và **lợi nhuận trước tài chính và thuế thu nhập** (profit before financing and income taxes).
+2. `SỰ_THẬT` Doanh nghiệp phải công bố **thước đo do ban điều hành tự định nghĩa** (management-defined performance measures — MPM): các tiểu tổng thu nhập/chi phí **không do IFRS quy định** nhưng được dùng trong truyền thông công khai. Đây là công cụ để kiểm tra "lợi nhuận điều chỉnh" (xem [Bài 007](007-notes-and-accounting-red-flags.md)).
+3. `SỰ_THẬT` Chuẩn thêm **nguyên tắc mới về gộp và tách khoản mục**; một số đoạn của IAS 1 được chuyển sang **IAS 8** (đã đổi tên thành *Basis of Preparation of Financial Statements*) và **IFRS 7**.
+
+`SỰ_THẬT` Kéo theo, IAS 7 (báo cáo lưu chuyển tiền tệ) được sửa, hiệu lực cho kỳ bắt đầu từ `2027-01-01`: phương pháp gián tiếp xuất phát từ **lợi nhuận hoạt động** thay vì lợi nhuận sau thuế; lãi vay đã trả xếp vào dòng tiền **tài chính** nếu doanh nghiệp không cấp tài chính cho khách hàng như hoạt động kinh doanh chính (IAS 7.34A); với doanh nghiệp **không** có hoạt động kinh doanh chính được chỉ định (không đầu tư vào tài sản và không cấp tài chính cho khách hàng như hoạt động chính), lãi và cổ tức nhận được xếp vào **đầu tư**; cổ tức đã trả xếp vào **tài chính** — bỏ quyền lựa chọn trước đây (nguồn thứ cấp: KPMG, 01/06/2026; BDO, IFR Bulletin 2026/05; xem [Bài 004](004-cash-flow-and-earnings-quality.md)).
+
+Cách dùng hộp này khi học:
+
+- Khi đọc báo cáo của kỳ năm bắt đầu **trước** `2027-01-01` (trừ khi doanh nghiệp áp dụng sớm): vẫn theo IAS 1, chưa có hai tiểu tổng mới.
+- Khi đọc báo cáo lập theo IFRS 18: dòng "lợi nhuận hoạt động" là mốc mới để tính các tỷ lệ (biên hoạt động, ROIC); đừng lấy "lợi nhuận thuần" như mốc duy nhất nữa. `SUY_LUẬN` Nhưng "lợi nhuận hoạt động" của IFRS 18 không mặc nhiên bằng EBIT bạn tự tính; phải đọc nó gồm những khoản nào.
+- Khi **so sánh** báo cáo cũ và mới: điểm xuất phát của cầu nối lợi nhuận → tiền đã khác, nên phải nói rõ đang so hai chuẩn trình bày khác nhau.
+
+`CHƯA_BIẾT` Với báo cáo lập theo **VAS** (Việt Nam), cách trình bày và tên chỉ tiêu khác với IFRS; bài này không nêu chi tiết vì lượt này chưa mở được văn bản hướng dẫn hiện hành của Bộ Tài chính. Khi áp vào hồ sơ Việt Nam, phải đọc thông tư/chế độ kế toán đang áp dụng và đối chiếu tên chỉ tiêu.
+
 ## Nguồn Internet đã mở và kiểm tra khi cập nhật lời giải
 
 - [IFRS 18 - Presentation and Disclosure in Financial Statements, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/): trang chuẩn "Standard 2026 Issued", mở ngày 2026-10-26 (HTTP 200); ban hành tháng 4-2024, hiệu lực kỳ báo cáo năm từ hoặc sau 2027-01-01; xác nhận việc thay thế IAS 1, hai tiểu tổng mới, yêu cầu công bố MPM, nguyên tắc gộp/tách khoản mục, và việc chuyển một số đoạn sang IAS 8 (đổi tên *Basis of Preparation of Financial Statements*) và IFRS 7.
+- [KPMG — IFRS 18 changes to the statement of cash flows](https://kpmg.com/us/en/articles/2026/ifrs-18-changes-statement-cash-flows.html): **nguồn thứ cấp**, đăng 2026-06-01, mở ngày 2026-10-26; xác nhận sửa đổi IAS 7 do IFRS 18 (điểm xuất phát lợi nhuận hoạt động; phân loại lãi và cổ tức cho doanh nghiệp không có hoạt động kinh doanh chính được chỉ định; hiệu lực kỳ từ 2027-01-01).
 - [IAS 7 - Statement of Cash Flows, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ias-7-statement-of-cash-flows/): trang chuẩn hiện hành được truy cập ngày 2026-08-10; xác nhận phương pháp gián tiếp điều chỉnh lợi nhuận cho giao dịch phi tiền mặt, dồn tích và các khoản liên quan tới dòng tiền đầu tư hoặc tài chính. Trang ghi nhận các sửa đổi do IFRS 18 ban hành tháng 4-2024.
-- [IAS 7, đoạn 18-20 - bản PDF IFRS Foundation](https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-7-statement-of-cash-flows.pdf?bypass=onStatement): bản PDF phát hành năm 2022, truy cập ngày 2026-08-10; liệt kê cụ thể tồn kho, khoản phải thu, khoản phải trả và các khoản phi tiền mặt trong cầu nối dòng tiền gián tiếp. Khi có khác biệt, trang chuẩn hiện hành phía trên được ưu tiên vì phản ánh các sửa đổi mới hơn.
+- [IAS 7, đoạn 18-20 - bản PDF IFRS Foundation](https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-7-statement-of-cash-flows.pdf?bypass=onStatement): bản PDF phát hành năm 2022, truy cập ngày 2026-08-10; liệt kê cụ thể tồn kho, khoản phải thu, khoản phải trả và các khoản phi tiền mặt trong cầu nối dòng tiền gián tiếp. Khi có khác biệt, trang chuẩn hiện hành phía trên được ưu tiên vì phản ánh các sửa đổi mới hơn. Đến ngày `2026-10-26`, bản PDF này không mở công khai được (các lần mở trong ngày: đòi thuê bao IFRS Digital hoặc từ chối kết nối).
 - [Beginners' Guide to Financial Statements, U.S. SEC](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements): cập nhật gần nhất ngày 2017-02-06, truy cập ngày 2026-08-10; giải thích báo cáo dòng tiền đối chiếu lợi nhuận với tiền thực tế thông qua khoản phi tiền mặt và tài sản, nợ hoạt động.
 
 ## Bước tiếp theo
