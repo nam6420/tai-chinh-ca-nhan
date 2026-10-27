@@ -3,7 +3,7 @@
 - Cập nhật cấu trúc: `2026-10-27`.
 - Hiện có **61 mã bài đã soạn**: 001–016, N1–N8 và 37 bài Đợt 1–6. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
-- [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
+- [Lộ trình và chuẩn học](roadmap.md), [đối chiếu 51 mục](coverage-51.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
 ## Nhánh 1 — Hiểu doanh nghiệp và phân tích cổ phiếu
 

@@ -7,7 +7,7 @@
 
 ## Kế hoạch mở rộng 51 mục kiến thức
 
-Đây là thứ tự biên soạn, không phải thời khóa biểu. Mỗi đợt có cổng kiểm nguồn và phản biện riêng; bài đã soạn không tự là bài đã kiểm duyệt.
+Xem [bảng đối chiếu 51 mục](coverage-51.md) để truy từng mã mục tới bài hoặc khung thực hành. Đây là thứ tự biên soạn, không phải thời khóa biểu. Mỗi đợt có cổng kiểm nguồn và phản biện riêng; bài đã soạn không tự là bài đã kiểm duyệt.
 
 | Đợt | Phạm vi | Trạng thái |
 |---|---|---|
