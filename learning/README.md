@@ -1,7 +1,7 @@
 # Bắt đầu học tại đây
 
-- Cập nhật cấu trúc: `2026-10-26`.
-- Hiện có **24 mã bài**: 001–016 và N1–N8. Mã là địa chỉ, không phải thứ tự đọc.
+- Cập nhật cấu trúc: `2026-10-27`.
+- Hiện có **30 mã bài đã soạn**: 001–016, N1–N8 và sáu bài Đợt 1. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
 
@@ -38,6 +38,16 @@ N5A có thể đọc sớm sau N1, **không phải điều kiện học 001**. B
 ## Nhánh 2 — Danh mục và quỹ
 
 **N1 → N5A → N4 → N7 → N5B → bài tổng kết nhánh quỹ ngay trong N5.** Không bắt buộc học kế toán và DCF. Ví dụ N7 tự đủ đầu vào. Không có quỹ hay tỷ trọng cá nhân nào được đề xuất.
+
+## Nhánh 3 — Tài chính cá nhân, Việt Nam và thực thi
+
+P1 và P3 đã qua hai nhánh kiểm duyệt; các bài còn lại đang kiểm lại. Xem [sổ kiểm duyệt](reviews/README.md) trước khi dùng:
+
+1. [P1 — Ngân sách, quỹ khẩn cấp, bảo hiểm](lessons/P1-budget-emergency-fund-insurance.md) → [P2 — Nợ cá nhân](lessons/P2-personal-debt.md) → [P3 — Mục tiêu và chính sách cá nhân](lessons/P3-goals-risk-ips.md).
+2. [B3 — Bảo mật tài khoản và lừa đảo](lessons/B3-account-security-scams.md): học trước khi chuyển tiền cho bên tự nhận là đơn vị đầu tư.
+3. [V1 — Cấu trúc thị trường Việt Nam](lessons/V1-vietnam-market-structure.md) → [V2 — Quy tắc giao dịch](lessons/V2-vietnam-trading-rules.md). Quy tắc thay đổi theo thời gian; kiểm lại nguồn hiện hành trước khi áp dụng.
+
+Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đầu nhật ký học hoặc quyết định bằng [mẫu nhật ký](../templates/decision-journal.md).
 
 ## Nhánh chuyên ngành — chọn khi cần
 

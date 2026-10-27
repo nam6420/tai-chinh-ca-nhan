@@ -1,6 +1,6 @@
 # Sổ kiểm duyệt bài học
 
-- Cập nhật: `2026-10-26`.
+- Cập nhật: `2026-10-27`.
 - **13 bài mới** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung.
 - Cổng cấu trúc của repo đã đối chiếu13/13 bài mới với26 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
@@ -8,6 +8,12 @@
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [B3](../lessons/B3-account-security-scams.md) | Bản nháp | Đang kiểm lại | Đang kiểm lại | Chưa chốt biên bản |
+| [P1](../lessons/P1-budget-emergency-fund-insurance.md) | Đã soạn | [ĐẠT](P1-fact-check.md) | [ĐẠT](P1-risk-review.md) | `089cda636e1e…` |
+| [P2](../lessons/P2-personal-debt.md) | Bản nháp | [CHƯA_BIẾT](P2-fact-check.md) | [ĐẠT](P2-risk-review.md) | `e9675a0e3d88…` |
+| [P3](../lessons/P3-goals-risk-ips.md) | Đã soạn | [ĐẠT](P3-fact-check.md) | [ĐẠT](P3-risk-review.md) | `19cec10b2058…` |
+| [V1](../lessons/V1-vietnam-market-structure.md) | Bản nháp | Đang kiểm lại | Đang kiểm lại | Chưa chốt biên bản |
+| [V2](../lessons/V2-vietnam-trading-rules.md) | Bản nháp | [CHƯA_BIẾT](V2-fact-check.md) — 1 lỗi nghiêm trọng | [CHƯA_BIẾT](V2-risk-review.md) | `a646be11cd89…` |
 | [010](../lessons/010-cost-of-capital.md) | Đã soạn | [ĐẠT](010-fact-check.md) | [ĐẠT](010-risk-review.md) | `dd420c920588…` |
 | [011](../lessons/011-dcf-reverse-dcf.md) | Đã soạn | [ĐẠT](011-fact-check.md) | [ĐẠT](011-risk-review.md) | `14c62076d36e…` |
 | [012](../lessons/012-scenarios-margin-of-safety.md) | Đã soạn | [ĐẠT](012-fact-check.md) | [ĐẠT](012-risk-review.md) | `7c89bdda6acc…` |
@@ -39,4 +45,3 @@
 ## Khi sửa nội dung
 
 Tính lại mã băm, kiểm lại nguồn/phản biện khi nội dung trọng yếu đổi. Không sửa biên bản để khớp một bài chưa được người kiểm đọc. Trạng thái hai dòng vòng đời được chuẩn hóa theo script; thay nội dung bài không được chuẩn hóa bỏ qua.
-

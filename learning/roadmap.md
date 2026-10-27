@@ -1,9 +1,25 @@
 # Lộ trình học hiện hành
 
-- Cập nhật: `2026-10-26`.
-- Có **24 mã bài đã soạn**: 16 bài số và 8 bài nền. Có 13 bài mới trong đợt triển khai này; trạng thái kiểm riêng ở [sổ kiểm duyệt](reviews/README.md).
+- Cập nhật: `2026-10-27`.
+- Có **30 mã bài đã soạn**: 16 bài số, 8 bài nền và 6 bài Đợt 1. Trạng thái kiểm riêng ở [sổ kiểm duyệt](reviews/README.md).
 - Thứ tự đọc và nhánh quỹ dùng [một danh sách tại README](README.md). Không học theo thứ tự số mã.
 - [Review và kế hoạch được yêu cầu triển khai](review-and-expansion-plan-2026-10-26.md); [bảng thực hành](practice/research-and-model-worksheets.md).
+
+## Kế hoạch mở rộng 51 mục kiến thức
+
+Đây là thứ tự biên soạn, không phải thời khóa biểu. Mỗi đợt có cổng kiểm nguồn và phản biện riêng; bài đã soạn không tự là bài đã kiểm duyệt.
+
+| Đợt | Phạm vi | Trạng thái |
+|---|---|---|
+| 0 | Quy ước mã, đường học, thuật ngữ | Đang đồng bộ chỉ mục |
+| 1 | P1–P3, B3, V1–V2 | P1 và P3 đã kiểm; bốn bài còn lại đang kiểm lại |
+| 2 | V3–V5, B1–B2, L1–L3 | Chưa soạn |
+| 3 | A1–A5 | Chưa soạn |
+| 4 | M1–M3, H1–H6 | Chưa soạn |
+| 5 | F1–F7 | Chưa soạn |
+| 6 | K1–K2, danh sách đọc, khung thực hành và hồ sơ mẫu | Chưa soạn |
+
+Các mã chỉ là địa chỉ chủ đề: V thị trường Việt Nam, B thực thi, P tài chính cá nhân, A loại tài sản, M vĩ mô, F phân tích, H hành vi/rủi ro/định lượng, L pháp lý, K thực hành. Có thể dùng [mẫu nhật ký](../templates/decision-journal.md) ngay, không phải đợi Đợt 6.
 
 ## Các chặng và điều kiện chuyển tiếp
 

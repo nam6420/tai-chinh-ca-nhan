@@ -138,3 +138,13 @@ Nguồn khung toàn cầu đã mở khi tạo bản đầu ngày 2026-08-10: [Kh
 | Hệ số lấp đầy hàng không | Nhu cầu hành khách nhân quãng đường / công suất ghế nhân quãng đường; không tự cho tỷ lệ hòa vốn | 014; [IATA](https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/) |
 
 Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và nhật ký không phải ngưỡng chứng minh hiệu quả đầu tư. Mở lại nguồn trước khi dùng các định nghĩa vào trường hợp cụ thể.
+
+## Thuật ngữ trong Đợt 1
+
+Các bài liên quan đang được kiểm duyệt lại; đối chiếu trạng thái tại [sổ kiểm duyệt](reviews/README.md). Nguồn mở lại ngày 27/10/2026; cách dùng thuật ngữ có thể khác giữa các tài liệu.
+
+| Thuật ngữ | Giải thích ngắn | Bài và nguồn |
+|---|---|---|
+| Quỹ khẩn cấp | Tiền để riêng cho chi phí bất ngờ hoặc tình huống tài chính khẩn cấp; mức cần có tùy hoàn cảnh | [P1](lessons/P1-budget-emergency-fund-insurance.md); [CFPB](https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/) |
+| Khả năng chịu rủi ro (risk capacity) | Mức rủi ro có thể chịu về mặt tài chính | [P3](lessons/P3-goals-risk-ips.md); [OSC Investor Office](https://www.getsmarteraboutmoney.ca/learning-path/building-your-investing-strategy/how-to-make-an-investment-policy-statement/) |
+| Mức sẵn lòng chịu rủi ro (risk tolerance) | Mức rủi ro một người sẵn lòng chấp nhận; một số nguồn dùng thuật ngữ rộng hơn | [P3](lessons/P3-goals-risk-ips.md); [OSC Investor Office](https://www.getsmarteraboutmoney.ca/learning-path/building-your-investing-strategy/how-to-make-an-investment-policy-statement/) |

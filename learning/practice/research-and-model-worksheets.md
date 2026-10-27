@@ -152,6 +152,20 @@ Không dùng bảng trống để tuyên bố đã phân tích đủ ba kịch b
 11. Kiểm toán/kiểm soát có lưu ý trọng yếu gì?
 12. Khi bằng chứng xung đột, có nguồn độc lập và ý kiến bất đồng được giữ không?
 
+## 9. Phiếu tự học tài chính cá nhân và an toàn
+
+Các phiếu trống dưới đây dùng cùng [P1](../lessons/P1-budget-emergency-fund-insurance.md), [P2](../lessons/P2-personal-debt.md), [P3](../lessons/P3-goals-risk-ips.md) và [B3](../lessons/B3-account-security-scams.md); các bài đang kiểm duyệt lại. Không ghi thông tin nhạy cảm vào kho dùng chung.
+
+| Câu hỏi | Người học tự điền |
+|---|---|
+| Thu nhập thực nhận và chi thiết yếu theo tháng | Chưa ghi |
+| Số tháng quỹ tự chọn và tiền dự phòng đã có | Chưa ghi |
+| Nợ, ngày đến hạn, lãi và phí cần đối chiếu hợp đồng | Chưa ghi |
+| Mục tiêu, số tiền, thời hạn và điều chưa chắc chắn | Chưa ghi |
+| Kênh chính thức tự tìm để xác minh và báo sự cố | Chưa ghi |
+
+Quỹ dự kiến = số tháng tự chọn × chi thiết yếu hằng tháng. Đây là phiếu tự tính, không đề xuất mức quỹ, sản phẩm hay hành động mua/bán.
+
 ## Nguồn và giới hạn
 
 Các bảng là `Ý_KIẾN` về thiết kế học tập và `KỊCH_BẢN` hư cấu, được tổng hợp từ bài004–016/N8. Khung DCF mở lại từ nguồn NYU nêu ở mục4 trong lượt26/10/2026. Các dữ kiện công ty thật phải dùng nguồn gốc tại thời điểm thực hành; bảng này không điền hộ số công ty. Mẫu vĩ mô riêng tại [đây](../../data/processed/macro-observation-template.md). Chưa có dữ liệu chứng minh bảng kiểm giúp tăng lợi nhuận.
