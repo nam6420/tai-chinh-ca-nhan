@@ -11,8 +11,8 @@
 
 | Đợt | Phạm vi | Trạng thái |
 |---|---|---|
-| 0 | Quy ước mã, đường học, thuật ngữ | Đang đồng bộ chỉ mục |
-| 1 | P1–P3, B3, V1–V2 | P1 và P3 đã kiểm; bốn bài còn lại đang kiểm lại |
+| 0 | Quy ước mã, đường học, thuật ngữ | Đã đồng bộ chỉ mục nền |
+| 1 | P1–P3, B3, V1–V2 | Đã qua hai nhánh kiểm duyệt theo từng bài; giữ các mục chưa biết |
 | 2 | V3–V5, B1–B2, L1–L3 | Chưa soạn |
 | 3 | A1–A5 | Chưa soạn |
 | 4 | M1–M3, H1–H6 | Chưa soạn |

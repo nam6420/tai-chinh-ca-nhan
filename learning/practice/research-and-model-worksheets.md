@@ -154,7 +154,7 @@ Không dùng bảng trống để tuyên bố đã phân tích đủ ba kịch b
 
 ## 9. Phiếu tự học tài chính cá nhân và an toàn
 
-Các phiếu trống dưới đây dùng cùng [P1](../lessons/P1-budget-emergency-fund-insurance.md), [P2](../lessons/P2-personal-debt.md), [P3](../lessons/P3-goals-risk-ips.md) và [B3](../lessons/B3-account-security-scams.md); các bài đang kiểm duyệt lại. Không ghi thông tin nhạy cảm vào kho dùng chung.
+Các phiếu trống dưới đây dùng cùng [P1](../lessons/P1-budget-emergency-fund-insurance.md), [P2](../lessons/P2-personal-debt.md), [P3](../lessons/P3-goals-risk-ips.md) và [B3](../lessons/B3-account-security-scams.md); xem trạng thái từng bài tại [sổ kiểm duyệt](../reviews/README.md). Không ghi thông tin nhạy cảm vào kho dùng chung.
 
 | Câu hỏi | Người học tự điền |
 |---|---|

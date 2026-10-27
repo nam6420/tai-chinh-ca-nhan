@@ -141,7 +141,7 @@ Các giải thích thiết kế như điều kiện bác bỏ, bảng kiểm và
 
 ## Thuật ngữ trong Đợt 1
 
-Các bài liên quan đang được kiểm duyệt lại; đối chiếu trạng thái tại [sổ kiểm duyệt](reviews/README.md). Nguồn mở lại ngày 27/10/2026; cách dùng thuật ngữ có thể khác giữa các tài liệu.
+Đối chiếu trạng thái từng bài tại [sổ kiểm duyệt](reviews/README.md). Nguồn mở lại ngày 27/10/2026; cách dùng thuật ngữ có thể khác giữa các tài liệu.
 
 | Thuật ngữ | Giải thích ngắn | Bài và nguồn |
 |---|---|---|

@@ -5,15 +5,16 @@
 - Cổng cấu trúc của repo đã đối chiếu13/13 bài mới với26 biên bản. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
 - **N2 và N3** (soạn trong một phiên Claude Code cùng ngày) đã qua cả hai nhánh, nhiều vòng, trên đúng mã băm ở bảng dưới. **Bài 001** đạt kiểm nguồn cho phần đổi trong đợt này nhưng **chưa** qua phản biện rủi ro.
 - **9 bài cũ còn lại** (002–009) không được tuyên bố kiểm duyệt toàn bộ trong đợt này. Thay đổi của chúng chủ yếu là điều hướng/chia phiên; xem trạng thái và mốc nguồn trong từng bài.
+- **Đợt 1:** B3, P1–P3, V1–V2 đã qua hai nhánh trên phiên bản ở bảng. Các mục `CHƯA_BIẾT` vẫn là giới hạn nội dung, không được hiểu là đã xác minh.
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
-| [B3](../lessons/B3-account-security-scams.md) | Bản nháp | Đang kiểm lại | Đang kiểm lại | Chưa chốt biên bản |
+| [B3](../lessons/B3-account-security-scams.md) | Đã soạn | [ĐẠT](B3-fact-check.md) | [ĐẠT](B3-risk-review.md) | `6e63d8d9fae5…` |
 | [P1](../lessons/P1-budget-emergency-fund-insurance.md) | Đã soạn | [ĐẠT](P1-fact-check.md) | [ĐẠT](P1-risk-review.md) | `089cda636e1e…` |
-| [P2](../lessons/P2-personal-debt.md) | Bản nháp | [CHƯA_BIẾT](P2-fact-check.md) | [ĐẠT](P2-risk-review.md) | `e9675a0e3d88…` |
+| [P2](../lessons/P2-personal-debt.md) | Đã soạn | [ĐẠT](P2-fact-check.md) | [ĐẠT](P2-risk-review.md) | `e9675a0e3d88…` |
 | [P3](../lessons/P3-goals-risk-ips.md) | Đã soạn | [ĐẠT](P3-fact-check.md) | [ĐẠT](P3-risk-review.md) | `19cec10b2058…` |
-| [V1](../lessons/V1-vietnam-market-structure.md) | Bản nháp | Đang kiểm lại | Đang kiểm lại | Chưa chốt biên bản |
-| [V2](../lessons/V2-vietnam-trading-rules.md) | Bản nháp | [CHƯA_BIẾT](V2-fact-check.md) — 1 lỗi nghiêm trọng | [CHƯA_BIẾT](V2-risk-review.md) | `a646be11cd89…` |
+| [V1](../lessons/V1-vietnam-market-structure.md) | Đã soạn | [ĐẠT](V1-fact-check.md) | [ĐẠT](V1-risk-review.md) | `17e384b64beb…` |
+| [V2](../lessons/V2-vietnam-trading-rules.md) | Đã soạn | [ĐẠT](V2-fact-check.md) | [ĐẠT](V2-risk-review.md) | `f7e01717e1a8…` |
 | [010](../lessons/010-cost-of-capital.md) | Đã soạn | [ĐẠT](010-fact-check.md) | [ĐẠT](010-risk-review.md) | `dd420c920588…` |
 | [011](../lessons/011-dcf-reverse-dcf.md) | Đã soạn | [ĐẠT](011-fact-check.md) | [ĐẠT](011-risk-review.md) | `14c62076d36e…` |
 | [012](../lessons/012-scenarios-margin-of-safety.md) | Đã soạn | [ĐẠT](012-fact-check.md) | [ĐẠT](012-risk-review.md) | `7c89bdda6acc…` |

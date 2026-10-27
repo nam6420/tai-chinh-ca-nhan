@@ -1,13 +1,13 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài B3 — Bảo vệ tài khoản và nhận diện lừa đảo đầu tư
+# Bài B3 — Bảo vệ tài khoản và nhận diện lừa đảo đầu tư
 
 - Ngày: `2026-10-27`
-- Chốt dữ liệu lúc: `2026-10-27 09:46 UTC+7 (Asia/Ho_Chi_Minh)`
+- Chốt dữ liệu lúc: `2026-10-27 10:39 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Nhận ra các dấu hiệu lừa đảo đầu tư phổ biến, biết cách tự kiểm tra một đơn vị có được cấp phép hay không, giữ tài khoản an toàn ở mức cơ bản và biết việc cần làm ngay khi nghi bị lừa.
 - Bài trước liên quan: Không yêu cầu kiến thức tài chính; nên học trước khi chuyển tiền vào bất kỳ tài khoản đầu tư nào. Học tiếp [N1](N1-market-basics.md).
 - Thời lượng: Một đến hai phiên ngắn; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Trước khi chuyển tiền cho một nơi tự nhận là đầu tư, tôi kiểm tra được điều gì và dừng khi thấy dấu hiệu nào?**
-- Kiểm nguồn: `CHƯA CHẠY` trên bản này (bản trước `ĐẠT`)
-- Phản biện rủi ro: `CHƯA CHẠY` trên bản này (bản trước `ĐẠT` có điều kiện)
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
 
 ## Hiểu bài này trong 1 phút
 
@@ -55,11 +55,13 @@ Quy tắc cho nhóm mạo danh: **cúp máy, tự tra số hoặc kênh chính t
 
 ## 3. Kiểm tra tư cách đơn vị trước khi chuyển tiền
 
-`SỰ_THẬT` (thứ cấp) UBCKNN nói danh sách công ty chứng khoán và công ty quản lý quỹ được cấp phép đăng trên ssc.gov.vn (nguồn Doanh nghiệp & Hội nhập cho công ty chứng khoán, Viettimes cho quỹ và công ty quản lý quỹ). `CHƯA_BIẾT` Chưa mở được trang này (lỗi chuyển hướng) nên chưa xác nhận trực tiếp địa chỉ trang danh sách; hãy tự gõ địa chỉ cơ quan vào trình duyệt, không bấm đường dẫn trong tin nhắn.
+`CHƯA_BIẾT` Địa chỉ danh sách giấy phép hiện hành của UBCKNN cho công ty chứng khoán và quản lý quỹ chưa được xác nhận trực tiếp. Khi cần kiểm một đơn vị cụ thể, hãy tự tìm kênh liên hệ chính thức của cơ quan quản lý và yêu cầu kiểm tra tên pháp nhân, giấy phép và phạm vi hoạt động; không dùng đường dẫn hoặc số điện thoại do người lạ gửi.
 
-Giới hạn của việc kiểm này: (1) danh sách chỉ nói về công ty chứng khoán, quản lý quỹ; tiền mã hóa, ngoại hối hay "sàn" khác nằm ngoài; (2) một đơn vị có trong danh sách **vẫn có thể bị mạo danh** (website nhái, nhân viên giả) nên phải gọi lại qua số trên website bạn tự gõ; (3) tên nhái thường chỉ khác một chữ.
+`SỰ_THẬT` [VNX — Danh sách thành viên](https://www.vnx.vn/vi/danh-sach-thanh-vien) cho tra cứu tên, mã và thị trường của thành viên giao dịch. Đây là một điểm đối chiếu bổ sung, không phải danh sách đầy đủ giấy phép của UBCKNN: vắng tên trong danh sách thành viên không tự chứng minh một tổ chức không được cấp phép, và có tên cũng không loại trừ mạo danh. Trang không nêu ngày chốt dữ liệu; cần kiểm với cơ quan có thẩm quyền và kênh chính thức của đơn vị.
 
-`SỰ_THẬT (thứ cấp, chưa đối chiếu văn bản gốc)` Khoản 1 Điều 91 Luật Chứng khoán 2019 quy định công ty chứng khoán không được đưa ra nhận định hay bảo đảm với khách hàng về mức thu nhập hay lợi nhuận, và không được bảo đảm khách hàng không bị thua lỗ, trừ đầu tư vào chứng khoán có thu nhập cố định; bản đọc là từ cơ sở dữ liệu pháp luật tư nhân. [hethongphapluat.com](https://hethongphapluat.com/luat-chung-khoan-2019/dieu-91). Tiêu đề Điều 91 trên trang đó liệt kê cả công ty quản lý quỹ, nhưng khoản 1 không nêu rõ chủ thể và văn bản gốc chưa đối chiếu, nên bài không khẳng định phạm vi. Theo một cơ sở dữ liệu thứ cấp, Luật 56/2024/QH15 không nằm trong danh sách điều bị sửa có Điều 91; Quốc hội đang xem xét sửa đổi Luật Chứng khoán (xem [V1](V1-vietnam-market-structure.md)). `CHƯA_BIẾT` Văn bản gốc và bản hợp nhất hiện hành chưa mở được; bài này chỉ dùng điều đó để nói rằng *lời cam kết lãi chắc chắn từ một công ty chứng khoán là dấu hiệu cần dừng lại*, không để tư vấn pháp lý.
+Giới hạn của việc kiểm này: (1) danh sách thành viên VNX không xác nhận giấy phép cho quỹ, tiền mã hóa, ngoại hối hay "sàn" khác; (2) một đơn vị có tên trong danh sách **vẫn có thể bị mạo danh** (website nhái, nhân viên giả) nên phải gọi lại qua kênh chính thức bạn tự tìm; (3) tên nhái thường chỉ khác một chữ.
+
+`CHƯA_BIẾT` Phạm vi và hiệu lực hiện hành của Điều 91 Luật Chứng khoán về nhận định hoặc bảo đảm lợi nhuận chưa được đối chiếu văn bản gốc sau sửa đổi. Dù chưa kết luận pháp lý, lời cam kết lãi chắc chắn là dấu hiệu cần dừng lại để kiểm chứng (xem cảnh báo FINRA ở mục 2).
 
 `CHƯA_BIẾT` Số công ty chứng khoán được cấp phép hiện hành và mức phạt đối với kinh doanh hay nhận ủy thác trái phép chưa được mở.
 
@@ -93,7 +95,7 @@ Bài này chỉ là gợi ý nguyên tắc, không thay thế tư vấn pháp l�
 2. Gọi ngay hotline ngân hàng đã chuyển tiền, càng sớm càng tốt, để đề nghị hỗ trợ tra soát. Phong tỏa tài khoản nhận tiền thường là quyền của cơ quan có thẩm quyền; kết quả không được bảo đảm (`CHƯA_BIẾT` thời hạn và thủ tục của ngân hàng).
 3. Giữ bằng chứng: tin nhắn, mã giao dịch, số tài khoản nhận, ảnh màn hình và thông tin ứng dụng. Nếu làm được an toàn, lưu ảnh màn hình và tên ứng dụng trước khi gỡ; không tiếp tục tương tác với đối tượng. [FBI/IC3](https://www.ic3.gov/PSA/2026/PSA260615) gợi ý cung cấp ảnh tin nhắn và thông tin ứng dụng khi báo cáo tại Hoa Kỳ; thứ tự lưu trước khi gỡ là gợi ý của giáo trình, không phải yêu cầu pháp lý Việt Nam.
 4. Báo công an gần nhất.
-5. Nếu lộ thông tin tài khoản đầu tư thật, dùng thiết bị tin cậy để báo ngân hàng và công ty chứng khoán, đổi mật khẩu và yêu cầu hỗ trợ bảo vệ tài khoản. Nếu đã cài phần mềm đáng ngờ, chỉ gỡ ứng dụng có thể chưa đủ: NCSC khuyên quét toàn bộ bằng phần mềm bảo mật nếu có và xử lý các vấn đề phát hiện được; theo hướng dẫn chính thức của nhà cung cấp hoặc chuyên gia tin cậy để kiểm tra thiết bị. [NCSC — Phishing](https://www.ncsc.gov.uk/section/respond-recover/phishing). Đây là hướng dẫn tham khảo của Anh.
+5. Nếu lộ thông tin tài khoản đầu tư thật, dùng thiết bị tin cậy để báo ngân hàng và công ty chứng khoán, đổi mật khẩu và yêu cầu hỗ trợ bảo vệ tài khoản. Nếu đã cài phần mềm đáng ngờ, chỉ gỡ ứng dụng có thể chưa đủ: [NCSC — Xóa thiết bị](https://www.ncsc.gov.uk/collection/device-security-guidance/managing-deployed-devices/erasing-devices) lưu ý ứng dụng bị gỡ hoặc quét bảo mật chưa chắc loại hết mã độc. NCSC khuyên quét toàn bộ bằng phần mềm bảo mật nếu có và xử lý các vấn đề phát hiện được; theo hướng dẫn chính thức của nhà cung cấp hoặc chuyên gia tin cậy để kiểm tra thiết bị. [NCSC — Phishing](https://www.ncsc.gov.uk/section/respond-recover/phishing). Đây là hướng dẫn tham khảo của Anh.
 6. Cảnh giác với người tự xưng giúp lấy lại tiền hoặc "dịch vụ thu hồi" trên mạng: nạn nhân có thể bị nhắm mục tiêu lần nữa.
 
 `CHƯA_BIẾT` Khả năng thu hồi tiền: không có số liệu thu hồi nào được mở, nên không khẳng định có thể hay không thể lấy lại. Kênh báo cáo trực tuyến chính thức và thời hạn tra soát của ngân hàng chưa được mở.
@@ -125,7 +127,7 @@ Câu 1–3 là phần cốt lõi; câu 4–7 là luyện thêm.
 
 1. Người lạ chủ động mời; "0 rủi ro" và giá thấp hơn thị trường; áp lực 48 giờ và 3 suất; ứng dụng và đường dẫn riêng (kể cả có trên kho chính thức cũng không đủ chứng minh); nạp vào tài khoản công ty không rõ giấy phép; rút nhỏ để tạo tin; đòi phí thuế khi rút lớn; yêu cầu giữ bí mật.
 2. `PHÉP_TÍNH` Đã chuyển `20.000.000 + 60.000.000 + 5.000.000 = 85.000.000` đồng; nhận về 2.000.000 đồng. Số dư hiển thị không phải tiền đã nhận.
-3. Trang danh sách của cơ quan quản lý (UBCKNN, theo nguồn ở mục 3), tự gõ địa chỉ; đường dẫn trong tin nhắn có thể dẫn tới trang giả. Có tên trong danh sách vẫn chưa đủ: tên có thể bị mạo danh, nên phải gọi lại qua kênh bạn tự tìm.
+3. Tự tìm kênh chính thức của cơ quan quản lý để kiểm tra giấy phép và phạm vi hoạt động; bài chưa xác nhận được địa chỉ danh sách giấy phép hiện hành. Danh sách thành viên VNX có thể đối chiếu thêm nhưng không thay giấy phép; đường dẫn người lạ gửi có thể là trang giả. Có tên trong danh sách vẫn chưa đủ: tên có thể bị mạo danh, nên phải gọi lại qua kênh tự tìm.
 4. Rút nhỏ là công cụ tạo niềm tin trong mẫu hình lừa đảo mô tả ở mục 1; hợp pháp phải kiểm bằng giấy phép tra từ nguồn độc lập.
 5. Ai kiểm soát email có thể đặt lại mật khẩu các tài khoản khác (NCSC).
 6. Đó có thể là mẫu hình lừa đảo thu hồi tiền (recovery scam); FINRA cảnh báo nó có thể dẫn tới thiệt hại lớn hơn. Cần cảnh giác với lời đề nghị không mời mà đến, kể cả khi chưa đòi phí; đòi phí trả trước là một dấu hiệu riêng. Tự tìm và kiểm chứng kênh hỗ trợ.
@@ -168,10 +170,11 @@ Ngày truy cập tất cả nguồn: `2026-10-27`. Ngày dưới là ngày đăn
 | [Viettimes](https://viettimes.vn/canh-bao-gia-mao-ubcknn-so-gdck-ha-noi-de-lua-dao-nha-dau-tu-post168034.html) | 03/07/2023; Việt Nam; thứ cấp | Giấy phép quỹ giả, mạo danh sở giao dịch |
 | [Doanh nghiệp & Hội nhập](https://doanhnghiephoinhap.vn/uy-ban-chung-khoan-canh-bao-gia-mao-lien-quan-chung-khoan-state-street-1616.html) | 29/12/2023; Việt Nam; thứ cấp | Mạo danh tên công ty; danh sách trên ssc.gov.vn |
 | [Báo Pháp luật — Công an Hà Nội](https://doanhnhan.baophapluat.vn/cong-an-ha-noi-canh-bao-nguoi-dan-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-7cc6172e.html) | 09/09/2026; Việt Nam; thứ cấp | Mạo danh cơ quan, deepfake, rút nhỏ nạp lớn |
-| [hethongphapluat.com — Điều 91](https://hethongphapluat.com/luat-chung-khoan-2019/dieu-91) | Ngày đăng CHƯA_BIẾT; Luật 54/2019/QH14; cơ sở dữ liệu tư nhân | Cấm bảo đảm lợi nhuận (cần đối chiếu bản gốc) |
 | [Báo Pháp luật — khuyến cáo NHNN](https://doanhnhan.baophapluat.vn/ngan-hang-nha-nuoc-khuyen-cao-nguoi-dan-canh-giac-truoc-cac-hinh-thuc-lua-dao-trong-linh-vuc-ngan-hang-86489.html) | Ghi 10/09/2025, chưa xác nhận độc lập; Việt Nam; thứ cấp | Bảo mật cơ bản, gọi hotline |
 | [NCSC — 2SV](https://www.ncsc.gov.uk/guidance/setting-2-step-verification-2sv) | Xuất bản 07/08/2018, rà soát 10/01/2022, phiên bản 1.0; Anh | Xác minh hai bước |
 | [NCSC — Phishing](https://www.ncsc.gov.uk/section/respond-recover/phishing) | Không thấy ngày đăng; Anh | Xử lý khi đã cài phần mềm đáng ngờ hoặc lộ thông tin |
+| [NCSC — Xóa thiết bị](https://www.ncsc.gov.uk/collection/device-security-guidance/managing-deployed-devices/erasing-devices) | Rà soát 13/05/2025; Anh; hướng dẫn cho tổ chức | Giới hạn của việc chỉ gỡ ứng dụng hoặc quét bảo mật |
+| [VNX — Danh sách thành viên](https://www.vnx.vn/vi/danh-sach-thanh-vien) | Trang không nêu ngày chốt dữ liệu; Việt Nam | Kiểm tra bổ sung tư cách thành viên giao dịch, không thay danh sách giấy phép |
 | [FINRA — Regulator imposter scams](https://www.finra.org/investors/insights/regulator-imposter-scams) | 29/04/2026; Hoa Kỳ | Dấu hiệu, AI, recovery scam |
 
 Không dùng trong bài: Investor.gov, SEC, ASIC, FCA, ssc.gov.vn và thuvienphapluat.vn không mở được trong lượt thu thập (lỗi truy cập), nên chưa được trích dẫn là đã kiểm. Biên bản của bản trước (kiểm nguồn `ĐẠT`; phản biện `ĐẠT` có điều kiện) đã được xử lý trong bản này; cần kiểm lại phần đã đổi. `CHƯA_BIẾT` hiệu quả học thực tế.

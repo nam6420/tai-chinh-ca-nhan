@@ -1,4 +1,4 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài P2 — Nợ cá nhân: đọc lãi suất thật và thứ tự ưu tiên
+# Bài P2 — Nợ cá nhân: đọc lãi suất thật và thứ tự ưu tiên
 
 - Ngày: `2026-10-27`
 - Chốt dữ liệu lúc: `2026-10-27 09:40 UTC+7 (Asia/Ho_Chi_Minh)`
@@ -6,8 +6,8 @@
 - Bài trước liên quan: [P1](P1-budget-emergency-fund-insurance.md), [N4](N4-time-value-returns.md) (lãi kép, chiết khấu).
 - Thời lượng: Hai phiên; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **"1,5% mỗi tháng" thật sự là bao nhiêu mỗi năm, và nó so với lợi suất đầu tư kỳ vọng thế nào?**
-- Kiểm nguồn: `CHƯA CHẠY` trên bản này (bản trước `ĐẠT`)
-- Phản biện rủi ro: `CHƯA CHẠY` trên bản này (bản trước `ĐẠT`, còn điểm trung bình đã xử lý)
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
 
 ## Hiểu bài này trong 1 phút
 

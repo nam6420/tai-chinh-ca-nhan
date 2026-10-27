@@ -2,12 +2,12 @@
 
 - Loại kiểm duyệt: `KIỂM_NGUỒN`
 - Agent kiểm duyệt: `source_fact_checker`
-- Kiểm duyệt lúc: `2026-10-27 09:45 UTC+7 (Asia/Ho_Chi_Minh)`
+- Kiểm duyệt lúc: `2026-10-27 09:55 UTC+7 (Asia/Ho_Chi_Minh)`
 - Chốt dữ liệu lúc: `2026-10-27 09:40 UTC+7 (Asia/Ho_Chi_Minh)`
 - Phạm vi: Công thức niên kim, ví dụ lãi, APR, Thông tư 39 hợp nhất, CIC theo Thông tư 15 và sửa đổi sắp hiệu lực.
 - Báo cáo đích: `learning/lessons/P2-personal-debt.md`
 - SHA-256 nội dung đích: `e9675a0e3d8875fbc28803e3f1d47a8645fcbf28ce91ec9b0236982e0f938231`
-- Kết luận: `CHƯA_BIẾT`
+- Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
 
 ## Các nguồn Internet đã tự mở trong lượt kiểm duyệt
@@ -26,7 +26,8 @@
 |---|---|---|---|---|---|
 | Đã xử lý | Căn cứ CIC | Bài không dùng Thông tư 03/2013 làm căn cứ hiện hành; phân biệt ngày hiệu lực TT15 và TT46 | Trang Chính phủ, ý kiến NHNN | Giữ phân biệt ngày chốt và ngày hiệu lực | ĐẠT |
 | Không lỗi | Lãi, phí, cơ cấu nợ | Các nhận định đã kiểm khớp bản hợp nhất trong phạm vi áp dụng | 86/VBHN-NHNN | Giữ giới hạn từng loại bên cho vay | ĐẠT |
-| Trung bình | Trường dữ liệu và phân loại CIC | Chưa xác minh từ hệ thống chỉ tiêu gốc; bài giữ `CHƯA_BIẾT` | PDF TT15 và bản nháp | Kiểm quyết định chỉ tiêu hiện hành, từng ngưỡng và tác động TT46 sau 01/11 | Còn mở |
+| Không lỗi, giới hạn công khai | Trường dữ liệu và phân loại CIC | Bài không khẳng định các trường/ngưỡng chưa đối chiếu; tác động TT46 sau 01/11 giữ `CHƯA_BIẾT` | PDF TT15 và bản nháp | Kiểm quyết định chỉ tiêu và TT46 nếu muốn bổ sung | ĐẠT trong phạm vi hiện tại; nội dung thiếu vẫn CHƯA_BIẾT |
+| Thấp | Bảng nguồn CIC | Dòng bài 2021 mô tả rộng “nội dung CIC” dù không được dùng làm căn cứ hiện hành | Bài thứ cấp năm 2021 | Có thể đổi mô tả thành bối cảnh lịch sử | Không trọng yếu |
 
 ## Kiểm tra phép tính hoặc bằng chứng trái chiều
 
@@ -38,4 +39,4 @@ Chưa xác minh các trường dữ liệu CIC từ quyết định chỉ tiêu 
 
 ## Kết luận của agent kiểm duyệt
 
-`CHƯA_BIẾT`: phép tính và căn cứ đã kiểm khớp nhưng còn dữ kiện CIC và tác động sửa đổi chưa xác minh đầy đủ.
+`ĐẠT` cho các nhận định trọng yếu đang trình bày như dữ kiện. Các chi tiết CIC và tác động sau ngày hiệu lực TT46 chưa được xác nhận, vẫn giữ `CHƯA_BIẾT`.

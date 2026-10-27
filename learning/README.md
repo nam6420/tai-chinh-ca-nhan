@@ -41,7 +41,7 @@ N5A có thể đọc sớm sau N1, **không phải điều kiện học 001**. B
 
 ## Nhánh 3 — Tài chính cá nhân, Việt Nam và thực thi
 
-P1 và P3 đã qua hai nhánh kiểm duyệt; các bài còn lại đang kiểm lại. Xem [sổ kiểm duyệt](reviews/README.md) trước khi dùng:
+Sáu bài Đợt 1 đã qua hai nhánh kiểm duyệt; các mục chưa biết vẫn được ghi trong bài. Xem [sổ kiểm duyệt](reviews/README.md) trước khi dùng:
 
 1. [P1 — Ngân sách, quỹ khẩn cấp, bảo hiểm](lessons/P1-budget-emergency-fund-insurance.md) → [P2 — Nợ cá nhân](lessons/P2-personal-debt.md) → [P3 — Mục tiêu và chính sách cá nhân](lessons/P3-goals-risk-ips.md).
 2. [B3 — Bảo mật tài khoản và lừa đảo](lessons/B3-account-security-scams.md): học trước khi chuyển tiền cho bên tự nhận là đơn vị đầu tư.
