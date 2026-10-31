@@ -1,36 +1,23 @@
-# Biên bản kiểm duyệt: F2 — DDM, lợi nhuận thặng dư và SOTP
+# Biên bản phản biện rủi ro — Bài F2 (bản viết lại 2026-10-31)
 
 - Loại kiểm duyệt: `PHẢN_BIỆN_RỦI_RO`
 - Agent kiểm duyệt: `risk_bear_reviewer`
-- Kiểm duyệt lúc: `2026-10-27 12:04 UTC+7 (Asia/Ho_Chi_Minh)`
-- Chốt dữ liệu lúc: `2026-10-27 12:04 UTC+7 (Asia/Ho_Chi_Minh)`
-- Phạm vi: Toàn bài, nguồn, giả định và phép tính; xác nhận phần mới sau sửa.
+- Kiểm duyệt lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
+- Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
+- Phạm vi: `Toàn bài; số liệu Apple FY2025, phép tính, đáp án, nhãn nhận định, nguồn dẫn; mô hình learning/practice/models/valuation.py. Bốn vòng: vòng 1 trên bản viết lại đầu, các vòng 2–4 trên bản đã sửa; vòng 4 trên bản có mã băm tệp d4f37324, f8101b5a và tương ứng.`
 - Báo cáo đích: `learning/lessons/F2-valuation-ddm-residual-sotp.md`
-- SHA-256 nội dung đích: `2bb6551e6dc90d73292fa7ad87fbcc89db84d3c54ff8dd3d2dac8f7f552a8bf4`
+- SHA-256 nội dung đích: `60b77fa667dbc15da20b6572b12c15c130c58674dc0945f22681a065c429b13e`
 - Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
+- Người ghi: Điều phối viên chép/tổng hợp kết quả của nhánh độc lập trong cuộc trò chuyện ngày 31/10/2026; người kiểm không sửa bài. Hai nhánh không đọc kết luận của nhau.
 
-## Các nguồn Internet đã tự mở trong lượt kiểm duyệt
+## Kết quả
 
-| URL | Ngày xuất bản / kỳ dữ liệu | Ngày truy cập | Mục đích kiểm tra |
-|---|---|---|---|
-| [Damodaran — DDM](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/ddm.html) | Không ghi ngày | 27/10/2026 | Điều kiện Gordon và FCFE |
-| [CFA — Residual Income](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/residual-income-valuation) | Chương trình 2026 | 27/10/2026 | Công thức lợi nhuận thặng dư |
+Vòng 1: 1 lỗi nghiêm trọng (khẳng định quá mức 'RIM không phù hợp Apple'), đã xử lý. Không còn lỗi nghiêm trọng hay trung bình sau vòng 4. Còn mức Thấp: chiết khấu tập đoàn 15% chưa có nguồn (đã gắn KỊCH_BẢN và CHƯA_BIẾT).
 
-## Phát hiện
+## Hạn chế
 
-| Mức độ | Nhận định / phần | Phát hiện | Bằng chứng | Cách khắc phục | Trạng thái |
-|---|---|---|---|---|---|
-| Đã xử lý | Bản cập nhật | Mô hình DDM được bổ sung điều kiện tăng trưởng/đòn bẩy ổn định và cổ tức gần FCFE, đóng điểm trung bình. | Các nguồn trên | Không cần trong phạm vi đã kiểm. | Đã xác nhận |
-
-## Kiểm tra phép tính hoặc bằng chứng trái chiều
-
-2.000/(0,10 − 0,02) = 25.000; 15 − 100 × 10% = 5, giá trị 104,55 tỷ; SOTP 700 tỷ.
-
-## Hạn chế của lần kiểm duyệt
-
-Giả định không xác định giá trị của doanh nghiệp cụ thể.
-
-## Kết luận của agent kiểm duyệt
-
-`ĐẠT` trong phạm vi đã kiểm; không có lỗi nghiêm trọng chưa xử lý.
+- Giá AAPL ngày 30/10/2026 (344,63) chỉ có từ nguồn thứ cấp stockanalysis.com, chưa đối chiếu sàn.
+- Người phản biện không có công cụ tính mã băm; mã băm do điều phối viên tính bằng `scripts/validate_report.py --print-hash`. Sau vòng 4 điều phối viên chỉ chuẩn hóa dòng siêu dữ liệu đầu bài (tách dòng chốt dữ liệu, tách hai dòng trạng thái kiểm duyệt, bỏ nhãn nháp), không đổi nội dung dạy.
+- Điểm còn mở mức Thấp: chưa có nguồn mở được cho Fisher dạng nhân, điều kiện quan hệ sạch của RIM, xử lý thiểu số và chi phí trụ sở trong SOTP, chiết khấu tập đoàn 15%; hoàn thuế quan một lần ở biên gộp quý 3 FY2026 chưa nhắc; quyết định pháp lý cụ thể chưa nêu tên.
+- Không đo hiệu quả học thực tế; chưa thử với người học.

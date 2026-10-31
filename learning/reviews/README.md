@@ -1,5 +1,7 @@
 # Sổ kiểm duyệt bài học
 
+> **Cập nhật 2026-10-31:** bài 010, 011, 012, F1, F2 đã viết lại theo [chuẩn chiều sâu](../../docs/LESSON_DEPTH_STANDARD.md), qua bốn vòng kiểm nguồn và phản biện độc lập, và **đã qua cổng xuất bản** (`validate_report.py`) với biên bản khớp mã băm ở bảng dưới. Biên bản ghi đè cùng tên tệp (bản cũ trong lịch sử git). Giữ các điểm Thấp còn mở trong biên bản: chưa có nguồn mở được cho Fisher dạng nhân, quan hệ sạch của RIM, thiểu số và chi phí trụ sở trong SOTP; giá AAPL 345 USD chỉ từ nguồn thứ cấp.
+
 - Cập nhật: `2026-10-27`.
 - **52 bài trong bảng** đã qua hai nhánh độc lập: kiểm nguồn và phản biện rủi ro; mỗi bài có hai biên bản khớp cùng phiên bản nội dung. Ngoài bảng, [hồ sơ Apple mẫu](../../research/companies/US/AAPL/report.md) có hai biên bản riêng.
 - Đã chạy cổng cấu trúc cho 52 bài trong bảng với 104 biên bản và hồ sơ Apple với hai biên bản riêng. Cổng cấu trúc không thay kiểm nguồn và không chứng minh hiệu quả học thực tế.
@@ -16,8 +18,8 @@
 |---|---|---|---|---|
 | [K1](../lessons/K1-screening-watchlist.md) | Đã soạn | [ĐẠT](K1-fact-check.md) | [ĐẠT](K1-risk-review.md) | `63a29010c308…` |
 | [K2](../lessons/K2-failure-case-postmortem.md) | Đã soạn | [ĐẠT](K2-fact-check.md) | [ĐẠT](K2-risk-review.md) | `50c2292f7720…` |
-| [F1](../lessons/F1-three-statement-model-sensitivity.md) | Đã soạn | [ĐẠT](F1-fact-check.md) | [ĐẠT](F1-risk-review.md) | `2fe7fb3aa2c1…` |
-| [F2](../lessons/F2-valuation-ddm-residual-sotp.md) | Đã soạn | [ĐẠT](F2-fact-check.md) | [ĐẠT](F2-risk-review.md) | `2bb6551e6dc9…` |
+| [F1](../lessons/F1-three-statement-model-sensitivity.md) | Viết lại 2026-10-31 | [ĐẠT](F1-fact-check.md) | [ĐẠT](F1-risk-review.md) | `3f2c5014c1bf…` |
+| [F2](../lessons/F2-valuation-ddm-residual-sotp.md) | Viết lại 2026-10-31 | [ĐẠT](F2-fact-check.md) | [ĐẠT](F2-risk-review.md) | `60b77fa667db…` |
 | [F3](../lessons/F3-vietnam-property-developers.md) | Đã soạn | [ĐẠT](F3-fact-check.md) | [ĐẠT](F3-risk-review.md) | `1956dcc04ee7…` |
 | [F4](../lessons/F4-vietnam-bank-analysis.md) | Đã soạn | [ĐẠT](F4-fact-check.md) | [ĐẠT](F4-risk-review.md) | `4cbad2b67bbf…` |
 | [F5](../lessons/F5-vietnam-industry-research-framework.md) | Đã soạn | [ĐẠT](F5-fact-check.md) | [ĐẠT](F5-risk-review.md) | `5da2dcecdeef…` |
@@ -51,9 +53,9 @@
 | [P3](../lessons/P3-goals-risk-ips.md) | Đã soạn | [ĐẠT](P3-fact-check.md) | [ĐẠT](P3-risk-review.md) | `19cec10b2058…` |
 | [V1](../lessons/V1-vietnam-market-structure.md) | Đã soạn | [ĐẠT](V1-fact-check.md) | [ĐẠT](V1-risk-review.md) | `17e384b64beb…` |
 | [V2](../lessons/V2-vietnam-trading-rules.md) | Đã soạn | [ĐẠT](V2-fact-check.md) | [ĐẠT](V2-risk-review.md) | `f7e01717e1a8…` |
-| [010](../lessons/010-cost-of-capital.md) | Đã soạn | [ĐẠT](010-fact-check.md) | [ĐẠT](010-risk-review.md) | `dd420c920588…` |
-| [011](../lessons/011-dcf-reverse-dcf.md) | Đã soạn | [ĐẠT](011-fact-check.md) | [ĐẠT](011-risk-review.md) | `14c62076d36e…` |
-| [012](../lessons/012-scenarios-margin-of-safety.md) | Đã soạn | [ĐẠT](012-fact-check.md) | [ĐẠT](012-risk-review.md) | `7c89bdda6acc…` |
+| [010](../lessons/010-cost-of-capital.md) | Viết lại 2026-10-31 | [ĐẠT](010-fact-check.md) | [ĐẠT](010-risk-review.md) | `fe0471055e63…` |
+| [011](../lessons/011-dcf-reverse-dcf.md) | Viết lại 2026-10-31 | [ĐẠT](011-fact-check.md) | [ĐẠT](011-risk-review.md) | `7ab38cae7ce6…` |
+| [012](../lessons/012-scenarios-margin-of-safety.md) | Viết lại 2026-10-31 | [ĐẠT](012-fact-check.md) | [ĐẠT](012-risk-review.md) | `9ea42a6923c5…` |
 | [013](../lessons/013-banks-insurers.md) | Đã soạn | [ĐẠT](013-fact-check.md) | [ĐẠT](013-risk-review.md) | `1754fcda84e8…` |
 | [014](../lessons/014-industry-capital-cycle.md) | Đã soạn | [ĐẠT](014-fact-check.md) | [ĐẠT](014-risk-review.md) | `29cd0d6544ba…` |
 | [015](../lessons/015-behavior-decision-journal.md) | Đã soạn | [ĐẠT](015-fact-check.md) | [ĐẠT](015-risk-review.md) | `0a5126787c5b…` |
