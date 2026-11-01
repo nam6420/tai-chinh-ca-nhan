@@ -9,3 +9,5 @@ Chỉ dùng thư viện chuẩn Python 3. Chạy `python3 valuation.py`; kiểm 
 - `cyclical.py`: chuẩn hóa lợi nhuận công ty chu kỳ (bài Q3): trung bình tuyệt đối, biên, trung vị, bỏ năm cực đoan, ROE, chiết khấu lùi.
 - `hpg_fy2025_statements.csv`: số báo cáo tài chính hợp nhất kiểm toán FY2025 và cột năm trước của HPG (tỷ VND), mở 2026-11-01.
 - `earnings_quality.py`: Beneish M-score, Altman Z'', Piotroski F-score (bài Q1). Hệ số Beneish/Altman từ nguồn thứ cấp, chưa đối chiếu bài gốc.
+- `apple_capital_return_inputs.csv`: SBC, mua lại, cổ tức, số cổ phiếu và EPS của Apple FY2023–FY2025 (triệu USD; cổ phiếu nghìn), mở 2026-11-01.
+- `capital_return.py`: SBC, pha loãng, mua lại (EPS và giá trị mỗi cổ phiếu), cổ tức, cổ phiếu thưởng (bài Q2).
