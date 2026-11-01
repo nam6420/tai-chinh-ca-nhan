@@ -1,0 +1,45 @@
+# Sổ nguồn — Công ty Cổ phần FPT (FPT)
+
+- Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
+
+| Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
+|---|---|---|---|---|---|---|
+| S1 | [BCTC hợp nhất Q3/2026](https://fpt.com/api/media/20261028_FPT_BCTC_hop_nhat_Quy_3_nam_2026_5cc2369cdd.pdf) | 28/10/2026 (ký 22/10/2026) | Quý 3 và 9 tháng đến 30/09/2026 | Đồng, làm tròn sang tỷ; VAS; hợp nhất | Gốc, công ty công bố | PDF dạng ảnh; chưa kiểm toán; mức soát xét `CHƯA_BIẾT`; FTEL ghi theo vốn chủ từ 01/01/2026 |
+| S2 | [Thông cáo kết quả kinh doanh 9 tháng 2026](https://fpt.com/api/media/20261021_FPT_Ket_qua_kinh_doanh_9_thang_2026_d2a3d1293e.pdf) | 21/10/2026 | 9 tháng 2026 | Tỷ VND; theo mảng | Gốc, công ty công bố | Tự công bố; số mảng không phải báo cáo kiểm toán |
+| S3 | [Lợi nhuận trước thuế năm 2025 của FPT đạt 13.039 tỷ đồng](https://fpt.com/vi/tin-tuc/loi-nhuan-truoc-thue-nam-2025-cua-fpt-dat-13039-ty-dong) | 26/01/2026 | FY2025 | Tỷ VND; còn hợp nhất FTEL | Gốc, công ty công bố | Có thể là số trước kiểm toán; lệch 5 tỷ với S4 |
+| S4 | [Báo cáo thường niên 2025 (trang web)](https://bctn2025.fpt.com/phan-tich-hoat-dong-kinh-doanh/danh-gia-chung/) | 2026 (ngày chính xác `CHƯA_BIẾT`) | FY2025 | Tỷ VND | Gốc, công ty công bố | Trang không ghi rõ hợp nhất; tệp PDF quá 10 MB chưa mở |
+| S5 | [Danh mục công bố thông tin FPT](https://fpt.com/vi/nha-dau-tu/thong-tin-cong-bo) | trang động | 2026 | Danh mục nghị quyết | Gốc, công ty công bố | Chỉ đọc danh mục; PDF scan không đọc được số tỷ lệ |
+| S6 | [ACBS, cập nhật ĐHĐCĐ FPT](https://acbs.com.vn/acbsmedia/2026/04/FPT_Cap-nhat-nhanh-DHCD_17.04.2026.pdf) | 17/04/2026 | Kế hoạch 2026, sở hữu | Tỷ VND | Thứ cấp | Công ty chứng khoán có ý kiến mua; bỏ khuyến nghị và giá mục tiêu, chỉ dùng dữ kiện tổng hợp |
+| S7 | [CafeF, FPT công bố kết quả 9 tháng](https://cafef.vn/fpt-cong-bo-ket-qua-kinh-doanh-9-thang-mot-mang-tang-truong-toi-55-188261021083848638.chn) | 21/10/2026 | 9 tháng 2026 | Tỷ VND | Thứ cấp | Chỉ dùng đối chiếu bối cảnh |
+| S8 | [NSO, thông cáo kinh tế - xã hội](https://www.nso.gov.vn/?p=62592) | 03/10/2026 | Quý 3 và 9 tháng 2026 | % so với cùng kỳ | Gốc, cơ quan thống kê | Số ước tính |
+| S9 | [Bộ Công Thương, thuế Điều 301 của Mỹ](https://moit.gov.vn/en/news/u.s.-trade-representative-issues-final-determination-in-section-301-investigation-covering-60-economies.html) | Trang hiển thị 28/07/2026 | Hiệu lực từ 24/07/2026 (giờ miền Đông Hoa Kỳ) | % thuế | Thứ cấp (truyền lại quyết định của USTR) | Chưa mở trang USTR hoặc Federal Register |
+| S10 | [VnBusiness, FPT sẽ không hợp nhất toàn bộ báo cáo tài chính của FPT Telecom](https://vnbusiness.vn/fpt-se-khong-hop-nhat-toan-bo-bao-cao-tai-chinh-cua-fpt-telecom.html) | 19/03/2026 | Đổi phương pháp ghi nhận FTEL từ 01/01/2026 | Tỷ lệ sở hữu; % | Thứ cấp | Bài báo; chưa mở công văn của Bộ Công an hay công bố gốc của FPT |
+| S11 | [VnBusiness, FPT Telecom chưa đủ điều kiện công ty đại chúng](https://vnbusiness.vn/lai-nghin-ty-nhung-fpt-telecom-van-chua-du-dieu-kien-duy-tri-cong-ty-dai-chung.html) | 12/05/2026 | FTEL quý 1/2026, trạng thái tại 05/05/2026 | Tỷ VND; % | Thứ cấp | Bài báo |
+| S12 | [Doanh nhân - Pháp luật, FPT phát hành 10,8 triệu cổ phiếu ESOP giá 10.000 đồng](https://doanhnhan.baophapluat.vn/fpt-phat-hanh-10-8-trieu-co-phieu-esop-gia-10-000-dong-chi-1-700-ty-tra-co-tuc.html) | 21/05/2026 | Nghị quyết hội đồng quản trị công bố 19/05/2026 | Cổ phiếu; VND | Thứ cấp | Chưa mở nghị quyết gốc; bài không nêu hạn chế chuyển nhượng |
+| S13 | [Tribune India (ANI), áp lực giá do AI với triển vọng ngành CNTT Ấn Độ](https://www.tribuneindia.com/news/business/ai-driven-pricing-pressure-cost-cuts-reshape-india-it-outlook-report/) | 03/05/2026 | Báo cáo Kotak Institutional Equities | Định tính | Thứ cấp | Về các hãng Ấn Độ, không phải dữ liệu của FPT |
+| S14 | [Nông nghiệp và Môi trường, kỷ lục buồn 4,3 tỷ USD của FPT](https://nongnghiepmoitruong.vn/ky-luc-buon-43-ty-usd-cua-fpt-nha-dau-tu-nuoc-ngoai-rut-von-manh-d821626.html) | 15/07/2026 | Phiên 15/07/2026 | VND; vốn hóa USD | Thứ cấp | Bài báo; không phải dữ liệu sở giao dịch |
+| S15 | [Doanh nghiệp và Hội nhập, FPT Telecom trước khi về Bộ Công an](https://doanhnghiephoinhap.vn/fpt-telecom-truoc-khi-ve-bo-cong-an-con-ga-de-trung-vang-cua-fpt-chi-so-sinh-loi-tren-30-deu-dan-tra-co-tuc-110490.html) | 18/07/2025 | FTEL đến 07/2025 | Tỷ VND; % | Thứ cấp | Trước khi đổi cơ sở; số cổ tức lịch sử, không phải 2026 |
+| S16 | [Znews, FPT Telecom tiếp tục có quỹ lãi nghìn tỷ](https://znews.vn/fpt-telecom-tiep-tuc-co-quy-lai-nghin-ty-post1692107.html) | 26/10/2026 | 9 tháng và quý 3/2026 của FTEL | Tỷ VND | Thứ cấp (báo chí) | Số của FTEL qua báo chí; chưa mở báo cáo gốc |
+| S17 | [CafeF, bán ròng triền miên, khối ngoại vẫn nắm hơn 455 triệu cổ phiếu FPT](https://cafef.vn/ban-rong-trien-mien-khoi-ngoai-van-con-nam-hon-455-trieu-co-phieu-fpt-188261028190244374.chn) | 28/10/2026 | Giá đóng cửa 28/10/2026; từ đầu năm | Đồng; số cổ phiếu | Thứ cấp (báo chí) | Giá từ báo chí, không phải sở giao dịch |
+| S18 | [Elibook, FPT lợi nhuận quý 2 tăng trưởng 14% như kỳ vọng](https://elibook.vn/2026/07/21/fpt-loi-nhuan-quy-2-tang-truong-14-nhu-ky-vong-no-luc-viet-tiep-cau-chuyen-chuyen-doi-ai/) | 21/07/2026 | Quý 2/2026 | Tỷ VND; ý kiến công ty chứng khoán | Thứ cấp (blog phân tích) | Có dự báo và giá mục tiêu của bên thứ ba; chỉ dùng cho thuế, AI, kỳ vọng |
+| S19 | [Nhà đầu tư, cổ phiếu FPT giảm hơn 20% sau hai tháng](https://nhadautu.vn/co-phieu-fpt-giam-hon-20-sau-hai-thang-dinh-gia-quay-ve-vung-hop-ly-d103357.html) | 09/03/2026 | Đỉnh 19/01/2026; P/E | Đồng; lần | Thứ cấp (báo chí) | Có ý kiến về mức giá hợp lý, hồ sơ không dùng |
+| S20 | [Mekong Asean, FPT công bố lợi nhuận 6 tháng](https://mekongasean.vn/fpt-cong-bo-loi-nhuan-6-thang-da-u-nam-2026-57423.html) | 2026 | 6 tháng 2026 | Tỷ VND | Thứ cấp (báo chí) | Dùng để tách quý 3 bằng phép trừ làm tròn |
+| S21 | [VietTimes, FPT Telecom chuyển giao về Bộ Công an, lợi nhuận FPT sẽ thay đổi ra sao](https://viettimes.vn/fpt-telecom-chuyen-giao-ve-bo-cong-an-loi-nhuan-fpt-se-thay-doi-ra-sao-post196759.html) | 16/04/2026 | Lời quản lý FPT về cổ tức FTEL | Tỷ VND | Thứ cấp (báo chí) | Lời quản lý, không phải số kiểm toán |
+| S22 | [Stockbiz, 3 cổ phiếu trước nguy cơ rời rổ VN-Diamond](https://stockbiz.vn/tin-tuc/3-co-phieu-truoc-nguy-co-roi-ro-vn-diamond/42280550) | 15/10/2026 | Rà soát rổ chỉ số | Cổ phiếu, tỷ lệ sở hữu nước ngoài | Thứ cấp (báo chí; ước tính của BSC) | Sự kiện tương lai so với ngày chốt; chưa kiểm nguồn gốc |
+| S23 | [CafeF, FPT công bố văn bản quan trọng, cổ phiếu lên cao nhất 3 tháng](https://cafef.vn/fpt-cong-bo-van-ban-quan-trong-co-phieu-len-cao-nhat-3-thang-188260910103058955.chn) | 10/09/2026 | Thưởng cổ phiếu 10% | Cổ phiếu, đồng | Thứ cấp (báo chí) | Giá 74.200 trước thưởng; chưa có nguồn gốc ngày không hưởng quyền |
+| S24 | [Geekchamp, Infosys Q2 FY27](https://geekchamp.com/infosys-q2-fy27-results-revenue-grows-in-rupees-as-guidance-is-cut/) | 27/10/2026 | Q2 FY27 của Infosys | Phần trăm theo tiền tệ cố định | Thứ cấp (trang tổng hợp) | Chưa mở hồ sơ BSE/NSE gốc |
+| S25 | [Doanh nhân - Pháp luật, FPT chốt ngày thưởng hơn 171 triệu cổ phiếu](https://doanhnhan.baophapluat.vn/tap-doan-fpt-fpt-chot-ngay-thuong-hon-171-trieu-co-phieu-thi-gia-vuon-len-dinh-3-thang.html) | 10/09/2026 | Thưởng cổ phiếu 10% | Cổ phiếu | Thứ cấp (báo chí) | Ngày chốt quyền 22/09/2026 |
+
+## Mâu thuẫn và mục chưa giải quyết
+
+| Mục | Bằng chứng mâu thuẫn | Cách xử lý |
+|---|---|---|
+| Lợi nhuận trước thuế FY2025 | 13.039 tỷ (S3) và 13.044 tỷ (S4) | Ghi cả hai, chưa xác định số kiểm toán |
+| Cơ sở hợp nhất | FY2025 có FTEL; 2026 không | Chỉ so cột 9T2025 điều chỉnh với 9T2026 |
+| Số cổ phiếu và mệnh giá | Số cổ phiếu suy ra từ vốn góp / 10.000 đồng, mệnh giá chưa có nguồn mở | Không dùng số cổ phiếu trong kịch bản |
+| Cổ tức 2025 | 20% (ACBS, dự kiến), phần còn lại 10% khoảng 1.700 tỷ (S12), đã chi 1.716,4 tỷ (S1) | Ghi là thứ cấp; nghị quyết gốc chưa mở |
+| Tỷ lệ thưởng 10% | ACBS (S6) nêu; trang DNSE từng dẫn không xác minh được nên đã bỏ | Chờ nghị quyết gốc |
+| Kế hoạch 2026 | ACBS nêu theo phương pháp hợp nhất mới đối với FTEL | Chưa xác nhận từ nghị quyết đại hội cổ đông |
+| Lợi nhuận sau thuế FTEL 2025 | Trên 3.400 tỷ (S10); phần của FPT 45,66% là ước lượng thô của hồ sơ | `CHƯA_BIẾT` tỷ trọng thực trong 2.220,3 tỷ |
+| LNST mẹ FY2025 | 9.369 (S3); ACBS ghi 9.376 (S6) | Dùng S3; ghi lệch 7 tỷ |

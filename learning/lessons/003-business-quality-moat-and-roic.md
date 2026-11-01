@@ -12,7 +12,7 @@ Thời lượng gợi ý: 25-35 phút.
 
 `SUY_LUẬN` Bài này giải quyết một nhầm lẫn khác: **lợi nhuận cao trong một năm chưa chứng minh doanh nghiệp tốt**. Muốn đánh giá chất lượng, phải trả lời hai câu: lợi nhuận trên vốn có cao **kéo dài qua nhiều năm** không, và điều gì **ngăn đối thủ cạnh tranh** bào mòn mức lợi nhuận đó?
 
-Có thể hình dung bằng ngôn ngữ vận hành hệ thống: một dịch vụ đạt latency tốt trong một ngày đẹp trời chưa nói lên điều gì; thứ đáng tin là p99 ổn định qua nhiều tháng, nhiều đợt cao điểm và nhiều lần bị "tấn công" bởi đối thủ. Với doanh nghiệp cũng vậy: một năm lãi lớn có thể do chu kỳ giá, sự kiện một lần hoặc may mắn; **lợi nhuận trên vốn cao lặp lại nhiều năm, đi kèm bằng chứng khách hàng không rời bỏ và giá bán không bị ép xuống, mới là tín hiệu chất lượng.**
+Có thể hình dung một quán ăn: bán đắt hàng trong một ngày lễ chưa đủ để biết quán làm ăn tốt quanh năm. Cần xem nhiều mùa, khách có quay lại không và đối thủ có dễ lấy khách không. Với doanh nghiệp cũng vậy: một năm lãi lớn có thể do chu kỳ giá, sự kiện một lần hoặc may mắn; **lợi nhuận trên vốn cao lặp lại nhiều năm, đi kèm bằng chứng khách hàng không rời bỏ và giá bán không bị ép xuống, mới là tín hiệu chất lượng.**
 
 `SỰ_THẬT` Nghiên cứu của McKinsey trên khoảng 7.000 công ty phi tài chính niêm yết tại Mỹ giai đoạn 1963-2004 cho thấy ROIC trung vị (loại trừ goodwill) chỉ quanh 10%, xấp xỉ chi phí vốn dài hạn — tức doanh nghiệp "bình thường" chỉ đủ bù chi phí vốn. Cạnh tranh có xu hướng kéo lợi nhuận siêu ngạch về mức trung bình; moat là thứ hiếm giúp doanh nghiệp chống lại lực kéo đó (nguồn: McKinsey, dẫn ở cuối bài).
 
@@ -21,12 +21,22 @@ Có thể hình dung bằng ngôn ngữ vận hành hệ thống: một dịch v
 | Bài này làm | Bài này chưa làm |
 |---|---|
 | Dạy cách đặt câu hỏi về chất lượng: moat, ROIC, chi phí vốn, tái đầu tư, cờ đỏ quản trị | Kết luận doanh nghiệp cụ thể nào "tốt" hay "xấu" |
-| Cung cấp công thức khái quát và các biến thể cần biết trước khi tính | Dạy cách ước lượng chi phí vốn chính xác (chủ đề định giá, tuần 5-6) |
+| Cung cấp công thức khái quát và các biến thể cần biết trước khi tính | Dạy cách ước lượng chi phí vốn chính xác (Bài 010 — chi phí vốn) |
 | Chỉ ra bằng chứng định lượng cần tìm để xác nhận moat | Thay thế việc đọc báo cáo tài chính và thuyết minh của doanh nghiệp thật |
 
 > Câu cần nhớ: **Đừng hỏi "năm nay công ty lãi bao nhiêu?"; hãy hỏi "công ty tạo lợi nhuận trên vốn cao trong bao lâu, nhờ điều gì bảo vệ, và tái đầu tư thêm một đồng vốn thì sinh ra bao nhiêu?"**
 
 ## 1. Lợi thế cạnh tranh (economic moat) là gì?
+
+### Đường học trong bài
+
+`Ý_KIẾN` Chia thành ba phiên, không coi 25–35 phút là thời gian đã được kiểm chứng:
+
+- **Phiên A:** mục 1 và 6, rồi Bài tập 2–3. Đạt khi phân biệt được lời quảng bá với bằng chứng khách hàng/đối thủ.
+- **Phiên B:** mục 2–3 và ví dụ mục 7, rồi Bài tập 1. Đạt khi tính ROIC và giải thích mẫu số. Chi phí vốn ở đây là **giả định cho sẵn**; tự ước lượng sẽ học ở Bài 010.
+- **Phiên C:** mục 4–5 và 8. Tự hỏi: nếu tái đầu tư 100, sinh lợi 12 và chi phí vốn giả định 10%, hoạt động mới tạo phần chênh bao nhiêu? Đáp án: `12 − 100 × 10% = 2`, chưa phải toàn bộ dòng tiền cổ đông nhận.
+
+Sau mỗi phiên, đóng tài liệu và viết lại một câu kết luận kèm một điều chưa biết. Các điều chỉnh goodwill, nghiên cứu phát triển và biến thể ROIC là phần đọc thêm; chưa cần tự điều chỉnh tất cả ngay lần đầu.
 
 Lợi thế cạnh tranh bền vững — thường gọi là **moat** (hào nước quanh lâu đài) — là điều kiện khiến đối thủ khó hoặc không thể giành khách hàng và ép giá doanh nghiệp. `Ý_KIẾN` Thuật ngữ này phổ biến trong giới đầu tư; điều quan trọng không phải cái tên mà là **bằng chứng**.
 
@@ -55,7 +65,7 @@ Báo cáo thường niên nào cũng viết "chúng tôi dẫn đầu". Tuyên b
 
 ## 2. ROIC: lợi nhuận trên vốn đầu tư
 
-**ROIC (Return on Invested Capital)** đo một đồng vốn bỏ vào doanh nghiệp tạo ra bao nhiêu lợi nhuận hoạt động. Với người làm backend, đây giống số đo throughput trên mỗi đơn vị tài nguyên bỏ tiền mua — muốn biết hệ thống "đáng tiền" hay không, không nhìn tổng throughput, mà nhìn hiệu quả trên vốn đã triển khai.
+**ROIC (Return on Invested Capital)** đo hiệu quả một đồng vốn bỏ vào hoạt động kinh doanh. Hai cửa hàng cùng lãi 100, nhưng một nơi cần vốn 500 và một nơi cần 2.000, có hiệu quả vốn khác nhau; còn phải thống nhất cách đo lợi nhuận và vốn trước khi so sánh.
 
 `SỰ_THẬT` Theo tài liệu của Damodaran (NYU Stern), công thức khái quát là:
 
@@ -97,7 +107,13 @@ Chi phí vốn là một **ước tính phụ thuộc giả định** (lãi su�
 Tăng trưởng lợi nhuận ≈ Tỷ lệ tái đầu tư × ROIC
 ```
 
-trong đó tỷ lệ tái đầu tư là phần lợi nhuận hoạt động sau thuế được tái đầu tư trở lại doanh nghiệp (phần không trả cổ tức/mua lại cổ phiếu). Suy ra:
+trong đó tỷ lệ tái đầu tư là phần lợi nhuận hoạt động sau thuế được tái đầu tư trở lại hoạt động kinh doanh:
+
+```text
+Tỷ lệ tái đầu tư = (Capex − Khấu hao + Thay đổi vốn lưu động phi tiền mặt) / NOPAT
+```
+
+`SUY_LUẬN` Đây **không** phải "tỷ lệ lợi nhuận giữ lại" (phần không chia cổ tức): doanh nghiệp có thể giữ lại lợi nhuận mà chỉ để tiền nằm trong két, hoặc tái đầu tư bằng tiền đi vay. ROIC trong công thức cũng nên hiểu là lợi nhuận trên **đồng vốn mới**, không phải ROIC trung bình của toàn bộ vốn cũ. Suy ra:
 
 ```text
 Tỷ lệ tái đầu tư cần thiết ≈ Tốc độ tăng trưởng mong muốn / ROIC
@@ -151,7 +167,8 @@ Ví dụ thứ hai — vì sao lợi nhuận một năm gây hiểu nhầm:
 `KỊCH_BẢN` `MINH HỌA` Công ty C (hư cấu, mang tính chu kỳ) có 50 triệu cổ phiếu, giá 24. Lợi nhuận 5 năm gần nhất: 20, 25, 22, 100, 30 (năm thứ tư bùng nổ do giá bán tăng đột biến, năm sau đã rơi về vùng cũ).
 
 - `PHÉP_TÍNH` Nếu nhìn đúng năm đỉnh: vốn hóa = 24 × 50 = 1.200; P/E = 1.200/100 = 12 lần — trông "rẻ".
-- `PHÉP_TÍNH` Nếu dùng lợi nhuận đại diện quanh 25: P/E = 1.200/25 = 48 lần — thực tế là đắt.
+- `PHÉP_TÍNH` Nếu dùng lợi nhuận đại diện bằng **trung vị** 5 năm (`20, 22, 25, 30, 100` → 25): P/E = 1.200/25 = 48 lần — thực tế là đắt.
+- `PHÉP_TÍNH` Nếu dùng **bình quân** cả 5 năm, kể cả năm đỉnh: `(20 + 25 + 22 + 100 + 30)/5 = 39,4`, P/E = `1.200/39,4 = 30,5` lần; nếu bình quân 4 năm bỏ năm đỉnh: `97/4 = 24,25`, P/E = `49,5` lần. Cách chuẩn hoá đổi kết quả rất nhiều, nên phải ghi rõ đã dùng cách nào.
 
 `SUY_LUẬN` P/E 12 ở đây là ảo giác của chu kỳ: mẫu số (lợi nhuận) đang ở đỉnh tạm thời. Bài 002 gọi đây là bẫy P/E thấp; bài này cho thấy cơ chế của nó nằm ở việc **lợi nhuận đỉnh chu kỳ thổi phồng NOPAT và cả ROIC**, nên phải kiểm tra cả P/E lẫn ROIC trên dữ liệu nhiều năm.
 
@@ -252,7 +269,7 @@ Tính ROIC từng năm, nhận xét xu hướng, và nêu ít nhất hai giả t
 - Người học muốn thực hành tính ROIC trên thị trường nào (Việt Nam, Mỹ, khác), và doanh nghiệp thật đầu tiên để luyện là doanh nghiệp nào?
 - Ngành nào người học muốn chọn làm bài tập chu kỳ (hàng hóa cơ bản, bán lẻ, phần mềm...)?
 - Khả năng đọc thuyết minh tiếng Anh hiện tại đến đâu để chọn hồ sơ gốc phù hợp?
-- Người học muốn đào sâu ước lượng chi phí vốn ngay bây giờ hay để cùng chủ đề định giá tuần 5-6?
+- Người học muốn đào sâu ước lượng chi phí vốn ngay bây giờ hay để tới Bài 010 (chi phí vốn)?
 
 ## Nguồn Internet đã mở và nghiên cứu liên quan
 

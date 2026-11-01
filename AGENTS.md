@@ -31,7 +31,7 @@ Hỗ trợ người Việt học kinh doanh, doanh nghiệp, thị trường và
 - Nghiên cứu theo phạm vi toàn cầu, không mặc định giới hạn ở Việt Nam. Xác định rõ quốc gia, thị trường, đồng tiền và chuẩn kế toán của đối tượng.
 - Với đối tượng cụ thể, ưu tiên nguồn gốc có thẩm quyền tại nơi đối tượng hoạt động: công bố doanh nghiệp, quan hệ nhà đầu tư, sở giao dịch, cơ quan quản lý, ngân hàng trung ương và cơ quan thống kê.
 - Khi hữu ích, bổ sung nguồn so sánh quốc tế như IMF, World Bank, OECD, BIS, IOSCO, IFRS Foundation, SEC/EDGAR và các cơ quan chính thức tương ứng. Không ép nguồn quốc tế thay thế nguồn gốc địa phương.
-- Với một kết luận có ảnh hưởng lớn, cố gắng kiểm tra chéo ít nhất hai nguồn độc lập; giải thích nếu chỉ có một nguồn gốc duy nhất.
+- Với một kết luận có ảnh hưởng lớn, kiểm tra chéo ít nhất hai nguồn độc lập; nếu chỉ có một nguồn gốc duy nhất, nói rõ và giải thích vì sao.
 - Nguồn thứ cấp chỉ dùng cho bối cảnh hoặc quan điểm phản biện khi có thể truy được nguồn ban đầu.
 
 ## Quy tắc nghiên cứu
@@ -52,7 +52,7 @@ Hỗ trợ người Việt học kinh doanh, doanh nghiệp, thị trường và
 
 ## Điều phối agent
 
-Với nghiên cứu không đơn giản, dùng custom agent của dự án: bản Qwen Code trong `.qwen/agents/` hoặc bản Codex trong `.codex/agents/`. Hai bộ khai báo cùng vai trò và chính sách; khi sửa một bên phải đồng bộ bên còn lại:
+Với nghiên cứu không đơn giản, dùng vai trò chuyên môn của dự án. Ba bộ khai báo (DeepSeek Harness, Claude Code, Codex) cùng vai trò và chính sách; khi sửa một bên phải đồng bộ cả ba:
 
 1. `research_coordinator` lập phạm vi và sở hữu bản tổng hợp.
 2. Giao các nhánh độc lập, thiên về đọc, cho đúng agent chuyên môn.
@@ -61,6 +61,20 @@ Với nghiên cứu không đơn giản, dùng custom agent của dự án: bả
 5. Chờ các agent cần thiết, xử lý mâu thuẫn và giữ lại ý kiến bất đồng.
 
 Chỉ một agent được ghi vào mỗi tài liệu nghiên cứu. Agent chuyên môn chỉ đọc. Không tuyên bố báo cáo đã kiểm duyệt nếu hai bước kiểm nguồn và phản biện rủi ro chưa thực sự hoàn tất.
+
+### DeepSeek Harness (bản native)
+
+- Vai trò là project skill trong `.agents/skills/<ten-vai-tro>/SKILL.md`, được DeepSeek Harness tự nạp theo tên kebab-case: `research-coordinator`, `business-tutor`, `macro-market-researcher`, `company-analyst`, `source-fact-checker`, `risk-bear-reviewer`.
+- Giao việc bằng Agent Teams: `spawn_teammate` cho từng nhánh độc lập, shared task để biết ai giữ phần nào, `writeScopes` chỉ cấp cho điều phối viên trên tài liệu của mình. Không có Agent Teams thì dùng `subagent` hoặc tự làm tuần tự và nói rõ nhánh nào chưa được kiểm độc lập.
+- Ba lệnh tắt do con người gọi: `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh` (skill `user-invocable`, không hiện trong danh mục cho model).
+- Skill không giới hạn được công cụ như `tools` của Claude Code hay `sandbox_mode` của Codex. Quy tắc "năm vai trò chuyên môn chỉ đọc, điều phối viên là người ghi duy nhất" là ràng buộc hướng dẫn ở bản native, phải tự kiểm khi giao việc và khi nhận kết quả.
+
+### Bản Claude Code và Codex
+
+- Claude Code: `CLAUDE.md` (nạp tệp này), `.claude/agents/` (vai trò, tên kebab-case, quyền giới hạn bằng `tools`), `.claude/commands/` (lệnh tắt) và `.claude/settings.json`. Subagent không gọi được subagent khác nên phiên chính đóng vai điều phối viên.
+- Codex: `.codex/agents/` và `.codex/config.toml`.
+
+Tên vai trò giữa các bản (DSH và Claude Code dùng kebab-case): `research_coordinator` ↔ `research-coordinator`, `business_tutor` ↔ `business-tutor`, tương tự cho bốn vai trò còn lại (dấu gạch dưới ↔ gạch nối).
 
 ## Nơi lưu tài liệu
 

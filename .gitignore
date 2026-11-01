@@ -13,5 +13,7 @@ exports/
 # Personal financial notes must not enter a shared/public repository.
 journal/private/
 
-# Ghi chú cá nhân của Qwen Code, không chia sẻ qua git.
-.qwen/QWEN.local.md
+
+# Cấu hình cá nhân của Claude Code, không chia sẻ qua git.
+.claude/settings.local.json
+CLAUDE.local.md

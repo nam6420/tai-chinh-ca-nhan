@@ -18,14 +18,17 @@ Repo này **không phải dịch vụ tư vấn đầu tư**. Các agent không 
 
 Trong một phiên Codex mới, yêu cầu: `Hãy spawn business_tutor, chờ agent hoàn tất rồi cho tôi biết tên vai trò của agent đó.` Sau đó dùng `/agent` trong giao diện dòng lệnh và xác nhận có luồng `business_tutor`. Việc chỉ liệt kê tệp trong `.codex/agents/` không chứng minh custom agent đã được nạp hoặc spawn thành công.
 
-Trong một phiên Qwen Code mới, yêu cầu tương tự: `Hãy spawn business_tutor, chờ agent hoàn tất rồi cho tôi biết tên vai trò của agent đó.` Sau đó dùng `/agents manage` và xác nhận có `business_tutor`. Việc chỉ liệt kê tệp trong `.qwen/agents/` không chứng minh custom agent đã được nạp hoặc spawn thành công. Ba lệnh tắt của dự án: `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh`.
+Trong một phiên DeepSeek Harness (DSH) mới, các vai trò là project skill native: gõ `/` để thấy `hoc`, `nghien-cuu-doanh-nghiep`, `nghien-cuu-nganh` và chọn, hoặc nhờ agent nạp skill `business-tutor`. Để kiểm tra Agent Teams, yêu cầu: `Hãy spawn một teammate tên business-tutor, bảo nó đọc skill business-tutor rồi trả lời tôi nó giữ vai trò gì.` Xác nhận trong danh sách thành viên nhóm có `business-tutor`. Việc chỉ liệt kê tệp trong `.agents/skills/` không chứng minh skill đã được nạp hoặc teammate đã spawn thành công.
+
+Trong một phiên Claude Code mới (mở tại gốc repo), yêu cầu: `Hãy dùng subagent business-tutor, chờ hoàn tất rồi cho tôi biết tên vai trò của agent đó.` Sau đó gõ `/agents` và xác nhận có `business-tutor` trong mục project. Ba lệnh tắt: `/hoc`, `/nghien-cuu-doanh-nghiep`, `/nghien-cuu-nganh`. Việc chỉ liệt kê tệp trong `.claude/agents/` không chứng minh subagent đã được nạp.
 
 ## Cấu trúc
 
 ```text
+.agents/skills/      Vai trò và lệnh tắt native của DeepSeek Harness
+.claude/agents/      Subagent của dự án (bản Claude Code)
+.claude/commands/    Lệnh tắt slash cho Claude Code
 .codex/agents/       Custom agent của dự án (bản Codex)
-.qwen/agents/        Custom agent của dự án (bản Qwen Code)
-.qwen/commands/      Lệnh tắt slash của dự án cho Qwen Code
 docs/                Cách học, quy trình và tiêu chuẩn nghiên cứu
 learning/            Lộ trình, bảng thuật ngữ và bài học
 research/            Đề bài, hồ sơ nghiên cứu và báo cáo tổng hợp
@@ -46,4 +49,4 @@ scripts/             Kiểm tra cấu hình và cổng xuất bản
 - Mọi báo cáo doanh nghiệp phải có luận điểm thuận, nghịch và điều kiện làm luận điểm mất hiệu lực.
 - Không biến định giá thành khuyến nghị mua/bán.
 
-Xem bài [Khởi đầu 30 phút](learning/lessons/001-business-financial-statements.md) và [bảng thuật ngữ](learning/glossary.md) nếu bạn bắt đầu từ con số 0.
+Bắt đầu từ [mục lục 24 bài và hai đường học](learning/README.md). Nếu mới hoàn toàn, đọc [N1 — thị trường](learning/lessons/N1-market-basics.md) và [N6 — doanh nghiệp kiếm tiền](learning/lessons/N6-business-model-unit-economics.md), rồi tới ba báo cáo tài chính. Xem [bảng thuật ngữ](learning/glossary.md) và [sổ kiểm duyệt](learning/reviews/README.md) khi cần.

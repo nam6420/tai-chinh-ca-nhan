@@ -1,0 +1,52 @@
+# Sổ nguồn — Ngân hàng TMCP Ngoại thương Việt Nam (VCB)
+
+- Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
+- **Cảnh báo:** chưa mở được báo cáo tài chính gốc của ngân hàng hay HOSE; trang nhà đầu tư chỉ hiện lịch công bố. Gần như toàn bộ số ngân hàng là nguồn thứ cấp, cần đối chiếu báo cáo gốc trước khi dùng làm kết luận trọng yếu.
+
+| Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
+|---|---|---|---|---|---|---|
+| S1 | [Mekong ASEAN, Vietcombank lợi nhuận đi ngang](https://mekongasean.vn/vietcombank-loi-nhuan-di-ngang-tra-luong-binh-quan-48-trieu-dongthang-cho-nhan-vien-51492.html) | 31/01/2026 | FY2025 | Tỷ VND; hợp nhất | Thứ cấp | Số trước kiểm toán; nợ xấu tự lệch (9.464 và 9.646) |
+| S2 | [Mekong ASEAN, lãi ngoại hối gấp đôi, dự phòng quý 3](https://mekongasean.vn/lai-ngoai-hoi-gap-doi-vietcombank-day-manh-du-phong-quy-3-61301.html) | 31/10/2026 | Quý 3 và 9 tháng 2026 | Tỷ VND | Thứ cấp | LNST 9 tháng (33.054) chỉ có một nguồn |
+| S3 | [Investing.com (Vietstock), tăng trích lập dự phòng gấp 8 lần](https://vn.investing.com/news/economy-news/tang-trich-lap-du-phong-rui-ro-gap-8-lan-vietcombank-bao-lai-truoc-thue-quy-32026-di-ngang-2750339) | 30/10/2026 | Quý 3 và 9 tháng 2026 | Tỷ VND | Thứ cấp | Đăng lại bài của báo khác |
+| S4 | [Znews, Vietcombank tiếp tục lãi cao nhất ngành](https://znews.vn/vietcombank-tiep-tuc-lai-cao-nhat-nganh-ngan-hang-post1693271.html) | 31/10/2026 | 30/09/2026 | Tỷ VND | Thứ cấp | Bài ghi dư nợ "gần 1,82 triệu tỷ (+9%)"; hồ sơ dùng 1.820.000 làm số tròn |
+| S5 | [CafeF, cập nhật lợi nhuận quý 3/2026](https://cafef.vn/cap-nhat-loi-nhuan-quy-3-2026-cac-ngan-hang-sang-31-10-ket-qua-bat-ngo-cua-vietcombank-vietinbank-188261031075812515.chn) | 31/10/2026 | Quý 3 | Tỷ VND | Thứ cấp | Chỉ đối chiếu |
+| S6 | [Tạp chí Kinh tế Tài chính, VCB dẫn đầu lợi nhuận 9 tháng](https://tapchikinhtetaichinh.vn/vietcombank-dan-dau-loi-nhuan-9-thang-nhom-ngan-hang-nho-tang-truong-manh-171185.html) | 31/10/2026 | 9 tháng 2026 | Tỷ VND | Thứ cấp | Có tiêu đề về hết room tín dụng, chưa đọc đầy đủ |
+| S7 | [ACBS, cập nhật VCB](https://acbs.com.vn/acbsmedia/2026/08/VCB_cap-nhat_ACBS_07.08.2026-VN.pdf) | 07/08/2026 | Quý 2/2026 | Tỷ VND; chỉ số ACBS ước tính | Thứ cấp | Công ty chứng khoán có ý kiến mua; bỏ khuyến nghị và giá mục tiêu; NIM, CASA, CIR, CAR là ước tính của ACBS |
+| S8 | [Doanh nhân - Pháp luật, ĐHĐCĐ VCB 2026](https://doanhnhan.baophapluat.vn/dhdcd-vietcombank-vcb-2026-kiem-soat-chat-tin-dung-bat-dong-san-dau-co-don-luc-tang-von-len-gan-94-000-ty-dong.html) | 25/04/2026 | Đại hội 24/04/2026 | Tỷ VND | Thứ cấp | Chưa mở nghị quyết gốc |
+| S9 | [Người Quan Sát, VCB tăng vốn gần 100.000 tỷ](https://nguoiquansat.vn/vietcombank-don-luc-tang-von-quy-mo-co-the-tien-sat-100-000-ty-dong-287871.html) | 23/04/2026 | Kế hoạch tăng vốn | Tỷ VND | Thứ cấp | Tài liệu trước đại hội; nêu phương án riêng lẻ đã được đại hội 2025 thông qua |
+| S10 | [DBS, kết quả quý 2/2026](https://www.dbs.com/newsroom/DBS_second_quarter_net_profit_up_9pct_to_record_SGD_3_08_billion_as_quarterly_total_income_crosses_SGD_6_billion_for_first_time) | 06/08/2026 | Quý 2 và nửa đầu 2026 | Tỷ SGD | Gốc, công ty công bố | Không nêu chuẩn kế toán; khác chuẩn và khác chỉ số vốn so với VCB |
+| S11 | [Trang nhà đầu tư Vietcombank](https://www.vietcombank.com.vn/vi-VN/Nha-dau-tu) | trang động | Lịch công bố | | Gốc | Chỉ thấy lịch công bố, không có tệp báo cáo |
+| S12 | [NSO, thông cáo kinh tế - xã hội](https://www.nso.gov.vn/?p=62592) | 03/10/2026 | Quý 3 và 9 tháng 2026 | % so với cùng kỳ | Gốc, cơ quan thống kê | Số ước tính |
+| S13 | [Mekong ASEAN, tín dụng vượt 20 triệu tỷ](https://mekongasean.vn/lai-suat-tang-cham-lai-tin-dung-vuot-20-trieu-ty-dong-60399.html) | 07/10/2026 | Đến 30/09/2026 | VND; % | Thứ cấp | Họp báo của Ngân hàng Nhà nước; chưa mở trang gốc; bài không nêu mục tiêu 15% (xem S22) |
+| S14 | [Người Quan Sát, chỉ đạo điều hành lãi suất](https://nguoiquansat.vn/toan-canh-cac-chi-dao-dieu-hanh-lai-suat-cua-nhnn-tu-dau-nam-2026-323548.html) | 22/10/2026 | Từ đầu năm 2026 | % | Thứ cấp | Bài đăng lại; chưa mở công văn gốc |
+| S15 | [Mekong ASEAN, lãi bán niên Vietcombank vượt 29.000 tỷ](https://mekongasean.vn/lai-ban-nien-vietcombank-vuot-29000-ty-dong-thu-nhap-nhan-vien-tang-manh-57943.html) | 31/07/2026 | 6 tháng 2026 | Tỷ VND | Thứ cấp | LNTT 29.222 (+33,5%), lợi nhuận thuần trước dự phòng 32.218, nợ xấu 10.737 (0,61%), bao phủ 279% |
+| S16 | [Viettimes, giải mã khoản lãi hơn 2.900 tỷ của Vietcombank](https://viettimes.vn/giai-ma-khoan-lai-hon-2900-ty-dong-cua-vietcombank-sau-khi-thau-tom-vietcombank-tower-post204142.html) | 06/08/2026 | Quý 2/2026 | Tỷ VND | Thứ cấp | Giải thích của ngân hàng qua báo chí; chưa mở giải trình gốc |
+| S17 | [The Leader, Vietcombank quý II/2026 lợi nhuận tăng tốc trên nền tín dụng đi ngang](https://theleader.vn/vietcombank-quy-ii-2026-loi-nhuan-tang-toc-tren-nen-tin-dung-di-ngang-d47684.html) | quý 2/2026 (ngày chưa ghi rõ) | Quý 2/2026 | Tỷ VND; % | Thứ cấp | Số CASA và nợ nhóm 2 chưa đối chiếu báo cáo gốc |
+| S18 | [Doanh nghiệp và Hội nhập, VCB báo lãi quý 2, nợ nghi ngờ tăng đột biến](https://doanhnghiephoinhap.vn/vietcombank-bao-lai-quy-2-tang-manh-no-nghi-ngo-tang-dot-bien-gay-chu-y-144838.html) | 31/07/2026 | Quý 2/2026 | Tỷ VND | Thứ cấp | Không nêu nợ nhóm 2 hay nguyên nhân |
+| S19 | [Vietstock tiếng Anh, ngân hàng tăng dự phòng khi rủi ro nợ xấu quay lại](https://en.vietstock.vn/2026/05/banks-strengthen-provisions-as-bad-debt-risks-re-emerge-37-633428.htm) | 18/05/2026 | Quý 1/2026 | % tăng | Thứ cấp | Chỉ đọc khoảng 100.000 trong 169.684 ký tự |
+| S20 | [Mekong ASEAN, TCBS chỉ ra ba yếu tố cần theo dõi về chất lượng tài sản ngân hàng](https://mekongasean.vn/tcbs-chi-ra-3-yeu-to-can-theo-doi-ve-chat-luong-tai-san-ngan-hang-cuoi-nam-59640.html) | 15/09/2026 | Quý 2/2026, toàn ngành | % | Thứ cấp | Báo cáo của công ty chứng khoán qua báo chí |
+| S21 | [VnBusiness, VDSC ước tính 4 ngân hàng vượt room tín dụng](https://vnbusiness.vn/vdsc-uoc-tinh-4-ngan-hang-vuot-room-tin-dung-sau-quy-dinh-moi-ve-lc.html) | 26/10/2026 | Sau Công văn 9608 | Ngân hàng | Thứ cấp | Ước tính của VDSC; không phải thông báo của Ngân hàng Nhà nước |
+| S22 | [Ngân hàng Nhà nước, Chỉ thị 01/CT-NHNN ngày 09/01/2026](https://sbv.gov.vn/en/w/chi-thi-01-ctnhnn-ngay-09/01/2026) | 22/01/2026 | Năm 2026 | % | Gốc, ngân hàng trung ương | Trang mô tả chỉ thị; "dự kiến khoảng 15%, có thể điều chỉnh" |
+| S23 | [Tạp chí Kinh tế Tài chính, yêu cầu giảm lãi suất huy động tối thiểu 0,5%/năm](https://tapchikinhtetaichinh.vn/yeu-cau-giam-lai-suat-huy-dong-toi-thieu-0-5-nam-canh-bao-siet-tin-dung-ngan-hang-vi-pham-169892.html) | 2026 (Công văn 9608 ngày 18/10/2026) | Công văn 9608 | Tóm tắt nội dung công văn | Thứ cấp (báo chí) | Chưa mở toàn văn công văn |
+| S24 | [Doanh nhân - Pháp luật, lợi nhuận quý I/2026 của VCB](https://doanhnhan.baophapluat.vn/vietcombank-vcb-loi-nhuan-quy-i-2026-dat-gan-11-803-ty-dong-tang-manh-trich-lap-du-phong-rui-ro.html) | 2026 | Quý 1/2026 | Tỷ VND | Thứ cấp (báo chí) | Nhóm 4 từ 222 lên 1.586 tỷ; bao phủ trên 250% |
+| S25 | [Người Quan Sát, VietinBank vượt Vietcombank về lợi nhuận quý III/2026](https://nguoiquansat.vn/vietinbank-vuot-vietcombank-tro-thanh-vua-loi-nhuan-ngan-hang-quy-iii-2026-325380.html) | 31/10/2026 | Quý 3/2026, nhóm nợ | Tỷ VND | Thứ cấp (báo chí) | Chỉ dùng cho so sánh VietinBank (13.689 so với 11.218 tỷ); số nhóm nợ nằm ở S30, không ở bài này |
+| S26 | [CafeF, dự báo lợi nhuận của 13 ngân hàng quý 3/2026](https://cafebiz.vn/du-bao-loi-nhuan-cua-13-ngan-hang-trong-quy-3-2026-176260926095702633.chn) | 26/09/2026 | Dự báo quý 3 của MBS | Tỷ VND | Thứ cấp (dự báo bên thứ ba) | Dự báo là ý kiến, không phải kết quả |
+| S27 | [Elibook, VCB vẫn giữ ngôi vương và liệu có đang che đậy lợi nhuận](https://elibook.vn/2026/05/11/vcb-van-giu-ngoi-vuong-va-lieu-co-dang-che-dau-bot-loi-nhuan-cho-viec-phat-hanh-rieng-le-sap-toi/) | 11/05/2026 | Quý 1/2026 | Blog phân tích | Thứ cấp (blog) | Trái phiếu nhóm 4 khoảng 6,6 nghìn tỷ chưa xác minh; có suy đoán về động cơ trích lập, hồ sơ không dùng |
+| S28 | [Việt Báo, Vietcombank lãi hơn 40.000 tỷ sau 9 tháng](https://vietbao.vn/vietcombank-lai-hon-40000-ty-dong-sau-9-thang-613837.html) | 31/10/2026 | 9 tháng 2026 | Tỷ VND | Thứ cấp (báo chí) | Dư nợ +8,5%, tiền gửi +6,5%, giấy tờ có giá phát hành 47.400 tỷ |
+| S29 | [Tab Insights, ngân hàng Việt Nam quý 1/2026](https://tabinsights.com/article/vietnamese-banks-post-solid-profit-growth-despite-funding-pressures-and-higher-provisions) | 10/06/2026 | Quý 1/2026 toàn ngành | Tỷ lệ phần trăm | Thứ cấp | NIM ngành 2,9% so với 3,1%; LDR 114,2% |
+| S30 | [Người Quan Sát, Vietcombank lãi hơn 40.400 tỷ sau 9 tháng, dự phòng quý III tăng gần 8 lần](https://nguoiquansat.vn/vietcombank-lai-hon-40-400-ty-sau-9-thang-du-phong-quy-iii-tang-gan-8-lan-325370.html) | 31/10/2026 | Quý 3 và 9 tháng 2026 | Tỷ VND | Thứ cấp (báo chí) | Nhóm nợ 3–5, nhóm 2 (4.995), dự phòng trái phiếu chưa niêm yết (3.307 → 6.304), nguồn vốn; một nguồn báo chí duy nhất cho các số này |
+| S31 | [The Investor, Vietcombank aims to complete private placement in 2026](https://theinvestor.vn/vietcombank-aims-to-complete-private-placement-in-2026-d18928.html) | 25/04/2026 | Chào bán riêng lẻ | Cổ phiếu, tỷ lệ | Thứ cấp (báo chí) | Số cổ phiếu mâu thuẫn với S8/S9; có thể kéo sang 2027 |
+
+## Mâu thuẫn và mục chưa giải quyết
+
+| Mục | Bằng chứng mâu thuẫn | Cách xử lý |
+|---|---|---|
+| Thu nhập lãi thuần FY2025 | 58.674 (S1) và 58.771 (S7) | Ghi cả hai |
+| Nợ xấu FY2025 | 9.464 và tổng ba nhóm 9.646 trong cùng nguồn | Không dùng để tính |
+| CAR năm 2025 | 12,0% (bảng riêng của VCB) và 11,6% (bảng so sánh ngân hàng) trong cùng báo cáo ACBS | `CHƯA_BIẾT` số chính thức |
+| Thu nhập ngoài lãi 9 tháng | 15.804 (hiệu) và tổng các thành phần nêu trong bài (dịch vụ, ngoại hối, khác) khoảng 15.034 | Dùng hiệu; chênh khoảng 770 do khoản khác chưa liệt kê |
+| Kết quả tìm kiếm "LNTT quý 3 7.566 tỷ" | Có thể là bài cũ gắn sai ngày | Bỏ qua |
+| CASA | 33,9% (ACBS, S7) và 32,35% quý 2 (The Leader, S17) | Nêu cả hai; `CHƯA_BIẾT` số của ngân hàng |
+| Chi phí dự phòng FY2025 | 3.185 (S1) và 3.192 (S7) | Nêu cả hai |
+| Dư nợ cuối quý 3 | "gần 1,82 triệu tỷ (+9%)" (S4) | Dùng 1.820.000 làm số tròn; chưa có số báo cáo gốc |
