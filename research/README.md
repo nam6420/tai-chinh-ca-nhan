@@ -15,4 +15,4 @@ Ghi chú đang làm chưa qua kiểm chứng phải ghi `BẢN NHÁP - CHƯA KI�
 
 ## Bắt đầu
 
-[Đề bài](briefs/README.md), [hồ sơ doanh nghiệp](companies/README.md), [khung nghiên cứu ngành](sectors/README.md). [Hồ sơ Apple mẫu](companies/US/AAPL/report.md) đã qua hai nhánh trên đúng mã băm nhưng vẫn có điểm phản biện chưa xử lý; xem trực tiếp biên bản và mốc dữ liệu.
+[Đề bài](briefs/README.md), [hồ sơ doanh nghiệp](companies/README.md), [khung nghiên cứu ngành](sectors/README.md). [Hồ sơ Apple mẫu](companies/US/AAPL/report.md) đã qua hai nhánh trên đúng mã băm nhưng vẫn có điểm phản biện chưa xử lý; xem trực tiếp biên bản và mốc dữ liệu. Bốn [hồ sơ doanh nghiệp Việt Nam Đợt 2](companies/README.md) (FPT, VNM, VCB, HPG) còn là bản nháp chưa kiểm duyệt.
