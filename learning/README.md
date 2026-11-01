@@ -30,6 +30,7 @@
 | 19 | [010 — Chi phí vốn](lessons/010-cost-of-capital.md) | Tính và kiểm giả định WACC |
 | 20 | [011 — DCF và định giá ngược](lessons/011-dcf-reverse-dcf.md) | Đọc giả định sau khoảng giá trị |
 | 21 | [012 — Kịch bản và biên an toàn](lessons/012-scenarios-margin-of-safety.md) | Tính chi phí và điều kiện bác bỏ |
+| — | [Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ](lessons/Q3-normalizing-earnings-cyclical.md) | Bản nháp Đợt 3, chưa kiểm duyệt; học sau 009 và 011 |
 | 22 | [015 — Tâm lý và nhật ký](lessons/015-behavior-decision-journal.md) | Tách quy trình với kết quả; có thể dùng nghi thức nhẹ từ đầu |
 | 23 | [016 — Bài tổng kết](lessons/016-company-research-capstone.md) | Tạo hồ sơ nguồn và mô hình truy lại được |
 
