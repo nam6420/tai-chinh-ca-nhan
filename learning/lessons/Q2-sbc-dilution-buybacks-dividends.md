@@ -87,7 +87,7 @@ Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại c�
 | EPS pha loãng (USD) | 7,46 | 6,08 | 6,13 |
 | Cổ phiếu đang lưu hành cuối năm (nghìn) | 14.773.260 | 15.116.786 | không lấy |
 
-`SỰ_THẬT` Tài liệu cũng nêu chương trình mua lại 110 tỷ USD (tháng 05/2024) đã dùng hết và chương trình mới 100 tỷ USD (tháng 05/2025) đã dùng 221 triệu USD đến 27/09/2025; phần thuyết minh của ban điều hành ghi mua lại 89,3 tỷ USD trong năm, trong khi báo cáo lưu chuyển tiền tệ ghi tiền chi 90.711. `CHƯA_BIẾT` vì sao hai số lệch 1,4 tỷ USD; bài dùng số tiền chi trong báo cáo lưu chuyển tiền tệ và nêu lệch này.
+`SỰ_THẬT` Tài liệu cũng nêu chương trình mua lại 110 tỷ USD (tháng 05/2024) đã dùng hết và chương trình mới 100 tỷ USD (tháng 05/2025) đã dùng 221 triệu USD đến 27/09/2025; phần thuyết minh của ban điều hành ghi mua lại 89,3 tỷ USD trong năm, trong khi báo cáo lưu chuyển tiền tệ ghi tiền chi 90.711. Dữ liệu XBRL (bài Q4) cho thấy 89.300 triệu USD là giá trị cổ phiếu mua lại và hủy trong báo cáo vốn chủ, còn 90.711 là tiền chi: hai khái niệm khác nhau. `CHƯA_BIẾT` vì sao riêng khoản 1.411 triệu USD lệch; bài dùng số tiền chi trong báo cáo lưu chuyển tiền tệ và nêu lệch này.
 
 `PHÉP_TÍNH` Cổ tức `/` lợi nhuận `= 15.421/112.010 = 13,8%`. Tổng tiền chi cho cổ đông và người nhận cổ phiếu thưởng `= 15.421 + 90.711 + 5.960 = 112.092`, tức xấp xỉ bằng lợi nhuận ròng 112.010. So với dòng tiền: dòng tiền hoạt động trừ chi mua TSCĐ là 98.767, nên chi trả vượt `13.325`; so với 85.904 (đã trừ SBC) vượt `26.188`. `CHƯA_BIẾT` phần vượt được tài trợ bằng tiền sẵn có hay vay; cần đọc bảng cân đối và thuyết minh nợ.
 
@@ -216,4 +216,4 @@ Truy cập `2026-11-01`. Không suy ngày truy cập thành ngày xuất bản.
 | [Damodaran, Data Update 8 for 2026](https://aswathdamodaran.blogspot.com/2026/02/data-update-8-for-2026-time-for.html) | Blog tác giả; 24/02/2026; thị trường toàn cầu | Mua lại chuyển giá trị giữa người bán và người ở lại; FCFE; cảnh báo trả quá FCFE |
 | [BCTC hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) | VND; VAS; đã đọc trang in 7 và 39 | Cổ phiếu thưởng 20%, vốn góp, lợi nhuận chưa phân phối |
 
-`CHƯA_BIẾT` Số cổ phiếu mua lại gộp của Apple FY2025 và lý do lệch giữa 89,3 tỷ và 90.711 triệu USD (tôi đọc phần báo cáo tài chính và phần thuyết minh được trích, chưa đọc toàn bộ tài liệu); cách tính lãi cơ bản trên cổ phiếu của Hòa Phát; nguồn thứ hai độc lập cho nhận định "SBC là chi phí thật" (đây là quy ước phương pháp của dự án).
+`CHƯA_BIẾT` Số cổ phiếu mua lại gộp của Apple FY2025 và lý do riêng của khoản lệch 1.411 triệu USD giữa 89,3 tỷ và 90.711 triệu USD (tôi đọc phần báo cáo tài chính và phần thuyết minh được trích, chưa đọc toàn bộ tài liệu); cách tính lãi cơ bản trên cổ phiếu của Hòa Phát; nguồn thứ hai độc lập cho nhận định "SBC là chi phí thật" (đây là quy ước phương pháp của dự án).

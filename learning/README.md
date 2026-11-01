@@ -30,6 +30,7 @@
 | 19 | [010 — Chi phí vốn](lessons/010-cost-of-capital.md) | Tính và kiểm giả định WACC |
 | 20 | [011 — DCF và định giá ngược](lessons/011-dcf-reverse-dcf.md) | Đọc giả định sau khoảng giá trị |
 | 21 | [012 — Kịch bản và biên an toàn](lessons/012-scenarios-margin-of-safety.md) | Tính chi phí và điều kiện bác bỏ |
+| — | [Q4 — Lấy dữ liệu: EDGAR/XBRL, báo cáo Việt Nam, bảng tính](lessons/Q4-getting-data-edgar-xbrl-vietnam.md) | Bản nháp Đợt 3, chưa kiểm duyệt; học sau N8 và V4 |
 | — | [Q2 — SBC, pha loãng, mua lại, cổ tức](lessons/Q2-sbc-dilution-buybacks-dividends.md) | Bản nháp Đợt 3, chưa kiểm duyệt; học sau 006 và 011 |
 | — | [Q1 — Chất lượng lợi nhuận có công cụ](lessons/Q1-earnings-quality-toolkit.md) | Bản nháp Đợt 3, chưa kiểm duyệt; học sau 004, 005 và 007 |
 | — | [Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ](lessons/Q3-normalizing-earnings-cyclical.md) | Bản nháp Đợt 3, chưa kiểm duyệt; học sau 009 và 011 |
