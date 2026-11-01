@@ -7,3 +7,5 @@ Chỉ dùng thư viện chuẩn Python 3. Chạy `python3 valuation.py`; kiểm 
 - Mọi giả định tương lai là giả định bài học, không phải dự báo. Chưa có bảng tính Excel: người học dựng lại công thức theo hàm trong tệp.
 - `hpg_cycle_inputs.csv`: doanh thu, lợi nhuận, vốn chủ HPG FY2021–FY2025 (tỷ VND; trộn báo cáo thường niên 2023 và BCTC kiểm toán FY2025), mở 2026-11-01.
 - `cyclical.py`: chuẩn hóa lợi nhuận công ty chu kỳ (bài Q3): trung bình tuyệt đối, biên, trung vị, bỏ năm cực đoan, ROE, chiết khấu lùi.
+- `hpg_fy2025_statements.csv`: số báo cáo tài chính hợp nhất kiểm toán FY2025 và cột năm trước của HPG (tỷ VND), mở 2026-11-01.
+- `earnings_quality.py`: Beneish M-score, Altman Z'', Piotroski F-score (bài Q1). Hệ số Beneish/Altman từ nguồn thứ cấp, chưa đối chiếu bài gốc.
