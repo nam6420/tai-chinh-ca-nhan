@@ -83,6 +83,13 @@ class BaiQ3(unittest.TestCase):
         for dt, ln, bien in ((46855, 8015, 0.17), (56580, 8600, 0.15), (64678, 7578, 0.12)):
             self.assertAlmostEqual(ln / dt, bien, delta=0.005)
 
+    def test_bien_9t_2026_tru_tho_khoan_mot_lan(self):
+        # khoản chuyển nhượng dự án Phố Nối khoảng 3,8 nghìn tỷ (thứ cấp, chưa rõ trước/sau thuế)
+        self.assertAlmostEqual((23746 - 3800) / 171539, 0.1163, places=4)
+        self.assertAlmostEqual(4627 / 1878, 2.46, places=2)
+        self.assertAlmostEqual(92174.2 / 131220.0, 0.702, places=3)
+        self.assertAlmostEqual(105737 / 149568, 0.707, places=3)
+
     def test_lai_vay_theo_quy_va_quy_mo(self):
         # bản tổng quan Q3/2026 (trang 5): chi phí lãi vay theo quý, tỷ VND
         q25 = [627, 439, 812, 1237]

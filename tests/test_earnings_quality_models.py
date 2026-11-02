@@ -106,6 +106,11 @@ class BaiQ1(unittest.TestCase):
         t4 = dict(t, loi_nhuan_giu_lai=t["loi_nhuan_giu_lai"] + 12792.2)
         self.assertAlmostEqual(q.altman_zpp(t4)["X2"], 0.2475, places=4)
         self.assertAlmostEqual(q.altman_zpp(t4)["Z"], 2.687, places=3)
+        # Z' (Altman 2000, có X5 = doanh thu/tài sản) cho HPG ≈ 1,49, vùng xám 1,23–2,90
+        x5 = t["doanh_thu"] / t["tong_tai_san"]
+        zp = 0.717 * z["X1"] + 0.847 * z["X2"] + 3.107 * z["X3"] + 0.420 * z["X4"] + 0.998 * x5
+        self.assertAlmostEqual(x5, 0.605, places=3)
+        self.assertAlmostEqual(zp, 1.488, places=3)
         # không có dữ liệu phát hành thì không được mặc định "đạt"
         thieu = {k: v for k, v in t.items() if k != "phat_hanh_co_phieu"}
         with self.assertRaises(KeyError):

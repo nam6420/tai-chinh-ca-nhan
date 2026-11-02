@@ -1,8 +1,8 @@
 # BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ
 
-- Ngày viết: `2026-11-01`; sửa sau kiểm duyệt vòng 2 ngày `2026-11-02`.
+- Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 2–5 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
-- Nguồn số HPG: báo cáo tài chính hợp nhất kiểm toán FY2025, báo cáo thường niên 2023 và bản tổng quan Q3/2026, đều mở ngày `2026-11-01` (xem bảng cuối bài).
+- Nguồn số HPG: BCTC hợp nhất kiểm toán FY2025, báo cáo thường niên 2019 và 2023, tổng quan Q3/2026 và một bài báo về Q1/2026 (bảng cuối bài).
 - Mục tiêu: Phân biệt lợi nhuận một năm với mức "bình thường"; chuẩn hóa bằng trung bình, biên, trung vị, bỏ năm cực đoan, ROE; biết mỗi cách sai ở đâu.
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [cyclical.py](../practice/models/cyclical.py) và [hpg_cycle_inputs.csv](../practice/models/hpg_cycle_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
@@ -12,7 +12,7 @@
 
 ## Hiểu bài này trong 1 phút
 
-Người bán kem kiếm 100 triệu mùa hè và lỗ 20 triệu mùa đông; lấy một mùa nhân bốn đều sai. Công ty chu kỳ (*cyclical*) và hàng hóa (*commodity*, như thép) giống vậy ở quy mô năm. Chuẩn hóa lợi nhuận (*normalizing earnings*) trả lời câu hỏi: **một năm bình thường thì công ty kiếm được bao nhiêu?** Câu trả lời luôn là một khoảng, không phải một con số. Bài dạy các cách chuẩn hóa và giới hạn của từng cách trên HPG; không kết luận đắt/rẻ hay đỉnh/đáy, không dự báo.
+Người bán kem kiếm 100 triệu mùa hè và lỗ 20 triệu mùa đông; lấy một mùa nhân bốn đều sai. Công ty chu kỳ và hàng hóa (như thép) giống vậy ở quy mô năm. Chuẩn hóa lợi nhuận (*normalizing earnings*) trả lời: **một năm bình thường thì công ty kiếm được bao nhiêu?** Câu trả lời luôn là một khoảng. Bài dạy các cách chuẩn hóa và giới hạn của từng cách trên HPG; không kết luận đắt/rẻ, đỉnh/đáy hay dự báo.
 
 ## 1. Vì sao một năm không đủ
 
@@ -54,9 +54,9 @@ Không cách nào tự đúng: mỗi cách trả lời câu hỏi khác (đô la
 
 Hai điều rút ra. Một: trung bình số tuyệt đối (7,8) thấp nhất vì doanh thu gấp đôi trong 5 năm, đúng lời cảnh báo của Damodaran về quy mô. Hai: năm 1 có biên 18%, gấp 1,8 đến 3,6 lần các năm khác; bỏ nó làm kết quả giảm từ 11,28 xuống 8,70 (khoảng 23%). Bỏ cả đỉnh lẫn đáy (năm 3, biên 5%) cho `(6+8+10)/3 = 8%`, × 120 `= 9,6`. Các biến thể (7,8 đến 11,28) khác nhau phần lớn do chọn mẫu, nên đặt quy tắc loại **trước** khi xem kết quả và báo cả dải, đừng chọn điểm mình thích; bạn phải giải thích được vì sao một năm là bất thường.
 
-`PHÉP_TÍNH` Dùng mức chuẩn trung vị 9,6: lợi nhuận năm 5 cao hơn chuẩn `12,0/9,6 − 1 = 25%`. Giá giả định 12.000 đồng. EPS báo cáo `= 12,0 tỷ / 10 triệu = 1.200` đồng nên P/E `= 12.000/1.200 = 10`. EPS theo mức chuẩn `= 9,6 tỷ / 10 triệu = 960` đồng nên P/E `= 12.000/960 = 12,5`. Cùng một giá, năm có lợi nhuận cao hơn chuẩn cho P/E thấp hơn 20%; công ty không đổi.
+`PHÉP_TÍNH` Dùng mức chuẩn trung vị 9,6: lợi nhuận năm 5 cao hơn chuẩn `12,0/9,6 − 1 = 25%`. Giá giả định 12.000 đồng: EPS báo cáo `12,0 tỷ / 10 triệu = 1.200` đồng, P/E `= 10`; EPS chuẩn `9,6 tỷ / 10 triệu = 960` đồng, P/E `= 12,5`. Cùng một giá, năm lợi nhuận cao hơn chuẩn cho P/E thấp hơn 20%; công ty không đổi.
 
-Nếu phải mất hai năm mới về chuẩn, Damodaran chiết khấu lùi **giá trị tính từ lợi nhuận chuẩn hóa**. Để minh họa số học, bài áp phép chia lên chính con số 9,6 (r = 10%, `9,6/1,1² ≈ 7,93`, `discount_back`); đó không phải quy trình nguyên văn của nguồn.
+Nếu phải mất hai năm mới về chuẩn, Damodaran chiết khấu lùi **giá trị tính từ lợi nhuận chuẩn hóa**; bài minh họa số học trên con số 9,6 (r = 10%, `9,6/1,1² ≈ 7,93`, `discount_back`), không phải quy trình nguyên văn.
 
 ## Ví dụ từ nguồn thật
 
@@ -93,7 +93,7 @@ Kết quả trải từ khoảng 10.700 đến 19.900 tỷ, gần gấp đôi; c
 
 `SỰ_THẬT` Từ cuối FY2021 đến cuối FY2025 vốn chủ tăng từ 90.781 lên 131.220 tỷ (`PHÉP_TÍNH` +44,5%), trong khi doanh thu thuần chỉ tăng +4,3% (149.680 lên 156.116,1). Bảng cân đối FY2025 (trang 6–7): tài sản cố định (mã 220) từ 67.428,4 lên 133.608,1 tỷ trong năm 2025, còn chi phí xây dựng cơ bản dở dang (mã 242) giảm từ 63.655,9 xuống 10.721,1 tỷ. Vay ngắn hạn cộng dài hạn cuối 2025 là `64.695,0 + 27.479,2 = 92.174,2` tỷ; chi phí đi vay 3.114,9 so với 2.287,4 tỷ năm trước (+36,2%).
 
-`SUY_LUẬN` Công ty đã đưa vào hoạt động một khối tài sản lớn vốn trước đó là dở dang (BCTC FY2025 không nêu dự án nào được kết chuyển; `SỰ_THẬT` tổng quan Q3/2026 nêu hai dự án thép còn dở dang: ray và thép đặc biệt 700.000 tấn/năm, tiến độ 80%, sản phẩm đầu Q1/2027, và cán thép chất lượng cao thuộc HPDQ2, 500.000 tấn/năm, đang chạy thử). Hệ quả cho chuẩn hóa: (1) cách ROE nhân vốn chủ nay (19.870,6) có thể sai theo hai chiều: cao hơn thực tế nếu tài sản mới chưa chạy hết công suất, nhưng ROE FY2024 bị kéo thấp bởi vốn dở dang chưa sinh lời (mã 242 cuối FY2024: 63.655,9 tỷ; các năm trước `CHƯA_BIẾT`); chiều thứ ba là đòn bẩy: vốn mới nhờ vay nhiều (dư nợ 105.737 tỷ cuối Q3/2026, dư nợ vay/vốn chủ khoảng 0,71) nên ROE cũ không áp dụng, (2) biên × doanh thu nay giả định cấu trúc chi phí cũ, trong khi lãi và khấu hao đã tăng; (3) trung bình số tuyệt đối trộn các năm với bảng cân đối khác hẳn nhau. Không cách nào sửa trọn vẹn; chỉ có thể nêu giả định và đối chiếu.
+`SUY_LUẬN` Công ty đã đưa vào hoạt động một khối tài sản lớn vốn trước đó là dở dang (BCTC FY2025 không nêu dự án nào được kết chuyển; `SỰ_THẬT` tổng quan Q3/2026 nêu hai dự án thép còn dở dang: ray và thép đặc biệt 700.000 tấn/năm (tiến độ 80%, sản phẩm đầu Q1/2027) và cán thép chất lượng cao thuộc HPDQ2, 500.000 tấn/năm, đang chạy thử). Hệ quả cho chuẩn hóa: (1) ROE nhân vốn chủ nay (19.870,6) có thể sai hai chiều: cao hơn thực tế nếu tài sản mới chưa chạy hết công suất, nhưng ROE FY2024 bị kéo thấp bởi vốn dở dang (mã 242 cuối FY2024: 63.655,9 tỷ; các năm trước `CHƯA_BIẾT`); chiều thứ ba là đòn bẩy: dư nợ tuyệt đối tăng (105.737 tỷ cuối Q3/2026) nhưng dư nợ vay/vốn chủ vẫn khoảng 0,70–0,71 (FY2025 và Q3/2026), nên đòn bẩy tăng chưa chứng minh, còn lãi vay chắc chắn tăng, (2) biên × doanh thu nay giả định cấu trúc chi phí cũ, trong khi lãi và khấu hao đã tăng; (3) trung bình số tuyệt đối trộn các năm với bảng cân đối khác hẳn nhau. Không cách nào sửa trọn vẹn; chỉ nêu giả định và đối chiếu.
 
 ## 5. Chi phí cứng và đòn bẩy vận hành
 
@@ -103,19 +103,21 @@ Kết quả trải từ khoảng 10.700 đến 19.900 tỷ, gần gấp đôi; c
 
 Chu kỳ khác khoản bất thường một lần. Damodaran: sự cố riêng của công ty (đình công, vụ kiện; trang 615) thì loại chi phí đó cùng lá chắn thuế; nguyên nhân là chu kỳ ngành hay hàng hóa thì chuẩn hóa (trang 617–619). `Ý_KIẾN` Loại khoản lãi/lỗ một lần trước khi tính biên.
 
-Với một khoản lạ, hỏi: có lặp lại ngoài chu kỳ không; thuộc hoạt động chính hay thu nhập khác/tài chính. Lợi nhuận khác (mã 40) FY2025 là 134,8 tỷ trên lợi nhuận trước thuế 18.040,6 tỷ (`PHÉP_TÍNH` 0,7%), không chi phối FY2025 và không nói gì về kỳ khác.
+Với một khoản lạ, hỏi: có lặp lại ngoài chu kỳ không; thuộc hoạt động chính hay thu nhập khác/tài chính. Lợi nhuận khác (mã 40) FY2025 là 134,8 tỷ trên lợi nhuận trước thuế 18.040,6 tỷ (`PHÉP_TÍNH` 0,7%), không chi phối FY2025; Q1/2026 thì khác (mục 7).
 
 ## 7. Dùng lợi nhuận chuẩn hóa vào định giá, và chín tháng 2026
 
-`SỰ_THẬT` [Tổng quan tình hình kinh doanh Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) (HPG; PDF tạo 29/10/2026; tỷ VND): 9 tháng 2026 doanh thu 171.539, giá vốn 139.499, lợi nhuận gộp 30.775, LNST 23.746; 9 tháng 2025 doanh thu 111.031, lợi nhuận gộp 18.101, LNST 11.627; vốn chủ cuối tháng 9/2026 149.568. Nhóm thép đóng góp doanh thu 165.784 và LNST 18.396 (96% và 77% của tập đoàn); bất động sản 1% doanh thu và 19% LNST. `SUY_LUẬN` Nguồn ghi "LNST hợp nhất của tập đoàn", không ghi "chưa kiểm toán"; bài coi là số chung, chưa kiểm toán.
+`SỰ_THẬT` [Tổng quan tình hình kinh doanh Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) (HPG; PDF tạo 29/10/2026; tỷ VND): 9 tháng 2026 doanh thu 171.539, giá vốn 139.499, lợi nhuận gộp 30.775, LNST 23.746; 9 tháng 2025 doanh thu 111.031, lợi nhuận gộp 18.101, LNST 11.627; vốn chủ cuối tháng 9/2026 149.568. Nhóm thép: doanh thu 165.784, LNST 18.396 (96% và 77% của tập đoàn); bất động sản 1% doanh thu và 19% LNST. `SUY_LUẬN` Nguồn ghi "LNST hợp nhất của tập đoàn", không ghi "chưa kiểm toán"; bài coi là số chung chưa kiểm toán.
 
-`PHÉP_TÍNH` Biên gộp 9 tháng 2026 là `30.775/171.539 = 17,94%`; biên LNST/doanh thu `= 23.746/171.539 = 13,84%`; so với trung bình biên bỏ FY2021 là 7,58%, gấp `13,84/7,58 ≈ 1,83` lần. Hai lưu ý: (a) `171.539 − 139.499 = 32.040` khác lợi nhuận gộp công bố 30.775 (lệch 1.265), nên "doanh thu" nhiều khả năng chưa trừ giảm trừ (`SUY_LUẬN`); với doanh thu thuần ngầm định 170.274, biên LNST 13,95%, biên gộp 18,07%; (b) biên hợp nhất 13,84% trộn nhiều nhóm: biên LNST riêng nhóm thép `18.396/165.784 = 11,10%` vì bất động sản đóng góp 19% LNST trên 1% doanh thu. Biên hợp nhất không phải biên chu kỳ thép thuần và không so đồng nhất với FY2021–FY2025 (cơ cấu các năm đó `CHƯA_BIẾT`).
+`PHÉP_TÍNH` Biên gộp 9 tháng `30.775/171.539 = 17,94%`; biên LNST `23.746/171.539 = 13,84%`, gấp `13,84/7,58 ≈ 1,83` lần trung bình biên bỏ FY2021 (chưa loại khoản một lần, xem dưới). (a) `171.539 − 139.499 = 32.040` khác lợi nhuận gộp 30.775 (lệch 1.265): "doanh thu" nhiều khả năng chưa trừ giảm trừ (`SUY_LUẬN`); với doanh thu thuần ngầm định 170.274, biên LNST 13,95%, biên gộp 18,07%. (b) Biên hợp nhất trộn nhiều nhóm: biên riêng nhóm thép `18.396/165.784 = 11,10%`; không so đồng nhất với FY2021–FY2025 (cơ cấu các năm đó `CHƯA_BIẾT`).
 
-`SỰ_THẬT` Biên LNST theo quý (đọc nhãn biểu đồ): Q3/25 10,9%, Q4/25 8,5%, Q1/26 17,0%, Q2/26 12%, Q3/26 13%; biên gộp 13,7% (Q4/25) đến 19% (Q3/26); biên ròng Q1/26 (17,0%) cao hơn biên gộp (15,7%): cần thu nhập khác hoặc khoản lớn (`CHƯA_BIẾT`). Chi phí lãi vay theo quý (tỷ VND): Q1–Q4/2025 là 627, 439, 812, 1.237 (cộng 3.115, khớp mã 23 của FY2025); Q1–Q3/2026 là 1.333, 1.520, 1.774 (cộng 4.627). `PHÉP_TÍNH` Lãi vay/doanh thu: 2,70% (9T/2026), 2,00% (FY2025), 1,69% (9T/2025); cùng kỳ 9 tháng gấp khoảng 1,6 lần (9 tháng so với 12 tháng không cùng kỳ). Doanh thu 9 tháng +54%, sản lượng bán thép Q3 +54%: biên cũ nhân doanh thu FY2025 chuẩn hóa một quy mô cũ. `SUY_LUẬN` Biên 9 tháng là trung bình của chuỗi 8,5%–17%; lãi vay tăng làm biên LNST các năm trước khó so sánh; nên chuẩn hóa ở **EBIT (sau khấu hao)** rồi trừ lãi và thuế riêng (EBITDA bỏ khấu hao, đang lớn vì tài sản cố định gấp đôi; Damodaran trang 620 dùng lợi nhuận hoạt động), hoặc theo chênh lệch giá bán trừ giá nguyên liệu (trang 622: một trong ba lựa chọn; giá có thể ở trên hoặc dưới mức bình quân rất lâu). `CHƯA_BIẾT` EBIT và khấu hao từng năm của HPG. Damodaran dành chuẩn hóa tức thời cho công ty chu kỳ **đã trưởng thành**; HPG đang mở rộng, và cửa sổ 5 năm chỉ chứa một vòng bùng nổ–suy thoái.
+`SỰ_THẬT` Biên LNST theo quý (đọc nhãn biểu đồ): Q3/25 10,9%, Q4/25 8,5%, Q1/26 17,0%, Q2/26 12%, Q3/26 13%; biên gộp 13,7% (Q4/25) đến 19% (Q3/26). `SỰ_THẬT` (thứ cấp) [Bizhub/Vietnam News, 22/04/2026](https://bizhub.vietnamnews.vn/hoa-phat-reports-strongest-ever-quarterly-earnings-eyes-vnd22-trillion-profit-in-2026-post402098.html) (mở 02/11/2026): gần 3,8 nghìn tỷ lợi nhuận Q1/2026 đến từ chuyển nhượng cổ phần một dự án đô thị ở Phố Nối (Hưng Yên), mô tả là khoản một lần; lợi nhuận cốt lõi khoảng 5 nghìn tỷ; không nói trước hay sau thuế. `SUY_LUẬN` Khoản này giải thích biên ròng Q1 (17,0%) cao hơn biên gộp (15,7%) và nhiều khả năng là phần lớn lợi nhuận bất động sản (19% LNST, khoảng 4.400 tỷ), không nằm trong biên thép 11,10%. `PHÉP_TÍNH` thô: `23.746 − 3.800 ≈ 19.946`, biên khoảng 11,6% (thuế chưa kiểm).
 
-`SUY_LUẬN` Biên 13,84% cao hơn mọi năm FY2022–FY2025 nhưng thấp hơn năm 2021 (23,03%). `SỰ_THẬT` [Báo cáo thường niên 2019](https://static2.vietstock.vn/data/HOSE/2019/BCTN/VN/HPG_Baocaothuongnien_2019.pdf) (mở 02/11/2026) in doanh thu và lợi nhuận sau thuế hợp nhất 2017–2019 (tỷ VND): 46.855 và 8.015, 56.580 và 8.600, 64.678 và 7.578, tức tỷ suất 17%, 15%, 12% (gồm lợi ích cổ đông không kiểm soát). `SUY_LUẬN` Cửa sổ FY2021–FY2025 loại các năm này nên "13,84% cao hay thấp" và "23,03% gấp ba lần" chỉ đúng trong cửa sổ; thêm 2017–2019 thì mức chuẩn cao hơn 7,58%. Biên 2016 và 2020 `CHƯA_BIẾT` (cần BCTC kiểm toán). Hai khả năng: (i) chu kỳ thuận lợi, biên về mức cũ; (ii) quy mô và cấu trúc chi phí mới nâng mức chuẩn. Cả hai phía đều có bằng chứng: GDP 9 tháng +9,01% và xuất khẩu chỉ 23% doanh thu (yếu tố chu kỳ, chưa chứng minh mức chuẩn đổi); ngược lại một số báo chí ngành (thứ cấp, chưa kiểm) nêu thừa công suất dai dẳng và bảo hộ. Chu kỳ thép đã đổi cấu trúc hay chưa là `CHƯA_BIẾT`; số 9T chỉ có một nguồn gốc. `Ý_KIẾN` Cả hai cần số mới (công suất thực chạy, giá bán trừ nguyên liệu, lợi nhuận bất động sản). Mất hiệu lực nếu: Trung Quốc xuất khẩu thép thành phẩm trên 10 triệu tấn/tháng kéo dài (tháng 9/2026 là tháng thứ năm liên tiếp); CBAM; dư nợ và lãi vay tăng; số 9 tháng chưa kiểm toán.
+`SỰ_THẬT` Chi phí lãi vay theo quý (tỷ VND): Q1–Q4/2025 là 627, 439, 812, 1.237 (cộng 3.115, khớp mã 23 của FY2025); Q1–Q3/2026 là 1.333, 1.520, 1.774 (cộng 4.627). `PHÉP_TÍNH` Lãi vay/doanh thu: 2,70% (9T/2026), 2,00% (FY2025), 1,69% (9T/2025): tỷ lệ cùng kỳ gấp khoảng 1,6 lần, lãi vay tuyệt đối gấp khoảng 2,5 lần (4.627/1.878). Doanh thu 9 tháng +54%: biên cũ nhân doanh thu FY2025 chuẩn hóa một quy mô cũ. `SUY_LUẬN` Nên chuẩn hóa ở **EBIT (sau khấu hao)** rồi trừ lãi và thuế riêng (EBITDA bỏ khấu hao, đang lớn vì tài sản cố định gấp đôi; Damodaran trang 620 dùng lợi nhuận hoạt động), hoặc theo chênh lệch giá bán trừ giá nguyên liệu (trang 622: một trong ba lựa chọn; giá có thể ở trên hoặc dưới mức bình quân rất lâu). Damodaran dành chuẩn hóa tức thời cho công ty chu kỳ **đã trưởng thành**; HPG đang mở rộng, và cửa sổ 5 năm chỉ chứa một vòng bùng nổ–suy thoái. `CHƯA_BIẾT` EBIT và khấu hao từng năm của HPG.
 
-`KỊCH_BẢN` Chuẩn hóa không thay cho kịch bản; với DCF (011) dựng ba kịch bản biên: **bất lợi** quanh 5,75–6% (FY2022–FY2023; đáy trên cấu trúc chi phí và đòn bẩy mới có thể thấp hơn, `SUY_LUẬN`), **trung vị cửa sổ FY2021–2025** 8,7% (không phải kỳ vọng), **thuận lợi** 11,1% (LNST nhóm thép/doanh thu nhóm theo bản tổng quan, chưa đối chiếu thuyết minh bộ phận: thép 165.784 cộng nông nghiệp 5.064 là 170.848 trên tổng 171.539, chỉ còn khoảng 691 cho bất động sản trong khi nguồn ghi 1%, nên số nhóm có thể chưa trừ loại trừ nội bộ). Ba mức là giả định minh họa, chưa cùng gốc: 5,75–8,7% là biên hợp nhất, 11,1% là biên nhóm thép. Với bội số (009), tính P/E chuẩn hóa song song với P/E báo cáo.
+`SỰ_THẬT` [Báo cáo thường niên 2019](https://static2.vietstock.vn/data/HOSE/2019/BCTN/VN/HPG_Baocaothuongnien_2019.pdf) (mở 02/11/2026) in doanh thu bán hàng (chưa trừ giảm trừ) và lợi nhuận sau thuế hợp nhất 2017–2019: 46.855 và 8.015, 56.580 và 8.600, 64.678 và 7.578 tỷ VND, tức 17%, 15%, 12% (trên doanh thu thuần 46.162, 55.836, 63.658 vẫn như vậy). `SUY_LUẬN` Biên 13,84% cao hơn FY2022–FY2025 nhưng thấp hơn 2021 (23,03%); cửa sổ FY2021–FY2025 loại 2017–2019 nên "13,84% cao hay thấp" và "23,03% gấp ba lần" chỉ đúng trong cửa sổ. Biên 2016 và 2020 `CHƯA_BIẾT`. Hai khả năng: (i) chu kỳ thuận lợi, biên về mức cũ; (ii) quy mô và chi phí mới nâng mức chuẩn. GDP 9 tháng +9,01% và xuất khẩu 23% doanh thu là yếu tố chu kỳ, chưa chứng minh mức chuẩn đổi; ngược lại một số báo chí ngành (thứ cấp, chưa kiểm) nêu thừa công suất dai dẳng và bảo hộ. Chu kỳ thép đã đổi cấu trúc hay chưa là `CHƯA_BIẾT`; số 9T chỉ có một nguồn gốc. `Ý_KIẾN` Cả hai cần số mới (công suất thực chạy, giá bán trừ nguyên liệu, lợi nhuận bất động sản). Mất hiệu lực nếu: Trung Quốc xuất khẩu thép thành phẩm trên 10 triệu tấn/tháng kéo dài (tháng 9/2026 là tháng thứ năm liên tiếp); CBAM; dư nợ và lãi vay tăng.
+
+`KỊCH_BẢN` Chuẩn hóa không thay cho kịch bản; với DCF (011) dựng ba mức biên tham chiếu, không phải dự báo: **A** 5,75–6% (FY2022–FY2023; đáy trên cấu trúc chi phí và đòn bẩy mới có thể thấp hơn, `SUY_LUẬN`); **B** 8,7% (trung vị cửa sổ FY2021–2025); **C** 11,1% (LNST nhóm thép/doanh thu nhóm theo bản tổng quan, chưa đối chiếu thuyết minh bộ phận: thép 165.784 cộng nông nghiệp 5.064 là 170.848 trên tổng 171.539, chỉ còn khoảng 691 cho bất động sản trong khi nguồn ghi 1%, nên số nhóm có thể chưa trừ loại trừ nội bộ). A và B là biên hợp nhất, C là biên nhóm thép, nên chưa cùng gốc. Biên 9T/2026 (13,84%; khoảng 11,6% sau khi trừ thô khoản một lần) nằm trên A và B, gần C; chưa mức nào đại diện năm bùng nổ FY2021 (23,03%). Với bội số (009), tính cả P/E chuẩn hóa lẫn P/E báo cáo.
 
 ## Bài tập — làm trước khi mở đáp án
 
@@ -127,8 +129,8 @@ Với một khoản lạ, hỏi: có lặp lại ngoài chu kỳ không; thuộc
 6. Giả sử một giá trị tính từ lợi nhuận chuẩn là 9,6 tỷ và phải mất 3 năm mới về mức đó; với r = 10%, giá trị quy về hiện tại là bao nhiêu (phép minh họa, chưa tính các năm chuyển tiếp)?
 7. HPG: tính biên LNST mẹ/doanh thu thuần của FY2023 và FY2025 (đơn vị tỷ VND, số ở mục "Ví dụ từ nguồn thật").
 8. HPG: tính lợi nhuận chuẩn hóa FY2025 theo biên trung bình bỏ FY2021 và theo trung bình số tuyệt đối bỏ FY2021, rồi giải thích vì sao hai số khác nhau.
-9. Biên LNST/doanh thu 9 tháng 2026 của HPG là 13,84% (hợp nhất; nhóm thép 18.396/165.784). Tính biên nhóm thép và nêu bốn câu hỏi cần trả lời trước khi gọi là "đỉnh chu kỳ".
-10. Nêu một hướng sai của ROE trung bình × vốn chủ nay theo mỗi chiều (cao quá, thấp quá) và chiều đòn bẩy khi công ty vừa đưa nhà máy mới vào hoạt động.
+9. Biên LNST 9 tháng 2026 của HPG là 13,84% (hợp nhất; nhóm thép 18.396/165.784). Tính biên nhóm thép và nêu bốn câu hỏi cần trả lời trước khi gọi là "đỉnh chu kỳ".
+10. Nêu hướng sai của ROE trung bình × vốn chủ nay theo mỗi chiều (cao quá, thấp quá, đòn bẩy) khi công ty vừa đưa nhà máy mới vào hoạt động.
 
 ## Đáp án
 
@@ -143,7 +145,7 @@ Với một khoản lạ, hỏi: có lặp lại ngoài chu kỳ không; thuộc
 6. `9,6/1,1³ = 9,6/1,331 ≈ 7,21` tỷ; đây là phép minh họa số học, vì Damodaran chiết khấu lùi giá trị chứ không phải lợi nhuận một năm.
 7. FY2023: `6.835/118.953 = 5,75%`. FY2025: `15.453,2/156.116,1 = 9,90%`.
 8. Biên trung bình bỏ FY2021 `(6,00+5,75+8,66+9,90)/4 = 7,58%` × 156.116,1 `≈ 11.826`. Trung bình tuyệt đối bỏ FY2021 `(8.484+6.835+12.021,4+15.453,2)/4 ≈ 10.698`. Khác nhau vì cách thứ nhất nhân biên với doanh thu FY2025 (lớn hơn), cách thứ hai giữ số tuyệt đối cũ.
-9. Biên nhóm thép `18.396/165.784 = 11,10%`. Ví dụ câu hỏi: công suất thực chạy so với lắp đặt; giá bán trừ giá nguyên liệu các quý gần nhất; lãi vay và khấu hao sau khi tài sản mới vào hoạt động; lợi nhuận bất động sản (19% LNST) có lặp lại không; khoản một lần trong 9 tháng. Số nhóm có thể chưa trừ loại trừ nội bộ.
+9. Biên nhóm thép `18.396/165.784 = 11,10%`. Ví dụ câu hỏi (kèm khoản chuyển nhượng dự án Phố Nối ở Q1/2026): công suất thực chạy so với lắp đặt; giá bán trừ giá nguyên liệu các quý gần nhất; lãi vay và khấu hao sau khi tài sản mới vào hoạt động; lợi nhuận bất động sản (19% LNST) có lặp lại không; khoản một lần trong 9 tháng. Số nhóm có thể chưa trừ loại trừ nội bộ.
 10. Cao quá: vốn mới chưa chạy hết công suất nên ROE lịch sử nhân vốn lớn hơn giả định mọi đồng vốn mới sinh lợi như đồng vốn cũ. Thấp quá: ROE FY2024 bị kéo thấp bởi vốn dở dang chưa sinh lời (mã 242: 63.655,9 tỷ). Chiều thứ ba là đòn bẩy: vốn mới nhờ vay nhiều nên ROE cũ không áp dụng.
 
 </details>
@@ -163,10 +165,10 @@ Một học viên viết: "HPG FY2025 lãi 15.453 tỷ. Trung bình 5 năm là 1
 <details>
 <summary>Mở sau khi tự tìm lỗi</summary>
 
-1. Trùng số giữa lợi nhuận FY2025 và trung bình năm năm là ngẫu nhiên; trung bình đó chứa năm 2021 có biên 23,03%, gấp khoảng ba lần trung bình bốn năm còn lại (7,58%) trong cửa sổ này; các năm 2017–2019 có biên 12–17%.
+1. Trùng số giữa lợi nhuận FY2025 và trung bình năm năm là ngẫu nhiên; trung bình đó chứa năm 2021 (biên 23,03%, gấp khoảng ba lần 7,58% của bốn năm còn lại, trong cửa sổ này); 2017–2019 có biên 12–17%.
 2. Trung bình số tuyệt đối bỏ qua vốn chủ tăng 44,5% từ 2021 đến 2025.
-3. Quy năm bằng 4/3 giả định quý cuối giống ba quý đầu (biên LNST theo quý dao động 8,5%–17%).
-4. 23.746 là LNST của bản tổng quan, nhiều khả năng số chung chưa kiểm toán, không phải lợi nhuận cổ đông công ty mẹ; hai khái niệm khác nhau (FY2025: 15.514,9 và 15.453,2). Và 13,84% hợp nhất trộn cả bất động sản (biên nhóm thép 11,10%).
+3. Quy năm bằng 4/3 giả định quý cuối giống ba quý đầu (biên LNST theo quý 8,5%–17%); Q1/2026 còn có khoản một lần khoảng 3,8 nghìn tỷ.
+4. 23.746 là LNST hợp nhất, nhiều khả năng chưa kiểm toán, không phải lợi nhuận cổ đông công ty mẹ (FY2025: 15.514,9 và 15.453,2); 13,84% còn trộn bất động sản và khoản một lần (biên nhóm thép 11,10%).
 5. Nếu 9 tháng 2026 là đỉnh thì P/E trên lợi nhuận quy năm thấp giả tạo; có phải đỉnh chưa biết. Thiếu nguồn và ngày của giá.
 6. Không nêu điều kiện làm luận điểm mất hiệu lực.
 
@@ -188,12 +190,11 @@ Một học viên viết: "HPG FY2025 lãi 15.453 tỷ. Trung bình 5 năm là 1
 ## Ranh giới an toàn
 
 - Không phải khuyến nghị mua/bán/nắm giữ; Hòa Phát chỉ là dữ liệu thực hành.
-- Chuẩn hóa là phép tính trên quá khứ kèm giả định, không phải dự báo; số 9 tháng 2026 chưa kiểm toán.
-- Không có giá cổ phiếu trong bài.
+- Chuẩn hóa là phép tính trên quá khứ kèm giả định, không phải dự báo; số 9 tháng 2026 chưa kiểm toán; bài không có giá cổ phiếu.
 
 ## Điều tôi vẫn chưa hiểu
 
-- Tôi chọn bao nhiêu năm để phủ một chu kỳ của ngành này, và vì sao?
+- Bao nhiêu năm phủ một chu kỳ của ngành này, và vì sao?
 
 ## Nguồn Internet đã mở
 
@@ -205,6 +206,7 @@ Truy cập `2026-11-01`, mở lại `2026-11-02`.
 | [BCTC hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) | FY2025 và cột FY2024; VND; VAS; đã đọc trang in 4–8 | Doanh thu, lợi nhuận, vốn chủ, tài sản cố định, vay |
 | [Báo cáo thường niên 2019 của Hòa Phát](https://static2.vietstock.vn/data/HOSE/2019/BCTN/VN/HPG_Baocaothuongnien_2019.pdf) | 2017–2019; tỷ VND; hợp nhất | Doanh thu và LNST 2017–2019 |
 | [Báo cáo thường niên 2023 của Hòa Phát](https://static2.vietstock.vn/data/HOSE/2023/BCTN/VN/HPG_Baocaothuongnien_2023.pdf) | FY2021–FY2023; tỷ VND làm tròn; trang tóm tắt chỉ số tài chính và báo cáo kết quả kinh doanh 2023 | Chuỗi lịch sử FY2021–FY2023 |
+| [Bizhub/Vietnam News, 22/04/2026](https://bizhub.vietnamnews.vn/hoa-phat-reports-strongest-ever-quarterly-earnings-eyes-vnd22-trillion-profit-in-2026-post402098.html) | Thứ cấp; Q1/2026 | Khoản một lần Phố Nối |
 | [Tổng quan tình hình kinh doanh Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) | Q3 và 9 tháng 2026; chưa kiểm toán | Số 9 tháng 2026; biên theo quý; lãi vay theo quý; dự án thép (trang 2–6) |
 
 `CHƯA_BIẾT` Nguyên nhân của biên đỉnh FY2021, phạm vi các số 9 tháng (nguồn gọi cả "doanh thu" lẫn "doanh thu thuần"), việc FY2024 trình bày lại, biên 2016 và 2020. Biên và lãi vay theo quý đọc từ nhãn biểu đồ trong PDF ảnh. Trung vị, biên gia quyền và bỏ năm cực đoan là biến thể của bài, không phải công thức nguyên văn ở chương 22; chưa có nguồn thứ hai độc lập.
