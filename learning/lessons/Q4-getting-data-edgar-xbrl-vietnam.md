@@ -1,4 +1,4 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q4 — Lấy dữ liệu: EDGAR/XBRL, báo cáo Việt Nam và bảng tính
+# Bài Q4 — Lấy dữ liệu: EDGAR/XBRL, báo cáo Việt Nam và bảng tính
 
 - Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 1–4 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
@@ -7,8 +7,9 @@
 - Bài liên quan: N8, V4, 004; Q1–Q3 nếu muốn tái lập số của chúng.
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [data_pull.py](../practice/models/data_pull.py), [apple_xbrl_subset.json](../practice/models/apple_xbrl_subset.json) và [hpg_fy2025_transcription.csv](../practice/models/hpg_fy2025_transcription.csv); kiểm bằng `python3 -m unittest discover tests`.
-- Kiểm nguồn: `CHƯA`
-- Phản biện rủi ro: `CHƯA`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
+- Biên bản: [kiểm nguồn](../reviews/Q4-fact-check.md), [phản biện](../reviews/Q4-risk-review.md)
 - Câu hỏi cốt lõi: **Con số tôi đang cầm có đúng kỳ, đúng đơn vị, đúng khái niệm, và tôi chứng minh được nó đến từ đâu không?**
 
 ## Hiểu bài này trong 1 phút

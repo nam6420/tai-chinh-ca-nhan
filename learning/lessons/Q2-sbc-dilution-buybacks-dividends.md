@@ -1,4 +1,4 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q2 — Cổ phiếu thưởng nhân viên, pha loãng, mua lại và cổ tức
+# Bài Q2 — Cổ phiếu thưởng nhân viên, pha loãng, mua lại và cổ tức
 
 - Ngày viết: `2026-11-01`; sửa sau kiểm duyệt vòng 1–4 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
@@ -7,8 +7,9 @@
 - Bài trước liên quan: 006, 010, 011. Học tiếp Q3.
 - Thời lượng: 3 phiên (A: mục 1–3; B: ví dụ nguồn thật và mục 4–5; C: bài tập).
 - Tệp thực hành: [capital_return.py](../practice/models/capital_return.py) và [apple_capital_return_inputs.csv](../practice/models/apple_capital_return_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
-- Kiểm nguồn: `CHƯA`
-- Phản biện rủi ro: `CHƯA`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
+- Biên bản: [kiểm nguồn](../reviews/Q2-fact-check.md), [phản biện](../reviews/Q2-risk-review.md)
 - Câu hỏi cốt lõi: **Công ty trả gì cho cổ đông, lấy gì từ cổ đông, và phần còn lại của mỗi cổ phiếu giá trị hơn hay kém đi?**
 
 ## Hiểu bài này trong 1 phút
