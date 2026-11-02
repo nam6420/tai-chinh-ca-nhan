@@ -42,6 +42,8 @@ class BaiQ3(unittest.TestCase):
         self.assertAlmostEqual(c.weighted_margin_norm(now["doanh_thu_thuan"], pat, rev), 17110.8, delta=0.1)
         self.assertAlmostEqual(c.median_margin_norm(now["doanh_thu_thuan"], m), 13515.8, delta=0.1)
         self.assertAlmostEqual(c.avg_margin_norm(now["doanh_thu_thuan"], c.trimmed(m)), 11826.4, delta=0.1)
+        self.assertAlmostEqual(c.avg_margin_norm(now["doanh_thu_thuan"], c.trimmed(m, 1, 1)), 12778.4, delta=0.1)
+        self.assertAlmostEqual(c.avg_dollar(c.trimmed(pat, 1, 1)), 11986.2, delta=0.1)
         roe = [r["lnst_cong_ty_me"] / r["von_chu_cuoi_nam"] for r in rows]
         self.assertEqual([round(x * 100, 2) for x in roe], [37.98, 8.83, 6.65, 10.49, 11.78])
         self.assertAlmostEqual(c.roe_norm(now["von_chu_cuoi_nam"], roe), 19870.6, delta=0.1)
@@ -55,6 +57,16 @@ class BaiQ3(unittest.TestCase):
         self.assertAlmostEqual(sga[2], 3268.0, places=1)
         self.assertAlmostEqual(rows[2]["doanh_thu_thuan"] / rows[1]["doanh_thu_thuan"] - 1, -0.1588, places=3)
         self.assertAlmostEqual(sga[2] / sga[1] - 1, -0.1131, places=3)
+
+    def test_nhom_thep_va_mau_so_9_thang(self):
+        self.assertAlmostEqual(18396 / 165784, 0.1110, places=4)
+        self.assertEqual(171539 - 139499, 32040)
+        self.assertEqual(32040 - 30775, 1265)
+        self.assertAlmostEqual(23746 / (139499 + 30775), 0.1395, places=4)
+        self.assertAlmostEqual(30775 / (139499 + 30775), 0.1807, places=4)
+        # Thép Xanh: bỏ cả đỉnh và đáy cho biên 8% và 9,6
+        m = [0.18, 0.06, 0.05, 0.08, 0.10]
+        self.assertAlmostEqual(c.avg_margin_norm(120, c.trimmed(m, 1, 1)), 9.6, places=6)
 
     def test_chin_thang_2026(self):
         n = c.NINE_M_2026

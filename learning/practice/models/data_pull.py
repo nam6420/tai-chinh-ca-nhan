@@ -9,6 +9,8 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import json
+import re
+import time
 import urllib.request
 from pathlib import Path
 
@@ -17,16 +19,34 @@ SEC_BASE = "https://data.sec.gov/api/xbrl"
 
 
 # ---------- EDGAR / XBRL ----------
-def fetch_companyfacts(cik: int, user_agent: str, opener=urllib.request.urlopen) -> dict:
-    """Gọi API companyfacts của SEC. SEC yêu cầu khai tên và liên hệ trong User-Agent và giới hạn
-    tần suất (hiện 10 yêu cầu/giây); đọc "Fair Access" trên sec.gov trước khi chạy. Hàm này KHÔNG
-    được gọi trong test; truyền user_agent của bạn, đừng dùng email của người khác."""
-    if "@" not in user_agent:
-        raise ValueError("user_agent nên có tên và email liên hệ của bạn, theo hướng dẫn của SEC")
+MIN_GAP_SECONDS = 0.2  # SEC: tối đa 10 yêu cầu/giây (tổng mọi máy); 0,2 giây chừa biên an toàn
+_last_call = 0.0
+
+
+def fetch_companyfacts(cik: int, user_agent: str, opener=urllib.request.urlopen, sleep=time.sleep,
+                       cache: dict | None = None) -> dict:
+    """Gọi API companyfacts của SEC. SEC yêu cầu khai tên và liên hệ trong User-Agent, giới hạn
+    tần suất (hiện 10 yêu cầu/giây) và không cho công cụ tự động cào cả trang; đọc "Fair Access"
+    trên sec.gov trước khi chạy. Hàm này KHÔNG được gọi trong test với mạng thật; truyền
+    user_agent của bạn, đừng dùng email của người khác. Cần dữ liệu của nhiều công ty thì tải
+    tệp companyfacts.zip thay vì gọi từng công ty."""
+    if not re.search(r"\S+@\S+\.\S+", user_agent) or " " not in user_agent.strip():
+        raise ValueError("user_agent cần có tên và email liên hệ của bạn, ví dụ 'Ten Ban ten@vidu.com'")
+    key = (cik,)
+    if cache is not None and key in cache:
+        return cache[key]
+    global _last_call
+    wait = MIN_GAP_SECONDS - (time.monotonic() - _last_call)
+    if wait > 0:
+        sleep(wait)
+    _last_call = time.monotonic()
     req = urllib.request.Request(f"{SEC_BASE}/companyfacts/CIK{cik:010d}.json",
                                  headers={"User-Agent": user_agent})
     with opener(req, timeout=60) as resp:
-        return json.load(resp)
+        data = json.load(resp)
+    if cache is not None:
+        cache[key] = data
+    return data
 
 
 def load_facts(path: Path | None = None) -> dict:
@@ -47,13 +67,15 @@ def duration_days(r: dict) -> int | None:
 def annual_series(facts: dict, tag: str, unit: str = "USD", taxonomy: str = "us-gaap") -> dict[str, float]:
     """Giá trị cả năm theo ngày kết thúc kỳ. Lọc theo độ dài kỳ (350–380 ngày), KHÔNG theo `fy`,
     vì `fy` là năm tài chính của hồ sơ báo cáo chứ không phải của kỳ. Cùng một kỳ xuất hiện trong
-    nhiều hồ sơ: lấy giá trị của hồ sơ nộp muộn nhất."""
+    nhiều hồ sơ (10-K, 10-K/A, 10-K năm sau): quy ước ở đây là lấy hồ sơ nộp muộn nhất, hòa thì lấy
+    `accn` lớn hơn; đó chỉ là quy ước (số muộn nhất có thể là số trình bày lại), tùy mục đích có thể
+    cần số của hồ sơ gốc. 350–380 ngày là quy ước cho năm 52/53 tuần."""
     best: dict[str, dict] = {}
     for r in rows(facts, tag, unit, taxonomy):
         d = duration_days(r)
         if d is None or not 350 <= d <= 380:
             continue
-        if r["end"] not in best or r["filed"] > best[r["end"]]["filed"]:
+        if r["end"] not in best or (r["filed"], r.get("accn", "")) > (best[r["end"]]["filed"], best[r["end"]].get("accn", "")):
             best[r["end"]] = r
     return {end: r["val"] for end, r in sorted(best.items())}
 

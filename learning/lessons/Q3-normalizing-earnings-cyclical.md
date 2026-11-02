@@ -1,10 +1,9 @@
 # BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ
 
-- Ngày viết: `2026-11-01`. Bài mới của Đợt 3; chưa có biên bản kiểm nguồn hay phản biện.
+- Ngày viết: `2026-11-01`. Bài mới của Đợt 3.
 - Chốt dữ liệu lúc: `2026-11-01 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: báo cáo tài chính hợp nhất kiểm toán FY2025, báo cáo thường niên 2023 và bản tổng quan Q3/2026, đều mở ngày `2026-11-01` (xem bảng cuối bài).
 - Mục tiêu: Phân biệt lợi nhuận của một năm với mức lợi nhuận "bình thường"; chuẩn hóa bằng trung bình số tuyệt đối, biên trung bình, trung vị, bỏ năm cực đoan, ROE; biết mỗi cách sai ở đâu; không dùng P/E của năm đỉnh hay năm đáy làm kết luận.
-- Bài trước liên quan: 004, 009, 011. Học tiếp 012.
 - Thời lượng: 3 phiên (A: mục 1–3; B: ví dụ nguồn thật và mục 4–7; C: bài tập).
 - Tệp thực hành: [cyclical.py](../practice/models/cyclical.py) và [hpg_cycle_inputs.csv](../practice/models/hpg_cycle_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
 - Kiểm nguồn: `CHƯA`
@@ -13,41 +12,21 @@
 
 ## Hiểu bài này trong 1 phút
 
-Một người bán kem kiếm 100 triệu trong mùa hè và lỗ 20 triệu trong mùa đông. Lấy lợi nhuận mùa hè nhân bốn để "quy năm" là sai; lấy mùa đông nhân bốn cũng sai. Công ty chu kỳ (*cyclical*) và công ty hàng hóa (*commodity*, bán sản phẩm giá do thị trường quyết định, như thép) giống người bán kem ở quy mô năm: lợi nhuận của một năm phụ thuộc vị trí của năm đó trong chu kỳ. Chuẩn hóa lợi nhuận (*normalizing earnings*) là trả lời câu hỏi: **một năm bình thường thì công ty kiếm được bao nhiêu?** Câu trả lời luôn là một khoảng, không phải một con số, và bài này dạy cách dựng khoảng ấy rồi nói rõ giả định.
-
-## Ôn bài cũ hoặc kiểm tra đầu vào
-
-1. 009: P/E bằng giá chia lợi nhuận mỗi cổ phiếu. Nếu lợi nhuận tạm thời cao bất thường, P/E trông cao hay thấp?
-2. 004: lợi nhuận kế toán khác tiền mặt thế nào?
-3. 011: giá trị doanh nghiệp trong DCF nhạy với dòng tiền năm cơ sở ra sao?
-
-<details>
-<summary>Mở sau khi tự làm</summary>
-
-Đáp án ngắn: (1) thấp, và đó là bẫy; (2) có khoản không bằng tiền như khấu hao, thay đổi vốn lưu động; (3) rất nhạy, vì mọi năm sau thường được suy từ năm cơ sở.
-
-</details>
+Người bán kem kiếm 100 triệu mùa hè và lỗ 20 triệu mùa đông; lấy một mùa nhân bốn để "quy năm" đều sai. Công ty chu kỳ (*cyclical*) và công ty hàng hóa (*commodity*, như thép) giống vậy ở quy mô năm. Chuẩn hóa lợi nhuận (*normalizing earnings*) trả lời câu hỏi: **một năm bình thường thì công ty kiếm được bao nhiêu?** Câu trả lời luôn là một khoảng, không phải một con số.
 
 ## Bài này làm gì và chưa làm gì
 
-| Làm | Chưa làm |
-|---|---|
-| Dạy các cách chuẩn hóa lợi nhuận và giới hạn của từng cách | Không kết luận cổ phiếu nào đắt hay rẻ |
-| Dùng 5 năm số thật của Hòa Phát (HPG) làm bài thực hành | Không dự báo giá thép hay lợi nhuận HPG |
-| Cho thấy khi quy mô công ty đổi thì cách trung bình đơn giản sai | Không dạy chuẩn hóa theo giá hàng hóa tương lai (chỉ nhắc ở mục 7) |
-| Dạy bài "bẩn": nhầm đơn vị, nhầm phạm vi, nhầm kỳ | Chưa dạy chuẩn hóa lợi nhuận bất thường một lần (chỉ nêu cách phân biệt, mục 6) |
+Làm: dạy các cách chuẩn hóa và giới hạn của từng cách, thực hành trên chuỗi FY2021–FY2025 cùng 9 tháng 2026 của Hòa Phát (HPG). Chưa làm: không kết luận đắt/rẻ hay đỉnh/đáy, không dự báo.
 
 ## 1. Vì sao một năm không đủ
 
 `SỰ_THẬT` Trong chương 22 của giáo trình *Investment Valuation* (Damodaran, bản 3), với công ty chu kỳ, ông viết rằng lợi nhuận, theo định nghĩa, biến động và phụ thuộc trạng thái nền kinh tế; với công ty hàng hóa, giá cao thường nối tiếp giá thấp; và nếu dùng lợi nhuận năm hiện tại làm năm cơ sở bạn có thể nhận ước tính giá trị sai lệch (trang 617, diễn đạt lại). Ông nêu hai lối: chỉnh tốc độ tăng trưởng gần hạn, hoặc định giá theo lợi nhuận chuẩn hóa (trang 617–619).
 
-`SUY_LUẬN` Hậu quả thực tế: mọi thước đo dựng trên một năm đều mượn vị trí của năm đó trong chu kỳ. P/E, tỷ suất lợi nhuận, tăng trưởng "so với năm trước" và cả dòng tiền năm cơ sở trong DCF đều chịu. Ở đỉnh chu kỳ lợi nhuận cao nên P/E trông thấp; ở đáy lợi nhuận thấp hoặc âm nên P/E trông cao hoặc không tính được. Người đọc nhìn con số mà tưởng nhìn công ty, thật ra đang nhìn chu kỳ.
-
-`SỰ_THẬT` Cũng trang 619, Damodaran viết rằng chuẩn hóa lợi nhuận là cách dễ nhất cho công ty chu kỳ trưởng thành, và nhấn mạnh giả định đi kèm: năm hiện tại không bình thường và lợi nhuận sẽ sớm về mức bình thường.
+`SUY_LUẬN` Mọi thước đo dựng trên một năm (P/E, tỷ suất lợi nhuận, dòng tiền năm cơ sở của DCF) mượn vị trí của năm đó trong chu kỳ: ở đỉnh P/E trông thấp, ở đáy trông cao hoặc không tính được. Chuẩn hóa là cách dễ nhất cho công ty chu kỳ trưởng thành (trang 619), với giả định đi kèm rằng năm hiện tại không bình thường và lợi nhuận sẽ sớm về mức bình thường.
 
 ## 2. Các cách chuẩn hóa
 
-`SỰ_THẬT` Trang 619 của chương trên liệt kê ít nhất hai cách chính: (a) lấy trung bình lợi nhuận tuyệt đối của các kỳ trước, đủ dài để phủ một chu kỳ, khoảng 5 đến 10 năm, và (b) lấy trung bình tỷ suất lợi nhuận hay lợi nhuận trên vốn đầu tư của các kỳ trước rồi nhân với quy mô hiện tại; ví dụ ROC trung bình 12% với vốn đầu tư 1.000 triệu cho lợi nhuận hoạt động chuẩn hóa 120 triệu. Ông cũng viết rằng cách (a) chỉ thích hợp khi quy mô công ty không đổi, và biên theo doanh thu ít dễ bị thao túng hơn (diễn đạt lại). Cuối đoạn là một điểm hay bị bỏ qua: thay lợi nhuận hiện tại bằng lợi nhuận chuẩn hóa đồng nghĩa với việc giả định về mức chuẩn **ngay lập tức**; nếu phải mất nhiều kỳ mới về mức chuẩn thì giá trị tính ra quá cao, và một cách sửa đơn giản là chiết khấu lùi theo số kỳ cần để chuẩn hóa.
+`SỰ_THẬT` Trang 619 của chương trên liệt kê ít nhất hai cách chính: (a) lấy trung bình lợi nhuận tuyệt đối của các kỳ trước, đủ dài để phủ một chu kỳ, khoảng 5 đến 10 năm, và (b) lấy trung bình tỷ suất lợi nhuận hay lợi nhuận trên vốn đầu tư của các kỳ trước rồi nhân với quy mô hiện tại; ví dụ ROC trung bình 12% với vốn đầu tư 1.000 triệu cho lợi nhuận hoạt động chuẩn hóa 120 triệu. Cách (a) chỉ hợp khi quy mô công ty không đổi; biên theo doanh thu ít dễ bị thao túng hơn (diễn đạt lại). Điểm hay bị bỏ qua: dùng lợi nhuận chuẩn hóa là giả định về mức chuẩn **ngay lập tức**; nếu phải mất nhiều kỳ thì giá trị quá cao, và cách sửa đơn giản là chiết khấu lùi theo số kỳ cần.
 
 `PHÉP_TÍNH` Ta dùng các công thức sau, mỗi công thức là một hàm trong [cyclical.py](../practice/models/cyclical.py):
 
@@ -57,11 +36,11 @@ Một người bán kem kiếm 100 triệu trong mùa hè và lỗ 20 triệu tr
 | Biên trung bình × doanh thu nay | `DT_nay × (Σ biên / n)` | `avg_margin_norm` |
 | Biên gia quyền × doanh thu nay | `DT_nay × Σ LN / Σ DT` | `weighted_margin_norm` |
 | Biên trung vị × doanh thu nay | `DT_nay × trung vị biên` | `median_margin_norm` |
-| Bỏ năm cực đoan rồi trung bình | cắt giá trị lớn nhất trước khi tính | `trimmed` |
+| Bỏ năm cực đoan rồi trung bình | cắt giá trị lớn nhất (và nhỏ nhất nếu đặt `drop_min=1`) trước khi tính | `trimmed` |
 | ROE trung bình × vốn chủ nay | `Vốn_nay × Σ ROE / n` | `roe_norm` |
 | Chiết khấu lùi | `LN_chuẩn / (1+r)^số năm` | `discount_back` |
 
-Không cách nào tự đúng. Mỗi cách trả lời một câu hỏi khác: "công ty kiếm được bao nhiêu **đô la** trong năm điển hình", "bao nhiêu **trên mỗi đồng doanh thu**", "bao nhiêu **trên mỗi đồng vốn**". Khi ba câu trả lời xa nhau, đó chính là thông tin: nó cho biết mức bất định của lợi nhuận chuẩn.
+Không cách nào tự đúng: mỗi cách trả lời câu hỏi khác (bao nhiêu đô la, bao nhiêu trên mỗi đồng doanh thu, trên mỗi đồng vốn). Khi các câu trả lời xa nhau, đó chính là thông tin về mức bất định.
 
 ## 3. Ví dụ hư cấu có đủ dữ kiện
 
@@ -77,11 +56,11 @@ Không cách nào tự đúng. Mỗi cách trả lời một câu hỏi khác: "
 | Biên trung bình bỏ năm 1 × 120 | 8,70 | 7,25% × 120 |
 | Biên trung vị × 120 | 9,60 | 8% × 120 |
 
-Hai điều rút ra. Một: trung bình số tuyệt đối (7,8) thấp hơn mọi cách còn lại vì công ty tăng doanh thu gấp đôi trong 5 năm; năm 1 nhỏ kéo trung bình xuống. Đây đúng là lời cảnh báo của Damodaran về quy mô. Hai: năm 1 có biên 18%, gấp đôi mọi năm khác; có giữ hay bỏ nó đổi kết quả từ 11,28 sang 8,70, tức khoảng 23%. Quyết định này không do công thức đưa ra mà do bạn phải giải thích được vì sao năm 1 là bất thường hay điển hình.
+Hai điều rút ra. Một: trung bình số tuyệt đối (7,8) thấp hơn mọi cách còn lại vì công ty tăng doanh thu gấp đôi trong 5 năm; năm 1 nhỏ kéo trung bình xuống. Đây đúng là lời cảnh báo của Damodaran về quy mô. Hai: năm 1 có biên 18%, cao gấp 1,8 đến 3,6 lần các năm khác; bỏ nó làm kết quả giảm từ 11,28 xuống 8,70, khoảng 23%. Bỏ chỉ một phía (đỉnh) là lựa chọn có thiên lệch hướng; bỏ cả đỉnh lẫn đáy (năm 3, biên 5%) cho `(6+8+10)/3 = 8%`, × 120 `= 9,6`. Quyết định này không do công thức đưa ra mà do bạn phải giải thích được vì sao một năm là bất thường hay điển hình.
 
 `PHÉP_TÍNH` Dùng mức chuẩn trung vị 9,6: lợi nhuận năm 5 cao hơn chuẩn `12,0/9,6 − 1 = 25%`. Giả sử giá cổ phiếu là 12.000 đồng (hư cấu, chỉ để minh họa phép chia). EPS báo cáo `= 12,0 tỷ / 10 triệu = 1.200` đồng nên P/E `= 12.000/1.200 = 10`. EPS theo mức chuẩn `= 9,6 tỷ / 10 triệu = 960` đồng nên P/E `= 12.000/960 = 12,5`. Cùng một giá, năm đỉnh cho P/E thấp hơn mức chuẩn 20%; công ty không đổi, chỉ có vị trí trong chu kỳ đổi.
 
-Nếu phải mất hai năm mới về chuẩn và tỷ lệ chiết khấu 10%, giá trị lợi nhuận chuẩn hóa quy về hiện tại là `9,6/1,1² ≈ 7,93` (`discount_back`). Con số này nhỏ hơn cả mức chuẩn 9,6 lẫn mức báo cáo 12,0, nhắc rằng "chuẩn hóa" không phải phép màu nâng lợi nhuận.
+Nếu phải mất hai năm mới về chuẩn, Damodaran đề xuất chiết khấu lùi **giá trị tính từ lợi nhuận chuẩn hóa** theo số kỳ cần thiết. Để minh họa số học, bài áp cùng phép chia lên chính lợi nhuận chuẩn: với r = 10%, `9,6/1,1² ≈ 7,93` (`discount_back`); đây là phép minh họa của bài, không phải quy trình nguyên văn của nguồn.
 
 ## Ví dụ từ nguồn thật
 
@@ -109,37 +88,38 @@ Hai nguồn khác chuẩn trình bày (làm tròn khác nhau, chuẩn bị báo 
 | Biên gia quyền × 156.116,1 | 17.110,8 | +10,7% |
 | Biên trung vị × 156.116,1 | 13.515,8 | −12,5% |
 | Biên trung bình bỏ FY2021 × 156.116,1 | 11.826,4 | −23,5% |
+| Biên trung bình bỏ cả FY2021 và FY2023 (đáy) × 156.116,1 | 12.778,4 | −17,3% |
 | ROE trung bình × vốn chủ 131.220,0 | 19.870,6 | +28,6% |
 
-Kết quả trải từ khoảng 10.700 đến khoảng 19.900 tỷ, tức gần gấp đôi. Báo cáo FY2025 (15.453,2) nằm giữa khoảng; ngẫu nhiên nó gần trùng với trung bình năm năm (15.454,3), và đó là một sự trùng hợp số học, không phải bằng chứng "FY2025 là năm bình thường". `SUY_LUẬN` Nếu bạn dừng ở trung bình năm năm, bạn sẽ kết luận lợi nhuận đang đúng mức chuẩn, nhưng trung bình đó chứa năm 2021 mà biên ròng gấp ba mức các năm còn lại.
+Kết quả trải từ khoảng 10.700 đến khoảng 19.900 tỷ, tức gần gấp đôi; cửa sổ năm năm chỉ có đúng một đỉnh và một đáy nên khoảng trải này phần lớn do lựa chọn mẫu, và năm năm là cận dưới của khoảng 5–10 năm mà Damodaran nêu. `CHƯA_BIẾT` chu kỳ thép dài bao lâu. Báo cáo FY2025 (15.453,2) nằm giữa khoảng; ngẫu nhiên nó gần trùng với trung bình năm năm (15.454,3), và đó là một sự trùng hợp số học, không phải bằng chứng "FY2025 là năm bình thường". `SUY_LUẬN` Nếu bạn dừng ở trung bình năm năm, bạn sẽ kết luận lợi nhuận đang đúng mức chuẩn, nhưng trung bình đó chứa năm 2021 có biên ròng 23,03%, gấp khoảng ba lần trung bình 7,58% của bốn năm còn lại.
 
-`SỰ_THẬT` Nguồn đã mở cho biết FY2021 có biên lợi nhuận gộp 27,5% và rơi xuống 11,9% năm sau; báo cáo thường niên 2023 trong phần bảng tóm tắt không nêu nguyên nhân. `CHƯA_BIẾT` nguyên nhân của năm đỉnh; cần mở thuyết minh và báo cáo thường niên FY2021 để kiểm.
+`PHÉP_TÍNH` Biên gộp FY2021 `= 41.108/149.680 = 27,5%` rơi xuống 11,9% năm sau (báo cáo thường niên 2023 in tỷ suất làm tròn 27% và 12%, và phần bảng tóm tắt không nêu nguyên nhân). `CHƯA_BIẾT` nguyên nhân của năm đỉnh; cần mở thuyết minh và báo cáo thường niên FY2021 để kiểm.
 
 ## 4. Quy mô đã đổi: lý do trung bình tuyệt đối sai
 
 `SỰ_THẬT` Từ cuối FY2021 đến cuối FY2025 vốn chủ tăng từ 90.781 lên 131.220 tỷ (`PHÉP_TÍNH` +44,5%), trong khi doanh thu thuần chỉ tăng +4,3% (149.680 lên 156.116,1). Bảng cân đối FY2025 (trang 6–7): tài sản cố định (mã 220) từ 67.428,4 lên 133.608,1 tỷ trong năm 2025, còn chi phí xây dựng cơ bản dở dang (mã 242) giảm từ 63.655,9 xuống 10.721,1 tỷ. Vay và nợ thuê tài chính ngắn hạn cộng dài hạn cuối 2025 là `64.695,0 + 27.479,2 = 92.174,2` tỷ; chi phí đi vay FY2025 là 3.114,9 tỷ so với 2.287,4 tỷ năm trước (+36,2%).
 
-`SUY_LUẬN` Công ty đã đưa vào hoạt động một khối tài sản lớn vốn trước đó là dở dang (nhiều khả năng dự án mới, nhưng nguồn đã mở không nêu tên dự án nên nhãn này chỉ là suy luận). Hệ quả cho chuẩn hóa: (1) vốn đã tăng nhưng doanh thu chưa phản ánh hết nên cách ROE nhân vốn chủ nay (19.870,6) có thể cao hơn thực tế nếu nhà máy mới chưa chạy hết công suất; (2) cách biên × doanh thu nay giả định cấu trúc chi phí cũ, trong khi chi phí lãi và khấu hao có thể đã đổi lên; (3) trung bình số tuyệt đối trộn các năm với bảng cân đối khác hẳn nhau. Không cách nào sửa trọn vẹn chuyện này; ta chỉ có thể nêu giả định và đối chiếu.
+`SUY_LUẬN` Công ty đã đưa vào hoạt động một khối tài sản lớn vốn trước đó là dở dang (nhiều khả năng dự án mới, nhưng nguồn đã mở không nêu tên dự án nên nhãn này chỉ là suy luận). Hệ quả cho chuẩn hóa: (1) cách ROE nhân vốn chủ nay (19.870,6) có thể sai theo hai chiều: cao hơn thực tế nếu tài sản mới chưa chạy hết công suất, nhưng ROE các năm trước lại bị kéo thấp bởi vốn dở dang chưa sinh lời (mã 242 cuối FY2024: 63.655,9 tỷ); (2) cách biên × doanh thu nay giả định cấu trúc chi phí cũ, trong khi chi phí lãi và khấu hao có thể đã đổi lên; (3) trung bình số tuyệt đối trộn các năm với bảng cân đối khác hẳn nhau. Không cách nào sửa trọn vẹn chuyện này; ta chỉ có thể nêu giả định và đối chiếu.
 
 ## 5. Chi phí cứng và đòn bẩy vận hành
 
-`PHÉP_TÍNH` Chi phí bán hàng cộng chi phí quản lý doanh nghiệp (từ cùng nguồn): FY2022 `2.666 + 1.019 = 3.685` (làm tròn tỷ); FY2023 `1.961 + 1.307 = 3.268`; FY2025 `2.633,6 + 1.436,5 = 4.070,1`. Doanh thu thuần FY2023 giảm 15,9% so với FY2022 (141.409 xuống 118.953) trong khi tổng hai chi phí chỉ giảm 11,3%. `SUY_LUẬN` Một phần chi phí không co theo doanh thu; khi doanh thu và biên cùng giảm, lợi nhuận giảm nhanh hơn doanh thu. Đó là lý do biên × doanh thu có thể đánh giá thấp mức rơi ở đáy.
+`PHÉP_TÍNH` Doanh thu thuần FY2023 giảm 15,9% so với FY2022 (141.409 xuống 118.953). Chi phí bán hàng giảm 26,4% (2.666 xuống 1.961) còn chi phí quản lý tăng 28,3% (1.019 xuống 1.307), nên hai khoản này gộp lại không phải bằng chứng gọn về chi phí cứng. Bằng chứng mạnh hơn trong cùng bảng tóm tắt: chi phí khấu hao gần như không đổi (6.772 so với 6.773 tỷ) khi doanh thu giảm gần 16%. `SUY_LUẬN` Phần chi phí cố định không co theo doanh thu nên khi doanh thu và biên cùng giảm, lợi nhuận giảm nhanh hơn doanh thu; điều đó có thể khiến biên × doanh thu đánh giá thấp mức rơi ở đáy. Nguyên nhân chính của biên gộp rơi từ 27,5% xuống 11,9% là giá bán so với giá nguyên liệu, mà bài chưa có nguồn gốc: `CHƯA_BIẾT`.
 
 ## 6. Cái gì cần chuẩn hóa, cái gì chỉ là một lần
 
-Chu kỳ khác khoản bất thường một lần. Damodaran (trang 615) tách hai nhóm: sự cố riêng của công ty (đình công, vụ kiện) thì loại phần chi phí đó cùng lá chắn thuế khỏi lợi nhuận; còn khi nguyên nhân là chu kỳ ngành thì dùng mức chuẩn hóa. Với khoản lãi hay lỗ "một lần" bạn cần loại trước khi tính biên, kẻo lẫn một khoản bất thường vào mức chuẩn.
+Chu kỳ khác khoản bất thường một lần. Damodaran tách hai nhóm: sự cố riêng của công ty (đình công, vụ kiện; trang 615) thì loại phần chi phí đó cùng lá chắn thuế khỏi lợi nhuận; còn khi nguyên nhân là chu kỳ ngành hay hàng hóa thì dùng mức chuẩn hóa (trang 617–619). `Ý_KIẾN` Khoản lãi hay lỗ một lần nên loại trước khi tính biên, kẻo lẫn vào mức chuẩn.
 
-Câu hỏi kiểm khi gặp một khoản lạ trong lợi nhuận: nó có lặp lại ngoài chu kỳ không; nó nằm trong hoạt động chính hay trong thu nhập khác/thu nhập tài chính; thuyết minh nêu gì. Trong bảng FY2025, lợi nhuận khác (mã 40) chỉ 134,8 tỷ so với lợi nhuận trước thuế 18.040,6 tỷ (`PHÉP_TÍNH` 0,7%), nên khoản này không chi phối FY2025; điều này không nói gì về các kỳ khác.
+Khi gặp một khoản lạ, hỏi: có lặp lại ngoài chu kỳ không; nằm trong hoạt động chính hay thu nhập khác/tài chính; thuyết minh nêu gì. Lợi nhuận khác (mã 40) FY2025 chỉ 134,8 tỷ trên lợi nhuận trước thuế 18.040,6 tỷ (`PHÉP_TÍNH` 0,7%), nên không chi phối FY2025; điều đó không nói gì về kỳ khác.
 
 ## 7. Dùng lợi nhuận chuẩn hóa vào định giá, và chín tháng 2026
 
-`SỰ_THẬT` [Tổng quan tình hình kinh doanh Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) (HPG công bố 29/10/2026; chưa kiểm toán, chưa soát xét; tỷ VND): 9 tháng 2026 doanh thu 171.539, lợi nhuận gộp 30.775, LNST (chung, chưa tách phần công ty mẹ) 23.746; 9 tháng 2025 doanh thu 111.031, lợi nhuận gộp 18.101, LNST 11.627; vốn chủ cuối tháng 9/2026 là 149.568.
+`SỰ_THẬT` [Tổng quan tình hình kinh doanh Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) (HPG; tệp PDF tạo ngày 29/10/2026 theo siêu dữ liệu; tỷ VND): 9 tháng 2026 doanh thu 171.539, giá vốn 139.499, lợi nhuận gộp 30.775, LNST 23.746; 9 tháng 2025 doanh thu 111.031, lợi nhuận gộp 18.101, LNST 11.627; vốn chủ cuối tháng 9/2026 149.568. Nhóm thép đóng góp doanh thu 165.784 và LNST 18.396 (96% và 77% của tập đoàn); bất động sản 1% doanh thu và 19% LNST; nông nghiệp 3% và 4%. `SUY_LUẬN` Trang nguồn không ghi "chưa kiểm toán" và chỉ ghi "LNST" mà không nói có tách cổ đông không kiểm soát hay không; bài coi là số chung, chưa kiểm toán (`CHƯA_BIẾT` xác nhận).
 
-`PHÉP_TÍNH` Biên gộp 9 tháng 2026 là `30.775/171.539 = 17,94%`; biên LNST chung/doanh thu `= 23.746/171.539 = 13,84%`; so với trung bình biên bỏ FY2021 là 7,58%, gấp `13,84/7,58 ≈ 1,83` lần. Vốn chủ cuối quý 3 cao hơn cuối FY2025 `149.568/131.220 − 1 = 14,0%`.
+`PHÉP_TÍNH` Biên gộp 9 tháng 2026 là `30.775/171.539 = 17,94%`; biên LNST/doanh thu `= 23.746/171.539 = 13,84%`; so với trung bình biên bỏ FY2021 là 7,58%, gấp `13,84/7,58 ≈ 1,83` lần. Vốn chủ cuối quý 3 cao hơn cuối FY2025 `149.568/131.220 − 1 = 14,0%`. Hai lưu ý: (a) `171.539 − 139.499 = 32.040` khác lợi nhuận gộp công bố 30.775 (lệch 1.265), nên "doanh thu" của bản tổng quan nhiều khả năng chưa trừ giảm trừ (`SUY_LUẬN`); với doanh thu thuần ngầm định `139.499 + 30.775 = 170.274`, biên LNST là 13,95%, biên gộp 18,07%; (b) biên hợp nhất 13,84% trộn nhiều nhóm: biên LNST riêng nhóm thép chỉ `18.396/165.784 = 11,10%`, vì bất động sản đóng góp 19% LNST trên 1% doanh thu. Biên hợp nhất không phải biên chu kỳ thép thuần, và không so đồng nhất với FY2021–FY2025 vì cơ cấu nhóm các năm đó `CHƯA_BIẾT` (cần thông tin bộ phận).
 
-`SUY_LUẬN` Biên 13,84% đã cao hơn mọi năm FY2022–FY2025, nhưng thấp hơn năm 2021 (23,03%). Điều đó không cho phép kết luận ở đỉnh hay chưa đến đỉnh: đáp án phụ thuộc vào việc quy mô mới có đổi mức chuẩn hay không. Cách an toàn hơn là nêu hai khả năng: (i) chu kỳ đang thuận lợi và biên sẽ về gần mức các năm trước, (ii) quy mô mới và cấu trúc chi phí mới làm mức chuẩn cao hơn các năm FY2022–FY2025. `Ý_KIẾN` Hai giả thuyết đều cần số mới để kiểm: công suất thực chạy, giá bán trừ chi phí nguyên liệu và các biện pháp thương mại đang áp dụng.
+`SUY_LUẬN` Biên 13,84% đã cao hơn mọi năm FY2022–FY2025, nhưng thấp hơn năm 2021 (23,03%). Điều đó không cho phép kết luận ở đỉnh hay chưa đến đỉnh: đáp án phụ thuộc vào việc quy mô mới có đổi mức chuẩn hay không. Cách an toàn hơn là nêu hai khả năng: (i) chu kỳ đang thuận lợi và biên sẽ về gần mức các năm trước, (ii) quy mô mới và cấu trúc chi phí mới làm mức chuẩn cao hơn các năm FY2022–FY2025. `Ý_KIẾN` Hai giả thuyết đều cần số mới để kiểm: công suất thực chạy, giá bán trừ chi phí nguyên liệu, các biện pháp thương mại, và phần lợi nhuận bất động sản có lặp lại không. Điều kiện làm kết luận mất hiệu lực: bản tổng quan nêu tháng 9/2026 là tháng thứ năm liên tiếp Trung Quốc xuất khẩu thép thành phẩm trên 10 triệu tấn, và CBAM của EU từ 2026; dư nợ và lãi vay tăng; số 9 tháng chưa kiểm toán; giả định chuẩn hóa tức thời.
 
-`PHÉP_TÍNH` Chuẩn hóa không thay cho kịch bản. Khi định giá bằng DCF (011), hãy dựng ít nhất ba kịch bản biên (ví dụ về mức bỏ-đỉnh 7,6%, mức trung vị 8,7%... ghi rõ là giả định) và xem giá trị nhạy ra sao, thay vì chọn một mức rồi coi là sự thật. Với bội số (009) hãy tính P/E trên lợi nhuận chuẩn hóa song song với P/E trên lợi nhuận báo cáo và nêu khoảng cách.
+`KỊCH_BẢN` Chuẩn hóa không thay cho kịch bản. Khi định giá bằng DCF (011), hãy dựng ít nhất ba kịch bản biên (ví dụ 7,6% là mức bỏ-đỉnh, 8,7% là trung vị, và một mức gần biên 13,84% hiện tại; đều là giả định minh họa) và xem giá trị nhạy ra sao, thay vì chọn một mức rồi coi là sự thật. Với bội số (009) hãy tính P/E trên lợi nhuận chuẩn hóa song song với P/E trên lợi nhuận báo cáo và nêu khoảng cách.
 
 ## Bài tập — làm trước khi mở đáp án
 
@@ -151,8 +131,8 @@ Câu hỏi kiểm khi gặp một khoản lạ trong lợi nhuận: nó có lặ
 6. Nếu phải mất 3 năm mới về mức chuẩn 9,6 tỷ và r = 10%, giá trị quy về hiện tại là bao nhiêu?
 7. HPG: tính biên LNST mẹ/doanh thu thuần của FY2023 và FY2025 (đơn vị tỷ VND, số ở mục "Ví dụ từ nguồn thật").
 8. HPG: tính lợi nhuận chuẩn hóa FY2025 theo biên trung bình bỏ FY2021 và theo trung bình số tuyệt đối bỏ FY2021, rồi giải thích vì sao hai số khác nhau.
-9. (Chuyển giao) Biên LNST chung/doanh thu 9 tháng 2026 của HPG là 13,84%. Liệt kê bốn câu hỏi bạn cần trả lời trước khi gọi đây là "đỉnh chu kỳ".
-10. (Chuyển giao) Vì sao ROE trung bình × vốn chủ nay có thể đánh giá cao lợi nhuận chuẩn khi công ty vừa đưa nhà máy mới vào hoạt động?
+9. (Chuyển giao) Biên LNST/doanh thu 9 tháng 2026 của HPG là 13,84% (hợp nhất; nhóm thép 18.396/165.784). Tính biên nhóm thép và liệt kê bốn câu hỏi cần trả lời trước khi gọi đây là "đỉnh chu kỳ".
+10. (Chuyển giao) Nêu một hướng sai của ROE trung bình × vốn chủ nay theo mỗi chiều (cao quá, thấp quá) khi công ty vừa đưa nhà máy mới vào hoạt động.
 
 ## Đáp án
 
@@ -167,8 +147,8 @@ Câu hỏi kiểm khi gặp một khoản lạ trong lợi nhuận: nó có lặ
 6. `9,6/1,1³ = 9,6/1,331 ≈ 7,21` tỷ.
 7. FY2023: `6.835/118.953 = 5,75%`. FY2025: `15.453,2/156.116,1 = 9,90%`.
 8. Biên trung bình bỏ FY2021 `(6,00+5,75+8,66+9,90)/4 = 7,58%` (theo số lẻ đầy đủ ra 7,577%), × 156.116,1 `≈ 11.826`. Trung bình tuyệt đối bỏ FY2021 `(8.484+6.835+12.021,4+15.453,2)/4 ≈ 10.698`. Khác nhau vì cách thứ nhất nhân biên các năm với doanh thu FY2025 (lớn hơn), cách thứ hai giữ số tuyệt đối cũ (doanh thu FY2022–FY2023 thấp hơn nhiều).
-9. Ví dụ: (a) công suất thực chạy so với công suất lắp đặt; (b) giá bán trừ giá nguyên liệu trong các quý gần nhất; (c) chi phí lãi vay và khấu hao sau khi tài sản mới vào hoạt động; (d) có khoản lãi bất thường một lần trong 9 tháng không. Chấp nhận câu hỏi khác nếu có lý do và nguồn kiểm được.
-10. Vì vốn chủ đã tăng nhưng lợi nhuận từ tài sản mới có thể chưa đạt mức dài hạn (đang tăng dần công suất). Nhân ROE lịch sử với vốn lớn hơn giả định mọi đồng vốn mới đã sinh lợi như đồng vốn cũ.
+9. Biên nhóm thép `18.396/165.784 = 11,10%`. Ví dụ câu hỏi: (a) công suất thực chạy so với công suất lắp đặt; (b) giá bán trừ giá nguyên liệu các quý gần nhất; (c) chi phí lãi vay và khấu hao sau khi tài sản mới vào hoạt động; (d) phần lợi nhuận bất động sản (19% LNST) có lặp lại không, và có khoản bất thường một lần trong 9 tháng không. Chấp nhận câu hỏi khác nếu có lý do và nguồn kiểm được.
+10. Cao quá: vốn mới chưa chạy hết công suất nên ROE lịch sử nhân vốn lớn hơn giả định mọi đồng vốn mới sinh lợi như đồng vốn cũ. Thấp quá: ROE các năm trước bị kéo thấp bởi vốn dở dang chưa sinh lời (mã 242 cuối FY2024: 63.655,9 tỷ), nên mức "chuẩn" lịch sử thấp hơn khả năng của vốn đã hoàn thành.
 
 </details>
 
@@ -176,9 +156,9 @@ Câu hỏi kiểm khi gặp một khoản lạ trong lợi nhuận: nó có lặ
 
 Đề: "Công ty thép M có lợi nhuận (tỷ đồng) các năm 2021–2025 là 3.450; 850; 680; 1.200; 1.545. Doanh thu FY2025 là 156 triệu đồng. Biên LNST 9 tháng 2026 là 13,8%. Chuẩn hóa lợi nhuận 2025 và cho biết 9 tháng 2026 có phải đỉnh."
 
-Phát hiện: (a) lợi nhuận tỷ đồng nhưng doanh thu "triệu đồng": lệch đơn vị ba bậc; (b) thiếu doanh thu các năm trước nên không tính được biên; (c) không rõ lợi nhuận là của công ty mẹ hay hợp nhất; (d) 9 tháng 2026 chưa kiểm toán và là LNST chung; (e) không biết vốn chủ nên không kiểm được thay đổi quy mô; (f) "có phải đỉnh" không trả lời được từ con số này.
+Phát hiện: (a) lợi nhuận tỷ đồng nhưng doanh thu "triệu đồng": lệch đơn vị ba bậc; (b) thiếu doanh thu các năm trước nên không tính được biên; (c) không rõ lợi nhuận của mẹ hay hợp nhất; (d) 9 tháng 2026 chưa kiểm toán; (e) không biết vốn chủ nên không kiểm được đổi quy mô; (f) "có phải đỉnh" không trả lời được từ các con số này.
 
-`Đáp án` Không chuẩn hóa được theo biên. Chỉ tính được trung bình số tuyệt đối 5 năm (`(3.450+850+680+1.200+1.545)/5 = 1.545`) và bỏ năm 2021 (`1.068,75`), kèm cảnh báo quy mô. Cần bổ sung doanh thu cùng đơn vị và cùng phạm vi từng năm, vốn chủ, và nguồn kỳ 9 tháng. Ghi `CHƯA_BIẾT` cho câu hỏi đỉnh hay không, không bịa.
+`Đáp án` Không chuẩn hóa được theo biên. Chỉ tính được trung bình số tuyệt đối 5 năm (`(3.450+850+680+1.200+1.545)/5 = 1.545`) và bỏ năm 2021 (`1.068,75`), kèm cảnh báo quy mô. Cần bổ sung doanh thu cùng đơn vị và phạm vi từng năm, vốn chủ, và nguồn kỳ 9 tháng; ghi `CHƯA_BIẾT` cho câu hỏi đỉnh hay không.
 
 ## Sai ở đâu
 
@@ -187,12 +167,12 @@ Một học viên viết: "HPG FY2025 lãi 15.453 tỷ. Trung bình 5 năm là 1
 <details>
 <summary>Mở sau khi tự tìm lỗi</summary>
 
-1. Trùng số giữa lợi nhuận FY2025 và trung bình năm năm là ngẫu nhiên; trung bình đó chứa năm 2021 với biên 23,03% gấp ba mức các năm sau.
+1. Trùng số giữa lợi nhuận FY2025 và trung bình năm năm là ngẫu nhiên; trung bình đó chứa năm 2021 có biên 23,03%, gấp khoảng ba lần trung bình bốn năm còn lại (7,58%).
 2. Trung bình số tuyệt đối bỏ qua việc vốn chủ tăng khoảng 44,5% từ 2021 đến 2025.
-3. Quy năm 9 tháng bằng 4/3 giả định quý cuối giống ba quý đầu và mọi quý như nhau trong chu kỳ; không có cơ sở.
-4. 23.746 là LNST chung chưa kiểm toán, không phải lợi nhuận cổ đông công ty mẹ; hai khái niệm khác nhau (FY2025: 15.514,9 chung so với 15.453,2 mẹ).
-5. P/E bằng giá hôm nay chia lợi nhuận quy năm cho thấy đỉnh chu kỳ nhìn như giá rẻ; thiếu nguồn và ngày của giá, và không đưa kịch bản mức chuẩn.
-6. Thiếu so sánh với kịch bản mất mức chuẩn: không có điều kiện làm luận điểm mất hiệu lực.
+3. Quy năm 9 tháng bằng 4/3 giả định quý cuối giống ba quý đầu; không có cơ sở.
+4. 23.746 là LNST của bản tổng quan, nhiều khả năng số chung chưa kiểm toán, không phải lợi nhuận cổ đông công ty mẹ; hai khái niệm khác nhau (FY2025: 15.514,9 chung so với 15.453,2 mẹ). Và 13,84% hợp nhất trộn cả bất động sản (biên nhóm thép 11,10%).
+5. Nếu 9 tháng 2026 là đỉnh chu kỳ thì P/E trên lợi nhuận quy năm trông thấp một cách giả tạo; còn có phải đỉnh hay không thì chưa biết. Thiếu nguồn và ngày của giá.
+6. Không nêu điều kiện làm luận điểm mất hiệu lực.
 
 </details>
 
@@ -211,12 +191,6 @@ Tiêu chí đạt: câu 1 biên `10%; 5%; 10%` trung bình `8,33%`, × 240 `= 20
 
 </details>
 
-## Lỗi thường gặp
-
-- Lấy lợi nhuận một năm làm mức chuẩn; trung bình số tuyệt đối khi quy mô đã đổi.
-- Trộn đơn vị, hoặc lợi nhuận mẹ với hợp nhất; quy năm từ chín tháng hay một quý.
-- Bỏ năm cực đoan mà không giải thích; coi mức chuẩn là sự thật thay vì một khoảng.
-
 ## Ranh giới an toàn
 
 - Đây là bài học, không phải khuyến nghị mua/bán/nắm giữ. Hòa Phát chỉ là dữ liệu thực hành.
@@ -228,7 +202,6 @@ Tiêu chí đạt: câu 1 biên `10%; 5%; 10%` trung bình `8,33%`, × 240 `= 20
 
 - Tôi chọn bao nhiêu năm để phủ một chu kỳ của ngành này, và vì sao?
 - Quy mô mới của công ty đã đổi mức lợi nhuận chuẩn chưa?
-- Phần nào trong biên là do chu kỳ, phần nào do quản lý hoặc vị thế ngành?
 
 ## Nguồn Internet đã mở
 

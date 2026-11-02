@@ -67,11 +67,13 @@ class BaiQ2(unittest.TestCase):
         sai = a["net_income"][y] / a["diluted_shares_wtd"][y]
         self.assertAlmostEqual(sai, 0.007465, places=6)
         self.assertAlmostEqual(sai * 1000, 7.465, places=3)
-        self.assertEqual(a["cfo"][y] - a["capex"][y] - c.total_cash_returned(
-            a["dividends_paid"][y], a["repurchases_cash"][y], a["tax_net_share_settlement"][y]), -13325)
-        self.assertEqual(c.fcf_after_sbc(a["cfo"][y], a["capex"][y], a["sbc"][y])
-                         - c.total_cash_returned(a["dividends_paid"][y], a["repurchases_cash"][y],
-                                                 a["tax_net_share_settlement"][y]), -26188)
+        tra_co_dong = c.total_cash_returned(a["dividends_paid"][y], a["repurchases_cash"][y])
+        self.assertEqual(tra_co_dong, 106132)
+        self.assertEqual(a["cfo"][y] - a["capex"][y] - tra_co_dong, -7365)
+        self.assertEqual(c.fcf_after_sbc(a["cfo"][y], a["capex"][y], a["sbc"][y]) - tra_co_dong, -20228)
+        # ở giá 200.000 chỉ mua 1 triệu cổ phiếu: EPS chỉ tăng ~1,01%
+        r2 = c.buyback(100e6, 1000e9, 200e9, 200000)
+        self.assertAlmostEqual(r2["eps_sau"] / r2["eps_truoc"] - 1, 0.0101, places=4)
         r = c.buyback(50e6, 500e9, 100e9, 50000)
         self.assertAlmostEqual(r["eps_sau"], 10416.67, places=2)
         self.assertAlmostEqual(c.adjust_for_bonus(10000, 0.1), 9090.91, places=2)
