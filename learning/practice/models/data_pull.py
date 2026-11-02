@@ -68,7 +68,7 @@ def annual_series(facts: dict, tag: str, unit: str = "USD", taxonomy: str = "us-
     """Giá trị cả năm theo ngày kết thúc kỳ. Lọc theo độ dài kỳ (350–380 ngày), KHÔNG theo `fy`,
     vì `fy` là năm tài chính của hồ sơ báo cáo chứ không phải của kỳ. Cùng một kỳ xuất hiện trong
     nhiều hồ sơ (10-K, 10-K/A, 10-K năm sau): quy ước ở đây là lấy hồ sơ nộp muộn nhất, hòa thì lấy
-    `accn` lớn hơn; đó chỉ là quy ước (số muộn nhất có thể là số trình bày lại), tùy mục đích có thể
+    `accn` lớn hơn (chắc chỉ khi cùng một bên nộp); đó chỉ là quy ước (số muộn nhất có thể là số trình bày lại), tùy mục đích có thể
     cần số của hồ sơ gốc. 350–380 ngày là quy ước cho năm 52/53 tuần."""
     best: dict[str, dict] = {}
     for r in rows(facts, tag, unit, taxonomy):
@@ -132,12 +132,13 @@ def load_transcription(path: Path | None = None) -> tuple[dict[str, float], dict
     return cur, prev
 
 
-def check_identity(name: str, left: float, right: float, tol: float = 0.01) -> dict:
-    """tol tính theo đơn vị đang dùng (tỷ VND): 0,01 tỷ = 10 triệu đồng, đủ cho làm tròn của bản chép."""
+def check_identity(name: str, left: float, right: float, tol: float = 1e-5) -> dict:
+    """tol tính theo đơn vị đang dùng (tỷ VND). Mặc định 1e-5 tỷ (10.000 đồng) cho số chép đủ 6 chữ số thập phân;
+    chỉ nâng lên 0,01 khi so với số đã làm tròn đến 0,01 tỷ (10 triệu đồng)."""
     return {"ten": name, "trai": left, "phai": right, "lech": left - right, "dat": abs(left - right) <= tol}
 
 
-def statement_checks(f: dict[str, float], tol: float = 0.01) -> list[dict]:
+def statement_checks(f: dict[str, float], tol: float = 1e-5) -> list[dict]:
     return [
         check_identity("tài sản = nợ phải trả + vốn chủ", f["tong_tai_san"], f["no_phai_tra"] + f["von_chu_so_huu"], tol),
         check_identity("tiền cuối năm: bảng cân đối = lưu chuyển tiền tệ", f["tien_cuoi_nam_bang_can_doi"], f["tien_cuoi_nam_luu_chuyen"], tol),

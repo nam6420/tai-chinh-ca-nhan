@@ -54,9 +54,9 @@ class BaiQ4(unittest.TestCase):
 
     def test_ba_so_mua_lai_khac_nhau(self):
         cash = dp.annual_series(self.facts, "PaymentsForRepurchaseOfCommonStock")["2025-09-27"]
-        bang_von = dp.annual_series(self.facts, "StockRepurchasedAndRetiredDuringPeriodValue")["2025-09-27"]
-        self.assertEqual((cash, bang_von), (90711e6, 89300e6))
-        self.assertAlmostEqual(dp.to_millions(cash - bang_von), 1411.0)
+        the_xbrl_89300 = dp.annual_series(self.facts, "StockRepurchasedAndRetiredDuringPeriodValue")["2025-09-27"]
+        self.assertEqual((cash, the_xbrl_89300), (90711e6, 89300e6))
+        self.assertAlmostEqual(dp.to_millions(cash - the_xbrl_89300), 1411.0)
         # 90.052 triệu (báo cáo biến động vốn chủ) chép từ 10-K, KHÔNG có thẻ XBRL trong tập con
         for tag in self.facts["facts"]["us-gaap"]:
             for r in dp.rows(self.facts, tag, next(iter(self.facts["facts"]["us-gaap"][tag]["units"]))):
@@ -133,7 +133,11 @@ class BaiQ4(unittest.TestCase):
                     von_chu_so_huu=cur["von_chu_so_huu"] * k)
         self.assertTrue(dp.statement_checks(sai3)[0]["dat"])
         # dung sai 0,01 tỷ: lệch 0,02 do làm tròn nhiều ô bị báo lỗi dù không có lỗi chép
-        self.assertFalse(dp.check_identity("x", 100.00, 100.02)["dat"])
+        self.assertFalse(dp.check_identity("x", 100.00, 100.02, tol=0.01)["dat"])
+        # lỗi chép 5 triệu đồng (0,005 tỷ) bị bắt ở dung sai mặc định, nhưng lọt ở 0,01
+        sai4 = dict(cur, no_phai_tra=cur["no_phai_tra"] + 0.005)
+        self.assertFalse(dp.statement_checks(sai4)[0]["dat"])
+        self.assertTrue(dp.statement_checks(sai4, tol=0.01)[0]["dat"])
         self.assertTrue(dp.check_identity("x", 100.00, 100.02, tol=0.05)["dat"])
 
     def test_bang_chep_co_cot_trang(self):

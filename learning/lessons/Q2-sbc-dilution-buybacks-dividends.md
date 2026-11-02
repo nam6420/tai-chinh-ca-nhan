@@ -1,9 +1,9 @@
 # BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q2 — Cổ phiếu thưởng nhân viên, pha loãng, mua lại và cổ tức
 
-- Ngày viết: `2026-11-01`. Bài mới của Đợt 3; chưa có biên bản kiểm nguồn hay phản biện.
+- Ngày viết: `2026-11-01`; sửa sau kiểm duyệt vòng 1–3 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
-- Nguồn số: Form 10-K FY2025 của Apple (SEC), báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát (HPG), bài viết Damodaran ngày 24/02/2026; mở ngày `2026-11-01` (bảng cuối bài).
-- Mục tiêu: Tính chi phí thật của cổ phiếu thưởng nhân viên (SBC); phân biệt mua lại cổ phiếu làm đẹp EPS với mua lại làm tăng giá trị; tính mua lại ròng sau pha loãng; so tiền trả cổ đông với dòng tiền; xử lý cổ phiếu thưởng và điều chỉnh EPS.
+- Nguồn số: Form 10-K FY2025 của Apple (SEC), báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát (HPG), bài viết Damodaran ngày 24/02/2026; mở ngày `2026-11-01` và mở lại `2026-11-02` (bảng cuối bài).
+- Mục tiêu: Tính chi phí của cổ phiếu thưởng nhân viên (SBC) theo quy ước dự án; phân biệt mua lại cổ phiếu làm đẹp EPS với mua lại làm tăng giá trị; tính mua lại ròng sau pha loãng; so tiền trả cổ đông với dòng tiền; xử lý cổ phiếu thưởng và điều chỉnh EPS.
 - Bài trước liên quan: 006, 010, 011. Học tiếp Q3.
 - Thời lượng: 3 phiên (A: mục 1–3; B: ví dụ nguồn thật và mục 4–5; C: bài tập).
 - Tệp thực hành: [capital_return.py](../practice/models/capital_return.py) và [apple_capital_return_inputs.csv](../practice/models/apple_capital_return_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
@@ -13,7 +13,7 @@
 
 ## Hiểu bài này trong 1 phút
 
-Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại cổ phiếu là công ty dùng tiền của chính nó mua phần bánh của một số người; những người ở lại giữ phần lớn hơn của cái bánh nhỏ hơn. Phát hành cổ phiếu thưởng cho nhân viên làm ngược lại: cắt thêm phần cho người mới. Cổ tức bằng tiền đưa ra một lát bánh. Cổ phiếu thưởng cho cổ đông (như Hòa Phát năm 2025) chỉ cắt cùng một cái bánh thành nhiều miếng nhỏ hơn. Bài này dạy tính từng việc, rồi ghép lại để biết **giá trị mỗi cổ phiếu** của người ở lại tăng, giảm hay không đổi.
+Công ty là cái bánh chia cho cổ đông. Mua lại là công ty dùng tiền mua phần bánh của một số người; người ở lại giữ phần lớn hơn của cái bánh nhỏ hơn. Cổ phiếu thưởng cho nhân viên cắt thêm phần cho người mới. Cổ tức bằng tiền đưa ra một lát bánh. Cổ phiếu thưởng cho cổ đông (Hòa Phát 2025) chỉ cắt cùng cái bánh thành nhiều miếng nhỏ hơn. Bài dạy tính từng việc rồi ghép lại để biết **giá trị mỗi cổ phiếu** của người ở lại tăng, giảm hay không đổi.
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
@@ -23,16 +23,13 @@ Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại c�
 <details>
 <summary>Mở sau khi tự làm</summary>
 
-(1) trả nợ hoặc giữ tiền, tái đầu tư, trả cổ đông; (2) SBC là chi phí thật dưới dạng cổ phiếu, không trừ thì dòng tiền bị tính cao.
+(1) trả nợ hoặc giữ tiền, tái đầu tư, trả cổ đông; (2) SBC, theo quy ước của dự án, được coi là chi phí dưới dạng cổ phiếu; không trừ thì dòng tiền bị tính cao.
 
 </details>
 
-## Bài này làm gì và chưa làm gì
+## Phạm vi
 
-| Làm | Chưa làm |
-|---|---|
-| Dạy tính SBC, pha loãng, mua lại, cổ tức, cổ phiếu thưởng; dùng số thật của Apple và Hòa Phát | Không đánh giá chính sách trả tiền của công ty nào là đúng hay sai |
-| Dạy đọc bài "bẩn": đơn vị lệch, hai con số cho cùng một việc | Không dạy thuế cổ tức hay thuế bán cổ phiếu (xem L3); không dạy quyền chọn |
+Bài dạy tính SBC, pha loãng, mua lại, cổ tức, cổ phiếu thưởng bằng số thật của Apple và Hòa Phát, và đọc bài "bẩn". Không đánh giá chính sách trả tiền của công ty nào; không dạy thuế (xem L3) hay quyền chọn.
 
 ## 1. Bốn dòng chảy giữa công ty và cổ đông
 
@@ -40,7 +37,7 @@ Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại c�
 |---|---|---|---|
 | Cổ tức tiền mặt | Có | Không đổi | Giảm đúng phần tiền trả (cổ đông nhận tiền bù) |
 | Mua lại cổ phiếu | Có | Giảm | Tăng, giảm hoặc giữ tùy giá mua so với giá trị nội tại |
-| Cổ phiếu thưởng cho nhân viên (SBC) | Không (trả bằng cổ phiếu) | Tăng | Giảm vì thêm người chia bánh |
+| Cổ phiếu thưởng cho nhân viên (SBC) | Không nếu phát hành thuần; có nếu công ty giữ cổ phiếu nộp thuế hộ (Apple 5.960, tương đương một khoản mua lại) | Tăng | Giảm vì thêm người chia bánh |
 | Cổ phiếu thưởng cho cổ đông | Không | Tăng theo tỷ lệ cho mọi người | Mỗi cổ phiếu giảm, tổng giá trị cổ đông không đổi |
 
 `Ý_KIẾN` Cách nhìn dùng trong bài này là **giá trị mỗi cổ phiếu của người ở lại**, không phải EPS hay số tiền chi. Mua lại có thể làm EPS tăng trong khi giá trị mỗi cổ phiếu giảm (mục 3).
@@ -53,9 +50,9 @@ Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại c�
 
 `PHÉP_TÍNH` Apple FY2025: SBC `/` dòng tiền hoạt động `= 12.863/111.482 = 11,5%`; dòng tiền tự do đơn giản (dòng tiền hoạt động trừ chi mua TSCĐ 12.715) `= 98.767`; trừ thêm SBC cho `85.904`. Bài 011 dùng đúng `85.904` làm dòng tiền gốc.
 
-`Ý_KIẾN` Quy ước của dự án này: trừ SBC khỏi dòng tiền khi định giá; đây là lựa chọn phương pháp, không phải quy định kế toán. Người học nên tự lập luận vì sao chọn.
+`Ý_KIẾN` Quy ước của dự án này: trừ SBC khỏi dòng tiền khi định giá; đây là lựa chọn phương pháp, không phải quy định kế toán.
 
-`SỰ_THẬT` Trong bài [Data Update 8 for 2026](https://aswathdamodaran.blogspot.com/2026/02/data-update-8-for-2026-time-for.html) (Damodaran, 24/02/2026), ông nêu rằng việc trả lương bằng cổ phiếu giải thích mua lại cổ phiếu hợp với quyền chọn hơn cổ phiếu hạn chế, và mua lại vẫn tăng khi công ty chuyển sang cổ phiếu hạn chế; nghĩa là SBC không phải lời giải thích đủ cho mua lại. Bài này không dựa vào điểm đó để kết luận về công ty nào.
+`SỰ_THẬT` Trong bài [Data Update 8 for 2026](https://aswathdamodaran.blogspot.com/2026/02/data-update-8-for-2026-time-for.html) (Damodaran, 24/02/2026), ông nêu rằng việc trả lương bằng cổ phiếu giải thích mua lại cổ phiếu hợp với quyền chọn hơn cổ phiếu hạn chế, và mua lại vẫn tăng khi công ty chuyển sang cổ phiếu hạn chế; nên SBC không giải thích đủ cho mua lại. Bài không dựa vào điểm này để kết luận về công ty nào.
 
 ## 3. Mua lại: giá so với giá trị nội tại
 
@@ -98,10 +95,11 @@ Hình dung công ty là một cái bánh chia cho các cổ đông. Mua lại c�
 | FY2025 | 106.132 | 98.767 | +7.365 |
 | FY2024 | 110.183 | 108.807 | +1.376 |
 | FY2023 | 92.575 | 99.584 | −7.009 |
+| Cộng 3 năm | 308.890 | 307.158 | +1.732 |
 
-So với 85.904 (đã trừ SBC), FY2025 vượt `20.228`. Một năm không đủ để kết luận: `SỰ_THẬT` 10-K ghi khoản thuế một lần 10,2 tỷ USD của quý 4 FY2024 gồm 15,8 tỷ USD phải trả Ireland bằng tiền giữ ký quỹ (thuyết minh 7), và `SUY_LUẬN` việc thanh toán này có thể làm lệch dòng tiền FY2025 (10-K không nói thẳng; `CHƯA_BIẾT` mức ảnh hưởng). Mẫu một công ty tiền mặt lớn, biên cao chỉ minh họa cách đọc, không chứng minh mua lại tốt hay xấu. `SUY_LUẬN` Khoản 5.960 là một phần chi phí SBC bằng tiền, nên không cộng vào phép so với số đã trừ SBC. `CHƯA_BIẾT` phần vượt được tài trợ bằng tiền sẵn có hay vay.
+So với 85.904 (đã trừ SBC), FY2025 vượt `20.228`. Một năm không đủ: `SỰ_THẬT` 10-K ghi khoản thuế một lần 10,2 tỷ USD của quý 4 FY2024 gồm 15,8 tỷ USD phải trả Ireland bằng tiền ký quỹ (thuyết minh 7), và [10-Q quý 2 FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000057/aapl-20250329.htm) (mở 02/11/2026) ghi sáu tháng đầu FY2025 Apple chuyển từ ký quỹ €14,2 tỷ (15,4 tỷ USD) cho Ireland; tiền thuế đã nộp ròng sáu tháng đó là 31.683 so với 14.531 triệu USD cùng kỳ năm trước. `SUY_LUẬN` Nếu khoản này nằm trong dòng tiền hoạt động thì CFO − capex FY2025 bị nén khoảng 15,4 tỷ USD và "vượt 7.365" gần biến mất; `CHƯA_BIẾT` nó ghi ở hoạt động nào. Cả ba năm gần cân bằng. Mẫu một công ty tiền mặt lớn chỉ minh họa cách đọc, không chứng minh mua lại tốt hay xấu. `SUY_LUẬN` Khoản 5.960 là một phần chi phí SBC bằng tiền, nên không cộng vào phép so với số đã trừ SBC. `CHƯA_BIẾT` phần vượt được tài trợ bằng tiền sẵn có hay vay.
 
-`PHÉP_TÍNH` EPS pha loãng tăng `7,46/6,08 − 1 = 22,7%`, trong khi lợi nhuận ròng tăng `112.010/93.736 − 1 = 19,5%` và cổ phiếu pha loãng bình quân giảm `15.004.697/15.408.095 − 1 = −2,6%`. Vậy khoảng 3 điểm phần trăm tăng EPS đến từ việc giảm số cổ phiếu. Lưu ý lợi nhuận FY2024 bị kéo thấp bởi khoản thuế thu nhập một lần 10,2 tỷ USD (thuyết minh số 7 của 10-K, quyết định State Aid), nên mức tăng 19,5% phần nào là hiệu ứng cơ sở thấp. Pha loãng: cổ phiếu pha loãng cao hơn cơ bản `15.004.697/14.948.500 − 1 = 0,38%` năm 2025.
+`PHÉP_TÍNH` EPS pha loãng tăng `7,46/6,08 − 1 = 22,7%`, trong khi lợi nhuận ròng tăng `112.010/93.736 − 1 = 19,5%` và cổ phiếu pha loãng bình quân giảm `15.004.697/15.408.095 − 1 = −2,6%`. Vậy khoảng 3 điểm phần trăm tăng EPS đến từ việc giảm số cổ phiếu. Lợi nhuận FY2024 bị kéo thấp bởi khoản thuế một lần 10,2 tỷ USD (thuyết minh 7). `PHÉP_TÍNH` (của bài, không phải số Apple công bố) loại khoản đó: lợi nhuận FY2024 khoảng `93.736 + 10.200 = 103.936`, lợi nhuận tăng khoảng 7,8%, EPS FY2024 khoảng `103.936/15.408,1 = 6,75`, EPS tăng khoảng 10,6%; phần giảm cổ phiếu (2,6 điểm) khi đó chiếm gần một phần tư mức tăng. Cổ phiếu pha loãng cao hơn cơ bản `15.004.697/14.948.500 − 1 = 0,38%` năm 2025 (chênh cơ bản–pha loãng, không phải pha loãng kinh tế toàn bộ của SBC).
 
 `PHÉP_TÍNH` Số cổ phiếu đang lưu hành cuối năm giảm `14.773.260/15.116.786 − 1 = −2,27%` (giảm ròng 343.526 nghìn cổ phiếu), dù công ty chi 90.711 triệu USD để mua lại. Ngược lại hãy cẩn thận với cách tính "giá ngụ ý": `90.711/343,526 triệu = 264 USD` mỗi cổ phiếu giảm ròng **không phải giá mua thật**, vì số giảm ròng đã trừ cổ phiếu mới phát hành cho nhân viên (và cổ phiếu giữ lại để nộp thuế hộ cũng ảnh hưởng số lưu hành). `SỰ_THẬT` Note 10 của 10-K (mở 02/11/2026): năm 2025 mua lại 401.672 nghìn cổ phiếu ("402 million shares ... for $89.3 billion") và phát hành ròng 58.146 nghìn; `401.672 − 58.146 = 343.526`, đúng số giảm ròng. `PHÉP_TÍNH` Giá mua trung bình khoảng `89.300/401,672 = 222 USD` (hoặc `90.711/401,672 = 226 USD` nếu dùng tiền chi); khác 264 và dao động theo số tiền nào là đúng.
 
@@ -109,7 +107,7 @@ So với 85.904 (đã trừ SBC), FY2025 vượt `20.228`. Một năm không đ�
 
 `SỰ_THẬT` [Báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) (thuyết minh số 26, trang in 39): theo nghị quyết Đại hội đồng cổ đông ngày 17/04/2025, công ty chi trả cổ tức năm 2024 **bằng cổ phiếu** cho cổ đông hiện hữu, tỷ lệ 20% (cổ đông sở hữu 10 cổ phiếu nhận 2 cổ phiếu thưởng), nguồn là lợi nhuận sau thuế chưa phân phối; số cổ phiếu phổ thông tăng từ 6.396.250.200 lên 7.675.465.855 (tăng thêm 1.279.215.655; mệnh giá 10.000 đồng/cổ phiếu). Bảng cân đối (trang in 7): vốn góp của chủ sở hữu từ 63.962,5 lên 76.754,7 tỷ VND; lợi nhuận sau thuế chưa phân phối (mã 421) từ 49.599,1 lên 51.037,9 tỷ.
 
-`PHÉP_TÍNH` `7.675.465.855/6.396.250.200 − 1 = 20,0%` (làm tròn; lệch rất nhỏ vì cổ phiếu lẻ, nguyên nhân `CHƯA_BIẾT`). Vốn góp tăng `76.754,7 − 63.962,5 = 12.792,2` tỷ VND, bằng số cổ phiếu thưởng nhân 10.000 đồng. Lợi nhuận sau thuế FY2025 là 15.514,9 tỷ nhưng lợi nhuận chưa phân phối chỉ tăng `1.438,8` tỷ. `PHÉP_TÍNH` `15.514,9 − 12.792,2 = 2.722,7`, lớn hơn mức tăng thật 1.438,8 tỷ; chênh khoảng 1.283,9 tỷ: `PHÉP_TÍNH` đã tách được từ báo cáo biến động vốn chủ (thuyết minh 26, trang in 38, cột lợi nhuận chưa phân phối): 49.599,1 − 12.792,2 (cổ phiếu thưởng) + 15.453,2 (lợi nhuận cổ đông công ty mẹ, không phải 15.514,9) − 496,0 − 600,0 (trích quỹ khen thưởng và quỹ đầu tư phát triển) + 6,4 (hoàn nhập) − 129,1 (đổi tỷ lệ lợi ích) − 3,5 (khác) = 51.037,9. Chênh 1.283,9 so với phép trừ ở trên là 61,8 (phần cổ đông không kiểm soát) cộng 496,0, 600,0, 129,1 và 3,5, trừ 6,4 (lệch làm tròn 0,1). Việc chuyển 12.792,2 tỷ sang vốn góp là chuyển khoản **bên trong** vốn chủ sở hữu; không có tiền rời công ty.
+`PHÉP_TÍNH` `7.675.465.855/6.396.250.200 − 1 = 20,0%` (làm tròn; lệch rất nhỏ vì cổ phiếu lẻ, nguyên nhân `CHƯA_BIẾT`). Vốn góp tăng `76.754,7 − 63.962,5 = 12.792,2` tỷ VND, bằng số cổ phiếu thưởng nhân 10.000 đồng. Lợi nhuận sau thuế FY2025 là 15.514,9 tỷ nhưng lợi nhuận chưa phân phối chỉ tăng `1.438,8` tỷ. `PHÉP_TÍNH` `15.514,9 − 12.792,2 = 2.722,7`, lớn hơn mức tăng thật 1.438,8 tỷ; chênh khoảng 1.283,9 tỷ: `PHÉP_TÍNH` đã tách được từ báo cáo biến động vốn chủ (thuyết minh 26, trang in 38, cột lợi nhuận chưa phân phối): 49.599,1 − 12.792,2 (cổ phiếu thưởng) + 15.453,2 (lợi nhuận cổ đông công ty mẹ, không phải 15.514,9) − 496,0 − 600,0 (trích quỹ khen thưởng và quỹ đầu tư phát triển) + 6,4 (hoàn nhập) − 129,1 (đổi tỷ lệ lợi ích) − 3,5 (khác) = 51.037,9. Chênh 1.283,9 so với phép trừ ở trên là 61,8 (cổ đông không kiểm soát) cộng 496,0, 600,0, 129,1 và 3,5, trừ 6,4 (đến đồng: 1.284,0). Việc chuyển 12.792,2 tỷ sang vốn góp là chuyển khoản **bên trong** vốn chủ sở hữu; không có tiền rời công ty.
 
 `SUY_LUẬN` Trong mô hình thuần (bỏ qua thuế, thanh khoản, tín hiệu và quy định), thưởng 20% không tạo thêm giá trị cho cổ đông hiện hữu: mỗi cổ phiếu mới ra đời làm mỗi cổ phiếu giảm giá trị tương ứng; các yếu tố ngoài mô hình có thể đổi kết luận, bài này chưa xét; EPS kỳ trước phải chia cho `1 + 0,2 = 1,2` để so được. Ví dụ: EPS 1.000 đồng trước thưởng thành `1.000/1,2 ≈ 833` sau điều chỉnh. Báo cáo kết quả kinh doanh FY2025 ghi lãi cơ bản trên cổ phiếu 1.973 đồng (FY2025) và 1.505 đồng (cột năm trước); `CHƯA_BIẾT` cột năm trước đã được điều chỉnh theo cổ phiếu thưởng chưa, và cách tính lãi cơ bản (có trừ quỹ khen thưởng phúc lợi hay không); cần đọc thuyết minh số 38.
 
@@ -117,9 +115,9 @@ So với 85.904 (đã trừ SBC), FY2025 vượt `20.228`. Một năm không đ�
 
 `SỰ_THẬT` Damodaran (cùng bài 24/02/2026, mục "A Rational Cash Return Policy") định nghĩa dòng tiền tự do cho vốn chủ (FCFE) là lợi nhuận cộng chi phí không bằng tiền, trừ chi đầu tư TSCĐ và vốn lưu động, cộng nợ vay ròng phát hành; trả cho cổ đông nhiều hơn FCFE làm cạn tiền hoặc phải huy động vốn; trả khi FCFE âm là dấu hiệu cảnh báo. Ông cũng nêu năm 2025 khoảng 37% công ty có trả tiền cho cổ đông có FCFE âm (diễn đạt lại).
 
-`PHÉP_TÍNH` Ba thước đo dùng trong bài: tỷ lệ chi trả cổ tức `= cổ tức/lợi nhuận` (Apple 13,8%); tổng tiền trả cổ đông so với FCFE; mua lại ròng `= số cổ phiếu mua − số cổ phiếu phát hành`. Không thước nào cho biết nên trả hay không; chúng chỉ cho biết phần đã trả có bền không.
+`PHÉP_TÍNH` Ba thước đo dùng trong bài: tỷ lệ chi trả cổ tức `= cổ tức/lợi nhuận` (Apple 13,8%); tổng tiền trả cổ đông so với FCFE; mua lại ròng `= số cổ phiếu mua − số cổ phiếu phát hành`. Không thước nào cho biết nên trả hay không; chỉ cho biết phần đã trả có bền không.
 
-`KỊCH_BẢN` Biển Xanh phát hành 1 triệu cổ phiếu mỗi năm cho nhân viên (trị giá `1 triệu × 100.000 = 100 tỷ`). Muốn giữ số cổ phiếu đứng yên, công ty phải mua lại 100 tỷ mỗi năm; chi 200 tỷ mua lại giảm ròng chỉ 1 triệu cổ phiếu (`net_buyback_shares`). Trong ví dụ giả định này, nửa số tiền mua lại chỉ bù pha loãng.
+`KỊCH_BẢN` Biển Xanh phát hành 1 triệu cổ phiếu mỗi năm cho nhân viên (trị giá `1 triệu × 100.000 = 100 tỷ`). Muốn giữ số cổ phiếu đứng yên, công ty phải mua lại 100 tỷ mỗi năm; chi 200 tỷ mua lại giảm ròng chỉ 1 triệu cổ phiếu (`net_buyback_shares`). Nửa số tiền mua lại chỉ bù pha loãng.
 
 ## 5. Quy trình đọc
 
@@ -165,65 +163,63 @@ So với 85.904 (đã trừ SBC), FY2025 vượt `20.228`. Một năm không đ�
 
 Đề: "Apple FY2025: lợi nhuận ròng 112.010, cổ phiếu pha loãng bình quân 15.004.697. Tính EPS. Công ty mua lại 89,3 tỷ USD theo ban điều hành, 90.052 triệu theo báo cáo vốn chủ và 90.711 triệu theo báo cáo lưu chuyển tiền tệ. Tính giá mua trung bình biết số cổ phiếu giảm ròng là 343.526."
 
-Phát hiện: (a) lợi nhuận tính bằng triệu USD, cổ phiếu bằng nghìn: chia thẳng ra `0,007465` sai đơn vị, nhân 1.000 mới được 7,465; (b) ba con số mua lại khác nhau (chênh tới 1,4 tỷ USD) và nguồn không nêu lý do; (c) số cổ phiếu giảm ròng đã trừ cổ phiếu phát hành, không phải số cổ phiếu mua; (d) đề thiếu số cổ phiếu mua gộp cả năm (có trong Note 10).
+Phát hiện: (a) lợi nhuận triệu USD, cổ phiếu nghìn: chia thẳng ra `0,007465` sai đơn vị (nhân 1.000 mới được 7,465); (b) ba số mua lại khác nhau (chênh tới 1,4 tỷ USD), lý do chưa biết; (c) số cổ phiếu giảm ròng đã trừ cổ phiếu phát hành, không phải số cổ phiếu mua; (d) đề thiếu số cổ phiếu mua gộp cả năm (có trong Note 10).
 
 `Đáp án` EPS `= 112.010 triệu/15.004,697 triệu cổ phiếu ≈ 7,46 USD`. Từ dữ kiện của đề, giá mua trung bình **không tính được**; 264 USD không phải giá mua. Dữ kiện nằm ở Note 10 của 10-K (401.672 nghìn cổ phiếu mua, giá khoảng 222–226 USD tùy số tiền dùng).
 
 ## Sai ở đâu
 
-Một học viên viết: "Biển Xanh mua lại 200 tỷ nên EPS tăng 2% nghĩa là giá trị cổ đông tăng 2%. SBC không tốn tiền nên không phải chi phí. Hòa Phát thưởng cổ phiếu 20% nên cổ đông giàu thêm 20%."
+Một học viên viết: "Biển Xanh mua lại 200 tỷ nên EPS tăng 2% nghĩa là giá trị cổ đông tăng 2%. SBC không tốn tiền nên không phải chi phí. Hòa Phát thưởng cổ phiếu 20% nên cổ đông giàu thêm 20%. Apple trả cổ đông 7.365 triệu USD hơn dòng tiền năm FY2025 nên chi quá tay."
 
 <details>
 <summary>Mở sau khi tự tìm lỗi</summary>
 
-1. EPS tăng không bằng giá trị tăng: nếu giá mua cao hơn giá trị nội tại, người ở lại thiệt (câu 4).
-2. SBC không tốn tiền nhưng chuyển giá trị cho nhân viên bằng cách thêm cổ phiếu; phải phản ánh bằng một trong hai cách (trừ khỏi dòng tiền hoặc cộng vào số cổ phiếu), không bỏ.
+1. EPS tăng không bằng giá trị tăng: nếu giá mua cao hơn giá trị nội tại, người ở lại thiệt.
+2. SBC không tốn tiền nhưng chuyển giá trị cho nhân viên bằng cách thêm cổ phiếu; nên phản ánh bằng một trong hai cách (trừ khỏi dòng tiền hoặc cộng vào số cổ phiếu); bỏ qua cả hai là bỏ sót.
 3. Thưởng cổ phiếu 20% chia cùng một giá trị cho nhiều cổ phiếu hơn; tổng giá trị cổ đông sở hữu không tăng.
 4. Không điều chỉnh EPS kỳ trước nên so sánh sai.
+5. Một năm không đủ: cộng ba năm chỉ chênh 1.732 và khoản nộp thuế State Aid có thể nén dòng tiền FY2025.
 
 </details>
 
 ## Kiểm tra chuyển bài
 
-Làm không nhìn mẫu; đạt khi đúng cả ba.
-
 1. Công ty có 50 triệu cổ phiếu, lợi nhuận ròng 500 tỷ đồng, mua lại 100 tỷ ở giá 50.000. Tính EPS trước và sau.
-2. Cổ phiếu thưởng tỷ lệ 10% (10:1). EPS trước thưởng 10.000. Tính EPS sau điều chỉnh.
+2. Cổ phiếu thưởng tỷ lệ 10% (10:1), EPS trước thưởng 10.000. EPS sau điều chỉnh?
 3. Nêu ít nhất hai việc phải kiểm trước khi khen một đợt mua lại.
 
 <details>
 <summary>Mở sau khi tự làm</summary>
 
-Tiêu chí đạt: câu 1 EPS trước `500 tỷ/50 triệu = 10.000`; mua `100 tỷ/50.000 = 2 triệu`, còn 48 triệu; EPS sau `≈ 10.417`. Câu 2 `10.000/1,1 ≈ 9.091`. Câu 3: giá mua so với giá trị nội tại; mua lại ròng sau SBC; nguồn tiền (FCFE hay vay); số cổ phiếu đã giảm thật chưa.
+Đạt khi đúng cả ba: câu 1 EPS trước `500 tỷ/50 triệu = 10.000`; mua `100 tỷ/50.000 = 2 triệu`, còn 48 triệu; EPS sau `≈ 10.417`. Câu 2 `10.000/1,1 ≈ 9.091`. Câu 3: giá mua so với giá trị nội tại; mua lại ròng sau SBC; nguồn tiền (FCFE hay vay); số cổ phiếu đã giảm thật chưa.
 
 </details>
 
 ## Lỗi thường gặp
 
-- Coi EPS tăng do mua lại là giá trị tăng.
-- Bỏ SBC vì không chảy tiền; hoặc phản ánh cùng một khoản cấp phát hai lần.
-- Tính "giá mua" từ số cổ phiếu giảm ròng.
+- Coi EPS tăng do mua lại là giá trị tăng; tính "giá mua" từ số cổ phiếu giảm ròng.
+- Bỏ SBC vì không chảy tiền, hoặc phản ánh một khoản cấp phát hai lần.
 - Không điều chỉnh EPS khi có cổ phiếu thưởng hoặc chia tách.
 
 ## Ranh giới an toàn
 
-- Đây là bài học, không phải khuyến nghị mua/bán/nắm giữ và không đánh giá chính sách của Apple hay Hòa Phát.
+- Không phải khuyến nghị mua/bán/nắm giữ, không đánh giá chính sách của Apple hay Hòa Phát.
 - Giá, giá trị nội tại và số cổ phiếu của Biển Xanh là giả định.
-- Quy định thuế và phát hành cổ phiếu thay đổi theo thời gian và nơi; kiểm lại nguồn hiện hành trước khi áp dụng.
+- Quy định thuế và phát hành thay đổi theo thời gian; kiểm lại nguồn hiện hành.
 
 ## Điều tôi vẫn chưa hiểu
 
-- Với công ty tôi đọc, giá mua lại trung bình là bao nhiêu và so với giá trị nội tại tôi ước?
-- SBC của công ty tôi đọc có đang được bù bằng mua lại, và tôi tính nó thế nào trong định giá?
+- Giá mua lại trung bình của công ty tôi đọc so với giá trị nội tại tôi ước?
+- SBC của công ty tôi đọc có được bù bằng mua lại không?
 
 ## Nguồn Internet đã mở
 
-Truy cập `2026-11-01`. Không suy ngày truy cập thành ngày xuất bản.
+Truy cập `2026-11-01`, mở lại `2026-11-02`.
 
 | Nguồn | Phạm vi | Dùng cho |
 |---|---|---|
 | [Apple Form 10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) | Hoa Kỳ; US GAAP; kết thúc 27/09/2025; triệu USD, cổ phiếu nghìn | SBC, mua lại, cổ tức, số cổ phiếu, EPS, chương trình mua lại |
 | [Damodaran, Data Update 8 for 2026](https://aswathdamodaran.blogspot.com/2026/02/data-update-8-for-2026-time-for.html) | Blog tác giả; 24/02/2026; thị trường toàn cầu | Mua lại chuyển giá trị giữa người bán và người ở lại; FCFE; cảnh báo trả quá FCFE |
-| [BCTC hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) | VND; VAS; đã đọc trang in 7 và 39 | Cổ phiếu thưởng 20%, vốn góp, lợi nhuận chưa phân phối |
+| [BCTC hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) | VND; VAS; đã đọc trang in 7, 8, 38 và 39 | Cổ phiếu thưởng 20%, vốn góp, lợi nhuận chưa phân phối |
 
 `CHƯA_BIẾT` Lý do ba số mua lại (89,3 tỷ, 90.052 và 90.711 triệu USD) khác nhau; mức ảnh hưởng của khoản nộp thuế State Aid lên dòng tiền FY2025; cách tính lãi cơ bản trên cổ phiếu của Hòa Phát (EPS năm trước 1.505 có thể đã điều chỉnh theo cổ phiếu thưởng, cần thuyết minh 38); nguồn thứ hai độc lập cho nhận định "SBC là chi phí thật" (đây là quy ước phương pháp của dự án).

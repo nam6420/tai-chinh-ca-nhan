@@ -1,6 +1,6 @@
 # BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q4 — Lấy dữ liệu: EDGAR/XBRL, báo cáo Việt Nam và bảng tính
 
-- Ngày viết: `2026-11-01`. Bài mới của Đợt 3; chưa có biên bản kiểm nguồn hay phản biện.
+- Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 1–3 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn: trang API XBRL và quy tắc truy cập của SEC, dữ liệu `companyfacts` của Apple, báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát (HPG), bản đăng lại Thông tư 96/2020/TT-BTC; mở ngày `2026-11-01` và `2026-11-02` (bảng cuối bài).
 - Mục tiêu: Lấy số liệu từ EDGAR bằng API có cấu trúc mà không dính các lỗi kỳ, trùng lặp, đơn vị, đổi tag; biết dữ liệu báo cáo Việt Nam nằm ở đâu và vì sao phải chép tay có kiểm; dựng bảng tính có cột nguồn và các phép kiểm đẳng thức; ghi nhận chỗ nào chưa biết.
@@ -13,13 +13,12 @@
 
 ## Hiểu bài này trong 1 phút
 
-Lấy dữ liệu giống nhặt nấm: quan trọng là biết cái nào ăn được. Một dòng số trong bảng tính trông giống nhau dù nó là số cả năm hay chín tháng, dù tính bằng đồng hay triệu đồng, dù là số gốc hay số đã điều chỉnh. Bài này dạy hai nguồn có thật (EDGAR cho công ty Mỹ và báo cáo PDF của công ty Việt Nam), những chỗ dễ nhầm ở từng nguồn, và cách dựng bảng tính để chính bảng tính báo lỗi cho bạn.
+Lấy dữ liệu giống nhặt nấm: quan trọng là biết cái nào ăn được. Một dòng số trông giống nhau dù là cả năm hay chín tháng, đồng hay triệu đồng, số gốc hay đã điều chỉnh. Bài dạy hai nguồn có thật (EDGAR và PDF công ty Việt Nam), chỗ dễ nhầm ở từng nguồn, và cách dựng bảng tính tự báo lỗi.
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N8: vì sao hai trang chép cùng một thông cáo không là hai nguồn độc lập? (Đáp: cùng nguồn gốc, không thêm bằng chứng.)
-
-Bài dạy gọi và đọc API XBRL của SEC, chép và kiểm báo cáo Việt Nam, dựng bảng tính tự báo lỗi, với số Apple (khớp Q2) và Hòa Phát (khớp Q1, Q3). Không dạy cào hàng loạt hay đánh giá dữ liệu thương mại.
+N8: vì sao hai trang chép cùng một thông cáo không là hai nguồn độc lập? (Cùng nguồn gốc.)
+Bài dạy gọi API XBRL của SEC, chép và kiểm báo cáo Việt Nam, dựng bảng tính tự báo lỗi, với số Apple (Q2) và Hòa Phát (Q1, Q3).
 
 ## 1. Ba lớp dữ liệu
 
@@ -33,9 +32,9 @@ Bài dạy gọi và đọc API XBRL của SEC, chép và kiểm báo cáo Việ
 
 ## 2. EDGAR và API XBRL
 
-`SỰ_THẬT` Trang [SEC — EDGAR APIs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) (mở 02/11/2026; trang ghi xem lại 08/04/2025) mô tả các điểm cuối: `submissions` (lịch sử hồ sơ), `companyconcept` (một khái niệm của một công ty) và `companyfacts` (toàn bộ khái niệm của một công ty, mỗi công ty một tệp, đường dẫn dùng mã CIK đệm đủ 10 chữ số), cùng `frames` (một số liệu của nhiều công ty cho một kỳ). Dữ liệu lấy từ các mẫu 10-Q, 10-K, 8-K, 20-F, 40-F, 6-K và biến thể, và chỉ gộp các sự kiện dùng taxonomy không tùy chỉnh (trang viết "e.g." us-gaap, ifrs-full, dei, srt: chỉ là ví dụ); khái niệm tùy chỉnh (extension) của riêng công ty bị loại. API không cần khóa; trang nói XBRL API thường chậm dưới một phút và tệp `companyfacts.zip` (gom dữ liệu companyfacts và frames) được dựng lại hằng đêm khoảng 3 giờ sáng giờ miền Đông; trang cũng nói cách hiệu quả nhất để lấy lượng dữ liệu lớn là các tệp ZIP gộp.
+`SỰ_THẬT` Trang [SEC — EDGAR APIs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) (mở 02/11/2026; trang ghi xem lại 08/04/2025) mô tả các điểm cuối: `submissions` (lịch sử hồ sơ), `companyconcept` (một khái niệm của một công ty) và `companyfacts` (toàn bộ khái niệm của một công ty, mỗi công ty một tệp, đường dẫn dùng mã CIK đệm đủ 10 chữ số), cùng `frames` (một số liệu của nhiều công ty cho một kỳ). Dữ liệu lấy từ các mẫu 10-Q, 10-K, 8-K, 20-F, 40-F, 6-K và biến thể, và chỉ gộp các sự kiện dùng taxonomy không tùy chỉnh (trang viết "e.g." us-gaap, ifrs-full, dei, srt); khái niệm tùy chỉnh (extension) của riêng công ty bị loại. API không cần khóa; độ trễ thường dưới một phút; `companyfacts.zip` được dựng lại hằng đêm khoảng 3 giờ sáng giờ miền Đông, và trang nói ZIP gộp là cách hiệu quả nhất để lấy lượng dữ liệu lớn.
 
-`SỰ_THẬT` Trang [SEC — Accessing EDGAR Data](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data) (mở 02/11/2026; trang ghi xem lại 26/06/2024), mục "Fair Access": mức tối đa hiện là 10 yêu cầu mỗi giây và SEC có thể hạ mức này; chương trình phải khai User-Agent kèm tên và email liên hệ (FAQ webmaster của SEC); mức 10 yêu cầu/giây áp cho tổng mọi máy của một người dùng và SEC có thể chặn IP vượt mức (developer-resources); SEC không cho botnet hay công cụ tự động cào cả trang; SEC không hỗ trợ kỹ thuật cho việc gỡ lỗi script. Điều khoản sao chép và ghi nguồn nằm ở trang khác của SEC mà tôi chưa mở (`CHƯA_BIẾT`); khi đăng lại hãy ghi nguồn. `PHÉP_TÍNH` Hàm `fetch_companyfacts` trong [data_pull.py](../practice/models/data_pull.py) bắt buộc User-Agent có tên và email, cách nhau tối thiểu 0,2 giây giữa hai lần gọi (10 yêu cầu/giây là mức tối đa, không phải mức nên dùng; biến đếm toàn cục chỉ đúng trong một tiến trình), có bộ nhớ đệm; test dùng hàm gọi giả. Hãy dùng thông tin liên hệ **của chính bạn**.
+`SỰ_THẬT` Trang [SEC — Accessing EDGAR Data](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data) (mở 02/11/2026; trang ghi xem lại 26/06/2024), mục "Fair Access": mức tối đa hiện là 10 yêu cầu mỗi giây và SEC có thể hạ mức này; chương trình phải khai User-Agent kèm tên và email liên hệ (FAQ webmaster của SEC); mức 10 yêu cầu/giây áp cho tổng mọi máy của một người dùng và SEC có thể chặn IP vượt mức (developer-resources); SEC không cho botnet hay công cụ tự động cào cả trang; SEC không hỗ trợ gỡ lỗi script. Điều khoản sao chép và ghi nguồn: `CHƯA_BIẾT` (trang khác, chưa mở); hãy ghi nguồn khi đăng lại. `PHÉP_TÍNH` Hàm `fetch_companyfacts` trong [data_pull.py](../practice/models/data_pull.py) bắt buộc User-Agent có tên và email, cách nhau tối thiểu 0,2 giây giữa hai lần gọi (mức tối đa không phải mức nên dùng; biến đếm toàn cục chỉ đúng trong một tiến trình; chưa xử lý lỗi 403/429), có bộ nhớ đệm; test dùng hàm gọi giả. Dùng liên hệ **của chính bạn**.
 
 Cấu trúc một tệp `companyfacts`: `facts → us-gaap → <tên tag> → units → <đơn vị> → danh sách bản ghi`. Mỗi bản ghi có `start` và `end` (kỳ; chỉ có `end` nếu là số tại một thời điểm), `val`, `fy`, `fp`, `form`, `filed` và đôi khi `frame`.
 
@@ -71,13 +70,13 @@ Cấu trúc một tệp `companyfacts`: `facts → us-gaap → <tên tag> → un
 
 `SỰ_THẬT` Cạm bẫy 7: lợi nhuận ròng cả năm FY2025 là 112.010 triệu USD, lũy kế chín tháng đến 28/06/2025 là 84.544 triệu USD. `PHÉP_TÍNH` Quý 4 FY2025 `= 112.010 − 84.544 = 27.466` triệu USD. `SỰ_THẬT` Phụ lục 99.1 của [8-K quý 4 FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm) (mở 02/11/2026) ghi lợi nhuận ròng ba tháng kết thúc 27/09/2025 là 27.466 triệu USD, khớp phép suy ra. Văn bản không nêu ngày công bố, chỉ nêu cuộc gọi kết quả ngày 30/10/2025.
 
-`SỰ_THẬT` Cạm bẫy 8: Apple FY2025 có **ba** số cho việc mua lại cổ phiếu: (i) tiền chi trong báo cáo lưu chuyển tiền tệ, dòng "Repurchases of common stock", 90.711 triệu USD; (ii) dòng "Common stock repurchased" trong báo cáo biến động vốn chủ của [10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) (mở 02/11/2026), 90.052 triệu USD, nằm ở cột lợi nhuận giữ lại (accumulated deficit); (iii) giá trị cổ phiếu mua lại và hủy theo tag `StockRepurchasedAndRetiredDuringPeriodValue` trong `companyfacts`, 89.300 triệu USD (bài Q2 ghi cùng số này từ MD&A). `PHÉP_TÍNH` Chênh (i) − (iii) = 1.411; (i) − (ii) = 659; (ii) − (iii) = 752 (triệu USD). Tập con lưu trong repo không chứa thẻ nào có giá trị 90.052; test kiểm điều đó. `CHƯA_BIẾT` vì sao ba số khác nhau (89.300 trong MD&A của 10-K ghi "$89.3 billion", làm tròn 0,1 tỷ nên các chênh lệch với số này có sai số khoảng ±50 triệu; phần 10-K tôi đã đọc không nêu nguyên nhân, phần còn lại chưa đọc). Cách dùng: nêu cả ba, ghi khái niệm, và dùng 90.711 cho phân tích dòng tiền vì đó là tiền ra khỏi công ty.
+`SỰ_THẬT` Cạm bẫy 8: Apple FY2025 có **ba** số cho việc mua lại cổ phiếu: (i) tiền chi trong báo cáo lưu chuyển tiền tệ, dòng "Repurchases of common stock", 90.711 triệu USD; (ii) dòng "Common stock repurchased" trong báo cáo biến động vốn chủ của [10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) (mở 02/11/2026), 90.052 triệu USD, nằm ở cột lợi nhuận giữ lại (accumulated deficit); (iii) giá trị cổ phiếu mua lại và hủy theo tag `StockRepurchasedAndRetiredDuringPeriodValue` trong `companyfacts`, 89.300 triệu USD (bài Q2 ghi cùng số này từ MD&A). `PHÉP_TÍNH` Chênh (i) − (iii) = 1.411; (i) − (ii) = 659; (ii) − (iii) = 752 (triệu USD). Tập con không chứa thẻ nào có giá trị 90.052 (test kiểm); `SUY_LUẬN` chưa kiểm: số theo thành phần vốn chủ có thể bị loại khỏi `companyfacts`. `CHƯA_BIẾT` vì sao ba số khác nhau (89.300 trong MD&A của 10-K ghi "$89.3 billion", làm tròn 0,1 tỷ nên các chênh lệch với số này có sai số khoảng ±50 triệu; phần 10-K tôi đã đọc không nêu nguyên nhân, phần còn lại chưa đọc). Cách dùng: nêu cả ba kèm khái niệm; cho dòng tiền ưu tiên 90.711 (`Ý_KIẾN`).
 
 ### Hòa Phát: tài liệu PDF và cách chép có kiểm
 
 `SỰ_THẬT` [Báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) (8.270.589 byte, khoảng 8,3 MB; SHA-256 `f38c5f75becf7d3f145d27183eec81f119fd4f75e378b983a2763ddc3f7e0c07`, tính trên bản tôi tải ngày 02/11/2026) là PDF ảnh quét: công cụ đọc văn bản không lấy được chữ, tôi phải đọc từng trang như ảnh (trang PDF = số trang in + 2; bảng cân đối ở trang in 5–7, kết quả kinh doanh trang 8, lưu chuyển tiền tệ trang 9–10). [Bản tổng quan Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/tong-quan-tinh-hinh-kinh-doanh-quy3-2026-vn.pdf) cũng là ảnh. Ngược lại [Báo cáo thường niên 2023](https://static2.vietstock.vn/data/HOSE/2023/BCTN/VN/HPG_Baocaothuongnien_2023.pdf) tải từ Vietstock có lớp chữ trích được. 
 
-`PHÉP_TÍNH` Từ các trang đó tôi chép 14 chỉ tiêu hai năm, mỗi dòng có cột `trang_in`, vào [hpg_fy2025_transcription.csv](../practice/models/hpg_fy2025_transcription.csv) (tỷ VND; số gốc VND chia 1 tỷ). Hàm `statement_checks` kiểm năm đẳng thức; cả hai năm đều đạt trong dung sai 0,01 tỷ (10 triệu đồng; khá rộng so với số chép đến nghìn đồng (6 chữ số thập phân của tỷ, làm tròn từ số nguyên đồng trên báo cáo): chỉ dùng 0,01 khi so với số đã làm tròn đến 0,01 tỷ; dung sai cố định, không tương đối theo độ lớn):
+`PHÉP_TÍNH` Từ các trang đó tôi chép 14 chỉ tiêu hai năm, mỗi dòng có cột `trang_in`, vào [hpg_fy2025_transcription.csv](../practice/models/hpg_fy2025_transcription.csv) (tỷ VND; số gốc VND chia 1 tỷ). Hàm `statement_checks` kiểm năm đẳng thức; cả hai năm đều đạt trong dung sai 0,01 tỷ (10 triệu đồng; khá rộng so với số chép đến nghìn đồng (6 chữ số thập phân của tỷ, làm tròn từ số nguyên đồng trên báo cáo): mặc định của mã là 1e-5 tỷ (10.000 đồng); 0,01 chỉ khi so với số đã làm tròn 0,01 tỷ; dung sai cố định, không tương đối):
 
 | Đẳng thức | FY2025 (tỷ VND) |
 |---|---:|
@@ -91,9 +90,9 @@ Cấu trúc một tệp `companyfacts`: `facts → us-gaap → <tên tag> → un
 
 ## 4. Báo cáo Việt Nam: ở đâu, khi nào, dạng gì
 
-`SỰ_THẬT` (thứ cấp: nội dung bản đăng lại gốc 2020, chưa hợp nhất) Theo [Thông tư 96/2020/TT-BTC](https://caselaw.vn/van-ban-phap-luat/372205-thong-tu-so-96-2020-tt-btc-ngay-16-11-2020-cua-bo-truong-bo-tai-chinh-huong-dan-cong-bo-thong-tin-tren-thi-truong-chung-khoan) (mở 02/11/2026; ban hành 16/11/2020, hiệu lực 01/01/2021 theo trang): báo cáo tài chính năm kiểm toán nằm ở Điều 10 khoản 1 điểm c, và Điều 14 khoản 1 (tổ chức niêm yết) dẫn chiếu Điều 10: công bố trong 10 ngày kể từ ngày kiểm toán ký, không quá 90 ngày kể từ cuối năm tài chính. Bán niên soát xét (Điều 14 khoản 2c): 5 ngày kể từ ngày ký, không quá 45 ngày (60 ngày với công ty mẹ hoặc đơn vị cấp trên). Quý (khoản 3c): 20 ngày kể từ cuối quý (30 ngày với công ty mẹ). Trang còn nêu giải trình khi lợi nhuận sau thuế đổi từ 10% trở lên hoặc đổi dấu (khoản 4–5). Trang ghi "đang có hiệu lực" và có Thông tư 68/2024/TT-BTC (hiệu lực 02/11/2024) sửa đổi Điều 5 và bổ sung Điều 25, 33; nguồn thứ cấp khác nhắc sửa đổi 18/2025 và 08/2026 (chưa mở văn bản gốc). `CHƯA_BIẾT` liệu các sửa đổi đó có đổi Điều 10, 14 không; có nguồn thứ cấp nhắc một dự thảo thông tư thay thế Thông tư 96 (chưa mở), nên số ngày trên đây không được dùng làm quy tắc hành động khi chưa đối chiếu văn bản hợp nhất. `CHƯA_BIẾT` hệ thống công bố của cơ quan quản lý có cung cấp dữ liệu có cấu trúc hay không.
+`SỰ_THẬT` (thứ cấp: nội dung bản đăng lại gốc 2020, chưa hợp nhất) Theo [Thông tư 96/2020/TT-BTC](https://caselaw.vn/van-ban-phap-luat/372205-thong-tu-so-96-2020-tt-btc-ngay-16-11-2020-cua-bo-truong-bo-tai-chinh-huong-dan-cong-bo-thong-tin-tren-thi-truong-chung-khoan) (mở 02/11/2026; ban hành 16/11/2020, hiệu lực 01/01/2021 theo trang): báo cáo tài chính năm kiểm toán nằm ở Điều 10 khoản 1 điểm c, và Điều 14 khoản 1 (tổ chức niêm yết) dẫn chiếu Điều 10: công bố trong 10 ngày kể từ ngày kiểm toán ký, không quá 90 ngày kể từ cuối năm tài chính. Bán niên soát xét (Điều 14 khoản 2c): 5 ngày kể từ ngày ký, không quá 45 ngày (60 ngày với công ty mẹ hoặc đơn vị cấp trên). Quý (khoản 3c): 20 ngày kể từ cuối quý (30 ngày với công ty mẹ); quý soát xét: 5 ngày kể từ ngày ký, không quá 45 ngày. Điều 14 áp cho tổ chức niêm yết và công ty đại chúng quy mô lớn. Trang còn nêu giải trình khi lợi nhuận sau thuế đổi từ 10% trở lên hoặc đổi dấu (khoản 4–5). Trang ghi "đang có hiệu lực" và có Thông tư 68/2024/TT-BTC (hiệu lực 02/11/2024) sửa đổi Điều 5 và bổ sung Điều 25, 33; nguồn thứ cấp khác nhắc sửa đổi 18/2025 và 08/2026 (chưa mở văn bản gốc). `CHƯA_BIẾT` liệu các sửa đổi đó có đổi Điều 10, 14 không; có nguồn thứ cấp nhắc một dự thảo thông tư thay thế Thông tư 96 (chưa mở), nên số ngày trên đây không được dùng làm quy tắc hành động khi chưa đối chiếu văn bản hợp nhất. `CHƯA_BIẾT` hệ thống công bố của cơ quan quản lý có cung cấp dữ liệu có cấu trúc hay không.
 
-`CHƯA_BIẾT` Việt Nam có API tương tự `companyfacts` hay không: tôi chưa xác nhận được; có thông tin thứ cấp, chưa mở, về cổng công bố một đầu mối của Ủy ban Chứng khoán Nhà nước từ tháng 03/2024. `SUY_LUẬN` Cho tới khi xác nhận, quy trình thực tế là: tìm báo cáo ở website quan hệ cổ đông của công ty hoặc cổng công bố, ghi URL và ngày mở, tải về và băm tệp, chép vào bảng, chạy đẳng thức, và ghi các ô đọc không rõ là `CHƯA_BIẾT`. Tệp có lớp chữ thì trích tự động rồi vẫn kiểm đẳng thức; PDF ảnh thì đọc từng trang, chép tay, tốt nhất có người chép lần hai (số FY2024 trong CSV là số trình bày lại, đừng so với báo cáo FY2024 gốc khi chưa kiểm).
+`CHƯA_BIẾT` Việt Nam có API tương tự `companyfacts` hay không (thông tin thứ cấp, chưa mở, về cổng công bố một đầu mối của Ủy ban Chứng khoán Nhà nước từ tháng 03/2024). `SUY_LUẬN` Cho tới khi xác nhận, quy trình là: tìm báo cáo ở website quan hệ cổ đông hoặc cổng công bố, ghi URL và ngày mở, tải và băm tệp, chép vào bảng, chạy đẳng thức, ghi ô đọc không rõ là `CHƯA_BIẾT`. Trước hết tìm bản có lớp chữ hoặc Excel (IR công ty, cổng sở giao dịch, Vietstock); có thì trích tự động rồi vẫn kiểm đẳng thức. PDF ảnh mới phải đọc từng trang và chép tay; CSV của bài **chưa được chép lần hai** bởi người khác (số FY2024 trong CSV là số trình bày lại, đừng so với báo cáo FY2024 gốc khi chưa kiểm).
 
 ## 5. Bảng tính: dựng để tự báo lỗi
 
@@ -122,7 +121,7 @@ Mỗi bảng có các cột: chỉ tiêu, mã số hoặc tag, kỳ, giá trị 
 3. (a) và (b) đều là FY2024 (hai hồ sơ báo cùng một số); (c) là FY2025. Lọc `fy == 2025` lấy cả (b) và (c), tức hai năm khác nhau. Phải lọc theo `start`/`end`.
 4. `90.711` triệu USD; `14.948.500` nghìn cổ phiếu.
 5. `112.010 − 84.544 = 27.466` triệu USD; nhãn `PHÉP_TÍNH` (suy ra từ hai số), không phải `SỰ_THẬT` của công bố quý 4.
-6. 90.711 − 90.052 = 659; 90.052 − 89.300 = 752; 90.711 − 89.300 = 1.411. Cho dòng tiền dùng 90.711 (tiền ra khỏi công ty). Nêu cả ba số kèm khái niệm; nguyên nhân khác nhau là `CHƯA_BIẾT`, không được đoán và không được bỏ số nào.
+6. 90.711 − 90.052 = 659; 90.052 − 89.300 = 752; 90.711 − 89.300 = 1.411 (hai số có 89.300 mang sai số khoảng ±50 triệu vì MD&A làm tròn 0,1 tỷ; độ chính xác `decimals` của thẻ là `CHƯA_BIẾT`, kiểm bằng trang R của 10-K). Cho dòng tiền ưu tiên 90.711 (`Ý_KIẾN`: là số trong báo cáo lưu chuyển tiền tệ). Nêu cả ba số kèm khái niệm; nguyên nhân khác nhau là `CHƯA_BIẾT`, không được đoán và không được bỏ số nào.
 7. Tỷ lệ 4: số cũ được trình bày lại sau một sự kiện chia tách (suy luận, không có nhãn trong dữ liệu). Khi so các năm, dùng cùng một cơ sở: chia số cũ cho 4 (hoặc dùng số điều chỉnh của hồ sơ mới nhất) và ghi lại.
 8. `126.679,19 + 131.220,01 = 257.899,20`: đạt.
 9. `18.040,59 − 2.574,22 − (−48,56) = 15.514,93`: đạt.
@@ -155,7 +154,7 @@ Một học viên viết: "Tôi lọc bản ghi `fy == 2025` của Apple, lấy 
 
 ## Kiểm tra chuyển bài
 
-Làm không nhìn mẫu; đạt khi đúng cả ba.
+Đạt khi đúng cả ba.
 
 1. Lợi nhuận cả năm 500, lũy kế chín tháng 360 (cùng đơn vị): quý 4 là bao nhiêu và nhãn là gì?
 2. Tài sản 1.000, nợ phải trả 640, vốn chủ 350: kiểm đẳng thức và nêu hành động.
@@ -182,12 +181,12 @@ Tiêu chí đạt: câu 1 `500 − 360 = 140`, nhãn `PHÉP_TÍNH`. Câu 2 `640 
 
 ## Khi nào bài này hết hiệu lực
 
-Hết đúng nếu: SEC đổi quy tắc truy cập hoặc đường dẫn API; Thông tư 96 bị thay thế hoặc sửa; Apple nộp 10-K/A hoặc trình bày lại số; cấu trúc JSON của `companyfacts` đổi; hoặc Việt Nam bắt buộc báo cáo XBRL tải được. Tập con `apple_xbrl_subset.json` (SHA-256 `04b292c59cb19cff018dc7418a8f03b59001069885766f43f766e314f6766c6b`, tải 01/11/2026) là ảnh chụp; số trong tệp đầy đủ có thể bị trình bày lại, nên so mã băm trước khi dùng.
+Hết đúng nếu: báo cáo FY2025 của Hòa Phát bị phát hành lại; Việt Nam đổi chuẩn kế toán (lộ trình `CHƯA_BIẾT`); SEC đổi quy tắc truy cập hoặc đường dẫn API; Thông tư 96 bị thay thế hoặc sửa; Apple nộp 10-K/A hoặc trình bày lại số; cấu trúc JSON của `companyfacts` đổi; hoặc Việt Nam bắt buộc báo cáo XBRL tải được. Tập con `apple_xbrl_subset.json` (SHA-256 `04b292c59cb19cff018dc7418a8f03b59001069885766f43f766e314f6766c6b`, tải 01/11/2026) là ảnh chụp; số trong tệp đầy đủ có thể bị trình bày lại, nên so mã băm trước khi dùng.
 
 ## Điều tôi vẫn chưa hiểu
 
-- Hệ thống công bố thông tin chính thức của Việt Nam có cho tải dữ liệu có cấu trúc không, và dưới điều khoản nào?
-- Công ty tôi theo dõi có đổi tag hay trình bày lại các kỳ trước không?
+- Hệ thống công bố của Việt Nam có cho tải dữ liệu có cấu trúc không?
+- Công ty tôi theo dõi có đổi tag hay trình bày lại kỳ trước không?
 
 ## Nguồn Internet đã mở
 
@@ -201,6 +200,6 @@ Truy cập `2026-11-01` và mở lại `2026-11-02` (các mục đã mở lại 
 | [Apple Form 10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) | Gốc; FY kết thúc 27/09/2025 | Cơ sở đối chiếu số trong bài Q2; báo cáo biến động vốn chủ 90.052 và lưu chuyển tiền tệ 90.711 |
 | [BCTC hợp nhất kiểm toán FY2025 của Hòa Phát](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/03/20260327-hpg-bctc-hop-nhat-nam-2025-sau-kiem-toan.pdf) | Gốc; PDF ảnh; VND; VAS; trang in 4–10 | Bản chép và các đẳng thức |
 | [Apple 8-K quý 4 FY2025, phụ lục 99.1](https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm) | Gốc; quý kết thúc 27/09/2025 | Lợi nhuận ròng quý 4 27.466 |
-| [Thông tư 96/2020/TT-BTC (bản đăng lại trên caselaw.vn)](https://caselaw.vn/van-ban-phap-luat/372205-thong-tu-so-96-2020-tt-btc-ngay-16-11-2020-cua-bo-truong-bo-tai-chinh-huong-dan-cong-bo-thong-tin-tren-thi-truong-chung-khoan) | Thứ cấp; đã đọc 100.000/235.516 ký tự, gồm Điều 10 và 14 | Thời hạn công bố, giải trình lợi nhuận |
+| [Thông tư 96/2020/TT-BTC (bản đăng lại trên caselaw.vn)](https://caselaw.vn/van-ban-phap-luat/372205-thong-tu-so-96-2020-tt-btc-ngay-16-11-2020-cua-bo-truong-bo-tai-chinh-huong-dan-cong-bo-thong-tin-tren-thi-truong-chung-khoan) | Thứ cấp; đã đọc toàn văn bản đăng lại (235.516 ký tự), gồm Điều 10 và 14 | Thời hạn công bố, giải trình lợi nhuận |
 
 `CHƯA_BIẾT` Văn bản gốc của Bộ Tài chính và các sửa đổi 18/2025, 08/2026 có đổi Điều 10, 14 không; dữ liệu có cấu trúc từ cổng công bố Việt Nam; nguyên nhân ba số mua lại của Apple khác nhau; điều khoản ghi nguồn khi đăng lại dữ liệu SEC.

@@ -60,6 +60,11 @@ class BaiQ3(unittest.TestCase):
 
     def test_nhom_thep_va_mau_so_9_thang(self):
         self.assertAlmostEqual(18396 / 165784, 0.1110, places=4)
+        # lãi vay/doanh thu và nợ/vốn chủ
+        self.assertAlmostEqual(sum(q26) / 171539, 0.0270, places=4)
+        self.assertAlmostEqual(sum(q25) / 156116.1, 0.0200, places=4)
+        self.assertAlmostEqual(sum(q25[:3]) / 111031, 0.0169, places=4)
+        self.assertAlmostEqual(105737 / 149568, 0.707, places=3)
         self.assertEqual(171539 - 139499, 32040)
         self.assertEqual(32040 - 30775, 1265)
         self.assertAlmostEqual(23746 / (139499 + 30775), 0.1395, places=4)
@@ -87,6 +92,11 @@ class BaiQ3(unittest.TestCase):
         self.assertAlmostEqual(sum(q26) / sum(q25), 1.49, places=2)
         self.assertAlmostEqual(171539 / 111031 - 1, 0.545, places=3)
         self.assertAlmostEqual(18396 / 165784, 0.1110, places=4)
+        # lãi vay/doanh thu và nợ/vốn chủ
+        self.assertAlmostEqual(sum(q26) / 171539, 0.0270, places=4)
+        self.assertAlmostEqual(sum(q25) / 156116.1, 0.0200, places=4)
+        self.assertAlmostEqual(sum(q25[:3]) / 111031, 0.0169, places=4)
+        self.assertAlmostEqual(105737 / 149568, 0.707, places=3)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 """Công cụ sàng lọc chất lượng lợi nhuận (bài Q1): Beneish M-score, Altman Z'', Piotroski F-score.
 
 Chỉ dùng thư viện chuẩn Python 3. Đây là công cụ SÀNG LỌC, không phải bằng chứng gian lận.
-Hệ số Beneish và Altman lấy từ nguồn thứ cấp (Wikipedia, mở 2026-11-01), chưa đối chiếu bài gốc.
+Hệ số Beneish lấy từ nguồn thứ cấp (Wikipedia), chưa đối chiếu bài gốc; hệ số Altman Z'' và hằng số 3,25
+đã đối chiếu với bản sao Altman (2000), còn cận vùng 2,6/1,1 chỉ có ở Wikipedia.
 Số HPG FY2025 nằm trong hpg_fy2025_statements.csv (tỷ VND).
 Chạy: python3 earnings_quality.py
 """
@@ -91,7 +92,7 @@ def altman_zpp(f) -> dict[str, float]:
 
 def altman_zpp_em(f) -> float:
     """Biến thể thị trường mới nổi (Wikipedia, mở 2026-11-01): cộng hằng số 3,25 vào Z''; cùng vùng
-    2,6 và 1,1 theo trang đó. Hằng số và vùng chưa đối chiếu bài gốc."""
+    2,6 và 1,1 theo trang đó. Hằng số khớp Altman (2000); vùng của biến thể này là CHƯA_BIẾT."""
     return 3.25 + altman_zpp(f)["Z"]
 
 
