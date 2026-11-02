@@ -1,13 +1,14 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q1 — Chất lượng lợi nhuận có công cụ (Beneish, Altman, Piotroski)
+# Bài Q1 — Chất lượng lợi nhuận có công cụ (Beneish, Altman, Piotroski)
 
-- Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 2–4 ngày `2026-11-02`.
+- Ngày viết: `2026-11-01`; sửa sau kiểm duyệt vòng 2–6 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: báo cáo tài chính hợp nhất kiểm toán FY2025. **Hệ số Beneish lấy từ nguồn thứ cấp**; hệ số Altman đã đối chiếu với bản sao Altman (2000).
 - Mục tiêu: Tính M-score, Z'' và F-score; đọc từng thành phần; phân biệt tín hiệu thật với hiệu ứng cơ học; viết kết luận không vượt quá bằng chứng.
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [earnings_quality.py](../practice/models/earnings_quality.py) và [hpg_fy2025_statements.csv](../practice/models/hpg_fy2025_statements.csv); kiểm bằng `python3 -m unittest discover tests`.
-- Kiểm nguồn: `CHƯA`
-- Phản biện rủi ro: `CHƯA`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
+- Biên bản: [kiểm nguồn](../reviews/Q1-fact-check.md), [phản biện](../reviews/Q1-risk-review.md)
 - Câu hỏi cốt lõi: **Báo cáo này có chỗ nào bất thường đáng đào sâu, và mỗi bất thường đó có lời giải thích đời thường nào không?**
 
 ## Hiểu bài này trong 1 phút

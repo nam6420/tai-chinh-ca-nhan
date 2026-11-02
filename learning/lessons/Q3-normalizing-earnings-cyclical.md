@@ -1,13 +1,14 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ
+# Bài Q3 — Chuẩn hóa lợi nhuận và công ty chu kỳ
 
-- Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 2–5 ngày `2026-11-02`.
+- Ngày viết: `2026-11-01`; sửa sau các vòng kiểm duyệt 2–6 ngày `2026-11-02`.
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: BCTC hợp nhất kiểm toán FY2025, báo cáo thường niên 2019 và 2023, tổng quan Q3/2026 và một bài báo về Q1/2026 (bảng cuối bài).
 - Mục tiêu: Phân biệt lợi nhuận một năm với mức "bình thường"; chuẩn hóa bằng trung bình, biên, trung vị, bỏ năm cực đoan, ROE; biết mỗi cách sai ở đâu.
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [cyclical.py](../practice/models/cyclical.py) và [hpg_cycle_inputs.csv](../practice/models/hpg_cycle_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
-- Kiểm nguồn: `CHƯA`
-- Phản biện rủi ro: `CHƯA`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
+- Biên bản: [kiểm nguồn](../reviews/Q3-fact-check.md), [phản biện](../reviews/Q3-risk-review.md)
 - Câu hỏi cốt lõi: **Nếu năm nay không phải năm điển hình, thì lợi nhuận "điển hình" là bao nhiêu và ta nên tin con số ấy đến đâu?**
 
 ## Hiểu bài này trong 1 phút
