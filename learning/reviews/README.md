@@ -1,5 +1,7 @@
 # Sổ kiểm duyệt bài học
 
+> **Cập nhật 2026-11-02:** bốn bài Q1–Q4 (Đợt 3) đã qua hai nhánh độc lập (Q2, Q4 ở vòng 5; Q1, Q3 ở vòng 6) và qua cổng `validate_report.py`. Tiêu chí ĐẠT từ vòng 4: không còn lỗi nghiêm trọng hoặc mức cao chưa xử lý; điểm trung bình và thấp còn mở được liệt kê trong biên bản. Nhật ký các vòng: [Q-round-1](Q-round-1.md), [Q-round-2](Q-round-2.md), [Q-round-3](Q-round-3.md), [Q-round-4](Q-round-4.md), [Q-round-5-6](Q-round-5-6.md); đây là tóm lược của điều phối viên, không phải biên bản ĐẠT.
+
 > **Cập nhật 2026-10-31:** bài 010, 011, 012, F1, F2 đã viết lại theo [chuẩn chiều sâu](../../docs/LESSON_DEPTH_STANDARD.md), qua bốn vòng kiểm nguồn và phản biện độc lập, và **đã qua cổng xuất bản** (`validate_report.py`) với biên bản khớp mã băm ở bảng dưới. Biên bản ghi đè cùng tên tệp (bản cũ trong lịch sử git). Giữ các điểm Thấp còn mở trong biên bản: chưa có nguồn mở được cho Fisher dạng nhân, quan hệ sạch của RIM, thiểu số và chi phí trụ sở trong SOTP; giá AAPL 345 USD chỉ từ nguồn thứ cấp.
 
 - Cập nhật: `2026-10-27`.
@@ -16,6 +18,10 @@
 
 | Bài | Nội dung | Kiểm nguồn | Phản biện | Phiên bản |
 |---|---|---|---|---|
+| [Q1](../lessons/Q1-earnings-quality-toolkit.md) | Đợt 3, kiểm duyệt 2026-11-02 | [ĐẠT](Q1-fact-check.md) | [ĐẠT](Q1-risk-review.md) | `24094d79412f…` |
+| [Q3](../lessons/Q3-normalizing-earnings-cyclical.md) | Đợt 3, kiểm duyệt 2026-11-02 | [ĐẠT](Q3-fact-check.md) | [ĐẠT](Q3-risk-review.md) | `3b543db8af30…` |
+| [Q2](../lessons/Q2-sbc-dilution-buybacks-dividends.md) | Đợt 3, kiểm duyệt 2026-11-02 | [ĐẠT](Q2-fact-check.md) | [ĐẠT](Q2-risk-review.md) | `e84b15a0bf43…` |
+| [Q4](../lessons/Q4-getting-data-edgar-xbrl-vietnam.md) | Đợt 3, kiểm duyệt 2026-11-02 | [ĐẠT](Q4-fact-check.md) | [ĐẠT](Q4-risk-review.md) | `d08f14b282f9…` |
 | [K1](../lessons/K1-screening-watchlist.md) | Đã soạn | [ĐẠT](K1-fact-check.md) | [ĐẠT](K1-risk-review.md) | `63a29010c308…` |
 | [K2](../lessons/K2-failure-case-postmortem.md) | Đã soạn | [ĐẠT](K2-fact-check.md) | [ĐẠT](K2-risk-review.md) | `50c2292f7720…` |
 | [F1](../lessons/F1-three-statement-model-sensitivity.md) | Viết lại 2026-10-31 | [ĐẠT](F1-fact-check.md) | [ĐẠT](F1-risk-review.md) | `3f2c5014c1bf…` |

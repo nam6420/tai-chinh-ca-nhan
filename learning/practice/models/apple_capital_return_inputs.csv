@@ -1,0 +1,14 @@
+chi_tieu,FY2025,FY2024,FY2023,don_vi,nguon
+net_income,112010,93736,96995,trieu USD,Apple 10-K FY2025 bao cao ket qua kinh doanh
+sbc,12863,11688,10833,trieu USD,Apple 10-K FY2025 luu chuyen tien te
+tax_net_share_settlement,5960,5441,5431,trieu USD,Apple 10-K FY2025 luu chuyen tien te (so chi)
+repurchases_cash,90711,94949,77550,trieu USD,Apple 10-K FY2025 luu chuyen tien te (so chi)
+dividends_paid,15421,15234,15025,trieu USD,Apple 10-K FY2025 luu chuyen tien te (so chi)
+cfo,111482,118254,110543,trieu USD,Apple 10-K FY2025 luu chuyen tien te
+capex,12715,9447,10959,trieu USD,Apple 10-K FY2025 luu chuyen tien te (so chi)
+basic_shares_wtd,14948500,15343783,15744231,nghin co phieu,Apple 10-K FY2025
+diluted_shares_wtd,15004697,15408095,15812547,nghin co phieu,Apple 10-K FY2025
+eps_basic,7.49,6.11,6.16,USD,Apple 10-K FY2025
+eps_diluted,7.46,6.08,6.13,USD,Apple 10-K FY2025
+shares_outstanding_end,14773260,15116786,,nghin co phieu,Apple 10-K FY2025 (cuoi nam tai chinh)
+dividend_per_share,1.02,0.98,0.94,USD,Apple 10-K FY2025 (khai bao)

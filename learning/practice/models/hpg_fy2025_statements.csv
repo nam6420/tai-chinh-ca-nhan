@@ -1,0 +1,25 @@
+chi_tieu,ma_so,FY2025,FY2024,ghi_chu
+doanh_thu_thuan,10,156116.094618,138855.112131,Bao cao KQKD hop nhat (ty VND)
+gia_von,11,131618.306435,120357.563003,
+loi_nhuan_gop,20,24497.788183,18497.549128,
+chi_phi_ban_hang,25,2633.630712,2337.308265,
+chi_phi_quan_ly,26,1436.537357,1545.516023,
+chi_phi_lai_vay,23,3114.855869,2287.360811,
+loi_nhuan_truoc_thue,50,18040.591978,13693.502261,
+lnst_chung,60,15514.931572,12020.023621,Loi nhuan sau thue gom co dong khong kiem soat (ma 60; ma 61 la cong ty me)
+phai_thu_khach_hang,131,10971.774018,4352.135420,Phai thu ngan han cua khach hang
+phai_thu_ngan_han_tong,130,15042.323118,7647.800287,
+tai_san_ngan_han,100,103659.402760,86674.276273,Da gom ma 110 120 130 140 150
+dau_tu_tai_chinh_ngan_han,120,19484.412761,18974.716731,Dau tu nam giu den ngay dao han
+tscd_huu_hinh,221,133420.846696,67244.150975,Gia tri con lai
+tong_tai_san,270,257899.200818,224489.707554,
+no_ngan_han,310,94186.268325,75225.243263,
+vay_dai_han,338,27479.194058,27080.443256,Vay va no thue tai chinh dai han
+von_chu_so_huu,400,131220.010877,114647.457984,Gom loi ich co dong khong kiem soat
+loi_nhuan_chua_phan_phoi,421,51037.901749,49599.124109,
+khau_hao,"LCTT 02",8470.683260,6927.967223,Gom phan bo loi the thuong mai va chi phi thue dat
+cfo,"LCTT 20",17365.859057,6608.320655,Luu chuyen tien thuan tu HDKD
+xay_dung_do_dang,240,10869.891371,63750.717325,Tai san do dang dai han (CIP la mot phan)
+dau_tu_tai_chinh_dai_han,250,2248.000000,136.500000,Tien gui co ky han dai han (dau tu nam giu den ngay dao han)
+no_dai_han_den_han,,8826.169216,3298.839307,Thuyet minh 23 (trang in 35): no dai han den han tra; cot FY2025 la so cuoi nam, cot FY2024 la so dau nam 2025 (3.298.839.307.413 VND)
+du_phong_phai_thu_ngan_han,137,132.548699,159.993736,Du phong phai thu ngan han kho doi (so am trong ngoac; ty VND; trang in 5)
