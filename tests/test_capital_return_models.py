@@ -78,6 +78,27 @@ class BaiQ2(unittest.TestCase):
         self.assertAlmostEqual(r["eps_sau"], 10416.67, places=2)
         self.assertAlmostEqual(c.adjust_for_bonus(10000, 0.1), 9090.91, places=2)
 
+    def test_tra_co_dong_so_voi_dong_tien_ba_nam(self):
+        a = c.load_apple()
+        chenh = {}
+        for fy in ("FY2025", "FY2024", "FY2023"):
+            tra = a["dividends_paid"][fy] + a["repurchases_cash"][fy]
+            fcf = a["cfo"][fy] - a["capex"][fy]
+            chenh[fy] = tra - fcf
+        self.assertEqual(chenh, {"FY2025": 7365, "FY2024": 1376, "FY2023": -7009})
+
+    def test_gia_mua_trung_binh_apple(self):
+        # Note 10 của 10-K: mua lại 401.672 nghìn cổ phiếu, phát hành ròng 58.146 nghìn
+        self.assertEqual(401672 - 58146, 343526)
+        self.assertAlmostEqual(89300 / 401.672, 222.3, places=1)
+        self.assertAlmostEqual(90711 / 401.672, 225.8, places=1)
+
+    def test_hpg_loi_nhuan_chua_phan_phoi(self):
+        # thuyết minh 26 (trang in 38), tỷ VND
+        dau, cuoi = 49599.1, 51037.9
+        bien_dong = -12792.2 + 15453.2 - 496.0 - 600.0 + 6.4 - 129.1 - 3.5
+        self.assertAlmostEqual(dau + bien_dong, cuoi, delta=0.2)
+
 
 if __name__ == "__main__":
     unittest.main()

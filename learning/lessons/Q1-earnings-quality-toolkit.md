@@ -1,7 +1,7 @@
 # BẢN NHÁP - CHƯA KIỂM DUYỆT: Bài Q1 — Chất lượng lợi nhuận có công cụ (Beneish, Altman, Piotroski)
 
 - Ngày viết: `2026-11-01`; sửa sau vòng kiểm duyệt 2 ngày `2026-11-02`.
-- Chốt dữ liệu lúc: `2026-11-01 (Asia/Ho_Chi_Minh)`
+- Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: báo cáo tài chính hợp nhất kiểm toán FY2025. **Hệ số Beneish lấy từ nguồn thứ cấp**; hệ số Altman đã đối chiếu với bản sao Altman (2000).
 - Mục tiêu: Tính M-score, Z'' và F-score; đọc từng thành phần; phân biệt tín hiệu thật với hiệu ứng cơ học; viết kết luận không vượt quá bằng chứng.
 - Thời lượng: 3 phiên.

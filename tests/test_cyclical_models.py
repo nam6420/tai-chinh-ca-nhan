@@ -78,6 +78,16 @@ class BaiQ3(unittest.TestCase):
         self.assertAlmostEqual(tb_bo_dinh, 0.07577, places=4)
         self.assertAlmostEqual(n["lnst_chung"] / n["doanh_thu"] / tb_bo_dinh, 1.827, places=2)
 
+    def test_lai_vay_theo_quy_va_quy_mo(self):
+        # bản tổng quan Q3/2026 (trang 5): chi phí lãi vay theo quý, tỷ VND
+        q25 = [627, 439, 812, 1237]
+        q26 = [1333, 1520, 1774]
+        self.assertAlmostEqual(sum(q25), 3114.9, delta=1.0)  # khớp mã 23 của BCTC FY2025
+        self.assertEqual(sum(q26), 4627)
+        self.assertAlmostEqual(sum(q26) / sum(q25), 1.49, places=2)
+        self.assertAlmostEqual(171539 / 111031 - 1, 0.545, places=3)
+        self.assertAlmostEqual(18396 / 165784, 0.1110, places=4)
+
 
 if __name__ == "__main__":
     unittest.main()
