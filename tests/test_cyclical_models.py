@@ -78,6 +78,11 @@ class BaiQ3(unittest.TestCase):
         self.assertAlmostEqual(tb_bo_dinh, 0.07577, places=4)
         self.assertAlmostEqual(n["lnst_chung"] / n["doanh_thu"] / tb_bo_dinh, 1.827, places=2)
 
+    def test_bien_2017_2019_theo_bao_cao_thuong_nien_2019(self):
+        # báo cáo thường niên 2019: doanh thu và lợi nhuận sau thuế hợp nhất, tỷ VND
+        for dt, ln, bien in ((46855, 8015, 0.17), (56580, 8600, 0.15), (64678, 7578, 0.12)):
+            self.assertAlmostEqual(ln / dt, bien, delta=0.005)
+
     def test_lai_vay_theo_quy_va_quy_mo(self):
         # bản tổng quan Q3/2026 (trang 5): chi phí lãi vay theo quý, tỷ VND
         q25 = [627, 439, 812, 1237]

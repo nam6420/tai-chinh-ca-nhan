@@ -69,6 +69,13 @@ class BaiQ4(unittest.TestCase):
         ]}}}}}
         self.assertEqual(dp.annual_series(facts, "X"), {"2024-12-31": 2})
 
+    def test_ytd_value_chon_ho_so_nop_muon_nhat(self):
+        facts = {"facts": {"us-gaap": {"X": {"units": {"USD": [
+            {"start": "2025-01-01", "end": "2025-09-30", "val": 10, "accn": "a-25-000001", "form": "10-Q", "filed": "2025-11-01"},
+            {"start": "2025-01-01", "end": "2025-09-30", "val": 12, "accn": "a-26-000001", "form": "10-Q", "filed": "2026-02-01"},
+        ]}}}}}
+        self.assertEqual(dp.ytd_value(facts, "X", "2025-09-30", (265, 280)), 12)
+
     def test_fetch_gioi_han_tan_suat_va_cache(self):
         sleeps, calls = [], []
 

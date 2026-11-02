@@ -90,7 +90,7 @@ class BaiQ1(unittest.TestCase):
         self.assertAlmostEqual(q.altman_zpp_em(t), 5.775, places=3)
         f = q.piotroski(t, p)
         # LEVER theo Piotroski gồm nợ dài hạn đến hạn: (27.479,2 + 8.826,2)/241.194,5 = 15,05% so với
-        # (27.080,5 + 3.298,8)/206.136,4 = 14,74%: đòn bẩy tăng, tín hiệu trượt
+        # (27.080,4 + 3.298,8)/206.136,4 = 14,74%: đòn bẩy tăng, tín hiệu trượt
         self.assertEqual(f["F_dLEVER"], 0)
         self.assertEqual(f["F_SCORE"], 6)
         self.assertEqual((f["F_dTURN"], f["F_dLIQUID"]), (0, 0))
@@ -100,6 +100,12 @@ class BaiQ1(unittest.TestCase):
         # định nghĩa hẹp (chỉ mã 338) lệch khỏi bài gốc và cho 7/6
         self.assertEqual(q.piotroski(t, p, lever_def="hep")["F_SCORE"], 7)
         self.assertEqual(q.piotroski(t2, p2, lever_def="hep")["F_SCORE"], 6)
+        # độ nhạy của Z'': loại thu nhập tài chính hạ Z'', cộng lại cổ tức bằng cổ phiếu nâng Z'' qua 2,6
+        t3 = dict(t, ebit=t["ebit"] - 2081.8)
+        self.assertAlmostEqual(q.altman_zpp(t3)["Z"], 2.471, places=3)
+        t4 = dict(t, loi_nhuan_giu_lai=t["loi_nhuan_giu_lai"] + 12792.2)
+        self.assertAlmostEqual(q.altman_zpp(t4)["X2"], 0.2475, places=4)
+        self.assertAlmostEqual(q.altman_zpp(t4)["Z"], 2.687, places=3)
         # không có dữ liệu phát hành thì không được mặc định "đạt"
         thieu = {k: v for k, v in t.items() if k != "phat_hanh_co_phieu"}
         with self.assertRaises(KeyError):

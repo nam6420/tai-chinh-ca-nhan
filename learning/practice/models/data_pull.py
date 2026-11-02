@@ -105,12 +105,19 @@ def conflicting_values(facts: dict, tag: str, unit: str, taxonomy: str = "us-gaa
 
 
 def ytd_value(facts: dict, tag: str, end: str, days: tuple[int, int], unit: str = "USD") -> float:
-    """Giá trị lũy kế từ đầu năm tài chính đến `end` (ví dụ 9 tháng: 265–280 ngày)."""
+    """Giá trị lũy kế từ đầu năm tài chính đến `end` (ví dụ 9 tháng: 265–280 ngày). Cùng quy ước chọn hồ sơ
+    như `annual_series` (nộp muộn nhất, hòa thì `accn` lớn hơn) để số cả năm và số lũy kế cùng một cơ sở;
+    nếu hai số thuộc hai lần trình bày khác nhau thì quý 4 suy ra có thể sai: kiểm `filed`/`accn` của cả hai."""
+    best = None
     for r in rows(facts, tag, unit):
         d = duration_days(r)
-        if r["end"] == end and d is not None and days[0] <= d <= days[1]:
-            return r["val"]
-    raise KeyError((tag, end))
+        if r["end"] != end or d is None or not days[0] <= d <= days[1]:
+            continue
+        if best is None or (r["filed"], r.get("accn", "")) > (best["filed"], best.get("accn", "")):
+            best = r
+    if best is None:
+        raise KeyError((tag, end))
+    return best["val"]
 
 
 def derive_q4(fy_value: float, nine_month_value: float) -> float:
