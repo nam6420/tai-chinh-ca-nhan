@@ -1,0 +1,32 @@
+[
+  {
+    "ma": "H3",
+    "tep": "learning/lessons/H3-risk-volatility-drawdown-liquidity.md",
+    "snapshot": "data/raw/payloads/learning-wave4-group2-snapshot-2026-11-02-1541/H3-risk-volatility-drawdown-liquidity.md",
+    "hash_chuan": "31f86268818194f8cb7b1bb9ad0380560e61d78da5afb068e5b91b9902e091ab",
+    "chot_du_lieu": "2026-11-02 15:41 Asia/Ho_Chi_Minh"
+  },
+  {
+    "ma": "H4",
+    "tep": "learning/lessons/H4-twr-mwr-benchmark.md",
+    "snapshot": "data/raw/payloads/learning-wave4-group2-snapshot-2026-11-02-1541/H4-twr-mwr-benchmark.md",
+    "hash_chuan": "9d28a01da565d27988658fc52331a0cfe203210d3c4c83561ec12f13e5e3625f",
+    "chot_du_lieu": "2026-11-02 15:41 Asia/Ho_Chi_Minh"
+  },
+  {
+    "ma": "H5",
+    "tep": "learning/lessons/H5-statistics-backtest-overfitting.md",
+    "snapshot": "data/raw/payloads/learning-wave4-group2-snapshot-2026-11-02-1541/H5-statistics-backtest-overfitting.md",
+    "hash_chuan": "a115d41d57c777a39c1f2c2db6c6040840ee3b1817ec2d71ac87b1195d62de30",
+    "chot_du_lieu": "2026-11-02 15:41 Asia/Ho_Chi_Minh"
+  },
+  {
+    "ma": "H4",
+    "vong": 2,
+    "ly_do": "Sửa diễn đạt alpha sau phát hiện trung bình; bản vòng1 giữ lại, chưa dùng xuất bản",
+    "tep": "learning/lessons/H4-twr-mwr-benchmark.md",
+    "snapshot": "data/raw/payloads/learning-wave4-group2-snapshot-2026-11-02-1541/H4-v2-twr-mwr-benchmark.md",
+    "hash_chuan": "7b20b19c335a4a3d1eca6e9af51913b06badde7b54efff00987a3de044168999",
+    "chot_du_lieu": "2026-11-02 15:41 Asia/Ho_Chi_Minh"
+  }
+]

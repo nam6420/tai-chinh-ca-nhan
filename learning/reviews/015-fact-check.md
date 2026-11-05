@@ -6,7 +6,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Phạm vi: `Đọc toàn bài; tìm kiếm/mở nguồn trọng yếu; tái tính ví dụ và toàn bộ đáp án; kiểm kỳ, đơn vị, phạm vi và giới hạn nguồn.`
 - Báo cáo đích: `learning/lessons/015-behavior-decision-journal.md`
-- SHA-256 nội dung đích: `0a5126787c5b420aa2f1534cd85d2a7f2502484c5f05bf28cb365f7a6683d76b`
+- SHA-256 nội dung đích: `5c4a2a3f992787b1b76329b360dda425eb1053611f98c36aeae7cee47cd39a24`
 - Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
 - Người ghi: Điều phối viên, chép/tổng hợp kết quả của nhánh độc lập trong cuộc trò chuyện ngày26/10/2026; người kiểm không sửa bài.

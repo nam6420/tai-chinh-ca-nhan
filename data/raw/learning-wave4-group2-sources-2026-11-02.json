@@ -1,0 +1,72 @@
+{
+  "chot_du_lieu": "2026-11-02 15:41 Asia/Ho_Chi_Minh",
+  "tai_lieu": [
+    {
+      "url": "https://www.berkshirehathaway.com/letters/2024ltr.pdf",
+      "ky": "22/02/2025; S&P 2008–2009, 2022–2023; trang PDF15; %, USD",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/berkshire-2024-letter.pdf",
+      "sha256": "ff21ab9407dec219757587b6ce6a1bf30e59cfff15bb21e81d1faaec7f97a8a7",
+      "byte": 64860,
+      "truy_cap": "2026-11-02T15:41:26.506799+07:00"
+    },
+    {
+      "url": "https://www.kevinsheppard.com/files/teaching/mfe/advanced-econometrics/Sullivan_Timmermann_White.pdf",
+      "ky": "10/1999; DJIA1897–1996; quy tắc, số đếm",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/sullivan-1999.pdf",
+      "sha256": "4f0292c3d3adea992cfa55014b363840254143f18e7908021ed2109d5a4d7a54",
+      "byte": 797925,
+      "truy_cap": "2026-11-02T15:41:26.507603+07:00"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
+      "ky": "Không ghi ngày; độ lệch chuẩn mẫu",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/nist-scale.html",
+      "sha256": "803f3dc9a1f431551c104cda1a0e25afcc0b742b41a112904a413e33a61d1d6d",
+      "byte": 17921,
+      "truy_cap": "2026-11-02T15:41:27.769129+07:00"
+    },
+    {
+      "url": "https://www.gipsstandards.org/standards/gips-standards-for-firms/gips-standards-handbook-for-firms/",
+      "ky": "Chuẩn2020; sổ tay trực tuyến",
+      "payload_error": "HTTP Error 403: Forbidden",
+      "ghi_chu": "Nội dung được mở bằng web trong lượt; không có payload tải bằng urllib."
+    },
+    {
+      "url": "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/backtesting-and-simulation",
+      "ky": "Chương trình2026; tóm tắt",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/cfa-backtest.html",
+      "sha256": "ffb3b568ee5c8ffafbb3b1060297f700e7919f56d15b475ac687631a38d219a8",
+      "byte": 154194,
+      "truy_cap": "2026-11-02T15:41:28.133375+07:00"
+    },
+    {
+      "url": "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/rates-and-returns",
+      "ky": "Chương trình2026; tóm tắt",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/cfa-returns.html",
+      "sha256": "7d7377c87331890c9c7dc2fe17fd0be6d3227899245504b9e08f90c63ccef13b",
+      "byte": 150072,
+      "truy_cap": "2026-11-02T15:41:28.547929+07:00"
+    },
+    {
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/liquidity-or-marketability",
+      "ky": "Không ghi ngày; Hoa Kỳ",
+      "tep": "data/raw/payloads/learning-wave4-group2-2026-11-02/sec-liquidity.html",
+      "sha256": "22b809c4efd0edfda6bf4a32a98bf284362ebcf9d74061de1b15560d5b5b6622",
+      "byte": 58274,
+      "truy_cap": "2026-11-02T15:41:29.085811+07:00"
+    },
+    {
+      "url": "https://arxiv.org/abs/1404.7493",
+      "ky": "29/04/2014, sửa21/09/2016 v5",
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "ghi_chu": "Mở thực tế bằng web; không giữ payload riêng."
+    }
+  ],
+  "gioi_han": "Một bản sao không tạo nguồn độc lập; số thật giữ kỳ lịch sử. Không sửa manifest nhóm1.",
+  "nguon_bo_sung_doi_chieu_alpha": {
+    "url": "https://rpc.cfainstitute.org/sites/default/files/-/media/documents/book/rf-publication/2003/rf-v2003-n1-3922-pdf.pdf",
+    "ky": "08/2003",
+    "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+    "ghi_chu": "Điều phối mở PDF thực tế sau kiểm vòng1 để kiểm diễn đạt alpha; không thêm dữ liệu thị trường. Mốc chốt bài giữ nguyên."
+  }
+}

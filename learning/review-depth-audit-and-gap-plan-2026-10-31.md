@@ -103,7 +103,7 @@
 | **1 — Vá chiều sâu lõi định giá** | Viết lại **010 → 011 → 012 → F1 → F2** theo chuẩn; thêm `practice/models/` với DCF, ba báo cáo, độ nhạy (XLSX hoặc CSV+công thức); dùng báo cáo thật của một DN phi tài chính | 5 bài ≈ 3k từ + 3–4 mô hình mẫu | Người học dựng lại DCF từ báo cáo thật, giải thích biến chi phối kết quả |
 | **2 — Hồ sơ mẫu đa dạng (D4, D5, G3)** | Lập 4 hồ sơ mẫu: DN Việt phi tài chính, ngân hàng Việt, công ty chu kỳ, bán lẻ/phần mềm; chọn theo người học; dùng cùng mẫu `templates/company-report.md` | 4 hồ sơ nháp + 4 cặp biên bản | Mỗi hồ sơ có 3 kịch bản, rủi ro, điều làm luận điểm mất hiệu lực |
 | **3 — Lấp khoảng trống cao (G1, G2, G4, G10)** | Bài mới: **Q1 Chất lượng lợi nhuận có công cụ** (Beneish/Altman/Piotroski), **Q2 SBC, pha loãng, mua lại, cổ tức**, **Q3 Chuẩn hóa lợi nhuận và công ty chu kỳ**, **Q4 Lấy dữ liệu: EDGAR/XBRL/HOSE, bảng tính** | 4 bài + tệp mẫu | Làm được bài "bẩn" trên dữ liệu thật |
-| **4 — Nâng cấp bài mỏng theo ưu tiên** | Nâng cấp **N1, N4, N5, H3–H5, A1–A4, M1–M3, F3–F7, 013, 014** (nhóm 3/10–4/10 trong §2) theo chuẩn; mỗi lần 3–4 bài | ~25 bài sâu hơn | Mỗi bài đạt chuẩn §6 và có biên bản mới |
+| **4 — Nâng cấp bài mỏng theo ưu tiên** | Nâng cấp **N1, N4, N5, H3–H5, A1–A4, M1–M3, F3–F7, 013, 014** (nhóm 3/10–4/10 trong §2) theo chuẩn; mỗi lần 3–4 bài | 20 mã đích danh cần nâng | Mỗi bài đạt chuẩn §6 và có biên bản mới |
 | **5 — Chủ đề còn thiếu (G5–G9, G11)** | Bài mới: **chứng quyền & phái sinh VN (hiểu rủi ro)**, **trái phiếu: YTM/duration/spread**, **bằng chứng phong cách đầu tư**, **hưu trí & nhà ở**, **vĩ mô nâng cao**, **thêm 3–4 ca thất bại** | 8–10 bài | Có bài tập số và ca đối chứng |
 | **6 — Đánh giá thành thạo (G12, D9)** | Kiểm tra cuối chặng, thẻ ôn cách quãng, rubric; chạy thử 3 phiên với một người học thật; đo phút thật, lỗi, câu chưa hiểu | Bộ kiểm tra + báo cáo phản hồi | Có dữ liệu học thật trước khi chốt lộ trình dài hạn |
 | **Liên tục — Dữ liệu hết hạn (D8)** | Thêm trường `Hết hạn rà lúc` ở bài có quy định/phí/thuế/số liệu; danh sách rà 6 tháng/lần; thay bảng số 008 bằng mẫu cập nhật có nguồn | Bảng hạn dùng + lịch rà | Không bài nào dẫn quy định không có ngày rà |
@@ -116,7 +116,7 @@
 
 ### Ước lượng khối lượng
 
-`CHƯA_BIẾT` công sức thực tế. `Ý_KIẾN` đếm đầu việc: Đợt 1 (5 bài + mô hình), Đợt 2 (4 hồ sơ), Đợt 3 (4 bài), Đợt 4 (~25 bài), Đợt 5 (8–10 bài). Đợt 4 là khối lượng lớn nhất; có thể giảm nếu người học chỉ theo một nhánh (xem điều kiện đổi kế hoạch).
+`CHƯA_BIẾT` công sức thực tế. `Ý_KIẾN` đếm đầu việc: Đợt 1 (5 bài + mô hình), Đợt 2 (4 hồ sơ), Đợt 3 (4 bài), Đợt 4 (20 mã đích danh), Đợt 5 (8–10 bài). Đợt 4 là khối lượng lớn nhất; có thể giảm nếu người học chỉ theo một nhánh (xem điều kiện đổi kế hoạch).
 
 ## 8. Rủi ro của kế hoạch này
 
@@ -139,3 +139,26 @@
 - Đợt 1: viết lại 010, 011, 012, F1, F2 (3 phiên mỗi bài, 10 câu bài tập, bài "bẩn", "sai ở đâu", kiểm tra chuyển bài); thêm [mô hình Python](practice/models/valuation.py) và số Apple FY2025 lấy từ 10-K; 18 test chạy xanh, gồm tái tính mọi số chính trong bài.
 - Kiểm duyệt: bốn vòng kiểm nguồn + phản biện độc lập. Vòng 1 tìm 5 lỗi nghiêm trọng (F1 đòn bẩy vận hành, CCC Apple, RIM–Apple, FCF0 chưa chuẩn hóa thuế, lưới giá Apple xa thị trường); vòng 2 còn 2 lỗi trung bình; vòng 3–4 không còn lỗi nghiêm trọng hay trung bình. Cả năm bài **đã qua cổng xuất bản** `validate_report.py`, đã bỏ nhãn nháp.
 - Chưa làm: bảng tính Excel; nguồn cho Fisher dạng nhân, quan hệ sạch của RIM, thiểu số/chi phí trụ sở của SOTP; đối chiếu giá AAPL với sàn.
+
+## 11. Triển khai tiếp ngày02/11/2026
+
+- A: bốn hồ sơ FPT,VNM,VCB,HPG đã chốt kiểm nguồn/phản biện vòng6–7 theo tiêu chí0nghiêm trọng/cao; xem [nhật ký](../research/companies/VN/review-round-5.md) và các biên bản trong từng hồ sơ.
+- B, nhóm1: nâng N1,N4,N5 theo chuẩnS, có10bài tập,bài bẩn,saiởđâu,chuyểnbài,ví dụ có số từ gốcApple/Vanguard và môđunPython được kiểm thử. Sáu nhánh cuối độc lập trên bản chụp14:28; đã chốt biên bản khớp hash. Xem [nhật ký nhóm1](reviews/wave4-group1-2026-11-02.md).
+- Đếm danh sách Đợt4 hiện nêu đích danh20mã, không phải25: N1,N4,N5,H3–H5,A1–A4,M1–M3,F3–F7,013,014. Đã làm3, còn17mã; giữ kế hoạch mỗi nhóm3–4bài. Nhóm kế tiếp: H3,H4,H5 (đo rủi ro, lợi suất có dòng tiền, thống kê và kiểm thử chiến lược). Chưa bắt đầu sửa17bài còn lại trong nhóm1này.
+- Kiểm chiều sâu máy báo12/65bàiS sau nhóm1, khác việc tất cả65bài đã đủ sâu. Không tuyên bố hoàn tất toàn bộĐợt4. Chưa commit/push.
+
+## 12. Nhật ký Đợt 4, nhóm 2 — 02/11/2026
+
+- Đã nâng H3 → H4 → H5 lên chuẩn cấu trúc bậc S; mỗi bài có ba phiên, ví dụ số từ nguồn thật, 10 bài tập/đáp án, dữ liệu bẩn, “Sai ở đâu”, kiểm tra chuyển bài và mô hình/test. Mốc chốt `2026-11-02 15:41 Asia/Ho_Chi_Minh`.
+- Hai nhánh độc lập trên bản cố định cho mỗi bài đều ĐẠT theo tiêu chí không còn nghiêm trọng/cao; trung bình/thấp lưu lại không chặn. H4 sửa diễn đạt alpha rồi chạy lại cả hai nhánh trên hash mới. Cổng hash xuất bản khớp; đã bỏ nháp. Xem [nhật ký nhóm 2](reviews/wave4-group2-2026-11-02.md) và sáu biên bản trong sổ kiểm duyệt.
+- Thêm `risk_performance.py`, `evidence_lab.py` và hai tệp test. 101 unit test qua; kiểm cấu trúc 15/65 bài S. Đây không phải chứng nhận mọi bài đã sâu hoặc người học đã thành thạo.
+- Đợt 4 có 20 mã, đã nâng 6, còn 14. Tiếp theo A1–A4 → M1–M3 → F3–F7 và 013/014. Số 12/65, 3 đã làm/17 còn ở §11 là mốc lịch sử nhóm 1.
+- Giữ nguyên bảy nội dung đã chốt của phiên bàn giao; làm trên nhánh hiện tại, chưa commit/push/mở PR.
+
+## 13. Nhật ký triển khai ngày 05/11/2026: Nghiên cứu Bảo hiểm, hoàn tất 20/20 bài Đợt 4 và N2–N3 bậc S
+
+- **Nghiên cứu thực chiến lĩnh vực Bảo hiểm (`research/`):** Hoàn thành báo cáo ngành [`research/sectors/VN-insurance/report.md`](../research/sectors/VN-insurance/report.md) và 3 hồ sơ doanh nghiệp bảo hiểm đầu ngành [`BVH`](../research/companies/VN/BVH/report.md), [`PVI`](../research/companies/VN/PVI/report.md), [`BIC`](../research/companies/VN/BIC/report.md) kèm mô-đun tái lập phép tính [`calc_insurance_profiles.py`](../research/companies/VN/calc_insurance_profiles.py) và bộ kiểm thử [`test_insurance_profiles.py`](../tests/test_insurance_profiles.py). Cả 4 báo cáo đã qua 2 vòng kiểm duyệt độc lập (`source_fact_checker` và `risk_bear_reviewer`) với `0` lỗi nghiêm trọng / `0` lỗi mức cao, khớp mã băm SHA-256 trên `scripts/validate_report.py`.
+- **Học phần Bảo hiểm & Hoàn tất 20/20 mã Đợt 4 + N2, N3 lên chuẩn cấu trúc Bậc S (`33/67` bài Bậc S):**
+  - Bổ sung 2 bài mới Bậc S về bảo hiểm (`F8`, `P4`) và nâng cấp `013` lên Bậc S kèm mô hình [`insurance.py`](practice/models/insurance.py) (đã qua kiểm nguồn và phản biện độc lập).
+  - Nâng cấp toàn bộ 13 bài còn lại của danh sách 20 bài Đợt 4 (`F3–F7`, `A1–A4`, `M1–M3`, `014`) và 2 bài nền kế toán (`N2`, `N3`) lên chuẩn cấu trúc Bậc S (`2.500–6.500` từ, 3 phiên học, ví dụ nguồn thật, 10 bài tập + đáp án, bài dữ liệu thiếu/lệch, "Sai ở đâu", 3 câu kiểm tra chuyển bài, liên kết `practice/models/`).
+  - Toàn bộ `111` unit test và `scripts/verify.py` đều đạt (`exit code 0`).

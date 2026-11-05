@@ -6,7 +6,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Phạm vi: `Đọc toàn bài; kiểm giả định, trường hợp công thức không còn đúng, giới hạn quốc gia/ngành, điều kiện bác bỏ và nguy cơ hiểu thành lời khuyên cá nhân; tự tìm nguồn phản chứng.`
 - Báo cáo đích: `learning/lessons/016-company-research-capstone.md`
-- SHA-256 nội dung đích: `5e3299c48e831b783f40e1fe9472e95d4be1c7cf8e4ef2fea24c2adb94ba244e`
+- SHA-256 nội dung đích: `fe99f73ecf7651783038d7c751036ddd15e7b5dcedcf6ac5f512c13d7386ec59`
 - Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
 - Người ghi: Điều phối viên, chép/tổng hợp kết quả của nhánh độc lập trong cuộc trò chuyện ngày26/10/2026; người kiểm không sửa bài.

@@ -1,0 +1,98 @@
+doi_tuong,chi_tieu,nam_2025,nam_2024,nam_2023,don_vi,nguon
+JPM,Net interest income,95443,92583,89267,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Noninterest revenue,87004,84973,68837,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Total net revenue,182447,177556,158104,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Total noninterest expense,95640,91797,87172,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Pre-provision profit,86807,85759,70932,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Provision for credit losses,14212,10678,9320,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Net income,57048,58471,49552,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.50
+JPM,Loans period-end,1493429,1347988,1323706,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 167
+JPM,Deposits period-end,2559320,2406032,2400688,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 167
+JPM,Total assets period-end,4424900,4002814,3875393,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 167
+JPM,Common stockholders equity,342393,324708,300474,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 167
+JPM,Total stockholders equity,362438,344758,327878,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 167
+JPM,Allowance for loan losses,25765,24345,22413,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.61 & 167
+JPM,Total allowances for credit losses,31230,26866,24765,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 111
+JPM,Nonperforming assets,10359,9300,7597,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 111
+JPM,Net charge-offs,9849,8638,6209,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.44 & 111
+JPM,CET1 ratio Standardized pct,14.6,15.7,15.0,phan_tram,JPMorgan Chase FY2025 Form 10-K p.44 & 94
+JPM,CET1 ratio Advanced pct,14.1,15.8,15.0,phan_tram,JPMorgan Chase FY2025 Form 10-K p.94
+JPM,CET1 capital,288469,275502,250800,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.94
+JPM,RWA Standardized,1981692,1753511,1671900,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.94
+JPM,RWA Advanced,2045249,1744921,1671900,trieu_USD,JPMorgan Chase FY2025 Form 10-K p.94
+GEICO,Premiums written,45193,42916,39837,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Premiums earned,44481,42252,39264,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Losses and loss adjustment expenses,32144,30331,31814,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Underwriting expenses,5513,4108,3815,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Total losses and expenses,37657,34439,35629,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Pre-tax underwriting earnings,6824,7813,3635,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+GEICO,Favorable prior year reserve development,957,550,1452,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-36
+BRK_INS,Total pre-tax underwriting earnings,9460,11405,6913,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-35
+BRK_INS,Net investment income pre-tax,15261,16748,11581,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-40
+BRK_INS,Insurance float year-end,176000,171000,169000,trieu_USD,Berkshire Hathaway FY2025 Form 10-K p.K-41
+BVH,Tong tai san hop nhat,291805652,251286327,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.7
+BVH,Tai san tai bao hiem,3682410,3558134,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.6
+BVH,Du phong phi nhuong tai bao hiem,1890740,1686898,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.6
+BVH,Du phong boi thuong nhuong tai bao hiem,1791670,1871237,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.6
+BVH,Du phong nghiep vu bao hiem goc va nhan tai,201682485,186574100,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong toan hoc,171409330,157148585,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong phi chua duoc huong,5839618,5451808,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong boi thuong,3223554,3111785,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong chia lai,3974183,3521003,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong lai cam ket dau tu toi thieu,16544350,16741737,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong dam bao can doi,518558,412275,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Du phong dao dong lon,172892,186908,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.8
+BVH,Von chu so huu hop nhat,25480341,23565887,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.9
+BVH,Phi bao hiem goc,43716183,42591776,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Phi nhan tai bao hiem,399971,217571,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Tang du phong phi chua duoc huong goc va nhan tai,-387809,-139666,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Tong phi nhuong tai bao hiem,-3808523,-3512320,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Tang du phong phi nhuong tai bao hiem,203843,-31178,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Doanh thu phi bao hiem thuan,40123665,39126184,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Hoa hong nhuong tai va doanh thu khac KDBH,824586,696992,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Doanh thu thuan hoat dong KDBH,40948251,39823176,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Tong chi boi thuong va tra tien bao hiem,-35137291,-36661946,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.10
+BVH,Tong chi truc tiep hoat dong KDBH,-39710305,-40792289,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.11
+BVH,Loi nhuan gop hoat dong KDBH,1237946,-969113,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.11
+BVH,Loi nhuan hoat dong tai chinh,11120466,10573596,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.11
+BVH,Loi nhuan sau thue TNDN,2921572,2194169,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.12
+BVH,Bien kha nang thanh toan Bao hiem Bao Viet,2692491,2592334,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.84
+BVH,Bien KNTT toi thieu Bao hiem Bao Viet,1916391,1788087,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.84
+BVH,Bien kha nang thanh toan Bao Viet Nhan tho,9921645,8879831,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.84
+BVH,Bien KNTT toi thieu Bao Viet Nhan tho,9269953,8554813,0,trieu_VND,BCTC hop nhat kiem toan BVH FY2025 tr.84
+BIC,Phi bao hiem goc,5696786,5439634,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Phi nhan tai bao hiem,92702,131909,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Tang du phong phi goc va nhan tai,-215373,-46024,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Tong phi nhuong tai bao hiem,-1760934,-1555277,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Tang du phong phi nhuong tai,135038,18628,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Doanh thu phi bao hiem thuan,3948219,3988870,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Hoa hong nhuong tai va doanh thu khac KDBH,338327,275969,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Doanh thu thuan hoat dong KDBH,4286546,4264839,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Tong chi boi thuong bao hiem,-1149647,-931642,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Tang du phong dao dong lon,-40306,-40163,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Chi phi khac hoat dong KDBH,-2101656,-2102232,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.8
+BIC,Loi nhuan gop hoat dong KDBH,994937,1190803,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.9
+BIC,Loi nhuan gop hoat dong tai chinh,510295,373293,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.9
+BIC,Chi phi quan ly doanh nghiep,-831078,-911828,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.9
+BIC,Loi nhuan truoc thue TNDN,678787,652803,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.9
+BIC,Loi nhuan sau thue TNDN,551891,501050,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.9
+BIC,Tong tai san hop nhat,10079691,8682527,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.4
+BIC,Tai san tai bao hiem,1625287,1241248,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.3
+BIC,Du phong nghiep vu bao hiem goc va nhan tai,4447337,3798684,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.5
+BIC,Von chu so huu hop nhat,3384461,2965214,0,trieu_VND,BCTC hop nhat Q4/2025 BIC tr.6
+PVI,Tong tai san hop nhat,44512137,31795023,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.5
+PVI,Tai san tai bao hiem,21614447,12404916,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.32
+PVI,Du phong boi thuong nhuong tai bao hiem,15368843,7518471,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.32
+PVI,Du phong nghiep vu bao hiem goc va nhan tai,28417499,17800976,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.42
+PVI,Von chu so huu hop nhat,8533908,8194456,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.6
+PVI,Phi bao hiem goc,14908335,13368214,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Phi nhan tai bao hiem,10498980,5741188,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Tong phi nhuong tai bao hiem,-17178018,-12350620,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Tang du phong phi giu lai thuan,-595397,-305935,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Doanh thu phi bao hiem thuan,7633900,6452846,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Hoa hong nhuong tai bao hiem,1337613,903179,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.46
+PVI,Tong chi boi thuong va du phong giu lai,-3286622,-2753139,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.47
+PVI,Chi phi khac hoat dong KDBH,-4810003,-3818724,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.47
+PVI,Loi nhuan hoat dong tai chinh,918212,883597,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.7
+PVI,Loi nhuan truoc thue TNDN,1459669,1133021,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.7
+PVI,Loi nhuan sau thue TNDN,1152107,891263,0,trieu_VND,BCTC hop nhat kiem toan PVI FY2025 tr.7

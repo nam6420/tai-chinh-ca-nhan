@@ -1,9 +1,9 @@
 # Lộ trình học hiện hành
 
-- Cập nhật: `2026-10-27`.
-- Có **61 mã bài đã soạn**: 16 bài số, 8 bài nền và 37 bài Đợt 1–6. Trạng thái kiểm riêng ở [sổ kiểm duyệt](reviews/README.md).
+- Cập nhật: `2026-11-05`.
+- Có **67 mã bài đã soạn**: 16 bài số (`001–016`), 8 bài nền (`N1–N8`), 39 bài Đợt 1–6 (bổ sung `P4`, `F8`) và 4 bài công cụ định lượng (`Q1–Q4`). Trạng thái kiểm riêng ở [sổ kiểm duyệt](reviews/README.md).
 - Thứ tự đọc và nhánh quỹ dùng [một danh sách tại README](README.md). Không học theo thứ tự số mã.
-- [Review và kế hoạch được yêu cầu triển khai](review-and-expansion-plan-2026-10-26.md); [bảng thực hành](practice/research-and-model-worksheets.md).
+- [Review và kế hoạch được yêu cầu triển khai](review-and-expansion-plan-2026-10-26.md); [bảng thực hành](practice/research-and-model-worksheets.md); [mô hình bảo hiểm & định chế tài chính](practice/models/insurance.py).
 
 ## Kế hoạch mở rộng 51 mục kiến thức
 
@@ -12,11 +12,11 @@ Xem [bảng đối chiếu 51 mục](coverage-51.md) để truy từng mã mục
 | Đợt | Phạm vi | Trạng thái |
 |---|---|---|
 | 0 | Quy ước mã, đường học, thuật ngữ | Đã đồng bộ chỉ mục nền |
-| 1 | P1–P3, B3, V1–V2 | Đã qua hai nhánh kiểm duyệt theo từng bài; giữ các mục chưa biết |
+| 1 | P1–P4, B3, V1–V2 | Đã qua hai nhánh kiểm duyệt theo từng bài (`P4` bậc S về hợp đồng bảo hiểm cá nhân); giữ các mục chưa biết |
 | 2 | V3–V5, B1–B2, L1–L3 | Đã qua hai nhánh kiểm duyệt theo từng bài; giữ các mục chưa biết và điểm còn mở |
 | 3 | A1–A5 | Đã qua hai nhánh trên từng bài; giữ các điểm chưa biết và phản biện còn mở |
 | 4 | M1–M3, H1–H6 | Đã qua hai nhánh trên từng bài; giữ các điểm chưa biết và phản biện còn mở |
-| 5 | F1–F7 | Đã qua hai nhánh trên từng bài; giữ các điểm chưa biết và phản biện còn mở |
+| 5 | F1–F8 | Đã qua hai nhánh trên từng bài (`F8` bậc S về doanh nghiệp bảo hiểm Việt Nam); giữ các điểm chưa biết và phản biện còn mở |
 | 6 | K1–K2, danh sách đọc, khung thực hành và hồ sơ mẫu | Đã soạn; K1–K2 và hồ sơ Apple qua hai nhánh, giữ điểm phản biện còn mở |
 
 Sáu hồ sơ ngành riêng được gợi ý ở F5 chưa được lập; F5 hiện là khung nghiên cứu và không giả vờ hoàn thành các hồ sơ đó.

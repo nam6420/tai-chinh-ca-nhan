@@ -293,3 +293,28 @@ class Vong4Hpg(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ReviewRound5(unittest.TestCase):
+    def test_hpg_liquidity_from_original_units(self):
+        r = c.hpg_liquidity_round5()
+        self.assertAlmostEqual(r["net_debt_cash_only"], 98883.885000271, places=6)
+        self.assertAlmostEqual(r["net_debt_including_term"], 59610.029874708, places=6)
+        self.assertAlmostEqual(r["fcf_simple"], 6329.163263317, places=6)
+        self.assertTrue(0.586 < r["liquid_over_short"] < 0.587)
+
+    def test_vcb_reserve_rollforward_not_residual_writeoff(self):
+        r = c.vcb_provisions_round5()
+        self.assertEqual(r["closing_vnd_million"], 31_168_107)
+        self.assertEqual(r["npl_vnd_million"], 12_817_585)
+        self.assertEqual(r["opening_npl_vnd_million"], 9_713_940)
+        self.assertAlmostEqual(r["coverage"], 2.4317, places=4)
+        self.assertAlmostEqual(r["npl_ratio"], 0.007058, places=6)
+
+
+class FtelGrowthCorrection(unittest.TestCase):
+    def test_same_period_growth_not_wrong_secondary_rates(self):
+        r = c.ftel_growth_round6()
+        self.assertAlmostEqual(r["np_9t_growth"], 0.1368, places=4)
+        self.assertAlmostEqual(r["np_q3_growth"], 0.1300, places=4)
+        self.assertAlmostEqual(r["rev_9t_growth"], 0.1682, places=4)

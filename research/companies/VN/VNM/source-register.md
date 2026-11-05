@@ -1,7 +1,7 @@
 # Sổ nguồn — Công ty Cổ phần Sữa Việt Nam (VNM)
 
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
-- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập ban đầu: 31/10/2026; nguồn bổ sung ghi ngày riêng.
 
 | Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
 |---|---|---|---|---|---|---|
@@ -27,6 +27,7 @@
 | S20 | [Dairy Business MEA, Vinamilk plans dairy price hike amid rising costs](https://dairybusinessmea.com/2026/05/12/vinamilk-plans-dairy-price-hike-amid-rising-costs/) | 12/05/2026 | Kế hoạch giá | Phần trăm | Thứ cấp (báo chí) | Mâu thuẫn thời điểm với S16 |
 | S21 | [Tuổi Trẻ, Jardine unit to exit Vietnam's largest dairy firm](https://news.tuoitre.vn/jardine-unit-to-exit-vietnams-largest-dairy-firm-with-planned-sale-of-entire-6-stake-103260123120027928.htm) | 23/01/2026 | Cơ cấu cổ đông | Phần trăm | Thứ cấp (báo chí) | Kế hoạch, chưa xác nhận hoàn tất; đối chiếu S4 |
 | S22 | [Thị trường Tài chính Tiền tệ, lãi suất đầu tháng 10/2026](https://thitruongtaichinhtiente.vn/lai-suat-dau-thang-10-2026-tiet-kiem-giu-nhip-on-dinh-chung-chi-tien-gui-hut-khach-85944.html) | Đầu 10/2026 | Lãi suất tiền gửi 12 tháng | Phần trăm | Thứ cấp (báo chí) | Có ý kiến chuyên gia |
+| S23 | [BCTC hợp nhất Q3/2026, bản sao](https://cdn.24hmoney.vn/upload/file/2026-4/2026-10-31/no-name-1793388857.pdf) — [trang lưu](https://24hmoney.vn/report/72986/financialstatements) | Trang lưu 31/10/2026; PDF tạo 30/10/2026 | 9T2026; VAS; VND | Hợp nhất, soát xét KPMG | Tài liệu công ty lập do 24hmoney lưu, tự tải ngày 02/11/2026 | Đã đọc ảnh PDF 63/trang in 62 xác nhận chi phí tài chính 453.303.861.156 và 242.667.487.576 VND. Miền công ty trả 403; chưa khớp byte. Tiêu đề trang lưu gọi kiểm toán nhưng tài liệu là soát xét. Manifest data/raw/company-review-sources-2026-11-02.json |
 
 ## Mâu thuẫn và mục chưa giải quyết
 

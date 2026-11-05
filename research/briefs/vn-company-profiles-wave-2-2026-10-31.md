@@ -1,6 +1,7 @@
 # Đề bài nghiên cứu: bốn hồ sơ mẫu doanh nghiệp Việt Nam (Đợt 2)
 
-- Trạng thái: `ĐANG_LÀM`
+- Trạng thái: `ĐÃ_KIỂM_DUYỆT`
+- Chốt triển khai: `2026-11-02 14:00 Asia/Ho_Chi_Minh`; cả bốn hồ sơ có hai biên bản ĐẠT cùng hash, theo tiêu chí không còn lỗi nghiêm trọng/cao. Xem [nhật ký vòng 5–7](../companies/VN/review-round-5.md).
 - Chủ trì: `research_coordinator`
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
 - Phạm vi địa lý: Việt Nam, sàn HOSE; tiền tệ VND; chuẩn kế toán VAS.
@@ -17,7 +18,7 @@
 
 - FPT: từ 01/01/2026 FPT Telecom chuyển sang ghi nhận theo phương pháp vốn chủ; số 2025 và 2026 không cùng cơ sở.
 - VNM: số so sánh 2025 được phân loại lại theo Thông tư 99 và 43; báo cáo năm 2025 đã kiểm toán chưa mở được.
-- VCB: ngân hàng, đo bằng thu nhập lãi thuần, chi phí dự phòng, nợ xấu, bao phủ và an toàn vốn; BCTC gốc chưa mở được, số liệu chủ yếu thứ cấp.
+- VCB: ngân hàng, đo bằng thu nhập lãi thuần, chi phí dự phòng, nợ xấu, bao phủ và an toàn vốn; đã đối chiếu nhóm nợ và dự phòng từ bản BCTC ngân hàng lập được lưu trên miền tổng hợp; chưa khớp byte với miền ngân hàng/HOSE, các số khác còn thứ cấp.
 - HPG: công ty chu kỳ, chuẩn hóa lợi nhuận qua năm 2021–2025 và nhìn đòn bẩy sau dự án lớn.
 
 ## Phạm vi

@@ -1,5 +1,11 @@
 # Sổ kiểm duyệt bài học
 
+> **Cập nhật học phần Bảo hiểm & Chuẩn hóa định dạng — 05/11/2026:** Nâng cấp Bài `013` lên bậc S và bổ sung hai bài bậc S mới (`F8` — Phân tích doanh nghiệp bảo hiểm Việt Nam; `P4` — Đọc hợp đồng bảo hiểm cá nhân) kèm mô-đun thực hành [`learning/practice/models/insurance.py`](../practice/models/insurance.py) và bộ kiểm thử `tests/test_insurance_models.py`; đồng thời dọn lỗi dính chữ — số ở `014`, `015`, `016`, `N1`, `N4`, `N7` và mở rộng ngưỡng từ bậc S lên `2.500–6.500` từ. Ba bài `013`, `F8`, `P4` đã qua hai nhánh độc lập (`source-fact-checker` và `risk-bear-reviewer`) và qua cổng xuất bản `validate_report.py`.
+
+> **Nâng chiều sâu Đợt 4, nhóm 2 — 02/11/2026:** H3/H4/H5 đạt bậc S, hai biên bản mới ĐẠT cùng hash và mốc chốt 15:41; đã qua cổng xuất bản. H4 sửa diễn đạt alpha rồi chạy lại cả hai nhánh mới. Xem [nhật ký nhóm 2](wave4-group2-2026-11-02.md); các điểm trung bình/thấp và việc rút lại một phát hiện được giữ trong biên bản. Biên bản trước nâng hết hiệu lực.
+
+> **Nâng chiều sâu Đợt4, nhóm1 — 02/11/2026:** N1, N4, N5 đã nâng lên bậcS, có môđun và kiểm thử; hai nhánh độc lập cuối kiểm bản chốt14:28, không còn lỗi nghiêm trọng/cao. Đã qua cổng hash và bỏ nhãn nháp. Xem [nhật ký nhóm](wave4-group1-2026-11-02.md); các điểm trung bình/thấp còn mở được giữ trong biên bản mới. Biên bản trước khi nâng đã hết hiệu lực, bản cũ giữ trong lịch sửgit.
+
 > **Cập nhật 2026-11-02:** bốn bài Q1–Q4 (Đợt 3) đã qua hai nhánh độc lập (Q2, Q4 ở vòng 5; Q1, Q3 ở vòng 6) và qua cổng `validate_report.py`. Tiêu chí ĐẠT từ vòng 4: không còn lỗi nghiêm trọng hoặc mức cao chưa xử lý; điểm trung bình và thấp còn mở được liệt kê trong biên bản. Nhật ký các vòng: [Q-round-1](Q-round-1.md), [Q-round-2](Q-round-2.md), [Q-round-3](Q-round-3.md), [Q-round-4](Q-round-4.md), [Q-round-5-6](Q-round-5-6.md); đây là tóm lược của điều phối viên, không phải biên bản ĐẠT.
 
 > **Cập nhật 2026-10-31:** bài 010, 011, 012, F1, F2 đã viết lại theo [chuẩn chiều sâu](../../docs/LESSON_DEPTH_STANDARD.md), qua bốn vòng kiểm nguồn và phản biện độc lập, và **đã qua cổng xuất bản** (`validate_report.py`) với biên bản khớp mã băm ở bảng dưới. Biên bản ghi đè cùng tên tệp (bản cũ trong lịch sử git). Giữ các điểm Thấp còn mở trong biên bản: chưa có nguồn mở được cho Fisher dạng nhân, quan hệ sạch của RIM, thiểu số và chi phí trụ sở trong SOTP; giá AAPL 345 USD chỉ từ nguồn thứ cấp.
@@ -31,14 +37,15 @@
 | [F5](../lessons/F5-vietnam-industry-research-framework.md) | Đã soạn | [ĐẠT](F5-fact-check.md) | [ĐẠT](F5-risk-review.md) | `5da2dcecdeef…` |
 | [F6](../lessons/F6-governance-related-party-audit.md) | Đã soạn | [ĐẠT](F6-fact-check.md) | [ĐẠT](F6-risk-review.md) | `a578a828fce3…` |
 | [F7](../lessons/F7-special-situations-restructuring.md) | Đã soạn | [ĐẠT](F7-fact-check.md) | [ĐẠT](F7-risk-review.md) | `e79742eb0858…` |
+| [F8](../lessons/F8-vietnam-insurance-analysis.md) | Bậc S, thêm mới 05/11/2026 | [ĐẠT](F8-fact-check.md) | [ĐẠT](F8-risk-review.md) | `bea4075e4f56…` |
 | [M1](../lessons/M1-monetary-policy-rates-fx-credit.md) | Đã soạn | [ĐẠT](M1-fact-check.md) | [ĐẠT](M1-risk-review.md) | `96d43e00bc57…` |
 | [M2](../lessons/M2-credit-real-estate-cycle.md) | Đã soạn | [ĐẠT](M2-fact-check.md) | [ĐẠT](M2-risk-review.md) | `593cf2be2e8c…` |
 | [M3](../lessons/M3-capital-trade-geopolitics.md) | Đã soạn | [ĐẠT](M3-fact-check.md) | [ĐẠT](M3-risk-review.md) | `7c95dae89eee…` |
 | [H1](../lessons/H1-behavioral-biases.md) | Đã soạn | [ĐẠT](H1-fact-check.md) | [ĐẠT](H1-risk-review.md) | `e7fbb0af3df1…` |
 | [H2](../lessons/H2-decisions-stress-position-size.md) | Đã soạn | [ĐẠT](H2-fact-check.md) | [ĐẠT](H2-risk-review.md) | `9ffcffd48e3b…` |
-| [H3](../lessons/H3-risk-volatility-drawdown-liquidity.md) | Đã soạn | [ĐẠT](H3-fact-check.md) | [ĐẠT](H3-risk-review.md) | `7dac5d06fd65…` |
-| [H4](../lessons/H4-twr-mwr-benchmark.md) | Đã soạn | [ĐẠT](H4-fact-check.md) | [ĐẠT](H4-risk-review.md) | `bb8e025a413b…` |
-| [H5](../lessons/H5-statistics-backtest-overfitting.md) | Đã soạn | [ĐẠT](H5-fact-check.md) | [ĐẠT](H5-risk-review.md) | `cd1cac9443a0…` |
+| [H3](../lessons/H3-risk-volatility-drawdown-liquidity.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](H3-fact-check.md) | [ĐẠT](H3-risk-review.md) | `31f862688181…` |
+| [H4](../lessons/H4-twr-mwr-benchmark.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](H4-fact-check.md) | [ĐẠT](H4-risk-review.md) | `7b20b19c335a…` |
+| [H5](../lessons/H5-statistics-backtest-overfitting.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](H5-fact-check.md) | [ĐẠT](H5-risk-review.md) | `a115d41d57c7…` |
 | [H6](../lessons/H6-technical-analysis-market-microstructure.md) | Đã soạn | [ĐẠT](H6-fact-check.md) | [ĐẠT](H6-risk-review.md) | `7892d145a3d7…` |
 | [A1](../lessons/A1-deposits-government-corporate-bonds.md) | Đã soạn | [ĐẠT](A1-fact-check.md) | [ĐẠT](A1-risk-review.md) | `bd4073d72bbd…` |
 | [A2](../lessons/A2-mutual-funds-etfs-fees.md) | Đã soạn | [ĐẠT](A2-fact-check.md) | [ĐẠT](A2-risk-review.md) | `c0c31fbe6257…` |
@@ -57,20 +64,21 @@
 | [P1](../lessons/P1-budget-emergency-fund-insurance.md) | Đã soạn | [ĐẠT](P1-fact-check.md) | [ĐẠT](P1-risk-review.md) | `089cda636e1e…` |
 | [P2](../lessons/P2-personal-debt.md) | Đã soạn | [ĐẠT](P2-fact-check.md) | [ĐẠT](P2-risk-review.md) | `e9675a0e3d88…` |
 | [P3](../lessons/P3-goals-risk-ips.md) | Đã soạn | [ĐẠT](P3-fact-check.md) | [ĐẠT](P3-risk-review.md) | `19cec10b2058…` |
+| [P4](../lessons/P4-personal-insurance-contracts-and-costs.md) | Bậc S, thêm mới 05/11/2026 | [ĐẠT](P4-fact-check.md) | [ĐẠT](P4-risk-review.md) | `949f9d76dfc4…` |
 | [V1](../lessons/V1-vietnam-market-structure.md) | Đã soạn | [ĐẠT](V1-fact-check.md) | [ĐẠT](V1-risk-review.md) | `17e384b64beb…` |
 | [V2](../lessons/V2-vietnam-trading-rules.md) | Đã soạn | [ĐẠT](V2-fact-check.md) | [ĐẠT](V2-risk-review.md) | `f7e01717e1a8…` |
 | [010](../lessons/010-cost-of-capital.md) | Viết lại 2026-10-31 | [ĐẠT](010-fact-check.md) | [ĐẠT](010-risk-review.md) | `fe0471055e63…` |
 | [011](../lessons/011-dcf-reverse-dcf.md) | Viết lại 2026-10-31 | [ĐẠT](011-fact-check.md) | [ĐẠT](011-risk-review.md) | `7ab38cae7ce6…` |
 | [012](../lessons/012-scenarios-margin-of-safety.md) | Viết lại 2026-10-31 | [ĐẠT](012-fact-check.md) | [ĐẠT](012-risk-review.md) | `9ea42a6923c5…` |
-| [013](../lessons/013-banks-insurers.md) | Đã soạn | [ĐẠT](013-fact-check.md) | [ĐẠT](013-risk-review.md) | `1754fcda84e8…` |
-| [014](../lessons/014-industry-capital-cycle.md) | Đã soạn | [ĐẠT](014-fact-check.md) | [ĐẠT](014-risk-review.md) | `29cd0d6544ba…` |
-| [015](../lessons/015-behavior-decision-journal.md) | Đã soạn | [ĐẠT](015-fact-check.md) | [ĐẠT](015-risk-review.md) | `0a5126787c5b…` |
-| [016](../lessons/016-company-research-capstone.md) | Đã soạn | [ĐẠT](016-fact-check.md) | [ĐẠT](016-risk-review.md) | `5e3299c48e83…` |
-| [N1](../lessons/N1-market-basics.md) | Đã soạn | [ĐẠT](N1-fact-check.md) | [ĐẠT](N1-risk-review.md) | `17f84bb54a24…` |
-| [N4](../lessons/N4-time-value-returns.md) | Đã soạn | [ĐẠT](N4-fact-check.md) | [ĐẠT](N4-risk-review.md) | `b6eae1288f29…` |
-| [N5](../lessons/N5-portfolio-index-investing.md) | Đã soạn | [ĐẠT](N5-fact-check.md) | [ĐẠT](N5-risk-review.md) | `19614c988878…` |
+| [013](../lessons/013-banks-insurers.md) | Bậc S, nâng 05/11/2026 | [ĐẠT](013-fact-check.md) | [ĐẠT](013-risk-review.md) | `e3dd723f16ce…` |
+| [014](../lessons/014-industry-capital-cycle.md) | Chuẩn hóa định dạng 05/11/2026 | [ĐẠT](014-fact-check.md) | [ĐẠT](014-risk-review.md) | `e27459e3a6ac…` |
+| [015](../lessons/015-behavior-decision-journal.md) | Chuẩn hóa định dạng 05/11/2026 | [ĐẠT](015-fact-check.md) | [ĐẠT](015-risk-review.md) | `5c4a2a3f9927…` |
+| [016](../lessons/016-company-research-capstone.md) | Chuẩn hóa định dạng 05/11/2026 | [ĐẠT](016-fact-check.md) | [ĐẠT](016-risk-review.md) | `fe99f73ecf76…` |
+| [N1](../lessons/N1-market-basics.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](N1-fact-check.md) | [ĐẠT](N1-risk-review.md) | `227dec97d9b6…` |
+| [N4](../lessons/N4-time-value-returns.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](N4-fact-check.md) | [ĐẠT](N4-risk-review.md) | `96ac0f808b21…` |
+| [N5](../lessons/N5-portfolio-index-investing.md) | Bậc S, nâng 02/11/2026 | [ĐẠT](N5-fact-check.md) | [ĐẠT](N5-risk-review.md) | `7da5421172af…` |
 | [N6](../lessons/N6-business-model-unit-economics.md) | Đã soạn | [ĐẠT](N6-fact-check.md) | [ĐẠT](N6-risk-review.md) | `525824d368db…` |
-| [N7](../lessons/N7-data-probability-uncertainty.md) | Đã soạn | [ĐẠT](N7-fact-check.md) | [ĐẠT](N7-risk-review.md) | `99cb2d79cc25…` |
+| [N7](../lessons/N7-data-probability-uncertainty.md) | Chuẩn hóa định dạng 05/11/2026 | [ĐẠT](N7-fact-check.md) | [ĐẠT](N7-risk-review.md) | `5d1241604b0b…` |
 | [N8](../lessons/N8-finding-verifying-sources.md) | Đã soạn | [ĐẠT](N8-fact-check.md) | [ĐẠT](N8-risk-review.md) | `3ad1116c84ff…` |
 | [N2](../lessons/N2-statement-line-items.md) | Đã soạn | [ĐẠT](N2-fact-check.md) | [ĐẠT](N2-risk-review.md) | `a9d024fae646…` |
 | [N3](../lessons/N3-vietnam-vas-statements.md) | Đã soạn (A/B) | [ĐẠT](N3-fact-check.md) | [ĐẠT](N3-risk-review.md) | `4a9358fa8819…` |

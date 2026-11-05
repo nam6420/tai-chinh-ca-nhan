@@ -9,9 +9,9 @@ Trạng thái: `Ý_KIẾN` — ngưỡng để thử, không phải ngưỡng kh
 
 ## Yêu cầu bậc S
 
-1. Thân bài từ 2.500 đến 4.500 từ, chia phiên có điểm dừng.
-2. Mục `## Ví dụ từ nguồn thật`: ít nhất một số liệu từ báo cáo gốc, ghi kỳ, đơn vị, phạm vi và liên kết mở được. Có ví dụ hư cấu đủ dữ kiện để tự tính.
-3. Mục `## Bài tập` có ít nhất 8 câu đánh số, gồm nhận biết, tính nhiều bước và tình huống chuyển giao; có mục `## Đáp án` giải từng bước.
+1. Tổng độ dài tệp từ 2.500 đến 6.500 từ, chia phiên có điểm dừng (nới trần từ 4.500 lên 6.500 từ để các bài chuyên sâu không phải viết nén hoặc dính chữ).
+2. Mục `## Ví dụ từ nguồn thật` (hoặc có đánh số thứ tự mục): ít nhất một số liệu từ báo cáo gốc, ghi kỳ, đơn vị, phạm vi và liên kết mở được. Có ví dụ hư cấu đủ dữ kiện để tự tính.
+3. Mục `## Bài tập` (hoặc có đánh số thứ tự mục) có ít nhất 8 câu đánh số, gồm nhận biết, tính nhiều bước và tình huống chuyển giao; có mục `## Đáp án` giải từng bước.
 4. Mục `## Bài làm với dữ liệu thiếu hoặc lệch` (bài "bẩn"): đề cố ý thiếu dữ kiện hoặc lệch đơn vị/kỳ; đáp án nêu cách phát hiện.
 5. Mục `## Sai ở đâu`: một phân tích sai có chủ ý để người học tìm lỗi.
 6. Mục `## Kiểm tra chuyển bài`: 3 câu làm không nhìn mẫu, kèm tiêu chí đạt.

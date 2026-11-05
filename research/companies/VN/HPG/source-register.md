@@ -1,7 +1,7 @@
 # Sổ nguồn — Tập đoàn Hòa Phát (HPG)
 
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
-- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập ban đầu: 31/10/2026; nguồn bổ sung ghi ngày riêng.
 
 | Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
 |---|---|---|---|---|---|---|
@@ -47,6 +47,11 @@
 | S42 | [Doanh nhân - Pháp luật, nợ vay Hòa Phát lập kỷ lục 96.838 tỷ](https://doanhnhan.baophapluat.vn/no-vay-hoa-phat-hpg-lap-ky-luc-96838-ty-dong-chi-phi-lai-vay-tang-vot-khi-dung-quat-2-dung-von-hoa-88228.html) | 31/10/2025 | 30/09/2025 | Tỷ VND | Thứ cấp (báo chí) | Vay ngắn hạn 28.356, dài hạn 68.482 |
 | S43 | [Doanh nhân - Pháp luật, nắm giữ 37.000 tỷ tiền mặt, Hòa Phát linh hoạt tối ưu hóa dòng vốn](https://doanhnhan.baophapluat.vn/nam-giu-37-000-ty-dong-tien-mat-hoa-phat-hpg-linh-hoat-toi-uu-hoa-dong-von.html) | 03/09/2026 | 30/06/2026 (đã soát xét) | Tỷ VND | Thứ cấp (báo chí) | Tiền 37.256, vay USD ngắn hạn 12.612, lãi suất |
 | S44 | [SteelOrbis, Formosa Hà Tĩnh chạy lại lò cao số 1 sau sự cố](https://www.steelorbis.com/steel-news/latest-news/formosa-ha-tinh-restarts-blast-furnace-no-1-after-hot-blast-stove-incident-1475781.htm) và [SMM, chào giá HRC nhập khẩu tăng](https://news.metal.com/newscontent/104101429-smm-steel-vietnam-hrc-offers-rise-on-near-term-supply-concerns) | 07–08/09/2026 | Sự cố ngày 04/09/2026 | Phần trăm công suất | Thứ cấp (báo chí ngành) | Yếu tố tạm thời |
+| S45 | [Bộ Công Thương, Quyết định 612 bản gốc](https://moit.gov.vn/upload/2005517/fck/files/QD_612_ap_dung_chong_lan_tranh_bien_phap_PVTM_thep_can_nong_e85ba.pdf) | 02/04/2026 | Biện pháp tạm thời | 26 mã HS | Gốc, tự mở 02/11/2026 | Đọc danh sách trực tiếp; bản cũ ghi 24 là sai |
+| S46 | [Cục PVTM: Quyết định 1917 và PDF đính kèm](https://pvtm.gov.vn/default.aspx?category_id=7ab9bb3e-2cbb-421a-bcbd-26aa48d301c3&do=detail&id=ec556014-bec8-491f-84e6-3ef90f2df5a3&page=news-detail) | 28/07/2026 | Biện pháp chính thức | 27,83%; 26 HS | Gốc; tự mở và tải PDF, đọc ảnh trang 2, 4, 5 ngày 02/11/2026 | Điều 3: hiệu lực sau 15 ngày, không phải ngày ký. Giữ ngoại lệ và miễn trừ |
+| S47 | [Cục PVTM: rà soát 1902](https://trav.gov.vn/default.aspx?category_id=7ab9bb3e-2cbb-421a-bcbd-26aa48d301c3&do=detail&id=2ad4b7df-26e0-4d28-a1b2-472d7ae64c3d&page=news-detail) | 27/07/2026 | AR01.AD20 | Thông báo | Gốc; tự mở 02/11/2026 | Chưa đọc đủ PDF phụ lục, không xác nhận kết quả rà soát |
+| S48 | [BCTC hợp nhất Q3/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/bao-cao-tai-chinh-hop-nhat-qiii-2026.pdf) | Ký và công bố 29/10/2026 | 30/09/2026; 9T2026 | Đồng; hợp nhất; VAS | Gốc, tải trực tiếp 02/11/2026 và đọc ảnh PDF 2, 4, 5, 7 | Chưa kiểm toán/soát xét; cột đầu kỳ điều chỉnh lại. Payload và SHA-256 lưu trong data/raw/company-review-sources-2026-11-02.json |
+| S49 | [Tổng quan kinh doanh Q1/2026](https://file.hoaphat.com.vn/hoaphat-com-vn/2026/04/bcq1-2026-vn-v4.pdf) | Q1/2026 | Q1/2026 | Tỷ VND; hợp nhất | Gốc, tự mở 02/11/2026 | LNST không gồm chuyển nhượng vốn 5.046 so với tổng 9.056; chưa kiểm toán, không đồng nhất với số PSI |
 
 ## Mâu thuẫn và mục chưa giải quyết
 

@@ -19,7 +19,7 @@
 | 11 | Quyền và sự kiện vốn | [V3](lessons/V3-corporate-actions.md) |
 | 12 | Bảo mật tài khoản | [B3](lessons/B3-account-security-scams.md) |
 | 13 | Ngân sách | [P1](lessons/P1-budget-emergency-fund-insurance.md) |
-| 14 | Quỹ khẩn cấp và bảo hiểm | [P1](lessons/P1-budget-emergency-fund-insurance.md) |
+| 14 | Quỹ khẩn cấp và bảo hiểm cá nhân | [P1](lessons/P1-budget-emergency-fund-insurance.md), [P4](lessons/P4-personal-insurance-contracts-and-costs.md) |
 | 15 | Nợ cá nhân | [P2](lessons/P2-personal-debt.md) |
 | 16 | Mục tiêu và thời hạn | [P3](lessons/P3-goals-risk-ips.md) |
 | 17 | Khả năng/chịu đựng rủi ro và IPS | [P3](lessons/P3-goals-risk-ips.md) |
@@ -31,7 +31,7 @@
 | 23 | Mô hình ba báo cáo | [F1](lessons/F1-three-statement-model-sensitivity.md) |
 | 24 | Định giá nâng cao | [F2](lessons/F2-valuation-ddm-residual-sotp.md) |
 | 25 | Bất động sản và khung ngành | [F3](lessons/F3-vietnam-property-developers.md), [F5](lessons/F5-vietnam-industry-research-framework.md) |
-| 26 | Ngân hàng Việt Nam | [F4](lessons/F4-vietnam-bank-analysis.md) |
+| 26 | Ngân hàng và doanh nghiệp bảo hiểm Việt Nam | [F4](lessons/F4-vietnam-bank-analysis.md), [F8](lessons/F8-vietnam-insurance-analysis.md), [013](lessons/013-banks-insurers.md) |
 | 27 | Quản trị | [F6](lessons/F6-governance-related-party-audit.md) |
 | 28 | Sự kiện đặc biệt | [F7](lessons/F7-special-situations-restructuring.md) |
 | 29 | Tiền tệ, tín dụng và tỷ giá | [M1](lessons/M1-monetary-policy-rates-fx-credit.md) |

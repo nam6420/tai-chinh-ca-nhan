@@ -1,0 +1,78 @@
+{
+  "moc_chot_ho_so": "2026-11-05 11:20 Asia/Ho_Chi_Minh",
+  "luu_y": "Payload lớn trong data/raw/payloads/ được git ignore. Số đưa vào báo cáo được đọc trực tiếp từ ảnh trang PDF và kiểm chứng lại bằng mô-đun Python research/companies/VN/calc_insurance_profiles.py. Bản sao trên miền tổng hợp (Vietstock/CafeF) mang con dấu và chữ ký kiểm toán/doanh nghiệp nhưng chưa khớp byte trực tiếp với miền doanh nghiệp/HOSE/HNX.",
+  "nguon": [
+    {
+      "ten": "bvh-fy2025-audited-mirror",
+      "url": "https://static2.vietstock.vn/data/HOSE/2025/BCTC/VN/NAM/BVH_Baocaotaichinh_2025_Kiemtoan_Hopnhat.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/bvh-fy2025-audited-mirror.pdf",
+      "sha256": "9a2c25375016c62aaa0d14703c8b1eb79565761dc9a11a039ace27bf014dadde",
+      "byte": 9746450,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "BCTC hợp nhất FY2025 đã kiểm toán bởi Ernst & Young Việt Nam (ký 31/03/2026, số 11623354/E-68737085-HN), 115 trang, lưu trên CDN Vietstock; chưa khớp byte với miền baoviet.com.vn/HOSE."
+    },
+    {
+      "ten": "pvi-fy2025-audited-mirror",
+      "url": "https://cafef1.mediacdn.vn/download/030326/pvi-bao-cao-tai-chinh-nam-2025-0-600196.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/pvi-fy2025-audited-mirror.pdf",
+      "sha256": "2bc0badc1c60d2fdca5c6dbc0fd5e70ca31faf1e3bb0ce07f4fc6f4b8ebbf126",
+      "byte": 22514367,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "BCTC hợp nhất FY2025 đã kiểm toán bởi PwC Việt Nam (ký 15/02/2026, số HAN 4235), 65 trang, lưu trên CDN CafeF; chưa khớp byte với miền pvi.com.vn/HNX."
+    },
+    {
+      "ten": "bic-fy2025-audited-mirror",
+      "url": "https://static2.vietstock.vn/data/HOSE/2025/BCTC/VN/NAM/BIC_Baocaotaichinh_2025_Kiemtoan_Hopnhat.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/bic-fy2025-audited-mirror.pdf",
+      "sha256": "c3cb5c109c0aa3ebe695476b7a6c90133885ccb65d88685797a066e10d1d45e2",
+      "byte": 4964127,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "BCTC hợp nhất FY2025 đã kiểm toán bởi Ernst & Young Việt Nam (ký 20/03/2026, số 12237572/E-68669225-HN; BIC ký 16/03/2026), 86 trang, lưu trên CDN Vietstock; chưa khớp byte với miền bic.vn/HOSE."
+    },
+    {
+      "ten": "bic-q4-fy2025-signed-mirror",
+      "url": "https://static2.vietstock.vn/vietstock/2026/1/30/20260130___bic___bao_cao_tai_chinh_hop_nhat_q4_2025_signed.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/bic-q4-fy2025-signed-mirror.pdf",
+      "sha256": "27d4788f34794923cd3c1989bfd30d72f8229a115ee3f2f86a9dd70e4e34f5d8",
+      "byte": 2826711,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "BCTC hợp nhất Quý 4/2025 và lũy kế cả năm 2025 do BIC tự lập và ký đóng dấu ngày 23/01/2026 kèm Công văn giải trình 156/CV-KT ngày 30/01/2026 (22 trang, lưu trên CDN Vietstock); dùng để đối chiếu chênh lệch trước và sau kiểm toán."
+    },
+    {
+      "ten": "31-vbhn-vpqh-luat-kinh-doanh-bao-hiem",
+      "url": "https://congbao.chinhphu.vn/tai-ve-van-ban-so-31-vbhn-vpqh-46722-51065",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/31-vbhn-vpqh.pdf",
+      "sha256": "68a62eb33e710334e2cc9ad8ad223f53ee33db6b235302585208bf3eea9225c9",
+      "byte": 2794334,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "Văn bản hợp nhất Luật Kinh doanh bảo hiểm số 31/VBHN-VPQH (hợp nhất Luật 08/2022/QH15 và Luật 56/2024/QH15), tải trực tiếp từ Công báo Chính phủ."
+    },
+    {
+      "ten": "46-2023-nd-cp",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2023/7/46-cp.signed.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/46-2023-nd-cp.pdf",
+      "sha256": "e62ec17ca3e689e138137aaa5c0d949488e3855e133fe07d75367e212e61317d",
+      "byte": 6573800,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "Nghị định 46/2023/NĐ-CP bản ký số chính thức tải trực tiếp từ Cổng Thông tin điện tử Chính phủ."
+    },
+    {
+      "ten": "44-vbhn-btc-thong-tu-67",
+      "url": "https://congbao.chinhphu.vn/tai-ve-van-ban-so-44-vbhn-btc-46909-51525",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/44-vbhn-btc.pdf",
+      "sha256": "aa670327e1e8b60744c966cc7f5289bd84343a54fab4a30a5e0cf5a8c6c74c79",
+      "byte": 5081521,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "Văn bản hợp nhất số 44/VBHN-BTC hợp nhất Thông tư 67/2023/TT-BTC, tải trực tiếp từ Công báo Chính phủ."
+    },
+    {
+      "ten": "berkshire-2025ar",
+      "url": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf",
+      "tep_cuc_bo": "data/raw/payloads/insurance-review-2026-11-05/berkshire-2025ar.pdf",
+      "sha256": "777a62551d4542ce62671df66c218247a398ecb0e66aaa8a5410daeb49b67fbf",
+      "byte": 9831136,
+      "truy_cap": "2026-11-05 Asia/Ho_Chi_Minh",
+      "gioi_han": "Báo cáo thường niên FY2025 của Berkshire Hathaway Inc., tải trực tiếp từ berkshirehathaway.com."
+    }
+  ]
+}

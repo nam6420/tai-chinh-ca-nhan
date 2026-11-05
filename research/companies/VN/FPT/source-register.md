@@ -1,7 +1,7 @@
 # Sổ nguồn — Công ty Cổ phần FPT (FPT)
 
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
-- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập ban đầu: 31/10/2026; nguồn bổ sung ghi ngày truy cập riêng.
 
 | Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
 |---|---|---|---|---|---|---|
@@ -30,6 +30,8 @@
 | S23 | [CafeF, FPT công bố văn bản quan trọng, cổ phiếu lên cao nhất 3 tháng](https://cafef.vn/fpt-cong-bo-van-ban-quan-trong-co-phieu-len-cao-nhat-3-thang-188260910103058955.chn) | 10/09/2026 | Thưởng cổ phiếu 10% | Cổ phiếu, đồng | Thứ cấp (báo chí) | Giá 74.200 trước thưởng; chưa có nguồn gốc ngày không hưởng quyền |
 | S24 | [Geekchamp, Infosys Q2 FY27](https://geekchamp.com/infosys-q2-fy27-results-revenue-grows-in-rupees-as-guidance-is-cut/) | 27/10/2026 | Q2 FY27 của Infosys | Phần trăm theo tiền tệ cố định | Thứ cấp (trang tổng hợp) | Chưa mở hồ sơ BSE/NSE gốc |
 | S25 | [Doanh nhân - Pháp luật, FPT chốt ngày thưởng hơn 171 triệu cổ phiếu](https://doanhnhan.baophapluat.vn/tap-doan-fpt-fpt-chot-ngay-thuong-hon-171-trieu-co-phieu-thi-gia-vuon-len-dinh-3-thang.html) | 10/09/2026 | Thưởng cổ phiếu 10% | Cổ phiếu | Thứ cấp (báo chí) | Ngày chốt quyền 22/09/2026 |
+| S26 | [BCTC riêng kiểm toán FTEL FY2025](https://fpt.vn/storage/upload/files/reports/bctc_2025_audit_eng.pdf) | Duyệt 19/03/2026 | FY2025 | VND; riêng FTEL | Gốc, kiểm toán; tự tải và đọc ảnh PDF 45 ngày 02/11/2026 | Cổ tức tiền mặt khai báo cho FPT 1.124.305.935.000 đồng, khác tiền thực nhận 2026; không dùng cổ tức cổ phiếu ở mục iii làm tiền |
+| S27 | [BCTC hợp nhất FTEL Q3/2026, bản sao PDF](https://cdn.financialreports.eu/financialreports/media/filings/87586/2026/RNS/87586_rns_2026-10-26_eb4189b2-5ac5-4003-b359-577ea5405034.pdf) — [trang lưu](https://financialfilings.com/filings/fpt-telecom-jsc/interim-quarterly-report/2026/74756264/) | Ký 23/10/2026, trang lưu 26/10 | Q3 và9T2026/2025 | VND; hợp nhất FTEL | Tài liệu FTEL lập, bản sao bên lưu trữ; tự tải/read ảnh PDF6 ngày02/11 | Không khớp byte miền FTEL; 9T LNST tăng13,7%, Q3 tăng13,0%; thay tỷ lệ sai chép từS16 |
 
 ## Mâu thuẫn và mục chưa giải quyết
 

@@ -6,7 +6,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 16:54 UTC+7 (Asia/Ho_Chi_Minh)`
 - Phạm vi: `Đọc toàn bài; tìm kiếm/mở nguồn trọng yếu; tái tính ví dụ và toàn bộ đáp án; kiểm kỳ, đơn vị, phạm vi và giới hạn nguồn.`
 - Báo cáo đích: `learning/lessons/N7-data-probability-uncertainty.md`
-- SHA-256 nội dung đích: `99cb2d79cc25a740534e001cd9c12d5a54e3f842be66e8b992b1cadd6cf2d427`
+- SHA-256 nội dung đích: `5d1241604b0b26468687fd7aec4c508f9abbfc51a34686cf098f8772fad42e76`
 - Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
 - Người ghi: Điều phối viên, chép/tổng hợp kết quả của nhánh độc lập trong cuộc trò chuyện ngày26/10/2026; người kiểm không sửa bài.

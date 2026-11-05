@@ -3,7 +3,7 @@
 - Ngày: `2026-10-26`
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Truy được đầu vào; tái tính chỉ số; tách sự thật/kịch bản; lập kế hoạch kiểm luận điểm với bằng chứng hai chiều.
-- Bài trước liên quan: Nền,004–012,015; thêm013nếu nghiên cứu tài chính,014nếu cần khung ngành. Không cần học hết mọi ngành.
+- Bài trước liên quan: Nền, 004–012, 015; thêm 013 nếu nghiên cứu tài chính, 014 nếu cần khung ngành. Không cần học hết mọi ngành.
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Tôi có thể để người khác kiểm lại một kết luận từ đầu tới cuối không?**
 - Kiểm nguồn: `ĐẠT`
@@ -25,7 +25,7 @@ Ví dụ thật chỉ tập đọc một lát cắt lịch sử Apple FY2025. Đ
 
 `Ý_KIẾN` Chọn một doanh nghiệp có hồ sơ công khai đọc được, ghi thị trường, đồng tiền, chuẩn và kỳ; bắt đầu bằng câu hỏi hẹp. Ví dụ: “Lợi nhuận FY2025 của Apple chuyển thành dòng tiền ra sao, cần đọc thêm gì để giải thích?”.
 
-`SỰ_THẬT` Apple, Hoa Kỳ, US GAAP, hợp nhất; FY kết thúc27/09/2025, đơn vị **triệu USD** trong10-K:
+`SỰ_THẬT` Apple, Hoa Kỳ, US GAAP, hợp nhất; FY kết thúc 27/09/2025, đơn vị **triệu USD** trong 10-K:
 
 | Chỉ tiêu gốc | FY2025 | Vị trí |
 |---|---:|---|
@@ -34,7 +34,7 @@ Ví dụ thật chỉ tập đọc một lát cắt lịch sử Apple FY2025. Đ
 | Tiền tạo từ hoạt động |111.482|Báo cáo lưu chuyển tiền|
 | Tiền chi mua tài sản cố định |12.715|Dòng đầu tư; báo cáo trình bày khoản chi âm|
 
-Nguồn gốc: [Apple10-K](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm). Dấu chấm trong bảng là phân cách nghìn, không phải dấu thập phân. Giữ dấu gốc của dòng chi; khi dùng “mức chi capex” lấy độ lớn dương có giải thích.
+Nguồn gốc: [Apple 10-K](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm). Dấu chấm trong bảng là phân cách nghìn, không phải dấu thập phân. Giữ dấu gốc của dòng chi; khi dùng “mức chi capex” lấy độ lớn dương có giải thích.
 
 `PHÉP_TÍNH` Biên ròng `112.010/416.161≈26,92%`; chuyển hóa tiền `111.482/112.010≈99,53%`; CFO trừ capex giản lược `111.482−12.715=98.767` triệu USD. Chỉ số cuối **không tự là FCFF hoặc FCFE đã chuẩn hóa**; còn phải kiểm phân loại lãi, khoản bất thường, trả công cổ phiếu và nhu cầu đầu tư. Một năm không chứng minh bền vững.
 
@@ -46,13 +46,13 @@ Nguồn gốc: [Apple10-K](https://www.sec.gov/Archives/edgar/data/320193/000032
 
 ## 3. Bài luyện kịch bản — tách khỏi Apple
 
-`KỊCH_BẢN` Công ty Sao Biển hư cấu, FCFF năm tới80/100/120 **tỷ đồng** ở bất lợi/cơ sở/thuận lợi. WACC10%,g2% chung; mô hình ổn định giản lược đã giả định tái đầu tư phù hợp. `PHÉP_TÍNH` EV tương ứng `80/0,08=1.000`, `100/0,08=1.250`, `120/0,08=1.500 tỷ`. Nếu nợ ròng200 và100 triệu cổ phần thì vốn chủ800/1.050/1.300 tỷ, tương đương8.000/10.500/13.000 đồng/cổ phần. Không dùng các con số này định giá Apple.
+`KỊCH_BẢN` Công ty Sao Biển hư cấu, FCFF năm tới 80/100/120 **tỷ đồng** ở bất lợi/cơ sở/thuận lợi. WACC 10%, g 2% chung; mô hình ổn định giản lược đã giả định tái đầu tư phù hợp. `PHÉP_TÍNH` EV tương ứng `80/0,08=1.000`, `100/0,08=1.250`, `120/0,08=1.500 tỷ`. Nếu nợ ròng 200 và 100 triệu cổ phần thì vốn chủ 800/1.050/1.300 tỷ, tương đương 8.000/10.500/13.000 đồng/cổ phần. Không dùng các con số này định giá Apple.
 
 Sản phẩm hoàn thành khi người khác tái lập được số, chỉ được giả định chủ chốt và phản chứng. Công bố nghiên cứu thật còn cần kiểm nguồn/phản biện đúng phiên bản theo quy trình repo; bài học này không tự tạo một báo cáo đã duyệt.
 
 ## Ví dụ từ nguồn thật
 
-Ví dụ Apple ở phần1 là dữ liệu công bố lịch sử từ một doanh nghiệp thật. Các nguyên nhân kinh tế chưa được kết luận tại đây. `CHƯA_BIẾT` trong bài: số cần chuẩn hóa qua nhiều năm, bộ giả định định giá và giá thị trường cùng ngày; cách xác minh là mở hồ sơ kỳ tương ứng và nguồn giá sở giao dịch. Vì vậy không có kết luận đắt/rẻ.
+Ví dụ Apple ở phần 1 là dữ liệu công bố lịch sử từ một doanh nghiệp thật. Các nguyên nhân kinh tế chưa được kết luận tại đây. `CHƯA_BIẾT` trong bài: số cần chuẩn hóa qua nhiều năm, bộ giả định định giá và giá thị trường cùng ngày; cách xác minh là mở hồ sơ kỳ tương ứng và nguồn giá sở giao dịch. Vì vậy không có kết luận đắt/rẻ.
 
 ## Năm câu hỏi khi đọc
 
@@ -67,7 +67,7 @@ Ví dụ Apple ở phần1 là dữ liệu công bố lịch sử từ một doa
 Câu 1–3 là phần cốt lõi; câu 4–6 là luyện thêm và chuyển sang tình huống mới. Nếu chưa tự giải được phần cốt lõi, quay lại ví dụ rồi thử với đầu vào khác.
 
 1. Tái tính biên ròng và chuyển hóa tiền Apple, ghi đơn vị.
-2. Vì sao98.767 chưa đủ để gọi là FCFF chuẩn hóa?
+2. Vì sao 98.767 chưa đủ để gọi là FCFF chuẩn hóa?
 3. Tính EV/vốn chủ mỗi cổ phần của kịch bản cơ sở Sao Biển.
 4. Viết một câu sự thật và một câu suy luận khác nhau từ bảng Apple.
 5. Lập hồ sơ theo mẫu cho câu hỏi hẹp, chưa cần kết luận đầu tư.
@@ -78,10 +78,10 @@ Câu 1–3 là phần cốt lõi; câu 4–6 là luyện thêm và chuyển sang
 <details>
 <summary>Mở sau khi tự làm</summary>
 
-1. `PHÉP_TÍNH` Khoảng26,92% và99,53%; tử/mẫu cùng triệuUSD nên tỷ lệ không có đơn vị tiền.
+1. `PHÉP_TÍNH` Khoảng 26,92% và 99,53%; tử/mẫu cùng triệu USD nên tỷ lệ không có đơn vị tiền.
 2. Cần xét dòng tiền thuộc ai, phân loại lãi/thuế, khoản bất thường và tái đầu tư; không chỉ trừ hai dòng.
-3. `PHÉP_TÍNH` EV1.250 tỷ, vốn chủ1.050 tỷ,10.500đồng/cổ phần; kiểm cầu nối và thang đo.
-4. Ví dụ: SỰ_THẬT CFO111.482triệuUSD; SUY_LUẬN cần kiểm cầu nối vì CFO gần lợi nhuận chưa đủ giải thích chất lượng.
+3. `PHÉP_TÍNH` EV 1.250 tỷ, vốn chủ 1.050 tỷ, 10.500 đồng/cổ phần; kiểm cầu nối và thang đo.
+4. Ví dụ: SỰ_THẬT CFO 111.482 triệu USD; SUY_LUẬN cần kiểm cầu nối vì CFO gần lợi nhuận chưa đủ giải thích chất lượng.
 5. Đáp án mở: đủ câu hỏi, nguồn, phép tính, giả định, ba kịch bản khi định giá, phản chứng/unknown; không nộp thông tin tài khoản cá nhân.
 6. Không nếu nội dung trọng yếu đổi; tính hash mới và kiểm lại. Không suy một hash hay cổng cấu trúc là bằng chứng nguồn đúng.
 
@@ -113,8 +113,8 @@ Các nguồn được nhánh chuyên môn hoặc điều phối viên tìm kiế
 
 | Nguồn | Kỳ/phiên bản, phạm vi | Dùng cho |
 |---|---|---|
-| [Apple FY2025 Form10-K](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) | FY27/09/2025; nộp31/10/2025; Hoa Kỳ; US GAAP; hợp nhất; triệuUSD; số lịch sử | Bảng gốc và tái tính; một nguồn gốc duy nhất cho số công bố |
-| [SEC — Filing Detail](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm) | Hồ sơ nộp31/10/2025; kỳ báo cáo27/09/2025 | Phân biệt ngày nộp và kỳ |
+| [Apple FY2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) | FY 27/09/2025; nộp 31/10/2025; Hoa Kỳ; US GAAP; hợp nhất; triệu USD; số lịch sử | Bảng gốc và tái tính; một nguồn gốc duy nhất cho số công bố |
+| [SEC — Filing Detail](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.htm) | Hồ sơ nộp 31/10/2025; kỳ báo cáo 27/09/2025 | Phân biệt ngày nộp và kỳ |
 | [Investor.gov — Using EDGAR](https://www.investor.gov/introduction-investing/getting-started/researching-investments/using-edgar-research-investments) | Hoa Kỳ; ngày xuất bản CHƯA_BIẾT | Truy hồ sơ và loại tài liệu |
 | [Damodaran — Valuation](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/lectures/val.html) | NYU; phương pháp, ngày phiên bản CHƯA_BIẾT | Công thức kịch bản hư cấu |
 

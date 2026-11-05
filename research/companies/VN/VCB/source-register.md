@@ -1,8 +1,8 @@
 # Sổ nguồn — Ngân hàng TMCP Ngoại thương Việt Nam (VCB)
 
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
-- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập mọi nguồn: 31/10/2026.
-- **Cảnh báo:** chưa mở được báo cáo tài chính gốc của ngân hàng hay HOSE; trang nhà đầu tư chỉ hiện lịch công bố. Gần như toàn bộ số ngân hàng là nguồn thứ cấp, cần đối chiếu báo cáo gốc trước khi dùng làm kết luận trọng yếu.
+- Mục đích: lưu vết nguồn cho hồ sơ học tập; nhận định và giới hạn xem [report.md](report.md). Ngày truy cập ban đầu: 31/10/2026; nguồn bổ sung ghi ngày riêng.
+- **Cảnh báo:** chưa tải được từ miền ngân hàng/HOSE. Đã đọc thuyết minh nhóm nợ và dự phòng của bản BCTC mang tên ngân hàng do 24hmoney lưu (S33); các số còn lại chưa đối chiếu vẫn là thứ cấp. Không coi nơi lưu bản sao là xác nhận độc lập thứ hai.
 
 | Mã | Nguồn và URL | Ngày công bố | Kỳ dữ liệu | Đơn vị / phạm vi | Loại | Giới hạn |
 |---|---|---|---|---|---|---|
@@ -37,6 +37,8 @@
 | S29 | [Tab Insights, ngân hàng Việt Nam quý 1/2026](https://tabinsights.com/article/vietnamese-banks-post-solid-profit-growth-despite-funding-pressures-and-higher-provisions) | 10/06/2026 | Quý 1/2026 toàn ngành | Tỷ lệ phần trăm | Thứ cấp | NIM ngành 2,9% so với 3,1%; LDR 114,2% |
 | S30 | [Người Quan Sát, Vietcombank lãi hơn 40.400 tỷ sau 9 tháng, dự phòng quý III tăng gần 8 lần](https://nguoiquansat.vn/vietcombank-lai-hon-40-400-ty-sau-9-thang-du-phong-quy-iii-tang-gan-8-lan-325370.html) | 31/10/2026 | Quý 3 và 9 tháng 2026 | Tỷ VND | Thứ cấp (báo chí) | Nhóm nợ 3–5, nhóm 2 (4.995), dự phòng trái phiếu chưa niêm yết (3.307 → 6.304), nguồn vốn; một nguồn báo chí duy nhất cho các số này |
 | S31 | [The Investor, Vietcombank aims to complete private placement in 2026](https://theinvestor.vn/vietcombank-aims-to-complete-private-placement-in-2026-d18928.html) | 25/04/2026 | Chào bán riêng lẻ | Cổ phiếu, tỷ lệ | Thứ cấp (báo chí) | Số cổ phiếu mâu thuẫn với S8/S9; có thể kéo sang 2027 |
+| S32 | [Vietcap, KQKD Q3/2026](https://www.vietcap.com.vn/trung-tam-phan-tich/vcb-loi-nhuan-thap-hon-ky-vong-do-chi-phi-du-phong-ngoai-du-kien-nhung-da-tang-truong-kinh-doanh-cot-loi-van-duy-tri-tich-cuc-bao-cao-kqkd) | 30/10/2026 | Q3/2026 | Tỷ VND; hợp nhất theo bên phân tích | Thứ cấp; điều phối tự mở 02/11/2026 | Khoảng 5.000 tỷ dự phòng trái phiếu khách hàng năng lượng trong Q3; chưa đối chiếu BCTC gốc, không suy danh tính |
+| S33 | [BCTC hợp nhất Q3/2026, bản sao PDF](https://cdn.24hmoney.vn/upload/file/2026-4/2026-10-31/no-name-1793388232.pdf) — [trang lưu](https://24hmoney.vn/report/72954/financialstatements) | Trang lưu 31/10/2026 | 30/09/2026 và 31/12/2025 trình bày lại | Triệu VND; hợp nhất | Tài liệu ngân hàng lập, bản sao trên miền tổng hợp; tự tải và đọc ảnh PDF 27–29 ngày 02/11/2026 | Chưa khớp byte với tệp từ ngân hàng/HOSE; nguồn và checksum trong data/raw/company-review-sources-2026-11-02.json |
 
 ## Mâu thuẫn và mục chưa giải quyết
 

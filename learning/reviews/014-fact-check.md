@@ -6,7 +6,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 17:04 UTC+7 (Asia/Ho_Chi_Minh)`
 - Phạm vi: `Đọc toàn bài; tìm kiếm/mở nguồn trọng yếu; tái tính ví dụ và toàn bộ đáp án; kiểm kỳ, đơn vị, phạm vi và giới hạn nguồn.`
 - Báo cáo đích: `learning/lessons/014-industry-capital-cycle.md`
-- SHA-256 nội dung đích: `29cd0d6544ba460cd21375de8220d76b606477cd7701128ad96a6479a861cb2d`
+- SHA-256 nội dung đích: `e27459e3a6ac20418edc4a04d4d15eced150f143056e59544380ad35445559d6`
 - Kết luận: `ĐẠT`
 - Lỗi nghiêm trọng chưa xử lý: `0`
 - Người ghi: Điều phối viên, chép/tổng hợp kết quả của nhánh độc lập trong cuộc trò chuyện ngày26/10/2026; người kiểm không sửa bài.

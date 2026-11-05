@@ -41,6 +41,18 @@ class KiemTraChieuSau(unittest.TestCase):
         text = good_lesson().replace("## Sai ở đâu", "## Khác")
         self.assertIn("thiếu mục: sai ở đâu", self.check_text(text))
 
+    def test_tieu_de_co_danh_so_va_do_dai_5000_tu(self) -> None:
+        body = "từ " * 4800
+        exercises = "\n".join(f"{i}. Câu {i}" for i in range(1, 9))
+        text = (
+            f"# Bài\n\n{body}\n\n## 4. Ví dụ doanh nghiệp thật: Công ty A\n"
+            "x practice/models/a.csv\n\n"
+            f"## 6. Bài tập (8 câu)\n{exercises}\n\n## 7. Đáp án\nx\n\n"
+            "## 8. Bài làm với dữ liệu thiếu hoặc lệch\nx\n\n"
+            "## 9. Sai ở đâu\nx\n\n## 10. Kiểm tra chuyển bài\nx\n"
+        )
+        self.assertEqual(self.check_text(text), [])
+
 
 if __name__ == "__main__":
     unittest.main()

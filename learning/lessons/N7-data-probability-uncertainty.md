@@ -15,7 +15,7 @@ Một nhóm người có thu nhập trung bình cao có thể chỉ vì một ng
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N4: khoản đầu 100, góp thêm 50 ngay cuối kỳ, tài khoản cuối160 thì lãi bao nhiêu? Đáp án10, không phải60. Trước khi tính phải phân biệt dòng tiền với lợi nhuận.
+N4: khoản đầu 100, góp thêm 50 ngay cuối kỳ, tài khoản cuối 160 thì lãi bao nhiêu? Đáp án 10, không phải 60. Trước khi tính phải phân biệt dòng tiền với lợi nhuận.
 
 ## Bài này làm gì và chưa làm gì
 
@@ -23,7 +23,7 @@ Dạy kiểm đơn vị, kỳ và bất định bằng bảng số nhỏ tự đ
 
 ## 1. So cái gì với cái gì?
 
-`PHÉP_TÍNH` Biên lợi nhuận tăng từ10% lên12% là **2 điểm phần trăm**; tăng tương đối `(12−10)/10=20%`. Mức tăng doanh thu20% không cùng nghĩa với biên lợi nhuận20%. Số danh nghĩa và sức mua thực khác nhau như N4.
+`PHÉP_TÍNH` Biên lợi nhuận tăng từ 10% lên 12% là **2 điểm phần trăm**; tăng tương đối `(12−10)/10=20%`. Mức tăng doanh thu 20% không cùng nghĩa với biên lợi nhuận 20%. Số danh nghĩa và sức mua thực khác nhau như N4.
 
 Mỗi số cần tên, quốc gia, kỳ, mẫu số, đơn vị và ngày công bố. Tăng tháng này so cùng kỳ không thể đem so trực tiếp với mức bình quân cả năm rồi kết luận vượt mục tiêu.
 
@@ -31,13 +31,13 @@ Mỗi số cần tên, quốc gia, kỳ, mẫu số, đơn vị và ngày công 
 
 `KỊCH_BẢN` Năm cửa hàng có lợi nhuận tháng, triệu đồng: `10,10,10,10,100`.
 
-`PHÉP_TÍNH` Bình quân = `140/5=28`; trung vị sau sắp xếp là10. Không có cửa hàng nào lãi28. Một điểm cực lớn kéo bình quân lên. `SỰ_THẬT` NIST giải thích sự khác nhau giữa trung bình và trung vị, đặc biệt với giá trị cực đoan. [NIST](https://itl.nist.gov/div898/handbook/eda/section3/eda351.htm).
+`PHÉP_TÍNH` Bình quân = `140/5=28`; trung vị sau sắp xếp là 10. Không có cửa hàng nào lãi 28. Một điểm cực lớn kéo bình quân lên. `SỰ_THẬT` NIST giải thích sự khác nhau giữa trung bình và trung vị, đặc biệt với giá trị cực đoan. [NIST](https://itl.nist.gov/div898/handbook/eda/section3/eda351.htm).
 
 Tương quan là cùng biến động; chưa đủ chứng minh nguyên nhân. Hai cửa hàng cùng tăng doanh thu khi trời nóng có thể vì thời tiết, không phải cửa hàng này làm cửa hàng kia tăng trưởng. Đây là phản ví dụ hư cấu cho yêu cầu kiểm cơ chế.
 
 ## 3. Xác suất và phiên bản dữ liệu
 
-`KỊCH_BẢN` Kết quả lãi/lỗ sau một năm là −40, +10 hoặc +50 triệu với xác suất giả định25%,50%,25%. `PHÉP_TÍNH` Kỳ vọng = `−40×0,25+10×0,50+50×0,25=7,5 triệu`. Tổng xác suất =100%. Không kịch bản nào cho7,5; kỳ vọng không phải kết quả chắc xảy ra. Xác suất tự gán phải có nhãn và thử độ nhạy.
+`KỊCH_BẢN` Kết quả lãi/lỗ sau một năm là −40, +10 hoặc +50 triệu với xác suất giả định 25%, 50%, 25%. `PHÉP_TÍNH` Kỳ vọng = `−40×0,25+10×0,50+50×0,25=7,5 triệu`. Tổng xác suất = 100%. Không kịch bản nào cho 7,5; kỳ vọng không phải kết quả chắc xảy ra. Xác suất tự gán phải có nhãn và thử độ nhạy.
 
 `SỰ_THẬT` BLS giải thích số ban đầu có thể được sửa khi thông tin đầy đủ hơn; ALFRED lưu phiên bản dữ liệu theo thời điểm. [BLS](https://www.bls.gov/about-bls/accurate-and-timely.htm), [ALFRED](https://alfred.stlouisfed.org/help). Khi đánh giá một quyết định quá khứ, chỉ dùng thông tin đã công bố tới lúc đó; không dùng bản sửa trong tương lai rồi trách người ra quyết định chưa biết.
 
@@ -59,11 +59,11 @@ Tương quan là cùng biến động; chưa đủ chứng minh nguyên nhân. H
 
 Câu 1–3 là phần cốt lõi; câu 4–6 là luyện thêm và chuyển sang tình huống mới. Nếu chưa tự giải được phần cốt lõi, quay lại ví dụ rồi thử với đầu vào khác.
 
-1. Lãi suất từ4% lên5% tăng bao nhiêu điểm phần trăm, bao nhiêu phần trăm tương đối?
-2. Tính bình quân và trung vị của1,2,3,4,40.
+1. Lãi suất từ 4% lên 5% tăng bao nhiêu điểm phần trăm, bao nhiêu phần trăm tương đối?
+2. Tính bình quân và trung vị của 1, 2, 3, 4, 40.
 3. Tính kỳ vọng ví dụ −40/+10/+50 ở trên; vì sao không được gọi là lợi nhuận chắc chắn?
-4. Xác suất trường hợp lỗ tăng lên50%, cơ sở25%, thuận lợi25%: kỳ vọng mới?
-5. Một báo cáo tháng6 dùng số đã sửa tháng9 để mô tả 'điều thị trường biết tháng6': lỗi gì?
+4. Xác suất trường hợp lỗ tăng lên 50%, cơ sở 25%, thuận lợi 25%: kỳ vọng mới?
+5. Một báo cáo tháng 6 dùng số đã sửa tháng 9 để mô tả 'điều thị trường biết tháng 6': lỗi gì?
 6. Một doanh nghiệp tăng giá và doanh thu tăng; cần thêm gì trước khi kết luận khách không nhạy giá?
 
 ## Đáp án và điều cần hiểu
@@ -72,10 +72,10 @@ Câu 1–3 là phần cốt lõi; câu 4–6 là luyện thêm và chuyển sang
 <summary>Mở sau khi tự làm</summary>
 
 1. `PHÉP_TÍNH` +1 điểm phần trăm; (5−4)/4=25% tương đối. Kiểm đơn vị diễn đạt.
-2. `PHÉP_TÍNH` 50/5=10, trung vị3; quan sát phân bố trước diễn giải.
-3. 7,5 triệu; là tổng có trọng số theo xác suất giả định, có thể mất40 triệu trong kịch bản bất lợi.
+2. `PHÉP_TÍNH` 50/5=10, trung vị 3; quan sát phân bố trước diễn giải.
+3. 7,5 triệu; là tổng có trọng số theo xác suất giả định, có thể mất 40 triệu trong kịch bản bất lợi.
 4. `PHÉP_TÍNH` −40×0,5+10×0,25+50×0,25=−5 triệu; luận điểm đổi khi xác suất đổi.
-5. Dùng dữ liệu tương lai so với câu hỏi, gây thiên lệch nhìn lại; cần phiên bản đã có tới tháng6.
+5. Dùng dữ liệu tương lai so với câu hỏi, gây thiên lệch nhìn lại; cần phiên bản đã có tới tháng 6.
 6. Lượng bán, cơ cấu sản phẩm, thời gian, đối thủ, khách rời bỏ và yếu tố chung; chỉ giá và doanh thu chưa đủ.
 
 </details>

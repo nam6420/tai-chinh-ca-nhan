@@ -1,0 +1,65 @@
+{
+  "moc_chot_ho_so": "2026-10-31 (Asia/Ho_Chi_Minh)",
+  "luu_y": "Payload lớn bị git ignore. OCR chỉ hỗ trợ tìm trang; số đưa vào báo cáo được đọc ảnh trang. Không chứng minh tệp chưa từng bị thay sau ngày công bố.",
+  "nguon": [
+    {
+      "ten": "hpg-q3-2026",
+      "url": "https://file.hoaphat.com.vn/hoaphat-com-vn/2026/10/bao-cao-tai-chinh-hop-nhat-qiii-2026.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/hpg-q3-2026.pdf",
+      "sha256": "a54c55eff615a80cb9c2e80da7893881d0dc31c1fa6aa81b682873bc89de01e2",
+      "byte": 19523137,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Tải trực tiếp từ miền cơ quan/công ty; bản PDF tải tại ngày truy cập."
+    },
+    {
+      "ten": "ftel-separate-fy2025",
+      "url": "https://fpt.vn/storage/upload/files/reports/bctc_2025_audit_eng.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/ftel-separate-fy2025.pdf",
+      "sha256": "e3a82d02b5a62034962c446170ad0912752c988c85b0102d949b2cc6d5ab90ee",
+      "byte": 17281241,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Tải trực tiếp từ miền cơ quan/công ty; bản PDF tải tại ngày truy cập."
+    },
+    {
+      "ten": "vnm-q3-2026-mirror",
+      "url": "https://cdn.24hmoney.vn/upload/file/2026-4/2026-10-31/no-name-1793388857.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/vnm-q3-2026-mirror.pdf",
+      "sha256": "fd144a9acb3bacbc745cde32d6375471b11b4b005e1919996631b6735d7c8378",
+      "byte": 3958733,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Bản gương đã khớp byte với CDN công ty qua node fetch; trang lưu gọi kiểm toán nhưng PDF là soát xét. Báo cáo cố định kiểm duyệt vẫn giữ cảnh báo cũ chưa khớp byte; biên bản mới ghi kết quả đã kiểm.",
+      "doi_chieu_mien_cong_ty": {
+        "url": "https://d8um25gjecm9v.cloudfront.net/cms/20261030_VNM_BCTC_da_soat_xet_Q3_2026_Hop_nhat_010a30af2b.pdf",
+        "ngay": "2026-11-02 Asia/Ho_Chi_Minh",
+        "ket_qua": "HTTP200 qua node fetch; 3.958.733 byte; SHA-256 fd144a9acb3bacbc745cde32d6375471b11b4b005e1919996631b6735d7c8378 khớp bản gương. web/curl403 là giới hạn công cụ trong lượt, không phải thiếu nguồn."
+      }
+    },
+    {
+      "ten": "vcb-q3-2026-mirror",
+      "url": "https://cdn.24hmoney.vn/upload/file/2026-4/2026-10-31/no-name-1793388232.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/vcb-q3-2026-mirror.pdf",
+      "sha256": "13caf1e063f5f3b551a793646833a9598a99a67aec439ab69c3ed6d2b2b4ba3a",
+      "byte": 15769585,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Bản sao công bố doanh nghiệp do 24hmoney lưu; chưa khớp byte với miền doanh nghiệp."
+    },
+    {
+      "ten": "qd1917",
+      "url": "https://pvtm.gov.vn/data/00195410-a87c-4a80-989d-83a83a4e020d/userfiles/files/QD%201917%20ap%20dung%20chong%20lan%20tranh%20chinh%20thuc%20thep%20can%20nong_28_07_2026.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/qd1917.pdf",
+      "sha256": "385887d4c042ac077b1030838eecfe094a50e219120fa24e9fb1ab22acf7bc64",
+      "byte": 3399707,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Tải trực tiếp từ miền cơ quan/công ty; bản PDF tải tại ngày truy cập."
+    },
+    {
+      "ten": "ftel-q3-2026-mirror",
+      "url": "https://cdn.financialreports.eu/financialreports/media/filings/87586/2026/RNS/87586_rns_2026-10-26_eb4189b2-5ac5-4003-b359-577ea5405034.pdf",
+      "tep_cuc_bo": "data/raw/payloads/company-review-2026-11-02/ftel-q3-2026-mirror.pdf",
+      "sha256": "475f1e5219a9ed36399776c185d941d1803d5dfdadc384955391fe1da6558a3b",
+      "byte": 10997751,
+      "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+      "gioi_han": "Bản sao BCTC hợp nhất FTEL, trang kết quả ký23/10/2026, bìa ký số26/10; chưa khớp byte miềnFTEL. Đã đọc ảnh PDF6."
+    }
+  ]
+}

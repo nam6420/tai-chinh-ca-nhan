@@ -1,0 +1,23 @@
+{
+  "ly_do": "Bản trên đĩa đổi trong lúc kiểm; chụp bản cố định để các nhánh không đuổi theo thay đổi. Chưa công nhận biên bản hash/mốc cũ.",
+  "ban": [
+    {
+      "bai": "learning/lessons/N1-market-basics.md",
+      "ban_co_dinh": "data/raw/payloads/lesson-review-2026-11-02-1428/N1-market-basics.md",
+      "sha256_chuan": "155457e8465dfd83c5fa65591312ab08ba591917e0aca7c3ed4d1a3b87e000a2",
+      "chot": "2026-11-02 14:28 Asia/Ho_Chi_Minh"
+    },
+    {
+      "bai": "learning/lessons/N4-time-value-returns.md",
+      "ban_co_dinh": "data/raw/payloads/lesson-review-2026-11-02-1428/N4-time-value-returns.md",
+      "sha256_chuan": "b7baa7456b4920a2a969bd156692ac7b2be296f89e8f08a5cc2b0ac19d0e3a1e",
+      "chot": "2026-11-02 14:28 Asia/Ho_Chi_Minh"
+    },
+    {
+      "bai": "learning/lessons/N5-portfolio-index-investing.md",
+      "ban_co_dinh": "data/raw/payloads/lesson-review-2026-11-02-1428/N5-portfolio-index-investing.md",
+      "sha256_chuan": "7da5421172af966fc71d0d231e794ec249387c4a6753b7da02730f967d8ede3b",
+      "chot": "2026-11-02 14:28 Asia/Ho_Chi_Minh"
+    }
+  ]
+}

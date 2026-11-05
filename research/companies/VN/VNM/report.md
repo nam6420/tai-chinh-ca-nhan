@@ -1,4 +1,4 @@
-# BẢN NHÁP - CHƯA KIỂM DUYỆT: Công ty Cổ phần Sữa Việt Nam - Vinamilk (VNM)
+# Công ty Cổ phần Sữa Việt Nam - Vinamilk (VNM)
 
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
 - Quốc gia / thị trường / sở giao dịch: `Việt Nam / cổ phiếu / HOSE`
@@ -6,8 +6,8 @@
 - Tiền tệ / đơn vị báo cáo: VND; báo cáo gốc ghi bằng đồng, bảng dưới quy đổi sang **tỷ VND**.
 - Đề bài nghiên cứu: [Đợt 2, bốn hồ sơ Việt Nam](../../../briefs/vn-company-profiles-wave-2-2026-10-31.md)
 - Sổ nguồn: [source-register.md](source-register.md)
-- Kiểm nguồn: `ĐANG_CHỜ`
-- Phản biện rủi ro: `ĐANG_CHỜ`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
 
 ## Tóm tắt bài học
 
@@ -57,7 +57,7 @@ Báo cáo Q3/2026 là **đã soát xét** bởi KPMG (không phải kiểm toán
 
 **Hai tốc độ không khớp.** `PHÉP_TÍNH` Chi phí nguyên vật liệu trong chi phí theo yếu tố tăng 32,8% (29.329,78 so với 22.086,04 tỷ) trong khi giá vốn hàng bán tăng 12,1% (30.724,64 so với 27.419,16 tỷ); chi phí nguyên liệu tăng hơn gấp đôi tốc độ doanh thu (14,5%). Hàng tồn kho tăng 14,4% **so với 01/01/2026** (7.468,56 so với 6.529,98 tỷ; mốc khác với hai mức trên). `SỰ_THẬT` (thứ cấp) Báo chí dẫn công ty nói biên gộp quý 3 giảm vì chi phí đầu vào tăng nhanh hơn doanh thu [S9, S10]. Cột 9 tháng 2025 của thuyết minh chi phí theo yếu tố không đánh dấu phân loại lại [S1], nên khả năng so cùng cơ sở chưa xác lập (`CHƯA_BIẾT`); tổng chi phí theo yếu tố vượt tổng chi phí theo chức năng (giá vốn, bán hàng, quản lý) 3.245 tỷ ở 9T2026, còn ở 9T2025 thấp hơn 833 tỷ [S1, `PHÉP_TÍNH`], mà thay đổi hàng tồn kho không giải thích hết.
 
-**Cầu nối lợi nhuận trước thuế từ số gốc [S1] (thuyết minh VI.3 và VI.4, báo cáo kết quả kinh doanh).** `PHÉP_TÍNH` Quý 3: lợi nhuận trước thuế tăng 568,40 tỷ (3.694,00 so với 3.125,60); doanh thu tài chính tăng 204,50 tỷ (600,34 so với 395,84) và lãi liên kết chuyển từ lỗ 194,49 tỷ sang lãi 40,73 tỷ (+235,22 tỷ); hai khoản cộng 439,72 tỷ, bằng 77,4% mức tăng. Chín tháng: lợi nhuận trước thuế tăng 2.434,58 tỷ (10.607,57 so với 8.172,99); doanh thu tài chính tăng 274,58 tỷ (1.413,10 so với 1.138,51) và lãi liên kết chuyển từ lỗ 174,54 tỷ sang lãi 139,70 tỷ (+314,24 tỷ); hai khoản cộng 588,83 tỷ, bằng 24,2% mức tăng. `PHÉP_TÍNH` Lợi nhuận trước thuế trừ doanh thu tài chính và lãi liên kết: quý 3 là 3.052,93 so với 2.924,25 tỷ (+4,4%); chín tháng là 9.054,77 so với 7.209,02 tỷ (+25,6%). `PHÉP_TÍNH` Cách tính trên chưa trừ chi phí tài chính, vốn tăng 66% trong quý 3 (151,41 so với 91,35 tỷ) và 87% trong chín tháng (453,30 so với 242,67 tỷ) [S1]. Cầu nối **ròng** (doanh thu tài chính trừ chi phí tài chính, cộng lãi liên kết): quý 3 tăng 379,66 tỷ, bằng 66,8% mức tăng lợi nhuận trước thuế; chín tháng tăng 378,20 tỷ, bằng 15,5%. Lợi nhuận trước thuế ngoài các khoản đó: quý 3 là 3.204,34 so với 3.015,60 tỷ (+6,3%); chín tháng là 9.508,07 so với 7.451,69 tỷ (+27,6%). Hồ sơ gọi đây là "lợi nhuận trước thuế trừ phần tài chính ròng và liên kết", không phải lợi nhuận cốt lõi theo định nghĩa của công ty; doanh thu tài chính còn gồm lãi tiền gửi từ tiền mặt vận hành (1.179,11 trong 1.413,10 tỷ chín tháng), là thu nhập khá đều. `SUY_LUẬN` Tăng trưởng của phần còn lại chín tháng khoảng 26–28% nhưng quý 3 đơn lẻ chỉ khoảng 4–6%, cho thấy đà đã chậm lại; khoản lỗ liên kết 194,49 tỷ cùng kỳ năm trước (nguyên nhân `CHƯA_BIẾT`) làm phần "tăng" lãi liên kết lớn hơn thực chất. `SỰ_THẬT` (thứ cấp) Lãi liên kết chín tháng chủ yếu từ Công ty CP Chế biến Dừa Á Châu theo báo chí [S10].
+**Cầu nối lợi nhuận trước thuế từ số gốc [S1] (bản sao lưu S23 đã đọc lại, PDF 63 xác nhận chi phí tài chính 9T) (thuyết minh VI.3 và VI.4, báo cáo kết quả kinh doanh).** `PHÉP_TÍNH` Quý 3: lợi nhuận trước thuế tăng 568,40 tỷ (3.694,00 so với 3.125,60); doanh thu tài chính tăng 204,50 tỷ (600,34 so với 395,84) và lãi liên kết chuyển từ lỗ 194,49 tỷ sang lãi 40,73 tỷ (+235,22 tỷ); hai khoản cộng 439,72 tỷ, bằng 77,4% mức tăng. Chín tháng: lợi nhuận trước thuế tăng 2.434,58 tỷ (10.607,57 so với 8.172,99); doanh thu tài chính tăng 274,58 tỷ (1.413,10 so với 1.138,51) và lãi liên kết chuyển từ lỗ 174,54 tỷ sang lãi 139,70 tỷ (+314,24 tỷ); hai khoản cộng 588,83 tỷ, bằng 24,2% mức tăng. `PHÉP_TÍNH` Lợi nhuận trước thuế trừ doanh thu tài chính và lãi liên kết: quý 3 là 3.052,93 so với 2.924,25 tỷ (+4,4%); chín tháng là 9.054,77 so với 7.209,02 tỷ (+25,6%). `PHÉP_TÍNH` Cách tính trên chưa trừ chi phí tài chính, vốn tăng 66% trong quý 3 (151,41 so với 91,35 tỷ) và 87% trong chín tháng (453,30 so với 242,67 tỷ) [S1]. Cầu nối **ròng** (doanh thu tài chính trừ chi phí tài chính, cộng lãi liên kết): quý 3 tăng 379,66 tỷ, bằng 66,8% mức tăng lợi nhuận trước thuế; chín tháng tăng 378,20 tỷ, bằng 15,5%. Lợi nhuận trước thuế ngoài các khoản đó: quý 3 là 3.204,34 so với 3.015,60 tỷ (+6,3%); chín tháng là 9.508,07 so với 7.451,69 tỷ (+27,6%). Hồ sơ gọi đây là "lợi nhuận trước thuế trừ phần tài chính ròng và liên kết", không phải lợi nhuận cốt lõi theo định nghĩa của công ty; doanh thu tài chính còn gồm lãi tiền gửi từ tiền mặt vận hành (1.179,11 trong 1.413,10 tỷ chín tháng), là thu nhập khá đều. `SUY_LUẬN` Tăng trưởng của phần còn lại chín tháng khoảng 26–28% nhưng quý 3 đơn lẻ chỉ khoảng 4–6%, cho thấy đà đã chậm lại; khoản lỗ liên kết 194,49 tỷ cùng kỳ năm trước (nguyên nhân `CHƯA_BIẾT`) làm phần "tăng" lãi liên kết lớn hơn thực chất. `SỰ_THẬT` (thứ cấp) Lãi liên kết chín tháng chủ yếu từ Công ty CP Chế biến Dừa Á Châu theo báo chí [S10].
 
 **Xu hướng ba quý 2026.**
 
@@ -136,10 +136,12 @@ Câu hỏi học tập "lợi nhuận cốt lõi còn tăng và tiền ròng cò
 
 Chi tiết ở [source-register.md](source-register.md). Mã dùng trong bài: S1 báo cáo tài chính hợp nhất Q3/2026 đã soát xét; S2 báo cáo hợp nhất Q2/2026 (chưa đọc số); S3 tài liệu họp đại hội cổ đông 2026 và bài báo FY2025 (thứ cấp); S4 bản trình bày doanh nghiệp 11/08/2026; S5 thông báo cổ tức còn lại 2025; S6 thông báo tạm ứng cổ tức 2026; S7 báo chí 24hmoney (thứ cấp); S8 NSO; S9 báo Vietstock về kết quả quý 3 (thứ cấp); S10 báo Doanh nhân - Pháp luật về kết quả quý 3 (thứ cấp); S11 báo VCCI về quý 1/2026 (thứ cấp); S12 Thông tư 43/2026/TT-BTC (bản đăng lại, thứ cấp); S13 báo Doanh nhân - Pháp luật về kết quả quý 2 (thứ cấp); S14 trang ukragroconsult về phiên Global Dairy Trade 20/10/2026 (thứ cấp duy nhất); S15 báo Mekong Asean về kết quả quý 4/2025 (thứ cấp); S16 báo VCCI 08/08/2026 về định hướng nửa cuối năm (thứ cấp); S17 báo cáo Shinhan Securities 11/08/2026 về quý 2 (thứ cấp, hồ sơ không dùng khuyến nghị và giá mục tiêu trong đó); S18 báo 24hmoney về quý 1/2026 (thứ cấp); S19 báo Mekong Asean về quý 1/2023 (thứ cấp); S20 Dairy Business MEA 12/05/2026 về kế hoạch giá (thứ cấp); S21 báo Tuổi Trẻ 23/01/2026 về cổ đông (thứ cấp); S22 báo Thị trường Tài chính Tiền tệ về lãi suất tháng 10/2026 (thứ cấp).
 
+Nguồn dự phòng khi S1 trả 403: [S23 — bản sao BCTC Q3 do 24hmoney lưu](https://cdn.24hmoney.vn/upload/file/2026-4/2026-10-31/no-name-1793388857.pdf), chưa đối chiếu byte với miền công ty.
+
 ## Biên bản kiểm duyệt
 
-- Biên bản kiểm nguồn: `ĐANG_CHỜ`
-- Biên bản phản biện rủi ro: `ĐANG_CHỜ`
+- Biên bản kiểm nguồn: [fact-check.md](fact-check.md)
+- Biên bản phản biện rủi ro: [risk-review.md](risk-review.md)
 - Bất đồng chưa giải quyết: nhãn "giảm nhẹ" so với "Q4 lõi" và mức độ căng của kịch bản đuôi vẫn là phán đoán minh họa; mức và thời điểm tăng giá bán (2–4%) chưa thống nhất giữa các nguồn; chưa xác nhận F&N đã hoàn tất mua; chưa mở báo cáo FY2025 đã kiểm toán và nguồn Q3 nào ngoài báo cáo của công ty.
 
 > Chỉ dùng cho học tập và nghiên cứu. Đây không phải tư vấn tài chính cá nhân hay lệnh giao dịch.

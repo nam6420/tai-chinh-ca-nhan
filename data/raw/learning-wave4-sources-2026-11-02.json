@@ -1,0 +1,16 @@
+{
+  "chot_du_lieu": "2026-11-02 14:00 Asia/Ho_Chi_Minh",
+  "truy_cap": "2026-11-02 Asia/Ho_Chi_Minh",
+  "tai_lieu": [
+    {
+      "url": "https://fund-docs.vanguard.com/F0968.pdf",
+      "ky": "2026-09-30",
+      "pham_vi": "VOO, Hoa Kỳ, USD",
+      "tep": "data/raw/payloads/company-review-2026-11-02/voo-factsheet-2026-09-30.pdf",
+      "sha256": "e96f5ad4c4aee46c64a609ff3fcab58e246e9e6b94f49b4986cb808b5ee82286",
+      "byte": 479174,
+      "gioi_han": "URL động, bản tải có thể khác ở lần truy cập sau. Dùng mốc 30/09/2026 đã mở, không dùng mốc tháng3 trong đề xuất của nhánh soạn."
+    }
+  ],
+  "nguon_khac": "URL và phạm vi nằm ở cuối từng bài N1/N4/N5. Phép tính lịch sử Apple từ 10-KFY2025, không phải giá hiện tại."
+}

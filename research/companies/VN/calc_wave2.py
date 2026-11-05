@@ -695,3 +695,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def hpg_liquidity_round5():
+    """S48 BCTC Q3/2026 PDF 2/4/7, đầu vào VND gốc, đổi ra tỷ VND."""
+    cash = 6_852_876_731_299 / 1e9
+    term = 39_273_855_125_563 / 1e9
+    short = 78_615_048_528_530 / 1e9
+    long = 27_121_713_203_040 / 1e9
+    cfo = 20_936_329_304_403 / 1e9
+    capex = 14_607_166_041_086 / 1e9
+    return {"net_debt_cash_only": short + long - cash,
+            "net_debt_including_term": short + long - cash - term,
+            "liquid_over_short": (cash + term) / short,
+            "fcf_simple": cfo - capex}
+
+
+def vcb_provisions_round5():
+    """S33 thuyết minh 5–7, đơn vị gốc TRIỆU VND. Không suy chi phí trái phiếu từ số dư."""
+    opening, general_charge, specific_charge, fx = 24_980_391, 1_002_848, 5_186_666, -1_798
+    closing = opening + general_charge + specific_charge + fx
+    npl = 2_571_437 + 1_657_212 + 8_588_936
+    old_npl = 761_291 + 301_991 + 8_650_658
+    return {"closing_vnd_million": closing, "npl_vnd_million": npl,
+            "opening_npl_vnd_million": old_npl,
+            "coverage": closing / npl, "npl_ratio": npl / 1_816_093_286,
+            "group34_ratio": (2_571_437 + 1_657_212) / (761_291 + 301_991)}
+
+
+def ftel_growth_round6():
+    """S27 BCTC FTEL PDF6/mã60 và10: VND, cùng kỳ và phạm vi hợp nhất."""
+    return {"np_9t_growth": 2_933_945_150_076 / 2_580_935_694_440 - 1,
+            "np_q3_growth": 1_022_467_701_403 / 904_823_140_859 - 1,
+            "rev_9t_growth": 16_690_579_638_134 / 14_286_916_907_543 - 1}

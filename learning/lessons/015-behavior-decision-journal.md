@@ -3,7 +3,7 @@
 - Ngày: `2026-10-26`
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Nhận diện ba kiểu thiên lệch; viết dự đoán có thể kiểm lại; tách quy trình với kết quả và lưu phản chứng.
-- Bài trước liên quan: Có thể dùng nghi thức nhật ký từ001; học sâu sau012. Học tiếp016.
+- Bài trước liên quan: Có thể dùng nghi thức nhật ký từ 001; học sâu sau 012. Học tiếp 016.
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Làm sao biết mình đang tìm sự thật hay chỉ bảo vệ ý kiến ban đầu?**
 - Kiểm nguồn: `ĐẠT`
@@ -29,9 +29,9 @@ Dạy kỷ luật học tập và quyết định mô phỏng, không chẩn đo
 
 ## 2. Ghi trước, không sửa lại quá khứ
 
-`KỊCH_BẢN` Một hồ sơ hư cấu: trước kết quả, bạn dự kiến doanh thu quý sau100–110, vì lượng khách ổn định; bằng chứng chống là khách đang kéo dài thời gian trả. Kết quả đạt108 nhưng tiền thu giảm mạnh.
+`KỊCH_BẢN` Một hồ sơ hư cấu: trước kết quả, bạn dự kiến doanh thu quý sau 100–110, vì lượng khách ổn định; bằng chứng chống là khách đang kéo dài thời gian trả. Kết quả đạt 108 nhưng tiền thu giảm mạnh.
 
-`SUY_LUẬN` Dự đoán doanh thu đúng không tự xác nhận luận điểm dòng tiền. Giữ nguyên ghi chép cũ, thêm bản nhìn lại và tách điều đúng, điều sai, thông tin mới. Nếu sửa dự đoán cũ thành105–110 sau khi biết108, bạn mất khả năng học từ sai số.
+`SUY_LUẬN` Dự đoán doanh thu đúng không tự xác nhận luận điểm dòng tiền. Giữ nguyên ghi chép cũ, thêm bản nhìn lại và tách điều đúng, điều sai, thông tin mới. Nếu sửa dự đoán cũ thành 105–110 sau khi biết 108, bạn mất khả năng học từ sai số.
 
 Dùng [mẫu nhật ký](../../templates/decision-journal.md): điều tin; nguồn ủng hộ/phản đối; giả định/mức tự tin; điều kiện đổi ý; mốc xem lại. Ghi thông tin mô phỏng, không thông tin tài chính cá nhân.
 
@@ -39,7 +39,7 @@ Dùng [mẫu nhật ký](../../templates/decision-journal.md): điều tin; ngu�
 
 `Ý_KIẾN` Trước: (1) câu hỏi cụ thể; (2) nguồn/kỳ/đơn vị; (3) kịch bản bất lợi; (4) bằng chứng mạnh nhất chống lại; (5) điều chưa biết; (6) điều kiện/mốc kiểm lại. Sau: thông tin mới nào xuất hiện; lỗi do dữ liệu/phép tính/cơ chế hay rủi ro đã nhận diện; thay đổi bước nào trong quy trình.
 
-`PHÉP_TÍNH` Nếu giá mô phỏng tăng10% nhưng mốc phù hợp tăng15%, chênh kết quả là−5 điểm phần trăm, chưa đủ kết luận có/không có kỹ năng từ một kỳ. So cùng tiền tệ, cổ tức, phí và rủi ro. Điểm dừng: viết một phản chứng khiến bạn không thoải mái nhưng phải giữ lại.
+`PHÉP_TÍNH` Nếu giá mô phỏng tăng 10% nhưng mốc phù hợp tăng 15%, chênh kết quả là −5 điểm phần trăm, chưa đủ kết luận có/không có kỹ năng từ một kỳ. So cùng tiền tệ, cổ tức, phí và rủi ro. Điểm dừng: viết một phản chứng khiến bạn không thoải mái nhưng phải giữ lại.
 
 ## Ví dụ từ nguồn thật
 
@@ -58,9 +58,9 @@ Dùng [mẫu nhật ký](../../templates/decision-journal.md): điều tin; ngu�
 Câu 1–3 là phần cốt lõi; câu 4–6 là luyện thêm và chuyển sang tình huống mới. Nếu chưa tự giải được phần cốt lõi, quay lại ví dụ rồi thử với đầu vào khác.
 
 1. Kết quả tốt có chứng minh quy trình tốt không? Giải thích.
-2. Với ví dụ108, cần xem lại điều gì ngoài doanh thu?
+2. Với ví dụ 108, cần xem lại điều gì ngoài doanh thu?
 3. Viết một dòng điều kiện đổi ý có dữ kiện và ngày xem lại.
-4. Tăng10% so mốc15%: chênh bao nhiêu điểm phần trăm?
+4. Tăng 10% so mốc 15%: chênh bao nhiêu điểm phần trăm?
 5. Vì sao không sửa dự đoán cũ sau sự kiện?
 6. Làm một nhật ký mô phỏng ngắn với ít nhất một nguồn chống lại luận điểm.
 
@@ -104,7 +104,7 @@ Các nguồn được nhánh chuyên môn hoặc điều phối viên tìm kiế
 
 | Nguồn | Kỳ/phiên bản, phạm vi | Dùng cho |
 |---|---|---|
-| [SEC — Behavioral Patterns of U.S. Investors](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-72) | Hoa Kỳ; bản tin16/06/2014, dẫn báo cáo Library of Congress08/2010 | Hành vi và giới hạn khái quát |
+| [SEC — Behavioral Patterns of U.S. Investors](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-72) | Hoa Kỳ; bản tin 16/06/2014, dẫn báo cáo Library of Congress 08/2010 | Hành vi và giới hạn khái quát |
 | [St. Louis Fed — ALFRED Help](https://alfred.stlouisfed.org/help) | Kho phiên bản dữ liệu Hoa Kỳ; ngày xuất bản CHƯA_BIẾT | Phản chứng khi dùng dữ liệu tương lai |
 
 Biên bản riêng cho đúng phiên bản: [kiểm nguồn](../reviews/015-fact-check.md), [phản biện](../reviews/015-risk-review.md). `CHƯA_BIẾT` hiệu quả học thực tế; không suy từ kiểm nguồn ra đã được người học nghiệm thu.

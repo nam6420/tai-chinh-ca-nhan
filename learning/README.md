@@ -1,9 +1,15 @@
 # Bắt đầu học tại đây
 
-- Cập nhật cấu trúc: `2026-10-27`.
-- Hiện có **61 mã bài đã soạn**: 001–016, N1–N8 và 37 bài Đợt 1–6. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
+> **Cập nhật học phần Bảo hiểm, Ngân hàng, Vĩ mô, Tài sản & Kế toán bậc S (05/11/2026):** Đã nâng cấp [Bài 013 — Ngân hàng và bảo hiểm](lessons/013-banks-insurers.md), bổ sung 2 bài bậc S mới về bảo hiểm tại Việt Nam ([Bài F8 — Phân tích doanh nghiệp bảo hiểm Việt Nam (`BVH`, `PVI`, `BIC`)](lessons/F8-vietnam-insurance-analysis.md), [Bài P4 — Đọc hợp đồng bảo hiểm cá nhân (`Term Life`, `UL`, `ILP`)](lessons/P4-personal-insurance-contracts-and-costs.md) kèm [`practice/models/insurance.py`](practice/models/insurance.py)), đồng thời nâng cấp toàn bộ 13 bài thuộc cụm chuyên ngành – tài sản – vĩ mô – chu kỳ (`F3–F7`, `A1–A4`, `M1–M3`, `014`) và 2 bài nền kế toán (`N2`, `N3`) lên chuẩn bậc S. Tổng hiện có **33/67 bài đạt chuẩn cấu trúc bậc S**.
+>
+> **Nâng chiều sâu 02/11/2026, nhóm H3–H5:** ba bài đạt bậc S, có 10 bài tập/đáp án mỗi bài, mô hình Python và hai nhánh kiểm duyệt độc lập cùng phiên bản. Xem [nhật ký nhóm 2](reviews/wave4-group2-2026-11-02.md) và [sổ kiểm duyệt](reviews/README.md) để đọc các hạn chế còn mở.
+
+- Cập nhật cấu trúc: `2026-11-05`.
+- Hiện có **67 mã bài đã soạn**: 001–016, N1–N8, 39 bài Đợt 1–6 (bổ sung `P4`, `F8`) và Q1–Q4. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [đối chiếu 51 mục](coverage-51.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).
+
+Nâng chiều sâu Đợt4: N1, N4, N5 đã đạt bậcS và qua hai nhánh trên bản chốt02/11/2026; xem [nhật ký](reviews/wave4-group1-2026-11-02.md), [mô hình](practice/models/market_returns.py). ĐẠT không thay việc học thử với người thật.
 
 ## Nhánh 1 — Hiểu doanh nghiệp và phân tích cổ phiếu
 
@@ -47,7 +53,7 @@ N5A có thể đọc sớm sau N1, **không phải điều kiện học 001**. B
 
 Sáu bài Đợt 1 đã qua hai nhánh kiểm duyệt; các mục chưa biết vẫn được ghi trong bài. Xem [sổ kiểm duyệt](reviews/README.md) trước khi dùng:
 
-1. [P1 — Ngân sách, quỹ khẩn cấp, bảo hiểm](lessons/P1-budget-emergency-fund-insurance.md) → [P2 — Nợ cá nhân](lessons/P2-personal-debt.md) → [P3 — Mục tiêu và chính sách cá nhân](lessons/P3-goals-risk-ips.md).
+1. [P1 — Ngân sách, quỹ khẩn cấp, bảo hiểm](lessons/P1-budget-emergency-fund-insurance.md) → [P2 — Nợ cá nhân](lessons/P2-personal-debt.md) → [P3 — Mục tiêu và chính sách cá nhân](lessons/P3-goals-risk-ips.md) → [P4 — Đọc hợp đồng bảo hiểm cá nhân: cấu trúc phí, điều khoản loại trừ và ranh giới bảo vệ – đầu tư](lessons/P4-personal-insurance-contracts-and-costs.md) *(bậc S)*.
 2. [B3 — Bảo mật tài khoản và lừa đảo](lessons/B3-account-security-scams.md): học trước khi chuyển tiền cho bên tự nhận là đơn vị đầu tư.
 3. [V1 — Cấu trúc thị trường Việt Nam](lessons/V1-vietnam-market-structure.md) → [V2 — Quy tắc giao dịch](lessons/V2-vietnam-trading-rules.md). Quy tắc thay đổi theo thời gian; kiểm lại nguồn hiện hành trước khi áp dụng.
 
@@ -67,7 +73,7 @@ Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đ�
 
 ## Phân tích nâng cao — Đợt 5
 
-[F1 — Mô hình ba báo cáo](lessons/F1-three-statement-model-sensitivity.md) → [F2 — Định giá nâng cao](lessons/F2-valuation-ddm-residual-sotp.md) → [F3 — Bất động sản](lessons/F3-vietnam-property-developers.md) → [F4 — Ngân hàng](lessons/F4-vietnam-bank-analysis.md) → [F5 — Khung sáu ngành](lessons/F5-vietnam-industry-research-framework.md) → [F6 — Quản trị](lessons/F6-governance-related-party-audit.md) → [F7 — Sự kiện đặc biệt](lessons/F7-special-situations-restructuring.md). Các bài qua hai nhánh; các hạn chế nguồn và điểm mở được giữ trong [sổ kiểm duyệt](reviews/README.md).
+[F1 — Mô hình ba báo cáo](lessons/F1-three-statement-model-sensitivity.md) → [F2 — Định giá nâng cao](lessons/F2-valuation-ddm-residual-sotp.md) → [F3 — Bất động sản](lessons/F3-vietnam-property-developers.md) → [F4 — Ngân hàng](lessons/F4-vietnam-bank-analysis.md) → [F8 — Bảo hiểm Việt Nam: dự phòng nghiệp vụ, tái bảo hiểm, đầu tư tài chính và vốn `RBC`](lessons/F8-vietnam-insurance-analysis.md) *(bậc S)* → [F5 — Khung sáu ngành](lessons/F5-vietnam-industry-research-framework.md) → [F6 — Quản trị](lessons/F6-governance-related-party-audit.md) → [F7 — Sự kiện đặc biệt](lessons/F7-special-situations-restructuring.md). Các bài qua hai nhánh; các hạn chế nguồn và điểm mở được giữ trong [sổ kiểm duyệt](reviews/README.md).
 
 ## Thực hành — Đợt 6
 
@@ -75,7 +81,7 @@ Các bài khác của kế hoạch đang chờ biên soạn; có thể bắt đ�
 
 ## Nhánh chuyên ngành — chọn khi cần
 
-- [013 — Ngân hàng và bảo hiểm](lessons/013-banks-insurers.md): hai phần riêng, học trước bài tổng kết nếu chọn đối tượng tài chính.
+- [013 — Ngân hàng và bảo hiểm: hai mô hình bảng cân đối ngược cần đọc riêng](lessons/013-banks-insurers.md) *(bậc S)*: ba buổi học (Ngân hàng `JPMorgan FY2025`, Phi nhân thọ & `Float` `Berkshire/GEICO FY2025`, Nhân thọ `IFRS 17` & Định giá `RIM`), dẫn tiếp sang [F8 — Bảo hiểm Việt Nam](lessons/F8-vietnam-insurance-analysis.md) và [P4 — Hợp đồng bảo hiểm cá nhân](lessons/P4-personal-insurance-contracts-and-costs.md).
 - [014 — Kinh tế ngành và chu kỳ](lessons/014-industry-capital-cycle.md): học trước bài tổng kết khi cần phân tích công suất, cung/cầu và nhóm so sánh.
 
 ## Cách học một phiên

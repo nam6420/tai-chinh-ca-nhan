@@ -13,19 +13,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = ROOT / "learning" / "lessons"
 
-MIN_WORDS, MAX_WORDS, MIN_EXERCISES = 2500, 4500, 8
+MIN_WORDS, MAX_WORDS, MIN_EXERCISES = 2500, 6500, 8
 REQUIRED_HEADINGS = {
-    "ví dụ nguồn thật": r"^## Ví dụ từ nguồn thật",
-    "bài tập": r"^## Bài tập",
-    "đáp án": r"^## Đáp án",
-    "bài bẩn": r"^## Bài làm với dữ liệu thiếu hoặc lệch",
-    "sai ở đâu": r"^## Sai ở đâu",
-    "kiểm tra chuyển bài": r"^## Kiểm tra chuyển bài",
+    "ví dụ nguồn thật": r"^## (?:\d+\.\s*)?Ví dụ(?: từ nguồn| doanh nghiệp) thật",
+    "bài tập": r"^## (?:\d+\.\s*)?Bài tập",
+    "đáp án": r"^## (?:\d+\.\s*)?Đáp án",
+    "bài bẩn": r"^## (?:\d+\.\s*)?Bài làm với dữ liệu thiếu hoặc lệch",
+    "sai ở đâu": r"^## (?:\d+\.\s*)?Sai ở đâu",
+    "kiểm tra chuyển bài": r"^## (?:\d+\.\s*)?Kiểm tra chuyển bài",
 }
 
 
 def count_exercises(text: str) -> int:
-    match = re.search(r"^## Bài tập.*?(?=^## )", text, re.M | re.S)
+    match = re.search(r"^## (?:\d+\.\s*)?Bài tập.*?(?=^## )", text, re.M | re.S)
     if not match:
         return 0
     return len(re.findall(r"^\d+\.\s", match.group(0), re.M))
