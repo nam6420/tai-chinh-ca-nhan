@@ -3,7 +3,7 @@
 - Ngày: `2026-10-27`
 - Chốt dữ liệu lúc: `2026-10-27 10:23 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Đọc đúng giá trần, giá sàn và bước giá từ giá tham chiếu; phân biệt lô chẵn với lô lẻ và các loại lệnh chính; tính ngày cổ phiếu về tài khoản theo T+2; nhận ra tín hiệu cảnh báo, kiểm soát, hạn chế của một cổ phiếu.
-- Bài trước liên quan: [V1](V1-vietnam-market-structure.md), [N1](N1-market-basics.md). Học tiếp bài B1 (phí, thuế, lưu ký) ở Đợt 2, chưa soạn.
+- Bài trước liên quan: Thứ tự đọc **Bước 2 của Nhánh 3 (Việt Nam)** — học ngay sau [Bài V1: Cấu trúc thị trường chứng khoán Việt Nam](V1-vietnam-market-structure.md) và [Bài N1: Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md). Học tiếp: [Bài V3: Hành động doanh nghiệp — cổ tức, thưởng, quyền mua, tách gộp](V3-corporate-actions.md) và [Bài B1: Chọn công ty chứng khoán, biểu phí và lưu ký](B1-broker-fees-custody.md).
 - Thời lượng: Hai phiên; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Với một lệnh tôi định đặt, giá nào hợp lệ, khi nào khớp, và khi nào cổ phiếu về tài khoản để bán lại?**
 - Kiểm nguồn: `ĐẠT`
@@ -16,7 +16,7 @@ Quy tắc giao dịch là các thông số do cơ quan và sở giao dịch đ�
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào: từ N1, giá chào mua cao nhất, giá chào bán thấp nhất và giá khớp gần nhất là ba thứ khác nhau; lệnh thị trường không bảo đảm giá khớp. Bài này áp vào quy tắc Việt Nam.
+Ôn lại [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md) và [Bài V1 — Cấu trúc thị trường chứng khoán Việt Nam](V1-vietnam-market-structure.md): giá chào mua cao nhất, giá chào bán thấp nhất và giá khớp gần nhất là ba thứ khác nhau; lệnh thị trường không bảo đảm giá khớp. Bài này áp vào quy tắc giao dịch Việt Nam trước khi sang [Bài V3](V3-corporate-actions.md) và [Bài B1](B1-broker-fees-custody.md).
 
 ## Bài này làm gì và chưa làm gì
 

@@ -3,7 +3,7 @@
 - Ngày: `2026-10-26`
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Truy được đầu vào; tái tính chỉ số; tách sự thật/kịch bản; lập kế hoạch kiểm luận điểm với bằng chứng hai chiều.
-- Bài trước liên quan: Nền, 004–012, 015; thêm 013 nếu nghiên cứu tài chính, 014 nếu cần khung ngành. Không cần học hết mọi ngành.
+- Bài trước liên quan: Thứ tự đọc **Bước 23/23 (Bài tổng kết Nhánh 1)** — học ngay sau [Bài 015: Tâm lý, bảng tự kiểm và nhật ký quyết định](015-behavior-decision-journal.md), tổng hợp toàn bộ chuỗi nền tảng ([Bài N1](N1-market-basics.md)–[Bài 003](003-business-quality-moat-and-roic.md)) và chuỗi phân tích – định giá ([Bài 004](004-cash-flow-and-earnings-quality.md)–[Bài 012](012-scenarios-margin-of-safety.md), [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md)–[Bài Q3](Q3-normalizing-earnings-cyclical.md)); đọc thêm [Bài 013](013-banks-insurers.md) nếu nghiên cứu ngân hàng/bảo hiểm, hoặc [Bài 014](014-industry-capital-cycle.md) nếu cần khung ngành chu kỳ.
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Tôi có thể để người khác kiểm lại một kết luận từ đầu tới cuối không?**
 - Kiểm nguồn: `ĐẠT`
@@ -15,7 +15,7 @@ Bài tổng kết không phải đoán mã sẽ tăng giá. Sản phẩm là m�
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N8: nguồn gốc khác nguồn sao chép. 011: EV khác vốn chủ. 012: ba kịch bản không phải lời tiên tri. 015: phải ghi luận điểm trước khi biết kết quả.
+Ôn lại các chốt chặn cốt lõi từ những bài trước trong Nhánh 1: [Bài N8](N8-finding-verifying-sources.md) (nguồn gốc khác nguồn sao chép), [Bài 011](011-dcf-reverse-dcf.md) (`EV` khác vốn chủ), [Bài 012](012-scenarios-margin-of-safety.md) (ba kịch bản không phải lời tiên tri), và [Bài 015](015-behavior-decision-journal.md) (phải ghi luận điểm trước khi biết kết quả).
 
 ## Bài này làm gì và chưa làm gì
 

@@ -25,6 +25,12 @@ Khi phân tích các sự kiện doanh nghiệp đặc biệt (`M&A`, phát hàn
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài F6 — Quản trị, bên liên quan và kiểm toán](F6-governance-related-party-audit.md) và [Bài F2 — Định giá DDM, Thu nhập thặng dư và SOTP](F2-valuation-ddm-residual-sotp.md), ta đã nắm cấu trúc tập đoàn và định giá tổng thành phần. Bài F7 giải phẫu các thương vụ mua bán sáp nhập (`M&A`), lợi thế thương mại (`Goodwill`), thoái vốn và tái cơ cấu nợ.
+
+---
+
 ## Buổi 1 — Vòng đời thương vụ M&A, Kế toán Hợp nhất kinh doanh và Lợi thế thương mại (Goodwill)
 
 ### 1.1. Bốn giai đoạn của một sự kiện M&A / Tái cấu trúc và Tài liệu cần kiểm

@@ -1,285 +1,266 @@
 # Bài 003: Chất lượng doanh nghiệp — lợi thế cạnh tranh, ROIC và khả năng tái đầu tư
 
-- Ngày: `2026-08-12`
-- Chốt dữ liệu lúc: `2026-08-12 20:12 UTC+7 (Asia/Ho_Chi_Minh)`
-- Mục tiêu: Hiểu vì sao lợi nhuận cao một năm chưa nói lên chất lượng doanh nghiệp; biết lợi thế cạnh tranh (economic moat) là gì và phải được xác nhận bằng bằng chứng định lượng nào; tính và đọc được ROIC (tỷ suất lợi nhuận trên vốn đầu tư), so nó với chi phí vốn, phân rã nó thành biên lợi nhuận và vòng quay vốn; nhận diện vài cờ đỏ quản trị (pha loãng, giao dịch bên liên quan).
+- Ngày: `2026-11-06`
+- Chốt dữ liệu lúc: `2026-11-06 10:40 UTC+7 (Asia/Ho_Chi_Minh)`
+- Kiểm nguồn: `ĐẠT`
+- Phản biện rủi ro: `ĐẠT`
+- Mục tiêu: Hiểu vì sao lợi nhuận cao một năm chưa chứng minh doanh nghiệp chất lượng; nắm 5 nguồn **lợi thế cạnh tranh bền vững (`Economic Moat`)** và bằng chứng định lượng kiểm chứng; tính từng bước **Lợi nhuận hoạt động sau thuế (`NOPAT`)**, **Vốn đầu tư (`Invested Capital — IC`)** theo hai góc nhìn (Tài sản và Nguồn vốn) và **Tỷ suất lợi nhuận trên vốn đầu tư (`ROIC`)**; phân rã `ROIC` thành biên lợi nhuận × vòng quay vốn, hiểu phương trình tăng trưởng `g = Tỷ lệ tái đầu tư × ROIC`, và nhận diện cờ đỏ quản trị (`pha loãng`, `giao dịch bên liên quan`, `goodwill`).
+- Thời lượng: Ba phiên học + thực hành với [valuation.py](../practice/models/valuation.py).
+- Bài trước liên quan: Thứ tự đọc 9/23 của Nhánh 1 — học ngay sau [Bài N4: Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md) (kế thừa [Bài 002](002-finding-a-cheap-stock.md), [Bài N2](N2-statement-line-items.md) và [Bài 001](001-business-financial-statements.md)). Học tiếp: [Bài 004: Dòng tiền và chất lượng lợi nhuận](004-cash-flow-and-earnings-quality.md).
+- Câu hỏi cốt lõi: **Điều gì giúp một doanh nghiệp tạo ra tỷ suất sinh lời trên vốn (`ROIC`) cao hơn chi phí vốn suốt nhiều năm mà không bị đối thủ cạnh tranh san phẳng?**
 
-> Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Các ví dụ số học đều là doanh nghiệp hư cấu. IAS 24, IFRS 3 và SEC chỉ là ví dụ chuẩn mực/cơ quan quản lý; với thị trường khác phải dùng chuẩn mực và hồ sơ tương ứng. Bài này kế thừa Bài 001 (ba báo cáo tài chính) và Bài 002 (ba câu hỏi trước khi định giá).
+> Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Các ví dụ số học về Quán cà phê Sao Biển và các công ty A, B, C là hư cấu; phần ví dụ thực tế dùng số liệu kiểm toán từ `Form 10-K FY2025` của Apple Inc.
 
-Thời lượng gợi ý: 25-35 phút.
+---
 
 ## Hiểu bài này trong 1 phút
 
-`SUY_LUẬN` Bài này giải quyết một nhầm lẫn khác: **lợi nhuận cao trong một năm chưa chứng minh doanh nghiệp tốt**. Muốn đánh giá chất lượng, phải trả lời hai câu: lợi nhuận trên vốn có cao **kéo dài qua nhiều năm** không, và điều gì **ngăn đối thủ cạnh tranh** bào mòn mức lợi nhuận đó?
+`SUY_LUẬN` Ở [Bài 002](002-finding-a-cheap-stock.md), bạn đã biết không mua cổ phiếu chỉ vì thị giá thấp hay `P/E` thấp. Bài 003 giải quyết ngộ nhận tiếp theo: **thấy doanh nghiệp năm nay báo lãi lớn liền nghĩ đó là một doanh nghiệp tuyệt vời.**
 
-Có thể hình dung một quán ăn: bán đắt hàng trong một ngày lễ chưa đủ để biết quán làm ăn tốt quanh năm. Cần xem nhiều mùa, khách có quay lại không và đối thủ có dễ lấy khách không. Với doanh nghiệp cũng vậy: một năm lãi lớn có thể do chu kỳ giá, sự kiện một lần hoặc may mắn; **lợi nhuận trên vốn cao lặp lại nhiều năm, đi kèm bằng chứng khách hàng không rời bỏ và giá bán không bị ép xuống, mới là tín hiệu chất lượng.**
+Hình dung một quán ăn: bán đắt hàng trong một ngày lễ chưa đủ để kết luận quán làm ăn giỏi quanh năm. Cần xem qua nhiều mùa: khách có tự nguyện quay lại không, tăng giá nhẹ khách có bỏ đi không, và nếu mở thêm chi nhánh thứ hai thì tiền vốn bỏ ra có sinh lời cao như quán đầu tiên không.
 
-`SỰ_THẬT` Nghiên cứu của McKinsey trên khoảng 7.000 công ty phi tài chính niêm yết tại Mỹ giai đoạn 1963-2004 cho thấy ROIC trung vị (loại trừ goodwill) chỉ quanh 10%, xấp xỉ chi phí vốn dài hạn — tức doanh nghiệp "bình thường" chỉ đủ bù chi phí vốn. Cạnh tranh có xu hướng kéo lợi nhuận siêu ngạch về mức trung bình; moat là thứ hiếm giúp doanh nghiệp chống lại lực kéo đó (nguồn: McKinsey, dẫn ở cuối bài).
+Trong kinh doanh, khi một ngành có lợi nhuận cao, đối thủ mới sẽ nhảy vào mở xưởng, giảm giá và giành khách, kéo lợi nhuận cả ngành về mức bình thường.
+- `SỰ_THẬT` Nghiên cứu của **McKinsey** trên khoảng `7.000` công ty phi tài chính niêm yết tại Mỹ (`1963–2004`) cho thấy tỷ suất lợi nhuận trên vốn đầu tư (`ROIC`, loại trừ `goodwill`) ở mức trung vị chỉ quanh **`10%/năm`**, xấp xỉ chi phí vốn dài hạn — nghĩa là công ty "trung bình" chỉ kiếm vừa đủ trả chi phí vốn.
+- Chỉ những doanh nghiệp sở hữu **lợi thế cạnh tranh bền vững (`Economic Moat` — hào nước bảo vệ lâu đài)** mới duy trì được `ROIC` vượt chi phí vốn qua nhiều chu kỳ.
 
-### Bài này làm gì và chưa làm gì?
+> Câu cần nhớ: **Đừng hỏi "năm nay công ty lãi bao nhiêu tỷ?"; hãy hỏi "mỗi 100 đồng vốn bỏ vào bộ máy kinh doanh sinh ra bao nhiêu đồng lợi nhuận (`ROIC`), con số đó có bền vững qua nhiều năm không, và hào nước nào ngăn đối thủ vào chia phần?"**
 
-| Bài này làm | Bài này chưa làm |
-|---|---|
-| Dạy cách đặt câu hỏi về chất lượng: moat, ROIC, chi phí vốn, tái đầu tư, cờ đỏ quản trị | Kết luận doanh nghiệp cụ thể nào "tốt" hay "xấu" |
-| Cung cấp công thức khái quát và các biến thể cần biết trước khi tính | Dạy cách ước lượng chi phí vốn chính xác (Bài 010 — chi phí vốn) |
-| Chỉ ra bằng chứng định lượng cần tìm để xác nhận moat | Thay thế việc đọc báo cáo tài chính và thuyết minh của doanh nghiệp thật |
+---
 
-> Câu cần nhớ: **Đừng hỏi "năm nay công ty lãi bao nhiêu?"; hãy hỏi "công ty tạo lợi nhuận trên vốn cao trong bao lâu, nhờ điều gì bảo vệ, và tái đầu tư thêm một đồng vốn thì sinh ra bao nhiêu?"**
+## Ôn bài cũ hoặc kiểm tra đầu vào
 
-## 1. Lợi thế cạnh tranh (economic moat) là gì?
+Hãy nối liền kiến thức từ 3 bài trước trong Nhánh 1:
+1. **Từ [Bài N4: Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md):** Bạn đã biết sức mạnh của lãi kép $\text{FV} = \text{PV} \times (1 + r)^n$. Một doanh nghiệp chất lượng cao chính là một **"cỗ máy lãi kép nội tại"**: mỗi năm tạo ra lợi nhuận và tái đầu tư mở rộng ở tỷ suất sinh lời trên vốn (`ROIC`) cao, giúp giá trị doanh nghiệp tăng trưởng kép.
+2. **Từ [Bài 002: Hiểu và tìm một cổ phiếu đang được định giá rẻ](002-finding-a-cheap-stock.md):** Bạn đã học 3 câu hỏi theo thứ tự (*Kiếm tiền bằng cách nào? → Doanh nghiệp có khỏe và chất lượng không? → Giá có rẻ không?*). Bài 003 cung cấp thước đo định lượng cho câu hỏi số 2.
+3. **Từ [Bài N2: Đọc từng dòng ba báo cáo tài chính](N2-statement-line-items.md):** Nhớ lại số liệu cuối năm của **Quán cà phê Sao Biển** (dùng ở mục 2 bên dưới):
+   - **Báo cáo kết quả kinh doanh:** Doanh thu thuần `= 1.200 triệu đồng`, Lợi nhuận hoạt động (`EBIT`) `= 150 triệu đồng`, Thuế suất `= 20%`, Lợi nhuận ròng (`Net Income`) `= 100 triệu đồng`.
+   - **Bảng cân đối kế toán:** Tiền mặt `= 185 triệu`, Phải thu `= 40 triệu`, Tồn kho `= 35 triệu`, Tài sản cố định ròng `= 470 triệu` (**Tổng tài sản `= 730 triệu`**); Phải trả người bán `= 30 triệu` (không chịu lãi), Nợ vay ngân hàng `= 200 triệu`, Vốn chủ sở hữu `= 500 triệu`.
 
-### Đường học trong bài
+---
 
-`Ý_KIẾN` Chia thành ba phiên, không coi 25–35 phút là thời gian đã được kiểm chứng:
+## 1. Lợi thế cạnh tranh bền vững (`Economic Moat`) là gì?
 
-- **Phiên A:** mục 1 và 6, rồi Bài tập 2–3. Đạt khi phân biệt được lời quảng bá với bằng chứng khách hàng/đối thủ.
-- **Phiên B:** mục 2–3 và ví dụ mục 7, rồi Bài tập 1. Đạt khi tính ROIC và giải thích mẫu số. Chi phí vốn ở đây là **giả định cho sẵn**; tự ước lượng sẽ học ở Bài 010.
-- **Phiên C:** mục 4–5 và 8. Tự hỏi: nếu tái đầu tư 100, sinh lợi 12 và chi phí vốn giả định 10%, hoạt động mới tạo phần chênh bao nhiêu? Đáp án: `12 − 100 × 10% = 2`, chưa phải toàn bộ dòng tiền cổ đông nhận.
+Thuật ngữ **Economic Moat** (hào nước kinh tế) mô tả những rào cản cấu trúc giúp doanh nghiệp bảo vệ thị phần và tỷ suất lợi nhuận trước đối thủ cạnh tranh.
 
-Sau mỗi phiên, đóng tài liệu và viết lại một câu kết luận kèm một điều chưa biết. Các điều chỉnh goodwill, nghiên cứu phát triển và biến thể ROIC là phần đọc thêm; chưa cần tự điều chỉnh tất cả ngay lần đầu.
+`SỰ_THẬT` Theo tài liệu của **VanEck** mô tả phương pháp luận của **Morningstar**, có **5 nguồn tạo ra lợi thế cạnh tranh (`Five Sources of Moat`)**:
 
-Lợi thế cạnh tranh bền vững — thường gọi là **moat** (hào nước quanh lâu đài) — là điều kiện khiến đối thủ khó hoặc không thể giành khách hàng và ép giá doanh nghiệp. `Ý_KIẾN` Thuật ngữ này phổ biến trong giới đầu tư; điều quan trọng không phải cái tên mà là **bằng chứng**.
-
-Theo tài liệu whitepaper của VanEck mô tả phương pháp luận moat của Morningstar, có năm nguồn moat thường gặp:
-
-| Nguồn moat | Trực giác | Ví dụ trong whitepaper (doanh nghiệp Mỹ) |
+| Nguồn lợi thế cạnh tranh (`Moat`) | Trực giác đời thường | Ví dụ điển hình |
 |---|---|---|
-| Tài sản vô hình (thương hiệu, bằng sáng chế, giấy phép) | Khách trả giá cao hơn hoặc đối thủ bị cấm sao chép | Starbucks, Eli Lilly |
-| Chi phí chuyển đổi (switching cost) | Đổi nhà cung cấp tốn tiền, thời gian, rủi ro | Salesforce, Stryker |
-| Hiệu ứng mạng lưới (network effect) | Càng nhiều người dùng, sản phẩm càng giá trị | Visa, Google |
-| Lợi thế chi phí (cost advantage) | Cùng giá bán nhưng chi phí thấp hơn nhờ quy mô, quy trình | Walmart, AB InBev |
-| Quy mô hiệu quả (efficient scale) | Thị trường chỉ đủ chỗ cho một/vài người có lãi | Union Pacific, Dominion Energy |
+| **1. Tài sản vô hình (`Intangible Assets`)** | Thương hiệu mạnh khiến khách trả giá cao hơn, hoặc bằng sáng chế / giấy phép cấm đối thủ sao chép. | Starbucks, Eli Lilly |
+| **2. Chi phí chuyển đổi (`Switching Costs`)** | Đổi sang đối thủ tốn nhiều thời gian đào tạo lại, chi phí tích hợp hoặc rủi ro đứt gãy vận hành. | Salesforce, Stryker |
+| **3. Hiệu ứng mạng lưới (`Network Effect`)** | Càng nhiều người dùng, mạng lưới càng giá trị đối với người dùng mới. | Visa, Google |
+| **4. Lợi thế chi phí (`Cost Advantage`)** | Nhờ quy mô, quy trình hoặc nguồn nguyên liệu rẻ, sản xuất với chi phí thấp hơn hẳn đối thủ. | Walmart, AB InBev |
+| **5. Quy mô hiệu quả (`Efficient Scale`)** | Thị trường ngách chỉ đủ chỗ cho 1–2 doanh nghiệp có lãi; người thứ ba vào sẽ khiến cả ngành cùng lỗ. | Union Pacific, Dominion Energy |
 
-`SỰ_THẬT` Bảng trên lấy từ whitepaper bản quyền © Morningstar 2020 và © 2020 VanEck, mô tả phương pháp luận Morningstar (trang morningstar.com không truy cập được trong lượt này — xem phần Nguồn). Đây là nguồn thứ cấp mô tả phương pháp luận, không phải tuyên bố của chính Morningstar.
+### Lợi thế cạnh tranh phải được chứng minh bằng con số, không bằng lời tự khen
 
-### Moat phải được xác nhận bằng bằng chứng, không bằng tuyên bố
+Báo cáo thường niên nào cũng viết *"Chúng tôi dẫn đầu thị trường"*. Đó chỉ là `Ý_KIẾN` của doanh nghiệp. Một `Moat` thật phải để lại **4 dấu vết định lượng lặp lại qua nhiều năm**:
+1. **Biên lợi nhuận gộp và biên `EBIT`** cao hơn hẳn trung vị ngành và ổn định kể cả trong năm khó khăn.
+2. **Quyền định giá (`Pricing Power`):** Tăng giá bán bù lạm phát mà sản lượng không giảm.
+3. **Tỷ lệ giữ chân khách hàng (`Retention Rate`) cao kéo dài** và thị phần ổn định.
+4. **Tỷ suất lợi nhuận trên vốn đầu tư (`ROIC`) cao hơn Chi phí vốn (`WACC`)** liên tục qua nhiều chu kỳ.
 
-Báo cáo thường niên nào cũng viết "chúng tôi dẫn đầu". Tuyên bố đó là `Ý_KIẾN` của doanh nghiệp. Moat chỉ đáng cân nhắc khi có bằng chứng định lượng lặp lại nhiều năm:
+---
 
-- Biên lợi nhuận gộp/hoạt động cao hơn hẳn nhóm so sánh **và ổn định** qua nhiều năm, kể cả năm khó.
-- Quyền định giá (pricing power): tăng giá mà khách không bỏ đi; doanh thu/đơn vị không giảm khi tăng giá.
-- Tỷ lệ giữ chân/gia hạn cao kéo dài; khách hàng rời bỏ rất ít ngay cả khi đối thủ rẻ hơn.
-- ROIC cao hơn chi phí vốn qua nhiều chu kỳ (xem mục 2-3).
+## 2. Giải phẫu từng bước `NOPAT`, `Vốn đầu tư (Invested Capital)` và `ROIC`
 
-`SUY_LUẬN` Ngược lại, moat có thể bị bào mòn: công nghệ thay đổi, quy định mở cửa, đối thủ tìm ra cách vượt chi phí chuyển đổi. Vì vậy câu hỏi đúng không phải "công ty có moat không?" mà là "bằng chứng moat còn nguyên vẹn đến kỳ báo cáo gần nhất không, và điều gì có thể phá vỡ nó?".
+### 1. Vì sao cần `ROIC` bên cạnh `ROE` và `ROA`?
 
-## 2. ROIC: lợi nhuận trên vốn đầu tư
+Ở [Bài N2](N2-statement-line-items.md), bạn đã biết `ROE = Lợi nhuận ròng / Vốn chủ sở hữu` và `ROA = Lợi nhuận ròng / Tổng tài sản`. Tuy nhiên:
+- `ROE` bị khuếch đại mạnh bởi **đòn bẩy nợ vay** (hoặc mua lại cổ phiếu quỹ làm mỏng vốn chủ).
+- `ROA` lại lệch pha giữa tử số và mẫu số: tử số (`Lợi nhuận ròng`) đã trừ lãi vay, còn mẫu số (`Tổng tài sản`) chứa cả tiền mặt nhàn rỗi và nợ phải trả người bán không tốn lãi. `SỰ_THẬT` **Damodaran (NYU Stern)** cảnh báo không dùng `ROA` để so với chi phí vốn (`WACC`).
 
-**ROIC (Return on Invested Capital)** đo hiệu quả một đồng vốn bỏ vào hoạt động kinh doanh. Hai cửa hàng cùng lãi 100, nhưng một nơi cần vốn 500 và một nơi cần 2.000, có hiệu quả vốn khác nhau; còn phải thống nhất cách đo lợi nhuận và vốn trước khi so sánh.
+Để đo chính xác **100 đồng vốn thực sự cắm vào bộ máy kinh doanh tạo ra bao nhiêu đồng lợi nhuận sau thuế cho cả chủ nợ lẫn cổ đông**, ta dùng **Tỷ suất lợi nhuận trên vốn đầu tư (`Return on Invested Capital — ROIC`)**.
 
-`SỰ_THẬT` Theo tài liệu của Damodaran (NYU Stern), công thức khái quát là:
+### 2. Công thức chuẩn và 3 bước tính trên Quán cà phê Sao Biển
 
-```text
-ROIC = Lợi nhuận hoạt động sau thuế (NOPAT) năm t / Giá trị sổ sách của vốn đầu tư đầu kỳ (t-1)
-```
+`SỰ_THẬT` Theo tài liệu của **Damodaran (NYU Stern)**, công thức chuẩn của `ROIC` là:
 
-Trong đó, cũng theo Damodaran:
+$$\text{ROIC} = \frac{\text{Lợi nhuận hoạt động sau thuế (NOPAT)}}{\text{Giá trị sổ sách của Vốn đầu tư (Invested Capital — IC)}}$$
 
-- **NOPAT** thường tính là `EBIT × (1 - thuế suất)`, phản ánh lợi nhuận tạo ra cho **mọi** người cấp vốn (chủ nợ lẫn cổ đông). Lưu ý dùng thuế suất hiệu dụng/giả định trên EBIT, không dùng thuế thực nộp, vì thuế thực nộp đã chứa lợi ích lá chắn thuế của lãi vay — dùng sai sẽ tính trùng.
-- **Vốn đầu tư (invested capital)** có thể tính từ nguồn vốn: `nợ vay có giá trị sổ sách + vốn chủ sở hữu - tiền mặt`; hoặc từ tài sản: `tài sản cố định + vốn lưu động phi tiền mặt`. Hai cách thường cho kết quả tương đương.
-- Dùng **giá trị sổ sách đầu kỳ** của vốn, vì lợi nhuận năm nay được tạo ra từ vốn đã bỏ ra trước đó.
+Hãy tính từng bước cho **Quán cà phê Sao Biển**:
 
-`SỰ_THẬT` Damodaran nhấn mạnh có **nhiều biến thể** (ROIC kế toán, cash ROIC, CFROI...) và các điều chỉnh (R&D bị tính là chi phí, thuê hoạt động, chi phí bất thường, goodwill). Điều quan trọng với người mới: **chọn một công thức và nhất quán khi so sánh giữa các doanh nghiệp và giữa các năm**; so sánh hai con số tính bằng hai công thức khác nhau là so sánh sai.
+#### Bước 1: Tính tử số `NOPAT` (`Net Operating Profit After Tax` — Lợi nhuận hoạt động sau thuế)
+Toàn bộ lợi nhuận hoạt động `EBIT = 150 triệu đồng` sau khi trừ thuế thu nhập doanh nghiệp (`thuế suất = 20%`) sẽ còn lại:
+$$\text{NOPAT} = \text{EBIT} \times (1 - \text{Thuế suất}) = 150 \times (1 - 0,20) = 120 \text{ triệu đồng}$$
+*(Lưu ý: Luôn nhân `EBIT` với `(1 − Thuế suất)` chứ không lấy thuế thực nộp trên báo cáo lãi lỗ, vì thuế thực nộp đã chứa lá chắn thuế của lãi vay — lấy sai sẽ tính trùng lợi ích thuế).*
 
-Cảnh báo:
+#### Bước 2: Tính mẫu số `Vốn đầu tư (Invested Capital — IC)` bằng cả 2 cách đối chứng
+Trong tổng tài sản `730 triệu đồng` của Quán Sao Biển, có `185 triệu` tiền mặt nằm trong két sắt và `30 triệu` được nhà cung cấp cho mua chịu miễn phí. Vậy **vốn thực sự mà chủ nợ và cổ đông đã bỏ vào vận hành quán** là bao nhiêu? Hai cách tính dưới đây luôn khớp nhau 100%:
 
-- `SUY_LUẬN` Với **ngân hàng và bảo hiểm**, khái niệm "vốn đầu tư" và "lợi nhuận hoạt động" theo công thức trên không áp dụng sạch: tiền gửi là nguyên liệu đầu vào chính và cũng là nợ. Kế thừa Bài 002: ngành tài chính cần bộ chỉ số và cách phân tích riêng (như ROE, ROA, an toàn vốn), không áp máy móc ROIC của doanh nghiệp phi tài chính.
-- `SỰ_THẬT` Damodaran cảnh báo ROA (lợi nhuận trên tổng tài sản) không được dùng để so với chi phí vốn, vì mẫu số của ROA chứa cả nợ ngắn hạn không chịu lãi.
-- Goodwill (lợi thế thương mại): `SỰ_THẬT` theo IFRS 3 của IFRS Foundation, goodwill là phần chênh lệch còn lại của giá phí hợp nhất kinh doanh sau khi phân bổ vào giá trị hợp lý của tài sản và nợ phải trả xác định được. Doanh nghiệp mua bán nhiều mà không loại/điều chỉnh goodwill thì ROIC dễ bị bóp méo; nghiên cứu của McKinsey dùng ROIC **loại trừ goodwill** để phản ánh hiệu quả hoạt động.
+- `PHÉP_TÍNH` **Cách 1 — Nhìn từ Nguồn vốn tài trợ (`Financing Approach`):**
+  $$\text{Vốn đầu tư (IC)} = \text{Tổng nợ vay chịu lãi} + \text{Vốn chủ sở hữu} - \text{Tiền và tương đương tiền}$$
+  $$\text{IC}_{\text{Sao Biển}} = 200 \text{ (Nợ vay)} + 500 \text{ (Vốn chủ)} - 185 \text{ (Tiền mặt)} = 515 \text{ triệu đồng}$$
 
-## 3. ROIC so với chi phí vốn: tạo hay phá hủy giá trị?
+- `PHÉP_TÍNH` **Cách 2 — Nhìn từ Tài sản vận hành (`Operating Asset Approach`):**
+  Lấy Tài sản cố định ròng cộng Vốn lưu động phi tiền mặt (`Phải thu + Tồn kho − Nợ ngắn hạn không chịu lãi`):
+  $$\text{Vốn lưu động phi tiền mặt} = (40 + 35) - 30 = 45 \text{ triệu đồng}$$
+  $$\text{IC}_{\text{Sao Biển}} = 470 \text{ (Tài sản cố định ròng)} + 45 \text{ (Vốn lưu động phi tiền mặt)} = 515 \text{ triệu đồng}$$
 
-**Chi phí vốn (cost of capital)** là mức lợi nhuận tối thiểu mà người cấp vốn (chủ nợ và cổ đông) kỳ vọng cho rủi ro họ gánh. `SỰ_THẬT` Theo Damodaran, thước đo giá trị cốt lõi là **excess return = ROIC - chi phí vốn**:
+Nhờ phương trình kế toán `Tài sản = Nợ phải trả + Vốn chủ sở hữu`, cả hai cách đều ra chính xác **`515 triệu đồng`**!
 
-- `SỰ_THẬT` ROIC > chi phí vốn: mỗi đồng vốn mới tạo ra nhiều hơn chi phí của nó → tăng trưởng **tạo** giá trị.
-- `SỰ_THẬT` ROIC < chi phí vốn: mỗi đồng vốn mới sinh ra ít hơn chi phí của nó → tăng trưởng càng nhanh càng **phá hủy** giá trị.
-- `SỰ_THẬT` Tính nhất quán bắt buộc: NOPAT sau thuế (đã loại lợi ích thuế của nợ) phải được so với chi phí vốn bình quân (WACC) sau thuế.
+#### Bước 3: Chia `NOPAT` cho `Vốn đầu tư (IC)` để ra `ROIC`
+Theo Damodaran, chuẩn nhất là dùng **Vốn đầu tư đầu kỳ** (hoặc bình quân đầu kỳ và cuối kỳ, miễn là nhất quán):
+- `PHÉP_TÍNH` Trên vốn đầu tư cuối kỳ (`515 triệu`): $\text{ROIC} = \frac{120}{515} \approx 23,30\%/\text{năm}$. Trên vốn đầu tư đầu kỳ (`500 triệu`): $\text{ROIC} = \frac{120}{500} = 24,00\%/\text{năm}$.
+- *(Cảnh báo: Không áp công thức `ROIC` này cho **ngân hàng và bảo hiểm** vì tiền gửi khách hàng là nguyên liệu kinh doanh — học riêng ở [Bài 013](013-banks-insurers.md)).*
 
-Chi phí vốn là một **ước tính phụ thuộc giả định** (lãi suất phi rủi ro, phần bù rủi ro, cơ cấu vốn), không phải con số quan sát trực tiếp. Trong phạm vi bài này: nếu không tự ước lượng được, hãy ghi `CHƯA_BIẾT` và chỉ kết luận định tính ("ROIC cao hơn đáng kể mặt bằng lãi vay và lợi nhuận kỳ vọng hợp lý"), không bịa một con số WACC chính xác.
+---
 
-`SỰ_THẬT` McKinsey (McKinsey on Finance, 2006) cung cấp thêm bối cảnh: nhà đầu tư trả bội số cao hơn cho công ty có ROIC vượt trội ngay cả khi tăng trưởng hạn chế; trong mẫu nghiên cứu, công ty có ROIC trên 20% có khoảng 50% xác suất duy trì mức đó sau một thập kỷ — còn công ty tăng trưởng "nóng" (trên 20%/năm) có tới 56% xác suất rơi xuống dưới 5% sau 10 năm, chỉ khoảng 13% duy trì được đà tăng trưởng. Nói cách khác: **ROIC cao bền vững hiếm và đáng giá hơn tăng trưởng nhanh nhất thời.**
+## 3. So sánh `ROIC` với Chi phí vốn (`WACC`): Tạo hay phá hủy giá trị?
 
-## 4. Tái đầu tư và tăng trưởng
+Ta so sánh `ROIC` với **Chi phí vốn (`Cost of Capital / WACC`)** — mức sinh lời tối thiểu mà chủ nợ và cổ đông đòi hỏi (học cách ước tính ở [Bài 010](010-cost-of-capital.md)). `SỰ_THẬT` Theo **Damodaran** và **McKinsey**, thước đo tạo giá trị cốt lõi là **Lợi suất vượt trội (`Excess Return = ROIC − WACC`)**:
+- **Khi `ROIC > WACC`:** Mỗi đồng vốn mới tạo ra nhiều hơn chi phí huy động nó $\implies$ **Tăng trưởng tạo thêm giá trị.**
+- **Khi `ROIC < WACC`:** Mỗi đồng vốn mới sinh ra ít hơn chi phí của nó $\implies$ **Càng mở rộng nhanh càng phá hủy giá trị**, dù lợi nhuận kế toán vẫn dương!
+- `SỰ_THẬT` **McKinsey** (`Balancing ROIC and growth to build value`, 2006) chỉ ra: công ty có `ROIC > 20%` có khoảng `50%` xác suất duy trì mức đó sau 10 năm; còn công ty tăng trưởng nóng (`> 20%/năm`) có tới `56%` xác suất tụt xuống `< 5%/năm` sau một thập kỷ và chỉ `13%` giữ được đà tăng trưởng.
 
-`SỰ_THẬT` Damodaran nêu quan hệ nền tảng:
+---
 
-```text
-Tăng trưởng lợi nhuận ≈ Tỷ lệ tái đầu tư × ROIC
-```
+## 4. Tái đầu tư, Tăng trưởng (`g = Reinvestment Rate × ROIC`) và Phân rã DuPont
 
-trong đó tỷ lệ tái đầu tư là phần lợi nhuận hoạt động sau thuế được tái đầu tư trở lại hoạt động kinh doanh:
+### 1. Phương trình nối giữa Tái đầu tư và Tăng trưởng lợi nhuận
 
-```text
-Tỷ lệ tái đầu tư = (Capex − Khấu hao + Thay đổi vốn lưu động phi tiền mặt) / NOPAT
-```
+`SỰ_THẬT` Theo **Damodaran**, khi `ROIC` ổn định, tốc độ tăng trưởng lợi nhuận hoạt động (`g`) bằng:
 
-`SUY_LUẬN` Đây **không** phải "tỷ lệ lợi nhuận giữ lại" (phần không chia cổ tức): doanh nghiệp có thể giữ lại lợi nhuận mà chỉ để tiền nằm trong két, hoặc tái đầu tư bằng tiền đi vay. ROIC trong công thức cũng nên hiểu là lợi nhuận trên **đồng vốn mới**, không phải ROIC trung bình của toàn bộ vốn cũ. Suy ra:
+$$\text{Tốc độ tăng trưởng (g)} \approx \text{Tỷ lệ tái đầu tư} \times \text{ROIC} \implies \text{Tỷ lệ tái đầu tư cần thiết} = \frac{g}{\text{ROIC}}$$
 
-```text
-Tỷ lệ tái đầu tư cần thiết ≈ Tốc độ tăng trưởng mong muốn / ROIC
-```
+với $\text{Tỷ lệ tái đầu tư} = \frac{(\text{CapEx} - \text{Khấu hao}) + \Delta\text{Vốn lưu động phi tiền mặt}}{\text{NOPAT}}$.
 
-`PHÉP_TÍNH` `MINH HỌA` (số hư cấu): Công ty A có ROIC 30% muốn tăng trưởng 6%/năm chỉ cần giữ lại `6% / 30% = 20%` NOPAT. Công ty B có ROIC 5% muốn tăng 6%/năm cần `6% / 5% = 120%` NOPAT — tức là **toàn bộ lợi nhuận vẫn không đủ**, phải vay thêm hoặc phát hành cổ phiếu. Cùng một tốc độ tăng, doanh nghiệp ROIC cao cần rất ít vốn hơn và không phải pha loãng hay vay nợ.
+`KỊCH_BẢN` & `PHÉP_TÍNH` So sánh **Công ty A** và **Công ty B** cùng có doanh thu `1.000`, cùng muốn tăng trưởng **`g = 6%/năm`** (giả sử `WACC = 10%/năm`):
 
-`SUY_LUẬN` Đây là lý do "khả năng tái đầu tư" đi kèm moat: moat cho ROIC cao, ROIC cao cho phép tăng trưởng rẻ; hết chỗ tái đầu tư trong ngành thì ROIC cao biến thành dòng tiền tự do trả lại cho cổ đông — vẫn là dấu hiệu tốt nếu phân bổ vốn hợp lý (xem mục 7).
-
-## 5. Phân rã ROIC: biên lợi nhuận × vòng quay vốn
-
-`PHÉP_TÍNH` ROIC có thể tách thành hai đòn bẩy (trực giác DuPont):
-
-```text
-ROIC = (NOPAT / Doanh thu) × (Doanh thu / Vốn đầu tư)
-     = Biên lợi nhuận hoạt động × Vòng quay vốn
-```
-
-Có hai con đường tạo ROIC cao: bán với biên dày (thương hiệu, khác biệt hóa) hoặc quay vòng vốn nhanh (hiệu quả vận hành, ít tài sản). `MINH HỌA` tiếp theo ví dụ Công ty A/B ở mục 4: A đạt `15% × 2,0 = 30%`; B đạt `6% × 0,83 ≈ 5%`. Khi ROIC của một doanh nghiệp thay đổi, hãy hỏi: biên thay đổi (giá bán, chi phí đầu vào) hay vòng quay thay đổi (tài sản phình to, hàng tồn chậm)?
-
-## 6. ROIC cao do moat hay do đỉnh chu kỳ?
-
-`SUY_LUẬN` ROIC cao của một năm có thể đến từ: giá hàng hóa đầu ra tăng đột biến, giá đầu vào giảm tạm thời, một hợp đồng lớn một lần, đánh giá lại tài sản, hoặc cắt giảm chi phí không lặp lại. Phân biệt bằng ba phép thử:
-
-1. **Xem nhiều năm, tốt nhất trọn một chu kỳ ngành** (bao gồm cả năm xấu). Moat thật thường lộ ra ở chỗ biên lợi nhuận và thị phần **chống chịu tốt trong năm khó**.
-2. **Tách giá và lượng**: lợi nhuận tăng do giá bán tăng theo thị trường (chu kỳ) khác với tăng do bán được nhiều hơn trong khi giữ giá (sức mạnh thật).
-3. **Loại sự kiện một lần** khỏi lợi nhuận trước khi tính ROIC "chuẩn hóa" — tương tự Bài 002 đã làm với P/E trên EPS bất thường.
-
-`SỰ_THẬT` McKinsey quan sát thấy xếp hạng ROIC giữa các ngành khá ổn định theo thời gian, nhưng **phương sai ROIC trong cùng một ngành đôi khi lớn hơn giữa các ngành** (ngành phần mềm và dịch vụ trong mẫu có trung vị 18%, nhưng chênh lệch giữa tứ phân vị trên và tứ phân vị dưới lên tới 31 điểm phần trăm). Vì vậy luôn so doanh nghiệp với nhóm cùng mô hình kinh doanh, không so với trung bình ngành chung chung.
-
-## 7. Ví dụ số học hư cấu: cùng doanh thu, ROIC khác nhau, giá trị khác nhau
-
-`KỊCH_BẢN` `MINH HỌA` — tất cả số dưới đây là hư cấu, đơn vị tiền:
-
-| Chỉ tiêu (năm) | Công ty A | Công ty B |
+| Chỉ tiêu (1 năm) | Công ty A (Có Moat mạnh) | Công ty B (Không có Moat) |
 |---|---:|---:|
-| Doanh thu | 1.000 | 1.000 |
-| NOPAT | 150 | 60 |
-| Vốn đầu tư đầu kỳ | 500 | 1.200 |
-| **ROIC** | **150/500 = 30%** | **60/1.200 = 5%** |
-| Biên lợi nhuận hoạt động | 15% | 6% |
-| Vòng quay vốn | 2,0 lần | 0,83 lần |
+| Doanh thu thuần / `NOPAT` / `IC` đầu kỳ | `1.000` / `150` / `500` | `1.000` / `60` / `1.200` |
+| **`ROIC = NOPAT / IC`** | **`150 / 500 = 30,0%`** | **`60 / 1.200 = 5,0%`** |
+| Tỷ lệ tái đầu tư cần thiết để tăng `g = 6%/năm` (`= g / ROIC`) | **`6% / 30% = 20%` NOPAT** (`= 30`) | **`6% / 5% = 120%` NOPAT** (`= 72`) |
+| Dòng tiền tự do (`FCFF = NOPAT − Tái đầu tư`) còn lại | **`150 − 30 = +120`** (Dư tiền chia cổ tức!) | **`60 − 72 = −12`** (Thiếu tiền, phải vay thêm!) |
 
-Giả sử chi phí vốn của cả hai là 10% (`KỊCH_BẢN`, giả định minh họa, `CHƯA_BIẾT` chi phí vốn thật vì chưa ước lượng):
+`SUY_LUẬN` Cùng tăng trưởng `6%/năm`, Công ty A (`ROIC = 30%`) chỉ cần giữ lại `20%` lợi nhuận và dư `120` tiền mặt tự do; còn Công ty B (`ROIC = 5%`) tiêu hết `100%` lợi nhuận vẫn thiếu `12`, phải vay nợ hoặc phát hành thêm cổ phiếu!
 
-- `PHÉP_TÍNH` Công ty A: ROIC 30% > 10%. Mỗi 100 đồng vốn mới tạo 30 đồng lợi nhuận trong khi chi phí vốn chỉ 10 đồng → tăng trưởng tạo giá trị.
-- `PHÉP_TÍNH` Công ty B: ROIC 5% < 10%. Mỗi 100 đồng vốn mới tạo 5 đồng trong khi chi phí vốn là 10 đồng → càng mở rộng càng lỗ kinh tế, dù báo cáo vẫn "có lãi kế toán".
+### 2. Phân rã `ROIC` theo trực giác DuPont: Biên lợi nhuận × Vòng quay vốn
 
-Ví dụ thứ hai — vì sao lợi nhuận một năm gây hiểu nhầm:
+`PHÉP_TÍNH` Nhân cả tử và mẫu của `ROIC` với `Doanh thu thuần`:
 
-`KỊCH_BẢN` `MINH HỌA` Công ty C (hư cấu, mang tính chu kỳ) có 50 triệu cổ phiếu, giá 24. Lợi nhuận 5 năm gần nhất: 20, 25, 22, 100, 30 (năm thứ tư bùng nổ do giá bán tăng đột biến, năm sau đã rơi về vùng cũ).
+$$\text{ROIC} = \underbrace{\left(\frac{\text{NOPAT}}{\text{Doanh thu thuần}}\right)}_{\text{Biên NOPAT}} \times \underbrace{\left(\frac{\text{Doanh thu thuần}}{\text{Vốn đầu tư (IC)}}\right)}_{\text{Vòng quay vốn đầu tư}}$$
 
-- `PHÉP_TÍNH` Nếu nhìn đúng năm đỉnh: vốn hóa = 24 × 50 = 1.200; P/E = 1.200/100 = 12 lần — trông "rẻ".
-- `PHÉP_TÍNH` Nếu dùng lợi nhuận đại diện bằng **trung vị** 5 năm (`20, 22, 25, 30, 100` → 25): P/E = 1.200/25 = 48 lần — thực tế là đắt.
-- `PHÉP_TÍNH` Nếu dùng **bình quân** cả 5 năm, kể cả năm đỉnh: `(20 + 25 + 22 + 100 + 30)/5 = 39,4`, P/E = `1.200/39,4 = 30,5` lần; nếu bình quân 4 năm bỏ năm đỉnh: `97/4 = 24,25`, P/E = `49,5` lần. Cách chuẩn hoá đổi kết quả rất nhiều, nên phải ghi rõ đã dùng cách nào.
+Công ty A đạt `15% × 2,0 vòng = 30%`; Công ty B chỉ đạt `6% × 0,83 vòng ≈ 5%`. Có hai con đường tạo `ROIC` cao: bán với **biên lợi nhuận dày** (thương hiệu, bằng sáng chế) hoặc **quay vòng vốn cực nhanh** (bán lẻ hiệu quả cao).
 
-`SUY_LUẬN` P/E 12 ở đây là ảo giác của chu kỳ: mẫu số (lợi nhuận) đang ở đỉnh tạm thời. Bài 002 gọi đây là bẫy P/E thấp; bài này cho thấy cơ chế của nó nằm ở việc **lợi nhuận đỉnh chu kỳ thổi phồng NOPAT và cả ROIC**, nên phải kiểm tra cả P/E lẫn ROIC trên dữ liệu nhiều năm.
+---
 
-## 8. Cờ đỏ quản trị (chạm nhẹ)
+## 5. Phân biệt `Moat` thật với Đỉnh chu kỳ & Ba cờ đỏ quản trị
 
-- **Pha loãng cổ phiếu:** phát hành thêm với giá thấp hơn giá trị hợp lý, ESOP quá lớn, hoặc liên tục gọi vốn trong khi lợi nhuận không chuyển thành tiền. `SỰ_THẬT` Theo Investor Bulletin của SEC (bản cập nhật 2022-10-14), hồ sơ chào bán tại Mỹ phải có mục "Dilution" so sánh giá chào bán với giá trị sổ sách mỗi cổ phần và với giá mà cổ đông hiện hữu đã trả; cấu trúc cổ phiếu hai lớp (dual-class) có thể khiến cổ đông đại chúng khó hoặc không thể gây ảnh hưởng lên các vấn đề doanh nghiệp. Kiểm tra số cổ phiếu lưu hành qua nhiều năm: lợi nhuận tăng nhưng EPS không tăng vì cổ phiếu tăng nhanh hơn là dấu hiệu pha loãng.
-- **Giao dịch bên liên quan:** `SỰ_THẬT` Theo IAS 24 của IFRS Foundation, bên liên quan bao gồm cá nhân (hoặc thành viên gia đình thân thiết) kiểm soát, đồng kiểm soát, có ảnh hưởng đáng kể hoặc là nhân sự quản lý chủ chốt, cùng các thực thể như công ty mẹ, công ty con, công ty liên kết; giao dịch bên liên quan là mọi chuyển giao nguồn lực, dịch vụ hoặc nghĩa vụ, **bất kể có tính giá hay không**; doanh nghiệp phải thuyết minh bản chất quan hệ, giá trị giao dịch, số dư và thù lao quản lý chủ chốt. Đọc thuyết minh để hỏi: giao dịch này có theo điều kiện thị trường không, hay chuyển lợi nhuận ra ngoài tầm cổ đông thiểu số?
-- **Phân bổ vốn lịch sử:** doanh nghiệp mua lại với giá đắt tạo goodwill lớn (IFRS 3: goodwill là phần giá phí hợp nhất vượt giá trị hợp lý của tài sản và nợ xác định được; mua rẻ thì ghi lãi ngay vào báo cáo lãi lỗ), mua đỉnh chu kỳ, hoặc đầu tư dàn trải khiến vòng quay vốn giảm nhiều năm liên tiếp — tất cả sẽ hiện ra trong xu hướng ROIC đi xuống dù lợi nhuận tuyệt đối vẫn tăng.
+### 1. Vì sao lợi nhuận 1 năm ở đỉnh chu kỳ đánh lừa cả `P/E` lẫn `ROIC`?
 
-## Năm câu hỏi khi đọc
+`KỊCH_BẢN` & `PHÉP_TÍNH` **Công ty C** (ngành chu kỳ) có `50 triệu cổ phiếu`, giá `24` (Vốn hóa `= 1.200`). Chuỗi lợi nhuận 5 năm: **`20`, `25`, `22`, `100`, `30`** (năm thứ 4 vọt lên `100` do giá hàng hóa tăng đột biến):
+- Nhìn đúng năm đỉnh (`100`): $\text{P/E} = \frac{1.200}{100} = 12,0 \text{ lần}$ (trông rẻ).
+- Dùng **trung vị (`median`) 5 năm** (`25`): $\text{P/E} = \frac{1.200}{25} = 48,0 \text{ lần}$ (thực chất rất đắt!).
+- Dùng **bình quân 5 năm** (`39,4`): $\text{P/E} = \frac{1.200}{39,4} \approx 30,5 \text{ lần}$; bỏ năm đỉnh (`97/4 = 24,25`) thì $\text{P/E} \approx 49,5 \text{ lần}$.
 
-1. Moat được tuyên bố có bằng chứng định lượng nào: biên lợi nhuận cao bền vững nhiều năm, pricing power, retention?
-2. ROIC tính theo công thức nào, có nhất quán giữa các năm và với nhóm so sánh không, và nó nằm trên hay dưới chi phí vốn?
-3. Tăng trưởng hiện tại cần bao nhiêu tái đầu tư; doanh nghiệp tài trợ bằng nội lực, nợ vay hay pha loãng?
-4. Lợi nhuận năm nay có tính đại diện không, hay là đỉnh chu kỳ/sự kiện một lần?
-5. Lịch sử phân bổ vốn nói gì: phát hành cổ phiếu, giao dịch bên liên quan và các thương vụ mua lại có làm hỏng ROIC không?
+### 2. Ba cờ đỏ quản trị làm xói mòn chất lượng doanh nghiệp
+
+1. **Pha loãng cổ phiếu (`Dilution`):** `SỰ_THẬT` Theo *Investor Bulletin: Investing in an IPO* của **SEC (`Investor.gov`)**, hồ sơ chào bán phải thuyết minh mục *Dilution* và rủi ro cấu trúc cổ phiếu hai lớp (`dual-class`). Phát hành ESOP/cổ phiếu giá rẻ liên tục làm EPS tăng chậm hơn lợi nhuận.
+2. **Giao dịch bên liên quan (`Related-Party Transactions`):** `SỰ_THẬT` Theo **IAS 24 (IFRS Foundation)**, doanh nghiệp phải thuyết minh bản chất và giá trị giao dịch với bên liên quan (cá nhân/tổ chức kiểm soát, quản lý chủ chốt và gia đình) dù có tính giá hay không, để cổ đông kiểm tra nguy cơ rút ruột lợi nhuận.
+3. **Thâu tóm (`M&A`) giá đắt tạo `Goodwill` lớn:** `SỰ_THẬT` Theo **IFRS 3 (IFRS Foundation)**, `Goodwill` là phần giá mua vượt giá trị hợp lý của tài sản thuần xác định được. Mua đắt làm phình mẫu số `IC` (gộp `Goodwill`) và kéo `ROIC` đi xuống.
+
+---
+
+## Ví dụ từ nguồn thật: Giải phẫu hiệu quả vốn của Apple Inc. (`Form 10-K FY2025`)
+
+`SỰ_THẬT` Kiểm tra trên dữ liệu từ **[Apple Inc. — Form 10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm)** (kết thúc `27/09/2025`, đơn vị: triệu USD) trong tệp [apple_fy2025_inputs.csv](../practice/models/apple_fy2025_inputs.csv) và mô hình [valuation.py](../practice/models/valuation.py):
+- **Kết quả kinh doanh (`FY2025`):** Doanh thu thuần `= 416.161`; Lợi nhuận hoạt động (`EBIT`) `= 133.050`; Lợi nhuận trước thuế `= 132.729`; Thuế TNDN `= 20.719`; Lợi nhuận ròng `= 112.010`.
+- **Bảng cân đối (`27/09/2025`):** Tiền mặt `= 35.934`; Chứng khoán khả mại `= 18.763 + 77.723 = 96.486` (Tổng thanh khoản `= 132.420`); Phải thu `= 39.777`; Tồn kho `= 5.718`; Phải trả người bán `= 69.860`; Tổng nợ vay `= 7.979 + 12.350 + 78.328 = 98.657`; Vốn chủ sở hữu `= 73.733`.
+
+`PHÉP_TÍNH` Từng bước tính toán:
+1. **Thuế suất hiệu dụng và `NOPAT`:**
+   $$\text{Thuế suất hiệu dụng} = \frac{20.719}{132.729} \approx 15,610\% \implies \text{NOPAT} = 133.050 \times (1 - 0,15610) \approx 112.281 \text{ triệu USD (Biên NOPAT } \approx 26,98\%)$$
+2. **Vốn lưu động thương mại và `ROIC`:**
+   - Phải thu + Tồn kho (`45.495`) nhỏ hơn Phải trả người bán (`69.860`), tạo ra **vốn lưu động thương mại âm** (`−24.365 triệu USD`).
+   - Nếu tính `IC` khi chỉ trừ `Cash` (`35.934`): $\text{IC} = 98.657 + 73.733 - 35.934 = 136.456 \text{ triệu USD} \implies \text{ROIC} = \frac{112.281}{136.456} \approx 82,28\%/\text{năm}$ (còn nếu trừ cả chứng khoán khả mại thì `IC = 39.970 triệu USD`, `ROIC > 280%`).
+   - Hàm `residual_income()` trong [valuation.py](../practice/models/valuation.py) minh họa trực tiếp cách một doanh nghiệp có `ROE` / `ROIC` vượt xa chi phí vốn tạo ra thu nhập thặng dư lớn trên mỗi đồng vốn sổ sách.
+
+---
 
 ## Bài tập
 
-### Bài 1: tính ROIC nhiều năm và nhận xét xu hướng
+`KỊCH_BẢN` Tự giải từng bước 10 bài tập dưới đây trước khi mở Đáp án (Bài 9–10 dùng dữ liệu thật từ [apple_fy2025_inputs.csv](../practice/models/apple_fy2025_inputs.csv) và [valuation.py](../practice/models/valuation.py)):
 
-`KỊCH_BẢN` Công ty T (hư cấu), số liệu NOPAT và vốn đầu tư **đầu kỳ** (đơn vị tiền):
+1. **Tính `ROIC` nhiều năm:** Công ty T có chuỗi `NOPAT` và `IC đầu kỳ` qua 4 năm: Năm 1 (`80` / `800`); Năm 2 (`100` / `900`); Năm 3 (`108` / `1.200`); Năm 4 (`110` / `1.500`). Tính `ROIC` từng năm, nhận xét xu hướng và nêu 2 giả thuyết cần kiểm tra.
+2. **Tuyên bố so với Bằng chứng `Moat`:** Phân loại 5 câu sau là **tuyên bố** hay **bằng chứng** và nêu dữ liệu cần kiểm tra: (a) *"Thương hiệu được yêu thích nhất ngành"*; (b) *"Tỷ lệ gia hạn hợp đồng đạt 95% trong 5 năm liên tiếp"*; (c) *"Hệ sinh thái không có đối thủ"*; (d) *"Biên gộp duy trì 45%–48% suốt 10 năm so với trung vị ngành 22%–25%"*; (e) *"Đổi nhà cung cấp tốn 6 tháng tích hợp lại hệ thống"*.
+3. **Phân biệt `Moat` với Đỉnh chu kỳ:** Công ty V sản xuất hóa chất cơ bản có lợi nhuận tăng từ `40` lên `160` trong 1 năm nhờ giá hóa chất thế giới tăng `+60%` do đứt gãy nguồn cung. Đặt giả thuyết và nêu dữ liệu kiểm tra để phân biệt `Moat` với đỉnh chu kỳ.
+4. **Tính `NOPAT`, `IC` theo 2 cách và `ROIC`:** Doanh nghiệp K có Doanh thu `= 2.000`, `EBIT = 250`, thuế suất `= 20%`. Đầu kỳ có: Tiền mặt `= 100`, Phải thu `= 150`, Tồn kho `= 200`, TSCĐ ròng `= 650` (Tổng tài sản `= 1.100`); Phải trả người bán (không chịu lãi) `= 100`, Vay ngân hàng `= 300`, Vốn chủ `= 700`. Tính `NOPAT`, `IC` theo 2 cách và `ROIC`.
+5. **Phân rã DuPont của `ROIC`:** Chuỗi bán lẻ X và Thương hiệu Y cùng đạt `ROIC = 24%/năm`. Biết X có biên `NOPAT = 4%`, Y có biên `NOPAT = 16%`. Tính vòng quay vốn đầu tư của X và Y.
+6. **Tỷ lệ tái đầu tư và `FCFF`:** Công ty M (`ROIC = 20%`) và N (`ROIC = 10%`) cùng có `NOPAT = 200 tỷ đồng` và cùng muốn tăng trưởng `g = 8%/năm`. Tính tỷ lệ tái đầu tư, số tiền tái đầu tư và `FCFF = NOPAT − Tái đầu tư` của M và N.
+7. **Lợi nhuận kinh tế (`Economic Profit`):** Công ty A (`NOPAT = 150`, `IC = 500`, `ROIC = 30%`) và Công ty B (`NOPAT = 60`, `IC = 1.200`, `ROIC = 5%`), giả sử `WACC = 10%`. Tính `Economic Profit = NOPAT − IC × WACC` của A và B.
+8. **Ảnh hưởng của `Goodwill` lên `ROIC`:** Tập đoàn G có `NOPAT = 180 tỷ`, tổng `IC = 1.800 tỷ` (trong đó `Goodwill` từ M&A là `1.000 tỷ`, tài sản hữu hình & vốn lưu động là `800 tỷ`). Tính `ROIC` gộp `Goodwill` và loại trừ `Goodwill`, giải thích ý nghĩa từng số.
+9. **Dữ liệu thật Apple (`FY2025`):** Từ [apple_fy2025_inputs.csv](../practice/models/apple_fy2025_inputs.csv), mảng `Products` có doanh thu `307.003`, giá vốn `194.116`; mảng `Services` có doanh thu `109.158`, giá vốn `26.844` (triệu USD). Tính biên lợi nhuận gộp từng mảng và liên hệ với nguồn `Moat`.
+10. **Thực hành `residual_income()` trong [valuation.py](../practice/models/valuation.py):** Với `B0 = 100`, `ke = 10%`, `payout = 50%`, `ROE = 20%` trong 2 năm đầu rồi hội tụ về `ke`, hãy tính `NI`, `RI = NI − ke × B` của Năm 1, Năm 2 và tổng giá trị `value = B0 + PV(RI)`.
 
-| Năm | NOPAT | Vốn đầu tư đầu kỳ |
-|---|---:|---:|
-| 1 | 80 | 800 |
-| 2 | 100 | 900 |
-| 3 | 108 | 1.200 |
-| 4 | 110 | 1.500 |
+---
 
-Tính ROIC từng năm, nhận xét xu hướng, và nêu ít nhất hai giả thuyết cần kiểm tra thêm.
+## Đáp án
 
-### Bài 2: phân biệt tuyên bố moat và bằng chứng moat
+1. `PHÉP_TÍNH` Năm 1: `10,0%`; Năm 2: `11,1%`; Năm 3: `9,0%`; Năm 4: `7,3%`. `SUY_LUẬN` `NOPAT` tăng nhưng `ROIC` giảm vì vốn phình nhanh hơn lãi; cần kiểm tra `Goodwill` từ M&A, tiến độ nhà máy mới hoặc biên lợi nhuận bị ép.
+2. `SUY_LUẬN` Câu (a), (c) là **tuyên bố**; câu (b), (d) là **bằng chứng định lượng**; câu (e) là **bán bằng chứng** (cần kiểm tra tỷ lệ rời bỏ thực tế).
+3. `SUY_LUẬN` Kiểm tra chuỗi giá bán/biên lợi nhuận 5–10 năm qua cả năm đáy chu kỳ và dòng tiền `CFO` ([Bài 004](004-cash-flow-and-earnings-quality.md)); nếu giá hàng hóa hạ nhiệt mà lợi nhuận rơi về `40` thì đó là đỉnh chu kỳ.
+4. `PHÉP_TÍNH` (a) $\text{NOPAT} = 250 \times 0,8 = 200 \text{ tỷ}$; (b) Nguồn vốn: $\text{IC} = 300 + 700 - 100 = 900 \text{ tỷ}$; Tài sản: $\text{IC} = 650 + (150 + 200 - 100) = 900 \text{ tỷ}$; (c) $\text{ROIC} = 200 / 900 \approx 22,22\%$.
+5. `PHÉP_TÍNH` Vòng quay vốn của X $= 24\% / 4\% = 6,0 \text{ vòng/năm}$ (chi phí thấp, quay vòng nhanh); của Y $= 24\% / 16\% = 1,5 \text{ vòng/năm}$ (thương hiệu biên dày).
+6. `PHÉP_TÍNH` M: tái đầu tư $8\% / 20\% = 40\%$ (`80 tỷ`) $\implies \text{FCFF}_M = 120 \text{ tỷ}$. N: tái đầu tư $8\% / 10\% = 80\%$ (`160 tỷ`) $\implies \text{FCFF}_N = 40 \text{ tỷ}$.
+7. `PHÉP_TÍNH` Công ty A: $150 - 500 \times 10\% = +100$ (tạo giá trị). Công ty B: $60 - 1.200 \times 10\% = -60$ (phá hủy giá trị dù lãi kế toán dương).
+8. `PHÉP_TÍNH` Gộp `Goodwill`: $180 / 1.800 = 10,0\%$ (đánh giá trách nhiệm M&A của ban lãnh đạo); Loại `Goodwill`: $180 / 800 = 22,5\%$ (đánh giá hiệu quả bộ máy vận hành hiện hữu).
+9. `PHÉP_TÍNH` Biên gộp `Products` $= (307.003 - 194.116) / 307.003 \approx 36,77\%$; Biên gộp `Services` $= (109.158 - 26.844) / 109.158 \approx 75,41\%$ (cao gấp đôi nhờ chi phí chuyển đổi và hiệu ứng mạng lưới hệ sinh thái iOS).
+10. `PHÉP_TÍNH` Năm 1: $\text{NI}_1 = 20, \text{RI}_1 = 20 - 10 = 10, B_1 = 110$. Năm 2: $\text{NI}_2 = 22, \text{RI}_2 = 22 - 11 = 11$. $\text{PV(RI)} = 10/1,1 + 11/1,21 = 18,1818 \implies \text{value} = 118,18$.
 
-`KỊCH_BẢN` Khi đọc hồ sơ công ty S (hư cấu), bạn gặp năm câu sau. Phân loại từng câu là **tuyên bố** hay **bằng chứng**, và nêu dữ liệu cần kiểm tra để biến tuyên bố thành bằng chứng:
+---
 
-1. "Chúng tôi sở hữu thương hiệu được yêu thích nhất ngành."
-2. "Tỷ lệ khách hàng gia hạn hợp đồng đạt 95% trong 5 năm liên tiếp."
-3. "Ban lãnh đạo tin rằng hệ sinh thái của chúng tôi không có đối thủ."
-4. "Biên lợi nhuận gộp duy trì 45-48% suốt 10 năm, trong khi trung vị nhóm cùng ngành là 22-25%."
-5. "Khách hàng muốn đổi sang đối thủ sẽ phải tích hợp lại toàn bộ hệ thống, ước tính tốn 6 tháng chi phí vận hành."
+## Bài làm với dữ liệu thiếu hoặc lệch
 
-### Bài 3: lợi nhuận bùng nổ — moat hay chu kỳ?
+Khi tính `ROIC` thực tế, bạn thường gặp 2 tình huống lệch dữ liệu:
+1. **Các trang web hiển thị `ROIC` rất khác nhau cho cùng một công ty** do khác quy ước trừ tiền mặt (`Cash` so với `Marketable securities`) hoặc dùng vốn đầu kỳ/cuối kỳ.
+2. **Vốn đầu tư (`IC`) âm hoặc sát `0`** ở các công ty phần mềm/dịch vụ giữ nhiều tiền mặt và thu tiền khách trả trước lớn.
 
-`KỊCH_BẢN` Công ty V (hư cấu) sản xuất hàng hóa cơ bản: lợi nhuận tăng từ 40 lên 160 trong một năm; giá bán thành phẩm tăng 60% do nguồn cung toàn cầu gián đoạn; chi phí đầu vào gần như không đổi; giá cổ phiếu tăng mạnh và P/E trượt trông rất thấp. Đặt giả thuyết và liệt kê dữ liệu cần kiểm tra để phân biệt "moat thật" với "đỉnh chu kỳ".
+**Quy trình xử lý chuẩn:**
+- **Bước 1:** Luôn tự tính từ báo cáo gốc và ghi rõ quy ước tử số (`NOPAT`) cùng mẫu số (`IC` đầu kỳ hay bình quân, có gồm `Goodwill` không).
+- **Bước 2:** Khi `IC ≤ 0` do tiền mặt và chiếm dụng vốn lớn, không chia máy móc ra `ROIC` âm mà đánh giá qua **Biên `NOPAT`** và **Tỷ lệ `FCF / Doanh thu`** ([Bài 004](004-cash-flow-and-earnings-quality.md)).
 
-## Đáp án hoàn chỉnh
+---
 
-### Bài 1
+## Sai ở đâu
 
-`PHÉP_TÍNH` Dùng vốn đầu tư đầu kỳ theo công thức mục 2:
+### Sai lầm 1: Đem `ROA` so sánh trực tiếp với `WACC`
+- **Sai ở đâu:** Mẫu số `Tổng tài sản` của `ROA` chứa cả tiền mặt nhàn rỗi và nợ thương mại không tốn lãi, còn tử số đã trừ lãi vay.
+- **Cách sửa:** Tính `NOPAT` và `Vốn đầu tư (IC)` để ra `ROIC` rồi mới so với `WACC`.
 
-- Năm 1: `80 / 800 = 10,0%`
-- Năm 2: `100 / 900 = 11,1%`
-- Năm 3: `108 / 1.200 = 9,0%`
-- Năm 4: `110 / 1.500 = 7,3%`
+### Sai lầm 2: Tính `NOPAT` bằng cách lấy `EBIT` trừ thẳng dòng "Thuế TNDN thực nộp" của công ty vay nợ lớn
+- **Sai ở đâu:** Thuế thực nộp đã giảm nhờ lá chắn thuế của lãi vay; trừ thẳng sẽ tính trùng lợi ích thuế của nợ vay (vốn đã nằm trong `WACC`).
+- **Cách sửa:** Luôn tính $\text{NOPAT} = \text{EBIT} \times (1 - \text{Thuế suất})$.
 
-`SUY_LUẬN` Nhận xét: NOPAT tăng đều 80 → 110 nhưng ROIC tăng nhẹ rồi **giảm liên tiếp hai năm** — vốn tăng nhanh hơn lợi nhuận. Nếu chi phí vốn là 10% (giả định minh họa), năm 4 công ty đã tiến sát ngưỡng không tạo giá trị. Giả thuyết cần kiểm tra: (a) vốn tăng do một thương vụ mua lại (kiểm tra goodwill và thuyết minh hợp nhất); (b) biên lợi nhuận bị ép do cạnh tranh giá hoặc chi phí đầu vào (tách biên và vòng quay theo mục 5); (c) đầu tư mở rộng chưa đạt công suất (kiểm tra tiến độ và kế hoạch công suất). Nếu dùng bình quân vốn thay vì vốn đầu kỳ, các tỷ lệ sẽ khác đôi chút — phải ghi rõ quy ước đã dùng.
+### Sai lầm 3: Ca ngợi tăng trưởng lợi nhuận khi `ROIC < WACC`
+- **Sai ở đâu:** Khi `ROIC < WACC`, mỗi đồng vốn mới bỏ thêm đều sinh lời thấp hơn chi phí huy động, làm cổ đông nghèo đi.
+- **Cách sửa:** Luôn kiểm tra `ROIC − WACC` và dòng tiền tự do còn lại sau tái đầu tư.
 
-### Bài 2
+---
 
-- Câu 1: **Tuyên bố** (ý kiến marketing). Cần: dữ liệu khảo sát nhận diện thương hiệu độc lập, khả năng giữ giá cao hơn đối thủ, biên lợi nhuận so nhóm cùng ngành qua nhiều năm.
-- Câu 2: **Bằng chứng định lượng ban đầu** — nhưng phải kiểm tra nguồn số liệu, định nghĩa "gia hạn" (tính theo số khách hàng hay theo giá trị hợp đồng), và tỷ lệ này có giảm trong năm khó không.
-- Câu 3: **Tuyên bố/ý kiến** của người trong cuộc. Cần: thị phần qua nhiều năm, phản ứng của khách hàng khi có đối thủ mới xuất hiện.
-- Câu 4: **Bằng chứng định lượng mạnh** — vẫn cần kiểm tra nhóm so sánh có thật sự cùng mô hình kinh doanh không và biên có chứa khoản một lần không.
-- Câu 5: **Bán bằng chứng** — ước tính chi phí chuyển đổi cần được xác nhận bằng dữ liệu thực: tỷ lệ rời bỏ sau khi đối thủ giảm giá, thời gian khách thực sự đã gắn bó.
+## Kiểm tra chuyển bài
 
-`SUY_LUẬN` Quy tắc: tuyên bố trả lời "chúng tôi nói gì về mình"; bằng chứng trả lời "số liệu nhiều năm và hành vi khách hàng nói gì". Moat đáng tin khi tuyên bố được đỡ bởi nhiều bằng chứng độc lập.
+Trước khi chuyển sang **[Bài 004: Dòng tiền và chất lượng lợi nhuận](004-cash-flow-and-earnings-quality.md)** (Bước 10/23 Nhánh 1), hãy tự trả lời 3 câu hỏi sau:
 
-### Bài 3
+1. Vì sao `Tổng nợ vay chịu lãi + Vốn chủ sở hữu − Tiền mặt` luôn khớp với `Tài sản cố định ròng + Vốn lưu động phi tiền mặt`?
+2. Một công ty có `ROIC = 6%/năm` và `WACC = 10%/năm` giữ lại `100%` lợi nhuận để mở rộng gấp đôi quy mô: tốt hay xấu cho cổ đông?
+3. **Bắc cầu sang [Bài 004](004-cash-flow-and-earnings-quality.md):** Nếu công ty báo cáo `NOPAT = 200 tỷ` và `ROIC = 25%` rất cao, nhưng toàn bộ lợi nhuận nằm ở **Phải thu khách hàng** và **Tồn kho** khiến két tiền trống rỗng (`CFO < 0`), làm sao phát hiện "lợi nhuận giấy" đó? Hãy sang ngay **[Bài 004: Dòng tiền và chất lượng lợi nhuận](004-cash-flow-and-earnings-quality.md)**!
 
-- `SUY_LUẬN` Giả thuyết 1 — đỉnh chu kỳ giá: lợi nhuận tăng chủ yếu do giá bán tăng 60% từ cú sốc nguồn cung bên ngoài, không phải do doanh nghiệp mạnh lên. Dữ liệu kiểm tra: chuỗi giá bán và chi phí 5-10 năm; công suất ngành đang mở rộng ở đâu; hợp đồng tương lai/giá kỳ hạn nếu có; khi nguồn cung phục hồi lợi nhuận có rơi về vùng 40 không.
-- `SUY_LUẬN` Giả thuyết 2 — hưởng lợi tạm thời từ tồn kho/ghi nhận một lần: giá tăng làm phần tồn kho giá rẻ được bán với giá cao, hoặc có khoản hoàn nhập dự phòng. Dữ liệu kiểm tra: thuyết minh hàng tồn kho, phương pháp tính giá xuất, dòng tiền hoạt động so với lợi nhuận (nối lại Bài 001).
-- `SUY_LUẬN` Giả thuyết 3 — moat thật (xác suất thấp hơn với hàng hóa cơ bản): chi phí sản xuất thấp nhất ngành, hợp đồng dài hạn, vị trí/logistics độc quyền. Dữ liệu kiểm tra: so chi phí đơn vị với đối thủ cùng ngành qua **cả chu kỳ**, đặc biệt năm giá xuống; thị phần có tăng trong giai đoạn khó không.
-- `SUY_LUẬN` Điều kiện bác bỏ "moat": nếu lợi nhuận trở về xu hướng cũ khi nguồn cung phục hồi, hoặc biên lợi nhuận biến động cùng nhịp giá hàng hóa thay vì ổn định, thì mức lợi nhuận 160 là chu kỳ, không phải chất lượng. P/E trượt thấp lúc này nhiều khả năng là bẫy của Bài 002.
-
-## Lỗi thường gặp
-
-- Tin moat vì báo cáo thường niên tuyên bố, không đòi bằng chứng định lượng nhiều năm.
-- Dùng ROIC một năm duy nhất để kết luận chất lượng; phải xem qua nhiều năm và cả chu kỳ, kể cả năm xấu.
-- So sánh ROIC tính bằng hai công thức/quy ước khác nhau (vốn đầu kỳ vs bình quân, có/không goodwill, có/không điều chỉnh R&D) rồi gọi là so sánh.
-- Áp máy móc công thức ROIC cho ngân hàng, bảo hiểm — vốn và lợi nhuận của ngành tài chính có cấu trúc khác hẳn.
-- Nói "ROIC 8% là tạm ổn" mà không so với chi phí vốn; hoặc tự bịa một con số chi phí vốn chính xác khi chưa ước lượng được (phải ghi `CHƯA_BIẾT`).
-- Ca ngợi tăng trưởng cao mà quên rằng với ROIC dưới chi phí vốn, tăng trưởng càng nhanh càng phá hủy giá trị.
-- Bỏ qua goodwill và lịch sử mua lại khi tính ROIC của doanh nghiệp hay đi thâu tóm.
-- Thấy P/E thấp ở đỉnh chu kỳ rồi gọi là rẻ, không chuẩn hóa lợi nhuận.
-- Thấy lợi nhuận tăng liền cho là tốt, không kiểm tra số cổ phiếu lưu hành (pha loãng) và giao dịch bên liên quan trong thuyết minh.
+---
 
 ## Ranh giới an toàn
 
-- Bài này là khung phân tích, không phải khuyến nghị mua/bán/nắm giữ cho bất kỳ mã nào.
-- Không đặt lệnh dựa trên một chỉ số duy nhất (ROIC cao, P/E thấp, "có moat").
-- Không dùng đòn bẩy để thực hành; ví dụ hư cấu không đại diện cho doanh nghiệp thật nào.
-- Mọi kết luận về doanh nghiệp thật phải đi qua hồ sơ gốc, kịch bản bất lợi/cơ sở/thuận lợi và bước kiểm nguồn theo quy trình của repo.
-
-## Điều tôi vẫn chưa hiểu
-
-- Người học muốn thực hành tính ROIC trên thị trường nào (Việt Nam, Mỹ, khác), và doanh nghiệp thật đầu tiên để luyện là doanh nghiệp nào?
-- Ngành nào người học muốn chọn làm bài tập chu kỳ (hàng hóa cơ bản, bán lẻ, phần mềm...)?
-- Khả năng đọc thuyết minh tiếng Anh hiện tại đến đâu để chọn hồ sơ gốc phù hợp?
-- Người học muốn đào sâu ước lượng chi phí vốn ngay bây giờ hay để tới Bài 010 (chi phí vốn)?
+- Bài học này là khung phân tích chất lượng doanh nghiệp, không phải khuyến nghị mua/bán/nắm giữ cổ phiếu.
+- Không đặt lệnh đầu tư chỉ dựa trên một chỉ số `ROIC` cao hay lời tuyên bố "có moat".
 
 ## Nguồn Internet đã mở và nghiên cứu liên quan
 
-Các nguồn dưới đây được mở trực tiếp ngày `2026-08-12` (không dùng đoạn trích trên trang kết quả làm bằng chứng).
+Các nguồn dưới đây được mở trực tiếp ngày `2026-08-12` và đối chiếu lại ngày `2026-11-06`:
 
-- [IAS 24 - Related Party Disclosures, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ias-24-related-party-disclosures/) — HTTP 200; ngày xuất bản trang: `CHƯA_BIẾT` (trang chuẩn hiện hành, cập nhật thường xuyên); lịch sử chuẩn: ban hành 07/1984 (IASC), IASB tiếp nhận 04/2001, sửa đổi 12/2003 và 11/2009, sửa đổi hệ quả từ IFRS 18 (04/2024); phạm vi: chuẩn mực IFRS toàn cầu; tiền tệ/đơn vị: không áp dụng. Cung cấp định nghĩa bên liên quan, giao dịch bên liên quan và yêu cầu thuyết minh (kể cả thù lao quản lý chủ chốt) dùng ở mục 8.
-- [IFRS 3 - Business Combinations, IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-3-business-combinations/) — HTTP 200; ngày xuất bản trang: `CHƯA_BIẾT`; ban hành lần đầu 03/2004 (thay IAS 22), sửa đổi toàn diện 01/2008, sửa đổi gần nhất từ IFRS 18 (04/2024); phạm vi: chuẩn mực IFRS toàn cầu; tiền tệ/đơn vị: không áp dụng. Cung cấp cách ghi nhận goodwill (phần giá phí hợp nhất còn lại sau khi phân bổ vào giá trị hợp lý của tài sản và nợ xác định được; mua rẻ ghi lãi ngay vào báo cáo lãi lỗ).
-- [Return on Capital (ROC), Return on Invested Capital (ROIC) and Return on Equity (ROE): Measurement and Implications — Aswath Damodaran, NYU Stern (PDF)](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/returnmeasures.pdf) — HTTP 200; bản PDF đề tháng 07/2007; phạm vi: khung đo lường toàn cầu, trung lập tiền tệ. Cung cấp công thức ROIC (NOPAT/vốn đầu tư giá trị sổ sách đầu kỳ), hai cách tính invested capital, cảnh báo tính trùng thuế, các điều chỉnh (R&D, thuê, goodwill), quan hệ excess return = ROIC − chi phí vốn, `tăng trưởng = tỷ lệ tái đầu tư × ROC` và cảnh báo về ROA.
-- [Balancing ROIC and growth to build value — McKinsey on Finance](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/balancing-roic-and-growth-to-build-value) — HTTP 200 (lần mở thứ hai trong phiên kiểm tra; lần đầu gặp 403 do máy chủ chặn tạm thời); xuất bản `2006-03-01`; tác giả Bing Cao và Bin Jiang; phạm vi: các công ty niêm yết lớn nhất Mỹ theo dõi từ 1965/1975/1985/1995 đến 2004; tiền tệ: USD. Cung cấp luận điểm ROIC là thước đo tạo giá trị, xác suất duy trì ROIC > 20% sau một thập kỷ khoảng 50%, và độ bền thấp của tăng trưởng nóng (56% rơi xuống dưới 5%, chỉ ~13% duy trì).
-- [A long-term look at ROIC — McKinsey on Finance](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/a-long-term-look-at-roic) — HTTP 200 (lần mở thứ hai trong phiên kiểm tra; lần đầu gặp 403 do máy chủ chặn tạm thời); xuất bản `2006-02-01`; tác giả Bin Jiang; phạm vi: khoảng 7.000 công ty phi tài chính niêm yết Mỹ 1963-2004, doanh thu > 200 triệu USD theo giá 2003; tiền tệ: USD; ROIC dùng trong nghiên cứu **loại trừ goodwill**. Cung cấp trung vị ROIC ~10% ≈ chi phí vốn dài hạn và phương sai ROIC trong ngành (phần mềm và dịch vụ trung vị 18%, chênh lệch tứ phân vị trên/dưới tới 31 điểm phần trăm).
-- [Five Sources of Moats Whitepaper — VanEck (mô tả phương pháp luận Morningstar)](https://www.vaneck.com/nl/en/moat-investing/five-sources-of-moats-whitepaper.pdf) — HTTP 200; bản quyền © Morningstar 2020 và © 2020 VanEck, ngày xuất bản chính xác: `CHƯA_BIẾT`; phạm vi: ví dụ lấy từ doanh nghiệp niêm yết Mỹ; tiền tệ: USD. Đây là **nguồn thứ cấp** mô tả năm nguồn moat (tài sản vô hình, chi phí chuyển đổi, hiệu ứng mạng lưới, lợi thế chi phí, quy mô hiệu quả) theo phương pháp luận Morningstar.
-- [Investor Bulletin: Investing in an IPO — SEC Investor.gov](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-17) — HTTP 200; cập nhật `2022-10-14`; phạm vi: chào bán IPO tại Mỹ; tiền tệ/đơn vị: không áp dụng. Cung cấp yêu cầu mục "Dilution" trong hồ sơ chào bán (so giá chào bán với giá trị sổ sách và giá cổ đông hiện hữu đã trả) và rủi ro cấu trúc hai lớp cổ phiếu.
-- Ghi nhận nguồn không truy cập được: `https://www.morningstar.com/business/insights/blog/equity-economic-moat-ratings` và `https://www.morningstar.com/stocks/morningstar-economic-moat-rating-3` đều trả về HTTP 202 với nội dung rỗng (nghi do chặn truy cập tự động) trong lượt này; vì vậy mục 1 dùng whitepaper VanEck như nguồn thứ cấp thay thế và đã ghi nhãn tương ứng.
+- [Return on Capital (ROC), Return on Invested Capital (ROIC) and Return on Equity (ROE) — Aswath Damodaran, NYU Stern (PDF)](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/returnmeasures.pdf) (`07/2007`) — Công thức `NOPAT`, 2 cách tính `IC`, `ROIC`, `Excess Return = ROIC − WACC`, `g = Reinvestment Rate × ROIC` và cảnh báo về `ROA`.
+- [A long-term look at ROIC — McKinsey on Finance](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/a-long-term-look-at-roic) (`2006-02-01`) & [Balancing ROIC and growth to build value](https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/balancing-roic-and-growth-to-build-value) (`2006-03-01`) — Trung vị `ROIC ~10%` trên `7.000` công ty Mỹ và độ bền của `ROIC > 20%`.
+- [Five Sources of Moats Whitepaper — VanEck (mô tả phương pháp luận Morningstar)](https://www.vaneck.com/nl/en/moat-investing/five-sources-of-moats-whitepaper.pdf) — Nguồn thứ cấp mô tả 5 nguồn `Moat`.
+- [IAS 24 — Related Party Disclosures](https://www.ifrs.org/issued-standards/list-of-standards/ias-24-related-party-disclosures/) & [IFRS 3 — Business Combinations](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-3-business-combinations/) (IFRS Foundation) — Giao dịch bên liên quan và `Goodwill`.
+- [Investor Bulletin: Investing in an IPO — SEC Investor.gov](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-17) (`2022-10-14`) — Pha loãng cổ phiếu (`Dilution`).
+- [Apple Inc. — Form 10-K FY2025](https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm) (`31/10/2025`) — Số liệu thực tế tại mục Ví dụ từ nguồn thật, Bài tập 9 và [apple_fy2025_inputs.csv](../practice/models/apple_fy2025_inputs.csv).

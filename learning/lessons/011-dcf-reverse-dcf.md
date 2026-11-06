@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
 - Nguồn số Apple: Form 10-K FY2025 mở ngày `2026-10-31`.
 - Mục tiêu: Dựng DCF năm giai đoạn trên số thật; kiểm tính nhất quán tái đầu tư–tăng trưởng; bắc cầu EV sang giá mỗi cổ phần; đảo mô hình để đọc giả định; đọc bảng độ nhạy.
-- Bài trước liên quan: 004, 009, [010](010-cost-of-capital.md), N4. Học tiếp [012](012-scenarios-margin-of-safety.md).
+- Bài trước liên quan: Thứ tự đọc **Bước 20/23 của Nhánh 1** — học ngay sau [Bài 010: Chi phí vốn — ke, kd, WACC](010-cost-of-capital.md) (kế thừa [Bài N4](N4-time-value-returns.md), [Bài 003](003-business-quality-moat-and-roic.md), [Bài 004](004-cash-flow-and-earnings-quality.md) và [Bài 009](009-valuation-multiples.md)). Học tiếp: [Bài 012: Kịch bản, biên an toàn và điều kiện bác bỏ](012-scenarios-margin-of-safety.md) (Bước 21/23).
 - Thời lượng: 3 phiên (A: mục 1–3; B: mục 4–5; C: mục 6–8 và bài tập). Chưa đo thời gian học thực tế.
 - Tệp thực hành: [valuation.py](../practice/models/valuation.py), [số Apple](../practice/models/apple_fy2025_inputs.csv) trong `learning/practice/models/`.
 - Kiểm nguồn: `ĐẠT`
@@ -18,12 +18,12 @@
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Trả lời bằng lời trước khi đọc tiếp (đáp án ở phần ẩn ngay dưới).
+Ôn lại các bài liền trước theo đúng thứ tự Nhánh 1 ([Bài N4](N4-time-value-returns.md) → [Bài 004](004-cash-flow-and-earnings-quality.md) → [Bài 009](009-valuation-multiples.md) → [Bài 010](010-cost-of-capital.md)). Trả lời bằng lời trước khi đọc tiếp (đáp án ở phần ẩn ngay dưới):
 
-1. 004: vì sao lợi nhuận kế toán khác dòng tiền hoạt động?
-2. 009: EV (*enterprise value*, giá trị doanh nghiệp) khác vốn chủ ở những khoản nào?
-3. 010: dòng tiền cho mọi người cấp vốn chiết khấu bằng gì, dòng tiền riêng cổ đông bằng gì?
-4. N4: tăng tỷ lệ chiết khấu thì giá trị hiện tại của cùng khoản nhận giảm hay tăng?
+1. [Bài 004](004-cash-flow-and-earnings-quality.md): vì sao lợi nhuận kế toán khác dòng tiền hoạt động?
+2. [Bài 009](009-valuation-multiples.md): `EV` (*enterprise value*, giá trị doanh nghiệp) khác vốn chủ ở những khoản nào?
+3. [Bài 010](010-cost-of-capital.md): dòng tiền cho mọi người cấp vốn chiết khấu bằng gì, dòng tiền riêng cổ đông bằng gì?
+4. [Bài N4](N4-time-value-returns.md): tăng tỷ lệ chiết khấu thì giá trị hiện tại của cùng khoản nhận giảm hay tăng?
 
 <details>
 <summary>Mở sau khi tự làm</summary>

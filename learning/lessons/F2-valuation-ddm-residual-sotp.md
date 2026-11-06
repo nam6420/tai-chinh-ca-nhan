@@ -18,10 +18,11 @@ DCF (bài 011) không phải công cụ duy nhất. Ba phương pháp thay thế
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-1. 010: vì sao dòng tiền cổ đông dùng chi phí vốn cổ đông (ke), không dùng WACC?
-2. 011: từ EV sang vốn chủ phải làm gì với nợ, tiền?
-3. 009: vì sao so P/E giữa hai công ty khác cơ cấu nợ dễ sai?
-4. 011: điều kiện của công thức giá trị cuối kỳ là gì?
+Ôn lại chuỗi bài định giá trong Nhánh 1 ([Bài 009](009-valuation-multiples.md) → [Bài 010](010-cost-of-capital.md) → [Bài 011](011-dcf-reverse-dcf.md) → [Bài 012](012-scenarios-margin-of-safety.md)):
+1. [Bài 010](010-cost-of-capital.md): vì sao dòng tiền cổ đông dùng chi phí vốn cổ đông (`ke`), không dùng `WACC`?
+2. [Bài 011](011-dcf-reverse-dcf.md): từ `EV` sang vốn chủ phải làm gì với nợ, tiền?
+3. [Bài 009](009-valuation-multiples.md): vì sao so `P/E` giữa hai công ty khác cơ cấu nợ dễ sai?
+4. [Bài 011](011-dcf-reverse-dcf.md): điều kiện của công thức giá trị cuối kỳ là gì?
 
 <details>
 <summary>Mở sau khi tự làm</summary>

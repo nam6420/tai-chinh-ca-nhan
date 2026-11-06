@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số: Form 10-K FY2025 của Apple (SEC), báo cáo tài chính hợp nhất kiểm toán FY2025 của Hòa Phát (HPG), bài viết Damodaran ngày 24/02/2026; mở ngày `2026-11-01` và mở lại `2026-11-02` (bảng cuối bài).
 - Mục tiêu: Tính chi phí của cổ phiếu thưởng nhân viên (SBC) theo quy ước dự án; phân biệt mua lại cổ phiếu làm đẹp EPS với mua lại làm tăng giá trị; tính mua lại ròng sau pha loãng; so tiền trả cổ đông với dòng tiền; xử lý cổ phiếu thưởng và điều chỉnh EPS.
-- Bài trước liên quan: 006, 010, 011. Học tiếp Q3.
+- Bài trước liên quan: Chuỗi định lượng thực hành sau [Bài 012](012-scenarios-margin-of-safety.md) (**Bước 2/4 của chuỗi `Q4 → Q2 → Q1 → Q3`**) — học ngay sau [Bài Q4: Lấy dữ liệu EDGAR/XBRL, báo cáo Việt Nam và bảng tính](Q4-getting-data-edgar-xbrl-vietnam.md) (kế thừa [Bài 006](006-capital-allocation-governance.md), [Bài 010](010-cost-of-capital.md) và [Bài 011](011-dcf-reverse-dcf.md)). Học tiếp: [Bài Q1: Chất lượng lợi nhuận có công cụ (Beneish, Altman, Piotroski)](Q1-earnings-quality-toolkit.md), sau đó sang [Bài Q3](Q3-normalizing-earnings-cyclical.md).
 - Thời lượng: 3 phiên (A: mục 1–3; B: ví dụ nguồn thật và mục 4–5; C: bài tập).
 - Tệp thực hành: [capital_return.py](../practice/models/capital_return.py) và [apple_capital_return_inputs.csv](../practice/models/apple_capital_return_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
 - Kiểm nguồn: `ĐẠT`
@@ -18,7 +18,10 @@ Công ty là cái bánh chia cho cổ đông. Mua lại là công ty dùng tiề
 
 ## Ôn bài cũ
 
-006: ba cách công ty dùng tiền dư. 011: vì sao DCF trừ SBC khỏi dòng tiền (quy ước dự án: SBC là chi phí dưới dạng cổ phiếu; không trừ thì dòng tiền bị tính cao)?
+Ôn lại các bài trước theo đúng thứ tự đọc ([Bài 006](006-capital-allocation-governance.md) → [Bài 011](011-dcf-reverse-dcf.md) → [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md)):
+- [Bài 006](006-capital-allocation-governance.md): nêu năm lựa chọn phân bổ vốn và ba cách công ty hoàn trả hoặc giữ lại tiền dư.
+- [Bài 011](011-dcf-reverse-dcf.md): vì sao mô hình `DCF` trừ chi phí thưởng cổ phiếu (`SBC`) khỏi dòng tiền (quy ước dự án: `SBC` là chi phí thực dưới dạng cổ phiếu; không trừ thì dòng tiền bị tính cao)?
+- [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md): làm thế nào để kiểm tra số lượng cổ phần lưu hành và tiền mua lại cổ phiếu từ dữ liệu gốc `10-K` / `XBRL`?
 
 ## Phạm vi
 

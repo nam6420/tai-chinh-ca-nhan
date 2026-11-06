@@ -13,6 +13,12 @@
 
 Cổ đông là người sở hữu một phần công ty, không phải người cho công ty vay. Một cổ đông phổ thông nhỏ vẫn có các quyền nhất định, nhưng quyền biểu quyết không bảo đảm ý kiến của mình sẽ thắng và một số quyền bổ sung có điều kiện về tỷ lệ sở hữu.
 
+## Ôn bài cũ
+
+- Trong [Bài L1 — Giao dịch nội gián, thao túng và công bố thông tin](L1-insider-trading-manipulation-disclosure.md) và [Bài 006 — Phân bổ vốn và quản trị](006-capital-allocation-governance.md), bạn đã nắm nghĩa vụ minh bạch của người nội bộ. Bài L2 hướng dẫn các quyền pháp định của cổ đông thiểu số tại Đại hội đồng cổ đông.
+
+---
+
 ## 1. Quyền cơ bản và điều kiện
 
 `SỰ_THẬT` Điều 115 [Luật Doanh nghiệp, văn bản hợp nhất 67/VBHN-VPQH](https://congbao.cdnchinhphu.vn/CongBaoCP/VanBan/2025/8/45865/58269-1-20251105-110667-vbhn-vpqh.pdf) quy định cổ đông phổ thông có quyền dự, phát biểu và biểu quyết tại Đại hội đồng cổ đông, trực tiếp hoặc qua đại diện được ủy quyền hoặc hình thức khác theo điều lệ và pháp luật; mỗi cổ phần phổ thông có một phiếu biểu quyết. Quyền nhận cổ tức theo mức do đại hội quyết định không có nghĩa công ty chắc chắn trả cổ tức mỗi năm.

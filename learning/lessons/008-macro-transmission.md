@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 12:08 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Chỉ ra được bốn kênh truyền dẫn từ số liệu vĩ mô vào báo cáo tài chính; tính được tác động của nén biên do giá đầu vào tăng nhanh hơn giá bán; tính được tác động của lãi suất thả nổi lên lãi vay; phân biệt được **chỉ số giá** với **mức tỷ giá**; đọc đúng một bảng số vĩ mô (kỳ dữ liệu, so sánh cùng kỳ hay so với đầu năm, đơn vị).
 - Thời lượng: 35 phút đọc + 40 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 003](003-business-quality-moat-and-roic.md) (moat, pricing power), [Bài 005](005-debt-liquidity-survival.md) (lãi vay)
+- Bài trước liên quan: Thứ tự đọc **Bước 14/23 của Nhánh 1** — học ngay sau [Bài 007: Đọc thuyết minh và cờ đỏ kế toán](007-notes-and-accounting-red-flags.md) (kế thừa [Bài 003](003-business-quality-moat-and-roic.md), [Bài 004](004-cash-flow-and-earnings-quality.md) và [Bài 005](005-debt-liquidity-survival.md)). Học tiếp: [Bài 009: Bội số định giá và cạm bẫy so sánh](009-valuation-multiples.md) (Bước 15/23).
 - Câu hỏi cốt lõi: **Lãi suất, lạm phát, tỷ giá và chu kỳ đi vào báo cáo tài chính qua đường nào?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Số liệu dùng trong bài là số liệu thật, đã mở trang gốc ngày `2026-10-26`; khi bạn đọc lại bài này vào lúc khác, **phải cập nhật số** — xem mục 13.
@@ -19,12 +19,12 @@ Vì vậy học vĩ mô không phải học thuộc con số. Học vĩ mô là 
 
 ## Ôn bài cũ (5 phút)
 
-Đáp án ở mục 9.
+Ôn lại các bài liền trước theo thứ tự Nhánh 1 ([Bài 003](003-business-quality-moat-and-roic.md) → [Bài 004](004-cash-flow-and-earnings-quality.md) → [Bài 005](005-debt-liquidity-survival.md) → [Bài 007](007-notes-and-accounting-red-flags.md)). Đáp án ở mục 9:
 
-1. Vì sao ROIC phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị (Bài 003)?
-2. Hệ số trả lãi tính thế nào, và vì sao nó nhạy với lãi suất thả nổi (Bài 005)?
-3. Nếu doanh thu tăng do giá bán tăng mà sản lượng không tăng, dòng tiền hoạt động có tăng tương ứng không (Bài 004)?
-4. Nêu một dấu hiệu doanh nghiệp có "quyền định giá" (Bài 003).
+1. Vì sao `ROIC` phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị ([Bài 003](003-business-quality-moat-and-roic.md))?
+2. Hệ số trả lãi tính thế nào, và vì sao nó nhạy với lãi suất thả nổi trên thuyết minh nợ vay ([Bài 005](005-debt-liquidity-survival.md) & [Bài 007](007-notes-and-accounting-red-flags.md))?
+3. Nếu doanh thu tăng do giá bán tăng mà sản lượng không tăng, dòng tiền hoạt động có tăng tương ứng không ([Bài 004](004-cash-flow-and-earnings-quality.md))?
+4. Nêu một dấu hiệu doanh nghiệp có "quyền định giá" ([Bài 003](003-business-quality-moat-and-roic.md)).
 
 ## Bài này làm gì và chưa làm gì
 

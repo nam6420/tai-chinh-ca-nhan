@@ -13,6 +13,12 @@
 
 Một khoản thu từ bán chứng khoán, một khoản cổ tức và lãi tiền gửi là những loại thu nhập khác nhau; không mặc nhiên áp một cách tính thuế cho tất cả. Lưu chứng từ theo từng lần phát sinh trước khi hỏi ai kê khai, nộp ở đâu và khi nào.
 
+## Ôn bài cũ
+
+- Trong [Bài L2 — Quyền của cổ đông thiểu số](L2-minority-shareholder-rights.md) và [Bài B1 — Công ty chứng khoán, phí và lưu ký](B1-broker-fees-custody.md), bạn đã nắm quyền cổ đông và biểu phí giao dịch. Bài L3 khép lại **Tầng L** với cách tính thuế thu nhập cá nhân khi nhận cổ tức và chuyển nhượng chứng khoán.
+
+---
+
 ## 1. Một ví dụ Việt Nam: chuyển nhượng chứng khoán
 
 `SỰ_THẬT` Theo [Báo điện tử Chính phủ, 04/07/2026](https://xaydungchinhsach.chinhphu.vn/thue-thu-nhap-ca-nhan-doi-voi-thu-nhap-tu-chuyen-nhuong-chung-khoan-119260703164200344.htm), Điều 54 [Nghị định 253/2026/NĐ-CP](https://vanban.chinhphu.vn/?docid=218684&pageid=27160&typegroupid=4) quy định thuế thu nhập cá nhân đối với thu nhập chuyển nhượng chứng khoán thuộc khoản 2 Điều 10 bằng giá chuyển nhượng nhân 0,1% cho từng lần chuyển nhượng. Bài này chỉ minh họa bán cổ phiếu niêm yết thuộc phạm vi đó, không khẳng định mọi giao dịch tài sản tài chính đều theo cách này.

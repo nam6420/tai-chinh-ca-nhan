@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-05 12:30 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Đọc đúng kỳ hạn, mẫu số và phạm vi của dữ liệu tín dụng – huy động – lãi suất – tỷ giá; phân tách cơ chế truyền dẫn từ công cụ của Ngân hàng Nhà nước (NHNN) sang thanh khoản liên ngân hàng, chi phí vốn huy động (`COF`), lãi vay doanh nghiệp và báo cáo tài chính thực tế.
 - Bài trước liên quan: [008](008-macro-transmission.md), [N7](N7-data-probability-uncertainty.md), [A5](A5-international-investing-currency-tax.md), [F4](F4-vietnam-bank-analysis.md).
-- Thời lượng: Ba phiên học có điểm dừng (mỗi phiên 45 phút) + thực hành trên mô hình [bank.py](../practice/models/bank.py) và [insurance.py](../practice/models/insurance.py).
+- Thời lượng: Ba phiên học có điểm dừng (mỗi phiên 45 phút) + thực hành trên mô hình [Bài F4](F4-vietnam-bank-analysis.md) và [insurance.py](../practice/models/insurance.py).
 - Câu hỏi cốt lõi: **Khi đọc bản tin về lãi suất điều hành, tỷ giá hay tăng trưởng tín dụng, những mắt xích truyền dẫn nào phải xảy ra trước khi con số đó chạm tới dòng tiền và lợi nhuận của một doanh nghiệp cụ thể?**
 - Kiểm nguồn: `ĐẠT`
 - Phản biện rủi ro: `ĐẠT`
@@ -15,6 +15,12 @@
 ## Hiểu bài trong một phút
 
 Ngân hàng trung ương không ấn định trực tiếp lợi nhuận của từng công ty trên sàn chứng khoán. Tại Việt Nam, Ngân hàng Nhà nước (NHNN) điều tiết điều kiện tiền tệ qua bộ công cụ gồm lãi suất điều hành (tái cấp vốn, tái chiết khấu, trần lãi suất tiền gửi dưới 6 tháng), nghiệp vụ thị trường mở (`OMO`), giao dịch ngoại hối (tỷ giá trung tâm, biên độ giao dịch, hoán đổi ngoại tệ `FX swap`) và định hướng tăng trưởng tín dụng. Tuy nhiên, từ quyết định chính sách đến báo cáo kết quả kinh doanh của doanh nghiệp có ít nhất bốn lớp đệm: (1) thanh khoản hệ thống ngân hàng và chênh lệch tín dụng – huy động, (2) kỳ hạn tái định giá của hợp đồng vay (`repricing lag`), (3) cấu trúc thu – chi ngoại tệ tự nhiên (`natural hedge`) hoặc hợp đồng phòng hộ (`hedging`), và (4) khả năng chuyển chi phí vốn/tỷ giá tăng thêm sang giá bán. Một con số tăng trưởng tín dụng hay biến động tỷ giá đơn lẻ không bao giờ tự chứng minh quan hệ nhân quả hay dự báo giá cổ phiếu nếu chưa mở từng lớp đệm này.
+
+---
+
+## Ôn bài cũ
+
+- Trong [Bài N4 — Giá trị thời gian của tiền, lạm phát và lợi suất](N4-time-value-returns.md) và [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), ta đã thấy lãi suất chi phối tỷ suất chiết khấu. Bài M1 mở đầu **Tầng M (Vĩ mô & Chu kỳ)** bằng cơ chế truyền dẫn chính sách tiền tệ, lãi suất, tỷ giá và tín dụng.
 
 ---
 
@@ -30,7 +36,7 @@ Người mới học vĩ mô thường gộp chung "lãi suất" thành một co
 |---|---|---|---|
 | **1. Lãi suất điều hành (`Policy rates`)** | Lãi suất tái cấp vốn, tái chiết khấu, trần lãi suất tiền gửi VND dưới 6 tháng | NHNN quy định hoặc giao dịch với các tổ chức tín dụng (TCTD) | Thay đổi theo quyết định hành chính của NHNN; đóng vai trò "neo kỳ vọng" và giới hạn biên độ chi phí vốn ngắn hạn. |
 | **2. Lãi suất thị trường 2 (`Interbank & OMO`)** | Lãi suất liên ngân hàng VND qua đêm (`ON`), 1 tuần (`1W`); lãi suất `OMO` và tín phiếu NHNN (`SBV bills`) | NHNN với các ngân hàng thương mại (NHTM), và các NHTM vay mượn lẫn nhau | Biến động hàng ngày; phản ánh tức thời trạng thái thanh khoản VND và áp lực tỷ giá, nhưng **không phải** lãi vay của doanh nghiệp sản xuất. |
-| **3. Lãi suất huy động thị trường 1 (`Deposit rates`)** | Lãi suất tiết kiệm kỳ hạn 1–36 tháng, chứng chỉ tiền gửi (`CD`) của dân cư và tổ chức | Các NHTM huy động vốn từ người dân và doanh nghiệp | Thay đổi theo cung – cầu vốn thực tế và `LDR`; quyết định trực tiếp chi phí vốn đầu vào (`COF`) của ngân hàng và lợi suất tiền gửi của công ty bảo hiểm ([F8](F8-insurance-float-actuarial.md)). |
+| **3. Lãi suất huy động thị trường 1 (`Deposit rates`)** | Lãi suất tiết kiệm kỳ hạn 1–36 tháng, chứng chỉ tiền gửi (`CD`) của dân cư và tổ chức | Các NHTM huy động vốn từ người dân và doanh nghiệp | Thay đổi theo cung – cầu vốn thực tế và `LDR`; quyết định trực tiếp chi phí vốn đầu vào (`COF`) của ngân hàng và lợi suất tiền gửi của công ty bảo hiểm ([F8](F8-vietnam-insurance-analysis.md)). |
 | **4. Lãi suất cho vay thị trường 1 (`Lending rates`)** | Lãi vay vốn lưu động ngắn hạn (3–6 tháng) và lãi vay trung dài hạn (máy móc, dự án) | NHTM cho doanh nghiệp và hộ gia đình vay | Bằng lãi suất cơ sở/huy động cộng biên độ rủi ro (`credit spread`). Phản ứng có độ trễ 3–12 tháng tùy chu kỳ tái định giá (`repricing schedule`) trong hợp đồng. |
 
 `SUY_LUẬN` Khi đọc tin "lãi suất liên ngân hàng qua đêm tăng từ 2%/năm lên 5%/năm trong tuần", điều đó cho biết thanh khoản ngắn hạn trên thị trường 2 đang căng thẳng (do mùa quyết toán cuối quý, Kho bạc Nhà nước thu thuế, hoặc NHNN phát hành tín phiếu nâng lãi suất VND thị trường 2 nhằm thu hẹp chênh lệch lãi suất VND–USD). Nó **chưa làm tăng ngay** chi phí lãi vay của công ty sản xuất nếu lãi suất huy động kỳ hạn 6–12 tháng trên thị trường 1 vẫn giữ nguyên. Chỉ khi căng thẳng kéo dài khiến các NHTM nâng biểu lãi suất huy động dân cư kỳ hạn 12 tháng, chi phí vốn đầu vào (`COF`) mới tăng lên và truyền sang lãi vay doanh nghiệp ở kỳ tái định giá tiếp theo.
@@ -67,9 +73,9 @@ Giả sử ngày `01/04` (đầu Quý II), mặt bằng lãi suất tham chiếu
    $$\Delta \text{Lãi Khoản C} = 500 \times 1{,}5\% \times \frac{6}{12} = 3{,}75\text{ tỷ VND}$$
 4. **Tổng chi phí lãi vay tăng thêm năm nay:** `0 + 4,50 + 3,75 = 8,25 tỷ VND` (thấp hơn nhiều so với phép nhân ngây thơ `1.200 × 1,5% = 18,00 tỷ VND`). Sang năm kế tiếp (khi Khoản B và C chịu đủ 12 tháng lãi mới), mức tăng cả năm mới đạt `(400 + 500) × 1,5% = 13,50 tỷ VND/năm`.
 
-`SUY_LUẬN` Đây là lý do lợi nhuận của doanh nghiệp thâm dụng vốn thường chưa giảm ngay trong quý đầu tiên lãi suất nhích tăng, nhưng lại bị bào mòn mạnh vào 2–4 quý sau đó. Bạn có thể dùng [bank.py](../practice/models/bank.py) để kiểm chứng mặt đối ứng của quá trình tái định giá này trên bảng cân đối của ngân hàng.
+`SUY_LUẬN` Đây là lý do lợi nhuận của doanh nghiệp thâm dụng vốn thường chưa giảm ngay trong quý đầu tiên lãi suất nhích tăng, nhưng lại bị bào mòn mạnh vào 2–4 quý sau đó. Bạn có thể dùng [Bài F4](F4-vietnam-bank-analysis.md) để kiểm chứng mặt đối ứng của quá trình tái định giá này trên bảng cân đối của ngân hàng.
 
-> **Điểm dừng phiên 1:** Mở thuyết minh "Vay và nợ thuê tài chính" của một doanh nghiệp sản xuất hoặc đối chiếu với [bank.py](../practice/models/bank.py), ghi lại tỷ trọng nợ ngắn hạn và cơ chế lãi suất cố định/thả nổi.
+> **Điểm dừng phiên 1:** Mở thuyết minh "Vay và nợ thuê tài chính" của một doanh nghiệp sản xuất hoặc đối chiếu với [Bài F4](F4-vietnam-bank-analysis.md), ghi lại tỷ trọng nợ ngắn hạn và cơ chế lãi suất cố định/thả nổi.
 
 ---
 
@@ -118,7 +124,7 @@ Tác động của tỷ giá đi vào báo cáo tài chính qua **hai kênh đ�
 
 | Biến số theo dõi | Câu hỏi bắt buộc về định nghĩa & kỳ đo | Nguồn gốc cần mở | Tác động có điều kiện lên Ngân hàng & Bảo hiểm | Điều chưa biết cần gắn nhãn `CHƯA_BIẾT` |
 |---|---|---|---|---|
-| **Tăng trưởng tín dụng** | Đo theo `YTD` (so cuối năm trước) hay `YoY` (so cùng kỳ 12 tháng)? | [Cục Thống kê](https://www.nso.gov.vn/bai-top/2026/10/bao-cao-tinh-hinh-kinh-te-xa-hoi-quy-iii-va-9-thang-nam-2026/), NHNN | Mở rộng tài sản sinh lời của ngân hàng ([bank.py](../practice/models/bank.py)), nhưng nếu vượt xa huy động sẽ đẩy `LDR` và `COF` tăng. | Cơ cấu tín dụng theo ngành và tỷ lệ nợ cơ cấu lại nếu nguồn chỉ công bố số tổng. |
+| **Tăng trưởng tín dụng** | Đo theo `YTD` (so cuối năm trước) hay `YoY` (so cùng kỳ 12 tháng)? | [Cục Thống kê](https://www.nso.gov.vn/bai-top/2026/10/bao-cao-tinh-hinh-kinh-te-xa-hoi-quy-iii-va-9-thang-nam-2026/), NHNN | Mở rộng tài sản sinh lời của ngân hàng ([Bài F4](F4-vietnam-bank-analysis.md)), nhưng nếu vượt xa huy động sẽ đẩy `LDR` và `COF` tăng. | Cơ cấu tín dụng theo ngành và tỷ lệ nợ cơ cấu lại nếu nguồn chỉ công bố số tổng. |
 | **Tăng trưởng huy động vốn** | Có gồm giấy tờ có giá không? Biến động tỷ lệ `CASA` ra sao? | Cục Thống kê, NHNN, BCTC ngân hàng | Quyết định chi phí vốn đầu vào (`COF`) ngân hàng và lợi suất tiền gửi của công ty bảo hiểm ([insurance.py](../practice/models/insurance.py)). | Độ bền vững của tiền gửi tổ chức vào tuần cuối quý. |
 | **Lãi suất điều hành & Thị trường 2** | Lãi suất tái cấp vốn, `OMO` hay qua đêm liên ngân hàng (`ON`)? | Thông cáo NHNN | Phản ánh chi phí thanh khoản ngắn hạn thị trường 2; chưa đồng nhất với lãi vay thị trường 1. | Độ trễ truyền dẫn thực tế sang biểu lãi suất tiết kiệm dân cư kỳ hạn 6–12 tháng. |
 | **Lợi suất trái phiếu Chính phủ** | Kỳ hạn mấy năm (5Y, 10Y)? Sơ cấp hay thứ cấp? | HNX, Kho bạc Nhà nước | Neo lãi suất phi rủi ro (`R_f`) và quyết định lãi suất chiết khấu dự phòng toán học bảo hiểm nhân thọ. | Lượng cầu tái đầu tư thực tế trong các phiên đấu thầu tới. |
@@ -150,7 +156,7 @@ Hãy tự giải 10 bài tập dưới đây trước khi mở phần Đáp án:
 7. **Tách dòng tiền hoạt động ngoại tệ và lỗ đánh giá lại nợ gốc:** Doanh nghiệp vận tải biển có doanh thu USD `40 triệu USD/năm`, chi phí vận hành USD `22 triệu USD/năm`, và nợ vay mua tàu bằng USD `50 triệu USD` (lãi suất `6,0%/năm` trả cuối năm, chưa đến hạn trả gốc). Nếu tỷ giá bình quân và cuối năm cùng tăng từ `25.000` lên `25.500 VND/USD` (`+500 VND/USD`), không phòng hộ, hãy tính: (a) biến động dòng tiền thuần bằng VND trong năm, và (b) biến động `EBT` kế toán sau khi đánh giá lại nợ gốc USD cuối năm.
 8. **Độ nhạy giá bán USD khi tỷ giá tăng:** Doanh nghiệp xuất khẩu thủy sản thu `50 triệu USD/năm`, chi phí đầu vào mua trong nước bằng VND là `1.100 tỷ VND`. Khi tỷ giá tăng `+4,0%` từ `25.000` lên `26.000 VND/USD`, khách hàng nước ngoài yêu cầu giảm giá bán USD đi `3,0%` (sản lượng không đổi). Hỏi lợi nhuận gộp bằng VND thay đổi bao nhiêu tỷ VND?
 9. **Hệ số khả năng trả lãi (`ICR`):** Doanh nghiệp có `EBIT` năm cơ sở `180 tỷ VND`, nợ vay thả nổi `1.500 tỷ VND` với lãi suất `8,0%/năm`. Sang năm bất lợi, `EBIT` giảm `15%` và lãi vay thả nổi tái định giá tăng thêm `+2,0 điểm phần trăm/năm` (lên `10,0%/năm`). Tính `ICR = EBIT / Chi phí lãi vay` ở năm cơ sở và năm bất lợi.
-10. **Đối chiếu tác động bất đối xứng giữa Bảo hiểm và Doanh nghiệp vay nợ:** Khi lãi suất tiền gửi kỳ hạn 12 tháng tăng `+1,5 điểm phần trăm/năm`, vì sao một công ty bảo hiểm phi nhân thọ nắm giữ `8.000 tỷ VND` tiền gửi kỳ hạn 6–12 tháng và không vay nợ ([F8](F8-insurance-float-actuarial.md)) lại có hướng biến động lợi nhuận ngược hẳn với doanh nghiệp ở Bài tập 9?
+10. **Đối chiếu tác động bất đối xứng giữa Bảo hiểm và Doanh nghiệp vay nợ:** Khi lãi suất tiền gửi kỳ hạn 12 tháng tăng `+1,5 điểm phần trăm/năm`, vì sao một công ty bảo hiểm phi nhân thọ nắm giữ `8.000 tỷ VND` tiền gửi kỳ hạn 6–12 tháng và không vay nợ ([F8](F8-vietnam-insurance-analysis.md)) lại có hướng biến động lợi nhuận ngược hẳn với doanh nghiệp ở Bài tập 9?
 
 ---
 
@@ -222,7 +228,7 @@ Trong thực tế nghiên cứu tại Việt Nam, bạn thường gặp hai tìn
 Trước khi chuyển sang bài [M2 — Chu kỳ tín dụng và bất động sản](M2-credit-real-estate-cycle.md), hãy trả lời 3 câu hỏi dưới đây:
 
 1. **Chuyển giao sang Ngân hàng ([F4](F4-vietnam-bank-analysis.md)):** Khi tín dụng toàn hệ thống tăng `10,89%` nhưng huy động chỉ tăng `9,78%`, vì sao ngân hàng có tỷ lệ `CASA` cao lại bảo vệ được `NIM` tốt hơn ngân hàng phụ thuộc tiền gửi có kỳ hạn?
-2. **Chuyển giao sang Bảo hiểm ([F8](F8-insurance-float-actuarial.md)):** Khi lãi suất tiền gửi 12 tháng và lợi suất trái phiếu Chính phủ 10 năm tăng `+100 bps`, hai chỉ tiêu nào trên BCTC công ty bảo hiểm sẽ phản ứng trực tiếp?
+2. **Chuyển giao sang Bảo hiểm ([F8](F8-vietnam-insurance-analysis.md)):** Khi lãi suất tiền gửi 12 tháng và lợi suất trái phiếu Chính phủ 10 năm tăng `+100 bps`, hai chỉ tiêu nào trên BCTC công ty bảo hiểm sẽ phản ứng trực tiếp?
 3. **Chuyển giao sang bài [M2](M2-credit-real-estate-cycle.md):** Khi lãi vay thả nổi tái định giá tăng `+2,0 điểm phần trăm/năm` sau thời gian ưu đãi, điều gì xảy ra đồng thời với dòng tiền trả nợ của người mua nhà và giá trị thanh lý của tài sản bảo đảm?
 
 ---

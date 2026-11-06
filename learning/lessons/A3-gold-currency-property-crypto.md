@@ -27,6 +27,12 @@ Trước khi xuống tiền vào bất kỳ lớp tài sản nào ngoài cổ ph
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài A1 — Tiền gửi và trái phiếu](A1-deposits-government-corporate-bonds.md) và [Bài A2 — Quỹ mở, ETF và phí](A2-mutual-funds-etfs-fees.md), ta đã xét các tài sản tài chính truyền thống. Bài A3 mở rộng sang vàng vật chất, ngoại tệ, bất động sản trực tiếp và tài sản mã hóa.
+
+---
+
 ## Buổi 1 — Vàng vật chất và Ngoại tệ: Toán học Giá quy đổi, Spread và Quy định Pháp lý
 
 ### 1.1. Bản chất kinh tế của Vàng và Công thức quy đổi Giá vàng Thế giới sang VND/lượng

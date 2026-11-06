@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 11:58 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Đọc được bản đồ thuyết minh của một báo cáo tài chính; phân biệt chính sách kế toán, thay đổi ước tính và sửa lỗi; nhận diện bốn chỗ hay được dùng để "làm đẹp" số liệu (doanh thu, phải thu, tồn kho, vốn hoá chi phí); đọc được thước đo do ban điều hành tự định nghĩa; phân biệt bốn loại ý kiến kiểm toán (một ý kiến không sửa đổi và ba loại sửa đổi).
 - Thời lượng: 40 phút đọc + 45 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 001](001-business-financial-statements.md), [Bài 004](004-cash-flow-and-earnings-quality.md), [Bài 006](006-capital-allocation-governance.md)
+- Bài trước liên quan: Thứ tự đọc **Bước 13/23 của Nhánh 1** — học ngay sau [Bài 006: Phân bổ vốn và quản trị](006-capital-allocation-governance.md) (kế thừa [Bài 005](005-debt-liquidity-survival.md), [Bài 004](004-cash-flow-and-earnings-quality.md) và [Bài 001](001-business-financial-statements.md)). Học tiếp: [Bài 008: Vĩ mô truyền dẫn vào doanh thu, chi phí và dòng tiền](008-macro-transmission.md) (Bước 14/23).
 - Câu hỏi cốt lõi: **Số liệu đẹp này được tạo ra bằng chính sách kế toán nào?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Mọi ví dụ số học là hư cấu. Bài này **không** kết luận doanh nghiệp nào gian lận; nó dạy cách đặt câu hỏi và cách kiểm.
@@ -19,12 +19,12 @@ Cả hai cách làm đều có thể **hợp pháp**, nhưng không phải vì d
 
 ## Ôn bài cũ (5 phút)
 
-Đáp án ở mục 9.
+Ôn lại các bài trước trong Nhánh 1 ([Bài 004](004-cash-flow-and-earnings-quality.md) → [Bài 005](005-debt-liquidity-survival.md) → [Bài 006](006-capital-allocation-governance.md)). Đáp án ở mục 9:
 
-1. Nếu phải thu tăng 100 trong năm, CFO thay đổi thế nào (Bài 004)?
-2. Goodwill hình thành khi nào, và điều gì xảy ra nếu thương vụ không đạt kỳ vọng (Bài 006)?
-3. Kể hai dấu hiệu mua lại cổ phiếu đáng ngờ (Bài 006).
-4. Vì sao "lãi tăng" chưa chắc là "EPS tăng" (Bài 006)?
+1. Nếu phải thu tăng 100 trong năm, `CFO` thay đổi thế nào ([Bài 004](004-cash-flow-and-earnings-quality.md))?
+2. `Goodwill` hình thành khi nào, và điều gì xảy ra nếu thương vụ không đạt kỳ vọng ([Bài 006](006-capital-allocation-governance.md))?
+3. Kể hai dấu hiệu mua lại cổ phiếu đáng ngờ ([Bài 006](006-capital-allocation-governance.md)).
+4. Vì sao "lãi tăng" chưa chắc là "`EPS` tăng" ([Bài 006](006-capital-allocation-governance.md))?
 
 ## Bài này làm gì và chưa làm gì
 

@@ -25,6 +25,12 @@ Phân bổ tài sản (`Asset Allocation`) — tức quyết định chia bao nh
 
 ---
 
+## Ôn bài cũ
+
+- Sau khi nắm đặc tính từng lớp tài sản qua [Bài A1](A1-deposits-government-corporate-bonds.md), [Bài A2](A2-mutual-funds-etfs-fees.md) và [Bài A3 — Vàng, ngoại tệ, bất động sản và tài sản mã hóa](A3-gold-currency-property-crypto.md), Bài A4 ghép chúng thành một danh mục đa tài sản bằng ma trận tương quan và kỷ luật tái cân bằng.
+
+---
+
 ## Buổi 1 — Toán học Đa dạng hóa: Hệ số Tương quan Pearson và Phương sai Danh mục
 
 ### 1.1. Định nghĩa Hệ số tương quan tuyến tính Pearson ($\rho_{AB}$)

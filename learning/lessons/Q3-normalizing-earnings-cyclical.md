@@ -4,6 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: BCTC hợp nhất kiểm toán FY2025, báo cáo thường niên 2019 và 2023, tổng quan Q3/2026 và một bài báo về Q1/2026 (bảng cuối bài).
 - Mục tiêu: Phân biệt lợi nhuận một năm với mức "bình thường"; chuẩn hóa bằng trung bình, biên, trung vị, bỏ năm cực đoan, ROE; biết mỗi cách sai ở đâu.
+- Bài trước liên quan: Chuỗi định lượng thực hành sau [Bài 012](012-scenarios-margin-of-safety.md) (**Bước 4/4 của chuỗi `Q4 → Q2 → Q1 → Q3`**) — học ngay sau [Bài Q1: Chất lượng lợi nhuận có công cụ](Q1-earnings-quality-toolkit.md) (kế thừa [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md), [Bài Q2](Q2-sbc-dilution-buybacks-dividends.md), [Bài 003](003-business-quality-moat-and-roic.md), [Bài 008](008-macro-transmission.md) và [Bài 009](009-valuation-multiples.md)). Học tiếp: [Bài 015: Tâm lý, bảng tự kiểm và nhật ký quyết định](015-behavior-decision-journal.md) (Bước 22/23 Nhánh 1) hoặc [Bài 014: Chu kỳ ngành và chu kỳ vốn](014-industry-capital-cycle.md).
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [cyclical.py](../practice/models/cyclical.py) và [hpg_cycle_inputs.csv](../practice/models/hpg_cycle_inputs.csv); kiểm bằng `python3 -m unittest discover tests`.
 - Kiểm nguồn: `ĐẠT`
@@ -14,6 +15,10 @@
 ## Hiểu bài này trong 1 phút
 
 Người bán kem kiếm 100 triệu mùa hè và lỗ 20 triệu mùa đông; lấy một mùa nhân bốn đều sai. Công ty chu kỳ và hàng hóa (như thép) giống vậy ở quy mô năm. Chuẩn hóa lợi nhuận (*normalizing earnings*) trả lời: **một năm bình thường thì công ty kiếm được bao nhiêu?** Câu trả lời luôn là một khoảng. Bài dạy các cách chuẩn hóa và giới hạn của từng cách trên HPG; không kết luận đắt/rẻ, đỉnh/đáy hay dự báo.
+
+## Ôn bài cũ hoặc kiểm tra đầu vào
+
+Ôn lại các bài liền trước ([Bài 009 — Bội số định giá](009-valuation-multiples.md), [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), [Bài Q4 — Lấy dữ liệu](Q4-getting-data-edgar-xbrl-vietnam.md) và [Bài Q1 — Chất lượng lợi nhuận](Q1-earnings-quality-toolkit.md)): vì sao ở năm đỉnh chu kỳ ngành thép, bội số `P/E` năm đơn lẻ trông rất thấp nhưng không có nghĩa là cổ phiếu rẻ ([Bài 009](009-valuation-multiples.md))?
 
 ## 1. Vì sao một năm không đủ
 

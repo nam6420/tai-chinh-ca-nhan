@@ -27,6 +27,12 @@ Quỹ đầu tư đại chúng là phương tiện gom vốn của nhiều nhà 
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài A1 — Tiền gửi, trái phiếu chính phủ và trái phiếu doanh nghiệp](A1-deposits-government-corporate-bonds.md) và [Bài N5 — Danh mục và đầu tư theo chỉ số](N5-portfolio-index-investing.md), ta đã nắm tài sản thu nhập cố định và triết lý quỹ chỉ số. Bài A2 giải phẫu cơ chế vận hành quỹ mở, quỹ hoán đổi danh mục (`ETF`), giá trị tài sản ròng (`NAV`) và chi phí ngầm.
+
+---
+
 ## Buổi 1 — Cơ chế vận hành Quỹ mở vs. ETF và Công thức NAV, Premium/Discount
 
 ### 1.1. Giá trị tài sản ròng trên một đơn vị quỹ (`NAV per Unit`)

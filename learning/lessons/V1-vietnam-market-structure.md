@@ -16,7 +16,7 @@ Bốn vai khác nhau: **cơ quan quản lý** (quản lý, cấp phép, giám s�
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào từ N1: khi bạn mua cổ phiếu đã phát hành, ai nhận tiền? (Người bán, không phải công ty.) Bài này nối thêm: tiền và cổ phiếu đi qua những tổ chức nào.
+Ôn lại [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md) và [Bài B3 — Bảo vệ tài khoản và nhận diện lừa đảo](B3-account-security-scams.md): khi bạn mua cổ phiếu đã phát hành trên sàn thứ cấp, ai nhận tiền? (Người bán, không phải công ty.) Bài này nối thêm: tiền và cổ phiếu tại Việt Nam đi qua những tổ chức nào trước khi học tiếp [Bài V2 — Quy tắc giao dịch cổ phiếu Việt Nam](V2-vietnam-trading-rules.md).
 
 ## Bài này làm gì và chưa làm gì
 

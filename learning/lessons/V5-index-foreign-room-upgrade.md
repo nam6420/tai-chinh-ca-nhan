@@ -13,6 +13,12 @@
 
 Chỉ số là thước đo theo một bộ quy tắc chọn và tính trọng số chứng khoán. Phân loại thị trường là quyết định của nhà cung cấp chỉ số về nhóm thị trường; hai tổ chức có thể phân loại cùng một nước khác nhau. Thêm vào chỉ số có thể làm thay đổi nhu cầu của quỹ theo chỉ số, nhưng không bảo đảm cổ phiếu nào tăng giá.
 
+## Ôn bài cũ
+
+- Sau khi nắm cấu trúc sàn ([Bài V1](V1-vietnam-market-structure.md)), quy tắc giao dịch ([Bài V2](V2-vietnam-trading-rules.md)), sự kiện quyền ([Bài V3](V3-corporate-actions.md)) và công bố thông tin ([Bài V4 — Công bố thông tin và truy nguồn](V4-disclosure-and-source-tracing.md)), Bài V5 khép lại **Nhánh 3 (Việt Nam)** bằng quy tắc bộ chỉ số, giới hạn sở hữu nước ngoài (`Foreign Room`) và nâng hạng thị trường.
+
+---
+
 ## 1. Chỉ số và phân loại không đồng nhất
 
 VN-Index và VN30 là ví dụ tên chỉ số; phải đọc phương pháp chính thức để biết tập cổ phiếu, trọng số, điều chỉnh và lịch xem xét. Một chỉ số không kể đầy đủ điều xảy ra với mọi cổ phiếu. `CHƯA_BIẾT` Phương pháp và thành phần hiện hành của từng chỉ số chưa được bài này đối chiếu; kiểm tài liệu của sở trước khi dùng làm chuẩn so sánh.

@@ -16,6 +16,12 @@ Lợi suất theo thời gian, gọi tắt TWR từ time-weighted return, ghép 
 
 Bài có ba phiên: dựng sổ dòng tiền; giải hai cách đo; kiểm mốc so sánh và dữ liệu thiếu. Đọc xong mỗi phiên hãy tự viết một câu giải thích trước khi nhìn đáp án. Đây là bài học phương pháp, không phải báo cáo hiệu quả một tài khoản thật và không xác nhận tuân thủ tiêu chuẩn GIPS.
 
+## Ôn bài cũ
+
+- Trong [Bài H3 — Rủi ro, biến động, sụt giảm và thanh khoản](H3-risk-volatility-drawdown-liquidity.md) và [Bài N4 — Giá trị thời gian của tiền](N4-time-value-returns.md), ta đã biết đo rủi ro và lợi suất. Bài H4 phân biệt lợi suất theo thời gian (`TWR`), lợi suất theo dòng tiền (`MWR`) và cách chọn chỉ số chuẩn (`Benchmark`).
+
+---
+
 ## Phiên 1 — Lập sổ trước khi tính tỷ lệ
 
 ### Phân biệt dòng tiền ngoài và chuyển động bên trong

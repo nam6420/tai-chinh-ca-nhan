@@ -15,7 +15,8 @@
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào: giá cổ phiếu có thể giảm trong thời gian ngắn mà doanh nghiệp không hỏng (N1, Bài 002). Hỏi: nếu bạn buộc phải bán đúng lúc đó để trả viện phí thì điều gì xảy ra? Đáp án: bạn chốt lỗ vì nhu cầu tiền, không vì đánh giá lại doanh nghiệp.
+- **Điểm xuất phát (Trước khi mở tài khoản chứng khoán):** Đây là bài khởi đầu về tài chính cá nhân, khuyến nghị đọc **trước hoặc song song với [Bài B3 — Bảo vệ tài khoản và nhận diện lừa đảo](B3-account-security-scams.md) và [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md)** (học tiếp: [Bài P2 — Nợ cá nhân](P2-personal-debt.md)).
+- **Kiểm tra đầu vào:** Giá cổ phiếu có thể giảm trong thời gian ngắn mà doanh nghiệp không hỏng (sẽ học ở [Bài N1](N1-market-basics.md) và [Bài 002](002-finding-a-cheap-stock.md)). Hỏi: nếu bạn buộc phải bán đúng lúc đó để trả viện phí thì điều gì xảy ra? Đáp án: bạn chốt lỗ vì nhu cầu tiền, không vì đánh giá lại doanh nghiệp.
 
 ## Bài này làm gì và chưa làm gì
 

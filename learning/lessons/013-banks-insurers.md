@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-05 09:30 UTC+7 (Asia/Ho_Chi_Minh)`
 - Bậc chiều sâu: `Bậc S — Bài giảng thực chiến (3 buổi học, 10 bài tập tính tay + mô hình Python)`
 - Mục tiêu: Phân biệt bảng cân đối ngược của ngân hàng và bảo hiểm; tính đúng `NII`, `NIM`, `CIR`, `PPOP`, `CET1`, cầu nối `GWP` $\to$ `NWP` $\to$ `UPR` $\to$ `NEP`, `Loss Ratio`, `Expense Ratio`, `Combined Ratio`, `Insurance Float` và chi phí `Float`; hiểu cơ chế `CSM` theo `IFRS 17` và định giá bằng `Justified P/B` và `Residual Income Model (RIM)`.
-- Bài trước liên quan: `N2`, `005`, `007`, `009`, `010`; dẫn tiếp sang `F8` (bảo hiểm Việt Nam chuyên sâu) và `P4` (đọc hợp đồng bảo hiểm cá nhân).
+- Bài trước liên quan: [N2](N2-statement-line-items.md), [005](005-debt-liquidity-survival.md), [007](007-notes-and-accounting-red-flags.md), [009](009-valuation-multiples.md), [010](010-cost-of-capital.md); dẫn tiếp sang [F4](F4-vietnam-bank-analysis.md), [F8](F8-vietnam-insurance-analysis.md) (bảo hiểm Việt Nam chuyên sâu) và [P4](P4-personal-insurance-contracts-and-costs.md) (đọc hợp đồng bảo hiểm cá nhân).
 - Thời lượng: `3 buổi học` + thực hành [`practice/models/insurance.py`](../practice/models/insurance.py) và [`geico_berkshire_fy2025_inputs.csv`](../practice/models/geico_berkshire_fy2025_inputs.csv).
 - Câu hỏi cốt lõi: **Vì sao tiền gửi ngân hàng và phí bảo hiểm thu trước không phải là doanh thu thuần kiểu cửa hàng bán lẻ, và vì sao định giá ngân hàng — bảo hiểm bằng `EV/EBITDA` hay `FCF` thông thường sẽ dẫn tới sai lầm nghiêm trọng?**
 - Kiểm nguồn: `ĐẠT`
@@ -26,7 +26,7 @@ Vì nợ phải trả chính là "nguyên liệu sản xuất" của ngân hàng
 
 ## Ôn bài cũ và phạm vi bài học
 
-- **Ôn bài cũ:** Bài `005` cho thấy chênh lệch kỳ hạn giữa tài sản và nợ phải trả (`Asset-Liability Mismatch — ALM`) có thể gây mất thanh khoản dù báo cáo đang lãi. Bài `007` cho thấy ước tính kế toán nhạy cảm nhất ở ngân hàng là **chi phí dự phòng rủi ro tín dụng (`Provision for Credit Losses`)**, còn ở bảo hiểm là **dự phòng bồi thường cho tổn thất đã phát sinh nhưng chưa báo cáo (`IBNR — Incurred But Not Reported`)**.
+- **Ôn bài cũ:** Bài [005](005-debt-liquidity-survival.md) cho thấy chênh lệch kỳ hạn giữa tài sản và nợ phải trả (`Asset-Liability Mismatch — ALM`) có thể gây mất thanh khoản dù báo cáo đang lãi. Bài [007](007-notes-and-accounting-red-flags.md) cho thấy ước tính kế toán nhạy cảm nhất ở ngân hàng là **chi phí dự phòng rủi ro tín dụng (`Provision for Credit Losses`)**, còn ở bảo hiểm là **dự phòng bồi thường cho tổn thất đã phát sinh nhưng chưa báo cáo (`IBNR — Incurred But Not Reported`)**.
 - **Bài này làm gì:** Buổi 1 giải phẫu ngân hàng thương mại (`NII`, `NIM`, `CIR`, `PPOP`, `NPL`, `RWA`, `CET1`) qua `Form 10-K FY2025` của **JPMorgan Chase & Co.**; Buổi 2 giải phẫu bảo hiểm phi nhân thọ (`P&C`), cầu nối phí `GWP` $\to$ `NEP`, `Combined Ratio` và `Insurance Float` qua `Form 10-K FY2025` của **Berkshire Hathaway / GEICO**; Buổi 3 phân tích bảo hiểm nhân thọ theo `IFRS 17` (`CSM`) và định giá bằng `Justified P/B` & `RIM`.
 - **Bài này chưa làm gì:** Chưa đi vào kế toán bảo hiểm Việt Nam (`Thông tư 232/2012/TT-BTC`), tam giác `Chain-Ladder` theo `VBHN 44/2026/VBHN-TT-BTC` và vốn `RBC` (học ở **[Bài F8](F8-vietnam-insurance-analysis.md)**); chưa bóc tách hợp đồng bảo hiểm cá nhân `UL`/`ILP` (học ở **[Bài P4](P4-personal-insurance-contracts-and-costs.md)**).
 

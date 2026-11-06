@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 14:20 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Dựng được cầu nối từ vốn hoá sang giá trị doanh nghiệp (EV) và biết các khoản điều chỉnh; chọn được bội số có nghĩa cho từng loại doanh nghiệp; nhận ra bốn kiểu bóp méo mẫu số (chu kỳ, khoản một lần, pha loãng, thuê tài sản/IFRS 16); chọn được nhóm so sánh đúng; giải thích được vì sao "P/E thấp hơn ngành" chưa phải là rẻ.
 - Thời lượng: 40 phút đọc + 45 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 002](002-finding-a-cheap-stock.md) (ba câu hỏi), [Bài 003](003-business-quality-moat-and-roic.md) (ROIC), [Bài 005](005-debt-liquidity-survival.md) (nợ)
+- Bài trước liên quan: Thứ tự đọc **Bước 15/23 của Nhánh 1** — học ngay sau [Bài 008: Vĩ mô truyền dẫn vào doanh thu, chi phí và dòng tiền](008-macro-transmission.md) (kế thừa [Bài 002](002-finding-a-cheap-stock.md), [Bài 003](003-business-quality-moat-and-roic.md), [Bài 005](005-debt-liquidity-survival.md) và [Bài 006](006-capital-allocation-governance.md)). Học tiếp: quay lại [Bài N3 (Phần B): Điều chỉnh và khác biệt VAS – IFRS](N3-vietnam-vas-statements.md#phần-b--điều-chỉnh-và-khác-biệt-vas--ifrs-sau-009) (Bước 16/23), sau đó sang [Bài N7: Đọc dữ liệu và bất định](N7-data-probability-uncertainty.md) (Bước 17/23).
 - Câu hỏi cốt lõi: **Với doanh nghiệp này, bội số nào có nghĩa và mẫu số nào đang bị bóp méo?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Ví dụ số học là hư cấu, trừ mục 6 dùng số của một doanh nghiệp thật từ **nguồn thứ cấp** (đã ghi rõ). Bài này chuẩn bị cho Bài 010 (chi phí vốn) và Bài 011 (DCF).
@@ -19,12 +19,12 @@ Vì vậy câu hỏi đúng không phải "bội số này cao hay thấp", mà 
 
 ## Ôn bài cũ (5 phút)
 
-Đáp án ở mục 9.
+Ôn lại chuỗi bài trước theo thứ tự Nhánh 1 ([Bài 002](002-finding-a-cheap-stock.md) → [Bài 003](003-business-quality-moat-and-roic.md) → [Bài 005](005-debt-liquidity-survival.md) → [Bài 006](006-capital-allocation-governance.md) → [Bài 008](008-macro-transmission.md)). Đáp án ở mục 9:
 
-1. Vì sao ROIC phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị (Bài 003)?
-2. Nêu ba dấu hiệu pha loãng và tác động lên EPS (Bài 006).
-3. IFRS 16 ghi nhận gì trên bảng cân đối của bên đi thuê (Bài 005)?
-4. Vì sao lợi nhuận một năm có thể không đại diện (Bài 003, mục 6)?
+1. Vì sao `ROIC` phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị ([Bài 003](003-business-quality-moat-and-roic.md))?
+2. Nêu ba dấu hiệu pha loãng và tác động lên `EPS` ([Bài 006](006-capital-allocation-governance.md)).
+3. `IFRS 16` ghi nhận gì trên bảng cân đối của bên đi thuê ([Bài 005](005-debt-liquidity-survival.md))?
+4. Vì sao lợi nhuận một năm có thể không đại diện do chu kỳ và biến động vĩ mô ([Bài 003](003-business-quality-moat-and-roic.md) & [Bài 008](008-macro-transmission.md))?
 
 ## Bài này làm gì và chưa làm gì
 

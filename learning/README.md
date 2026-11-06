@@ -1,10 +1,12 @@
 # Bắt đầu học tại đây
 
-> **Cập nhật học phần Bảo hiểm, Ngân hàng, Vĩ mô, Tài sản & Kế toán bậc S (05/11/2026):** Đã nâng cấp [Bài 013 — Ngân hàng và bảo hiểm](lessons/013-banks-insurers.md), bổ sung 2 bài bậc S mới về bảo hiểm tại Việt Nam ([Bài F8 — Phân tích doanh nghiệp bảo hiểm Việt Nam (`BVH`, `PVI`, `BIC`)](lessons/F8-vietnam-insurance-analysis.md), [Bài P4 — Đọc hợp đồng bảo hiểm cá nhân (`Term Life`, `UL`, `ILP`)](lessons/P4-personal-insurance-contracts-and-costs.md) kèm [`practice/models/insurance.py`](practice/models/insurance.py)), đồng thời nâng cấp toàn bộ 13 bài thuộc cụm chuyên ngành – tài sản – vĩ mô – chu kỳ (`F3–F7`, `A1–A4`, `M1–M3`, `014`) và 2 bài nền kế toán (`N2`, `N3`) lên chuẩn bậc S. Tổng hiện có **33/67 bài đạt chuẩn cấu trúc bậc S**.
+> **Cập nhật chuỗi bài mở đầu Nhánh 1 & Chuẩn hóa liên kết ôn bài cũ (06/11/2026):** Toàn bộ **9 bài mở đầu Nhánh 1** (`N1 → N6 → 001 → N2 → N8 → N3 → 002 → N4 → 003`) đã được viết lại và nâng cấp đồng bộ lên chuẩn **Bậc S** theo mạch câu chuyện xuyên suốt của **Quán cà phê Sao Biển** (đi từ trực giác đời thường → ví dụ tính nhẩm từng bước → số liệu báo cáo kiểm toán thực tế → công thức) và chuẩn hóa mục **`Ôn bài cũ`** có liên kết bấm được đúng thứ tự đọc trên toàn bộ **67/67 bài học**. Tổng hiện có **38/67 bài đạt chuẩn cấu trúc bậc S**.
+>
+> **Cập nhật học phần Bảo hiểm, Ngân hàng, Vĩ mô, Tài sản & Kế toán bậc S (05/11/2026):** Đã nâng cấp [Bài 013 — Ngân hàng và bảo hiểm](lessons/013-banks-insurers.md), bổ sung 2 bài bậc S mới về bảo hiểm tại Việt Nam ([Bài F8 — Phân tích doanh nghiệp bảo hiểm Việt Nam (`BVH`, `PVI`, `BIC`)](lessons/F8-vietnam-insurance-analysis.md), [Bài P4 — Đọc hợp đồng bảo hiểm cá nhân (`Term Life`, `UL`, `ILP`)](lessons/P4-personal-insurance-contracts-and-costs.md) kèm [`practice/models/insurance.py`](practice/models/insurance.py)), đồng thời nâng cấp toàn bộ 13 bài thuộc cụm chuyên ngành – tài sản – vĩ mô – chu kỳ (`F3–F7`, `A1–A4`, `M1–M3`, `014`) và 2 bài nền kế toán (`N2`, `N3`) lên chuẩn bậc S.
 >
 > **Nâng chiều sâu 02/11/2026, nhóm H3–H5:** ba bài đạt bậc S, có 10 bài tập/đáp án mỗi bài, mô hình Python và hai nhánh kiểm duyệt độc lập cùng phiên bản. Xem [nhật ký nhóm 2](reviews/wave4-group2-2026-11-02.md) và [sổ kiểm duyệt](reviews/README.md) để đọc các hạn chế còn mở.
 
-- Cập nhật cấu trúc: `2026-11-05`.
+- Cập nhật cấu trúc: `2026-11-06`.
 - Hiện có **67 mã bài đã soạn**: 001–016, N1–N8, 39 bài Đợt 1–6 (bổ sung `P4`, `F8`) và Q1–Q4. Mã là địa chỉ, không phải thứ tự đọc; trạng thái kiểm duyệt từng bài xem tại sổ kiểm duyệt.
 - Trạng thái từng bài mới và biên bản đúng phiên bản: [sổ kiểm duyệt](reviews/README.md). Bài đã soạn không tự đồng nghĩa đã kiểm duyệt.
 - [Lộ trình và chuẩn học](roadmap.md), [đối chiếu 51 mục](coverage-51.md), [thuật ngữ](glossary.md), [bảng thực hành](practice/research-and-model-worksheets.md), [review gốc và nhật ký triển khai](review-and-expansion-plan-2026-10-26.md).

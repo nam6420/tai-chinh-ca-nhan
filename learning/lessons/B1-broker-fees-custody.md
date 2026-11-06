@@ -13,6 +13,12 @@
 
 Công ty chứng khoán là một trung gian cung cấp tài khoản và dịch vụ nhận lệnh, không phải chính sở giao dịch. Chọn theo phí thấp nhất mà bỏ qua giấy phép, loại dịch vụ, rút tiền và hỗ trợ có thể bỏ sót chi phí hoặc rủi ro khác. Không có công ty nào được bài này khuyến nghị.
 
+## Ôn bài cũ
+
+- Trong [Bài B3 — Bảo mật tài khoản và lừa đảo](B3-account-security-scams.md) và [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md), bạn đã biết nguyên tắc an toàn tài khoản và cơ chế khớp lệnh. Bài B1 hướng dẫn kiểm tra công ty chứng khoán, biểu phí giao dịch và lưu ký tài sản.
+
+---
+
 ## 1. Bảng kiểm một trung gian
 
 `SUY_LUẬN` Đọc cùng [B3](B3-account-security-scams.md): kiểm tra tên pháp nhân và giấy phép qua kênh cơ quan quản lý tự tìm; danh sách thành viên VNX có thể đối chiếu bổ sung nhưng không thay thế giấy phép. Cần kiểm dịch vụ, thị trường phục vụ, phí, điều khoản lưu ký/rút tiền, hỗ trợ, bảo mật và xung đột lợi ích.

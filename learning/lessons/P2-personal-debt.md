@@ -3,7 +3,7 @@
 - Ngày: `2026-10-27`
 - Chốt dữ liệu lúc: `2026-10-27 09:40 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Phân biệt lãi tính trên gốc ban đầu với lãi tính trên dư nợ giảm dần; quy đổi về lãi suất thật theo năm; biết thông tin một hợp đồng vay phải nêu; và so sánh trả nợ với đầu tư bằng tư duy lãi suất kỳ vọng mà không đưa lời khuyên cá nhân.
-- Bài trước liên quan: [P1](P1-budget-emergency-fund-insurance.md), [N4](N4-time-value-returns.md) (lãi kép, chiết khấu).
+- Bài trước liên quan: Học ngay sau [Bài P1: Ngân sách, quỹ khẩn cấp và bảo hiểm](P1-budget-emergency-fund-insurance.md), kết hợp [Bài N4: Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md) (lãi kép, chiết khấu). Học tiếp: [Bài P3: Mục tiêu, thời hạn, khả năng chịu rủi ro và IPS](P3-goals-risk-ips.md).
 - Thời lượng: Hai phiên; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **"1,5% mỗi tháng" thật sự là bao nhiêu mỗi năm, và nó so với lợi suất đầu tư kỳ vọng thế nào?**
 - Kiểm nguồn: `ĐẠT`
@@ -15,7 +15,7 @@ Hai khoản vay cùng ghi "1,5%/tháng" có thể đắt khác nhau hoàn toàn 
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào: gửi 100 đồng lãi 10% một năm thì cuối năm có bao nhiêu (110). Nếu vay thì ngược lại: bạn trả thêm phần lãi. Chưa cần công thức niên kim; sẽ làm trong ví dụ.
+Ôn lại [Bài P1 — Ngân sách, quỹ khẩn cấp và bảo hiểm](P1-budget-emergency-fund-insurance.md) và [Bài N4 — Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md): gửi 100 đồng lãi 10% một năm thì cuối năm có bao nhiêu (110). Nếu vay thì ngược lại: bạn trả thêm phần lãi. Chưa cần công thức niên kim; sẽ làm trong ví dụ.
 
 ## Bài này làm gì và chưa làm gì
 

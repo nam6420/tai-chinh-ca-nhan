@@ -3,7 +3,9 @@
 - Ngày: `2026-10-26`
 - Chốt dữ liệu lúc: `2026-10-26 16:54 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Phân biệt phần trăm/điểm phần trăm, trung bình/trung vị; tính kỳ vọng đơn giản; tránh trộn kỳ và dùng dữ liệu tương lai.
-- Bài trước liên quan: [N4](N4-time-value-returns.md); không yêu cầu kế toán ở nhánh quỹ. Học tiếp N5B và 010.
+- Bài trước liên quan:
+  - **Nhánh 1 (Bước 17/23):** Học ngay sau [Bài N3 (Phần B): Điều chỉnh và khác biệt VAS – IFRS](N3-vietnam-vas-statements.md#phần-b--điều-chỉnh-và-khác-biệt-vas--ifrs-sau-009) và [Bài 009: Bội số định giá](009-valuation-multiples.md) (kế thừa [Bài N4](N4-time-value-returns.md)). Học tiếp: [Bài N5: Danh mục và đầu tư theo chỉ số](N5-portfolio-index-investing.md) (Bước 18/23), rồi sang [Bài 010: Chi phí vốn](010-cost-of-capital.md) (Bước 19/23).
+  - **Nhánh 2 (Danh mục & Quỹ chỉ số):** Học sau [Bài N4: Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md). Học tiếp: [Bài N5 (Phần B)](N5-portfolio-index-investing.md).
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Con số này nói được gì, và điều gì nó chưa chứng minh?**
 - Kiểm nguồn: `ĐẠT`
@@ -15,7 +17,9 @@ Một nhóm người có thu nhập trung bình cao có thể chỉ vì một ng
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N4: khoản đầu 100, góp thêm 50 ngay cuối kỳ, tài khoản cuối 160 thì lãi bao nhiêu? Đáp án 10, không phải 60. Trước khi tính phải phân biệt dòng tiền với lợi nhuận.
+Ôn lại kiến thức từ [Bài N4 — Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md) (và nếu bạn đang ở Bước 17/23 của Nhánh 1 thì kết nối với [Bài 009 — Bội số định giá](009-valuation-multiples.md) cùng [Bài N3 (Phần B)](N3-vietnam-vas-statements.md#phần-b--điều-chỉnh-và-khác-biệt-vas--ifrs-sau-009)):
+- Từ [Bài N4](N4-time-value-returns.md): khoản đầu 100, góp thêm 50 ngay cuối kỳ, tài khoản cuối 160 thì lãi bao nhiêu? Đáp án 10, không phải 60. Trước khi tính phải phân biệt dòng tiền với lợi nhuận.
+- Từ [Bài 009](009-valuation-multiples.md): vì sao lấy trung bình cộng `P/E` của một nhóm công ty có một mã đột biến có thể gây méo kết luận?
 
 ## Bài này làm gì và chưa làm gì
 

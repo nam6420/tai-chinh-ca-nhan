@@ -25,6 +25,12 @@ Các công cụ thu nhập cố định (`Fixed Income`) thường được gọ
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài P4 — Đọc hợp đồng bảo hiểm cá nhân](P4-personal-insurance-contracts-and-costs.md) và [Bài N4 — Giá trị thời gian của tiền](N4-time-value-returns.md), ta đã biết chiết khấu dòng tiền. Bài A1 mở đầu **Tầng A (Các lớp tài sản)** bằng tài sản thu nhập cố định: tiền gửi, trái phiếu Chính phủ và trái phiếu doanh nghiệp.
+
+---
+
 ## Buổi 1 — Tiền gửi Ngân hàng, Quy ước tính lãi và Bảo hiểm tiền gửi Việt Nam
 
 ### 1.1. Công thức tính lãi tiền gửi có kỳ hạn, lãi kép và rút trước hạn

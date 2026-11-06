@@ -18,10 +18,11 @@ Lợi nhuận không đồng nghĩa tiền thu được. Mô hình ba báo cáo 
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-1. 001: bút toán bán chịu 100 làm tài sản nào tăng, doanh thu tăng bao nhiêu, tiền tăng bao nhiêu?
-2. 004: công thức cầu nối từ lợi nhuận sau thuế sang CFO gồm những khoản nào?
-3. 005: vì sao công ty có lãi vẫn có thể hết tiền?
-4. N2: DSO, DIO, DPO tính bằng công thức nào?
+Ôn lại các bài nền tảng theo thứ tự ([Bài 001](001-business-financial-statements.md) → [Bài N2](N2-statement-line-items.md) → [Bài 004](004-cash-flow-and-earnings-quality.md) → [Bài 005](005-debt-liquidity-survival.md)):
+1. [Bài 001](001-business-financial-statements.md): bút toán bán chịu 100 làm tài sản nào tăng, doanh thu tăng bao nhiêu, tiền tăng bao nhiêu?
+2. [Bài 004](004-cash-flow-and-earnings-quality.md): công thức cầu nối từ lợi nhuận sau thuế sang `CFO` gồm những khoản nào?
+3. [Bài 005](005-debt-liquidity-survival.md): vì sao công ty có lãi vẫn có thể hết tiền?
+4. [Bài N2](N2-statement-line-items.md): `DSO`, `DIO`, `DPO` tính bằng công thức nào?
 
 <details>
 <summary>Mở sau khi tự làm</summary>

@@ -26,6 +26,12 @@ Theo chuẩn mực kế toán Việt Nam (`VAS 14`, Thông tư `200/2014/TT-BTC`
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài F2 — Định giá DDM, Thu nhập thặng dư và SOTP](F2-valuation-ddm-residual-sotp.md) và [Bài N3 — Đặc thù báo cáo tài chính Việt Nam](N3-vietnam-vas-statements.md), ta đã nắm công cụ định giá từng phần (`SOTP` / `RNAV`) và khoản mục người mua trả tiền trước. Bài F3 áp dụng trực tiếp vào doanh nghiệp bất động sản Việt Nam.
+
+---
+
 ## Buổi 1 — Chuỗi giá trị dự án và Bốn con số không bao giờ được cộng gộp
 
 ### 1.1. Bốn khái niệm cốt lõi trên báo cáo bất động sản

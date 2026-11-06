@@ -13,6 +13,12 @@
 
 Một chiếc bánh chia thành nhiều miếng hơn không tự làm chiếc bánh lớn lên. Cổ tức, phát hành thêm và tách cổ phiếu thay đổi tiền, số cổ phần hoặc quyền của từng người theo những cách khác nhau. Cần đọc văn bản của sự kiện cụ thể: được hưởng gì, ngày nào, phải làm gì và tiền đi đâu.
 
+## Ôn bài cũ
+
+- Trong [Bài V1 — Cấu trúc thị trường chứng khoán Việt Nam](V1-vietnam-market-structure.md) và [Bài V2 — Quy tắc giao dịch và thanh toán tại Việt Nam](V2-vietnam-trading-rules.md), bạn đã nắm bước giá, biên độ và chu kỳ thanh toán. Bài V3 giải thích cách điều chỉnh giá tham chiếu ngày giao dịch không hưởng quyền (`GDKHQ`) khi chia cổ tức hoặc phát hành thêm.
+
+---
+
 ## 1. Nhận biết sự kiện
 
 | Sự kiện | Trực giác | Điều cần kiểm |

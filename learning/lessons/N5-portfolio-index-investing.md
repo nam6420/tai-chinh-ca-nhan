@@ -3,7 +3,9 @@
 - Ngày: `2026-11-02`
 - Chốt dữ liệu lúc: `2026-11-02 14:28 Asia/Ho_Chi_Minh`
 - Mục tiêu: Nhận ra rủi ro tập trung và giới hạn đa dạng hóa; đọc mục tiêu/chi phí quỹ; tính lợi suất đơn giản không lẫn tiền góp.
-- Bài trước liên quan: Phần A: sau N1, không chặn 001. Phần B: sau [N4](N4-time-value-returns.md) và [N7](N7-data-probability-uncertainty.md).
+- Bài trước liên quan:
+  - **Nhánh 1 (Bước 18/23):** Học ngay sau [Bài N7: Đọc dữ liệu và bất định](N7-data-probability-uncertainty.md) (kế thừa [Bài N1](N1-market-basics.md) và [Bài N4](N4-time-value-returns.md)). Học tiếp: [Bài 010: Chi phí vốn — ke, kd, WACC](010-cost-of-capital.md) (Bước 19/23).
+  - **Nhánh 2 (Danh mục & Quỹ chỉ số):** Phần A học sau [Bài N1: Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md) (không chặn [Bài 001](001-business-financial-statements.md)); Phần B học sau [Bài N4](N4-time-value-returns.md) và [Bài N7](N7-data-probability-uncertainty.md). Học tiếp: [Bài A1](A1-deposits-government-corporate-bonds.md)–[Bài A5](A5-international-investing-currency-tax.md).
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Kết quả đầu tư cần so với điều gì và đang gánh những rủi ro nào?**
 - Kiểm nguồn: `ĐẠT`
@@ -15,7 +17,7 @@ Một doanh nghiệp có thể tốt mà cổ phiếu vẫn giảm. Giữ nhiề
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Phần A chỉ cần N1: cổ phiếu là sở hữu hay khoản gửi được bảo đảm? Sở hữu, không bảo đảm. Phần B: N4 cho 100 tăng 10% thành 110; N7 nhắc hai tỷ lệ khác mốc không thể ghép tùy ý.
+Phần A chỉ cần [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md): cổ phiếu là quyền sở hữu hay khoản gửi được bảo đảm? Sở hữu, không bảo đảm. Phần B (và Bước 18/23 của Nhánh 1): nối tiếp từ [Bài N4 — Giá trị thời gian của tiền và lợi suất](N4-time-value-returns.md) (100 tăng 10% thành 110) và [Bài N7 — Đọc dữ liệu và bất định](N7-data-probability-uncertainty.md) (hai tỷ lệ khác mốc thời gian hoặc khác mẫu số không thể ghép tùy ý).
 
 ## Bài này làm gì và chưa làm gì
 

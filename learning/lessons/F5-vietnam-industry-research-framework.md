@@ -4,10 +4,11 @@
 - Chốt dữ liệu lúc: `2026-11-05 12:05 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Xây dựng bản đồ kinh tế đơn vị (`Unit Economics`), cấu trúc chi phí, đòn bẩy hoạt động, chu kỳ vốn lưu động và biến số phá vỡ luận điểm cho 6 ngành trụ cột trên thị trường chứng khoán Việt Nam (`Thép`, `Chứng khoán`, `Bán lẻ chuỗi`, `Dầu khí thượng - trung - hạ nguồn`, `Điện phát điện`, và `Thủy sản xuất khẩu`).
 - Thời lượng dự kiến: `3 buổi học (~270 phút)`
-  - **Buổi 1 (90 phút):** Hai ngành hàng hóa và tài sản cố định nặng (`Heavy-Asset Cyclicals`) — Ngành Thép (`BOF` vs. `EAF`, chênh lệch giá `HRC` – quặng sắt – than cốc) và Ngành Điện (`Hợp đồng PPA`, sản lượng điện hợp đồng $Q_c$, thủy văn và giá khí/than).
-  - **Buổi 2 (90 phút):** Hai ngành chuỗi giá trị phân mảnh và xuất khẩu — Ngành Dầu khí (tách bạch Thượng nguồn `E&P`/Dịch khoan, Trung nguồn vận chuyển khí và Hạ nguồn lọc hóa dầu/phân phối) và Ngành Thủy sản (chu kỳ nuôi trồng cá tra/tôm, chi phí thức ăn, rào cản thuế chống bán phá giá `POR` và tỷ giá).
-  - **Buổi 3 (90 phút):** Hai ngành nhạy cảm với tiêu dùng và thanh khoản thị trường — Ngành Bán lẻ chuỗi (`SSSG` vs. mở mới cửa hàng, vòng quay tồn kho) và Ngành Công ty Chứng khoán (3 động cơ: Môi giới, Cho vay ký quỹ `Margin`, Tự doanh `FVTPL/AFS`), kèm thực hành xử lý dữ liệu bẩn và 10 bài tập định lượng.
-- Bài trước liên quan: [014 — Chu kỳ ngành và chu kỳ vốn](014-industry-capital-cycle.md), [F1 — Mô hình ba báo cáo tài chính](F1-three-statement-model-sensitivity.md), [M2 — Chu kỳ tín dụng và bất động sản](M2-credit-real-estate-cycle.md), [N6 — Mô hình kinh doanh và kinh tế đơn vị](N6-business-model-unit-economics.md).
+  - **Buổi 1 (90 phút):** Ngành Thép (`BOF` vs. `EAF`, chênh lệch giá `HRC` – quặng – than) và Ngành Điện (`PPA`, $Q_c$, thị trường `CGM`).
+  - **Buổi 2 (90 phút):** Ngành Dầu khí (thượng – trung – hạ nguồn) và Ngành Thủy sản (chu kỳ nuôi, giá thức ăn, thuế `POR`).
+  - **Buổi 3 (90 phút):** Ngành Bán lẻ chuỗi (`SSSG` vs. mở mới) và Công ty Chứng khoán (Môi giới, `Margin`, Tự doanh).
+- Bài trước liên quan: [Bài F4 — Đọc ngân hàng Việt Nam](F4-vietnam-bank-analysis.md), [Bài 014 — Chu kỳ ngành và chu kỳ vốn](014-industry-capital-cycle.md), [Bài F1 — Mô hình ba báo cáo](F1-three-statement-model-sensitivity.md).
+- Học tiếp: [Bài F6 — Quản trị, bên liên quan và kiểm toán](F6-governance-related-party-audit.md).
 - Mô hình thực hành và hồ sơ đi kèm: [`../practice/models/cyclical.py`](../practice/models/cyclical.py), [`../practice/models/hpg_cycle_inputs.csv`](../practice/models/hpg_cycle_inputs.csv), [`../practice/models/earnings_quality.py`](../practice/models/earnings_quality.py), và hai hồ sơ thực chiến [`../../research/companies/VN/HPG/report.md`](../../research/companies/VN/HPG/report.md), [`../../research/companies/VN/VNM/report.md`](../../research/companies/VN/VNM/report.md).
 - Câu hỏi cốt lõi: Vì sao áp dụng cùng một bội số `P/E = 10x` cho một nhà máy thép ở đỉnh chu kỳ, một công ty chứng khoán lúc thanh khoản kỷ lục và một chuỗi bán lẻ đang mở rộng cửa hàng lại dẫn tới những sai lầm định giá đắt giá nhất?
 - Kiểm nguồn: `ĐẠT`
@@ -23,6 +24,12 @@ Mỗi ngành có một **"đơn vị kinh tế hạt nhân" (`Core Unit Economic
 - **Điện**: Đơn vị kinh tế là `1 kWh điện thương phẩm`. Lợi nhuận phụ thuộc vào **tỷ lệ sản lượng điện hợp đồng ($Q_c$, thường `80%–90%`)** thanh toán theo giá `PPA` để bù chi phí cố định và trả nợ vay, đối lập với phần bán trên thị trường phát điện cạnh tranh (`CGM`) (`SUY_LUẬN`).
 - **Bán lẻ chuỗi**: Đơn vị kinh tế là **1 cửa hàng hiện hữu**. Mở thêm cửa hàng làm tổng doanh thu tăng không có nghĩa là công ty khỏe lên nếu **Tăng trưởng doanh thu cùng cửa hàng (`SSSG`)** âm (`SUY_LUẬN`).
 - **Công ty Chứng khoán**: Kết hợp 3 động cơ nhạy cảm với thanh khoản (`ADTV`) và chỉ số thị trường: (1) Môi giới (`Brokerage`), (2) Cho vay ký quỹ (`Margin` — trần `200%` Vốn chủ sở hữu), và (3) Tự doanh (`FVTPL/AFS/HTM`) (`SỰ_THẬT`).
+
+---
+
+## Ôn bài cũ
+
+- Sau khi phân tích bất động sản ở [Bài F3](F3-vietnam-property-developers.md), ngân hàng ở [Bài F4 — Đọc ngân hàng Việt Nam](F4-vietnam-bank-analysis.md) và chu kỳ vốn ở [Bài 014 — Chu kỳ ngành và chu kỳ vốn](014-industry-capital-cycle.md), Bài F5 xây dựng khung kinh tế đơn vị cho 6 ngành trụ cột khác trên sàn chứng khoán Việt Nam.
 
 ---
 

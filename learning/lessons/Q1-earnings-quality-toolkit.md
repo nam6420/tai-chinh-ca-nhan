@@ -4,6 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn số HPG: báo cáo tài chính hợp nhất kiểm toán FY2025. **Hệ số Beneish lấy từ nguồn thứ cấp**; hệ số Altman đã đối chiếu với bản sao Altman (2000).
 - Mục tiêu: Tính M-score, Z'' và F-score; đọc từng thành phần; phân biệt tín hiệu thật với hiệu ứng cơ học; viết kết luận không vượt quá bằng chứng.
+- Bài trước liên quan: Chuỗi định lượng thực hành sau [Bài 012](012-scenarios-margin-of-safety.md) (**Bước 3/4 của chuỗi `Q4 → Q2 → Q1 → Q3`**) — học ngay sau [Bài Q2: Cổ phiếu thưởng nhân viên, pha loãng, mua lại và cổ tức](Q2-sbc-dilution-buybacks-dividends.md) và [Bài Q4: Lấy dữ liệu](Q4-getting-data-edgar-xbrl-vietnam.md) (kế thừa [Bài 004](004-cash-flow-and-earnings-quality.md), [Bài 005](005-debt-liquidity-survival.md) và [Bài 007](007-notes-and-accounting-red-flags.md)). Học tiếp: [Bài Q3: Chuẩn hóa lợi nhuận và công ty chu kỳ](Q3-normalizing-earnings-cyclical.md).
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [earnings_quality.py](../practice/models/earnings_quality.py) và [hpg_fy2025_statements.csv](../practice/models/hpg_fy2025_statements.csv); kiểm bằng `python3 -m unittest discover tests`.
 - Kiểm nguồn: `ĐẠT`
@@ -14,6 +15,10 @@
 ## Hiểu bài này trong 1 phút
 
 Bác sĩ đo huyết áp không kết luận bạn bị bệnh; con số cao chỉ nói "cần khám thêm". Ba điểm số này cũng vậy. Điểm cao là **lý do để mở thuyết minh và đọc kỹ**, không phải bằng chứng gian lận, càng không phải lệnh bán. Bài tính và đọc ba điểm trên báo cáo FY2025 của Hòa Phát, không kết luận gian lận hay khuyến nghị.
+
+## Ôn bài cũ hoặc kiểm tra đầu vào
+
+Ôn lại các bài liền trước ([Bài 004](004-cash-flow-and-earnings-quality.md), [Bài 005](005-debt-liquidity-survival.md), [Bài 007](007-notes-and-accounting-red-flags.md), [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md) và [Bài Q2](Q2-sbc-dilution-buybacks-dividends.md)): vì sao khoảng cách giữa lợi nhuận sau thuế và dòng tiền hoạt động (`CFO`) ([Bài 004](004-cash-flow-and-earnings-quality.md)) cần được đọc cùng thuyết minh phải thu, tồn kho ([Bài 007](007-notes-and-accounting-red-flags.md)) và bảng số đã kiểm đẳng thức ([Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md))?
 
 ## 1. Ba công cụ, ba câu hỏi khác nhau
 

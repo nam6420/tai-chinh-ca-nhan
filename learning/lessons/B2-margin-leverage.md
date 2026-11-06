@@ -13,6 +13,12 @@
 
 Giao dịch ký quỹ (*margin*) dùng tiền vay để mua chứng khoán. Khi tài sản giảm giá, khoản nợ không tự giảm theo. Vốn của người vay chịu biến động trước và còn phải gánh lãi, phí. Bài này dạy nhận diện rủi ro; khả năng được vay không có nghĩa là nên vay.
 
+## Ôn bài cũ
+
+- Trong [Bài B1 — Công ty chứng khoán, phí và lưu ký](B1-broker-fees-custody.md) và [Bài 005 — Nợ, thanh khoản và khả năng sống sót](005-debt-liquidity-survival.md), bạn đã hiểu cấu trúc tài khoản và rủi ro đòn bẩy. Bài B2 giải thích toán học của vay ký quỹ (`Margin`), tỷ lệ ký quỹ duy trì và lệnh gọi ký quỹ (`Margin Call`).
+
+---
+
 ## 1. Khoản vay và lớp đệm
 
 `SỰ_THẬT` [FINRA — Margin Debt](https://syndication.finra.org/content/margin-debt-record-levels-know-risks) giải thích mua ký quỹ là vay từ công ty chứng khoán và phải trả gốc, lãi ngay cả khi đầu tư thua lỗ. Tài liệu này thuộc Hoa Kỳ; quyền và thủ tục tại Việt Nam cần đọc quy định và hợp đồng áp dụng.

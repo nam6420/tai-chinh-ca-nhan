@@ -13,6 +13,12 @@
 
 Phân tích kỹ thuật dùng quy tắc hoặc hình mẫu của giá và khối lượng để mô tả dữ liệu hoặc đặt giả thuyết. Một đường vẽ hấp dẫn không tự cho biết xác suất tăng giá hoặc lợi nhuận sau phí. Vi cấu trúc giúp xem lệnh, sổ giá và thanh khoản ảnh hưởng giá thực hiện ra sao.
 
+## Ôn bài cũ
+
+- Trong [Bài H5 — Thống kê, kiểm thử quá khứ và quá khớp](H5-statistics-backtest-overfitting.md) và [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md), ta đã hiểu kiểm định thống kê và sổ lệnh. Bài H6 khép lại **Tầng H** bằng góc nhìn vi cấu trúc thị trường đối với phân tích kỹ thuật.
+
+---
+
 ## 1. Bằng chứng có giới hạn và phản chứng
 
 `SỰ_THẬT` [Lo, Mamaysky & Wang — Foundations of Technical Analysis](https://www.nber.org/papers/w7613), NBER 2000, dùng phương pháp nhận dạng mẫu trên dữ liệu cổ phiếu Hoa Kỳ giai đoạn lịch sử của nghiên cứu và tìm thấy một số mẫu có thông tin bổ sung. Kết luận đó không bảo đảm giao dịch có lãi sau phí hoặc lặp lại tại Việt Nam hiện nay.

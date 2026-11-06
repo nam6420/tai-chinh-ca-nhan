@@ -16,6 +16,12 @@ Kiểm thử quá khứ, hay backtest, áp một quy trình xác định lên d�
 
 Ba phiên lần lượt kiểm ngày biết thông tin và thành viên mẫu, kiểm quá trình chọn kết quả, rồi kiểm chi phí và độ bền của kết luận. Bạn nên che phần đáp án khi làm. Một câu trả lời tốt có thể là “chưa đủ dữ liệu để kết luận”, nhưng phải chỉ rõ thiếu gì và cần nguồn nào để kiểm.
 
+## Ôn bài cũ
+
+- Trong [Bài H4 — TWR, MWR và chọn chỉ số chuẩn](H4-twr-mwr-benchmark.md) và [Bài H1 — Thiên kiến hành vi](H1-behavioral-biases.md), ta đã biết đo hiệu quả danh mục. Bài H5 cảnh báo các bẫy thống kê, thiên kiến sống sót (`Survivorship Bias`) và quá khớp (`Overfitting`) khi kiểm thử dữ liệu quá khứ.
+
+---
+
 ## Phiên 1 — Dữ liệu tồn tại lúc nào và ai bị bỏ khỏi bảng?
 
 ### Ngày kết thúc kỳ khác ngày biết thông tin

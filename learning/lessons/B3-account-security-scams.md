@@ -15,7 +15,8 @@ Kẻ lừa đảo không cần hiểu thị trường; chúng cần bạn chuy�
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào: nhớ lại bài N1, khi mua cổ phiếu thì tiền của bạn đi qua đâu trước khi đến người bán? Đáp án: qua công ty chứng khoán và hệ thống thanh toán theo quy định, chứ không phải chuyển thẳng vào tài khoản cá nhân của người lạ. Chưa cần biết quy trình cụ thể của thị trường Việt Nam.
+- **Điểm xuất phát (Trước khi chuyển tiền vào bất kỳ tài khoản đầu tư nào):** Bài này không yêu cầu kiến thức tài chính và nên đọc ngay sau [Bài P1 — Ngân sách, quỹ khẩn cấp và bảo hiểm](P1-budget-emergency-fund-insurance.md), **trước khi mở tài khoản và bước vào [Bài N1 — Thị trường chứng khoán vận hành thế nào?](N1-market-basics.md)** (hoặc đọc tiếp [Bài B1 — Chọn công ty chứng khoán, biểu phí và lưu ký](B1-broker-fees-custody.md)).
+- **Kiểm tra đầu vào:** Khi mua cổ phiếu hợp pháp (xem [Bài N1](N1-market-basics.md) và [Bài V1](V1-vietnam-market-structure.md)), tiền của bạn đi qua đâu trước khi đến người bán? Đáp án: qua công ty chứng khoán được cấp phép và hệ thống thanh toán theo quy định, chứ không phải chuyển thẳng vào tài khoản cá nhân của người lạ. Chưa cần biết quy trình cụ thể của thị trường Việt Nam.
 
 ## Bài này làm gì và chưa làm gì
 

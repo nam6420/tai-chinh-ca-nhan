@@ -13,6 +13,12 @@
 
 Kịch bản xấu là một phép thử, không phải lời tiên đoán. Có thể tính giá trị còn lại nếu giá giảm nhưng không vì thế biết xác suất giảm, mức đáy, khả năng bán hay thời gian phục hồi. Khi dữ liệu không đủ xác định xác suất đáng tin, hãy nói rõ điều chưa biết.
 
+## Ôn bài cũ
+
+- Trong [Bài H1 — Thiên kiến hành vi trong đầu tư](H1-behavioral-biases.md) và [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), ta đã nhận diện thiên kiến nhận thức. Bài H2 chuyển sang quy trình ra quyết định dưới áp lực và quy mô vị thế (`Position Sizing`).
+
+---
+
 ## 1. Rủi ro và bất định
 
 `SỰ_THẬT` [Ngân hàng Dự trữ Australia — Risk versus Uncertainty](https://www.rba.gov.au/publications/rdp/2000/2000-10/risk-versus-uncertainty.html), nghiên cứu tháng 12/2000, phân biệt trường hợp có thể mô hình hóa phân phối xác suất với tình huống phân phối không biết rõ. Đây là khung khái niệm, không khẳng định mọi xác suất tài chính đo được một cách khách quan.

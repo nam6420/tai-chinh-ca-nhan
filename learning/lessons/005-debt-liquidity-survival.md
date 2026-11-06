@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 10:45 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Đọc được cơ cấu nợ và lịch đáo hạn của một doanh nghiệp; tính bốn tỷ lệ sống còn và biết ngưỡng nào là nguy hiểm; hiểu thuê tài sản trở thành nợ trên bảng cân đối khi nào; so sánh được hai cách huy động vốn (vay hay phát hành cổ phiếu) trên cùng một ví dụ số học; nhận ra điều khoản vay (covenant) là rủi ro thật chứ không phải chi tiết hợp đồng.
 - Thời lượng: 35 phút đọc + 40 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 001](001-business-financial-statements.md) (bảng cân đối), [Bài 004](004-cash-flow-and-earnings-quality.md) (dòng tiền)
+- Bài trước liên quan: Thứ tự đọc **Bước 11/23 của Nhánh 1** — học ngay sau [Bài 004: Dòng tiền và chất lượng lợi nhuận](004-cash-flow-and-earnings-quality.md) (kế thừa [Bài 001](001-business-financial-statements.md) và [Bài N2](N2-statement-line-items.md)). Học tiếp: [Bài 006: Phân bổ vốn và quản trị](006-capital-allocation-governance.md) (Bước 12/23).
 - Câu hỏi cốt lõi: **Doanh nghiệp có thể trả nợ trong 12–24 tháng tới bằng nguồn tiền nào?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Mọi ví dụ số học là hư cấu. Bài này kế thừa Bài 001 và Bài 004; nó chuẩn bị cho Bài 009 (bội số EV/EBITDA) và Bài 013 (ngân hàng).
@@ -19,12 +19,12 @@ Với doanh nghiệp cũng vậy. Nợ không xấu; nợ là một cách huy đ
 
 ## Ôn bài cũ (5 phút)
 
-Trả lời trước khi đọc tiếp. Đáp án ở mục 9.
+Ôn lại bài liền trước trong lộ trình Nhánh 1 là [Bài 004 — Dòng tiền và chất lượng lợi nhuận](004-cash-flow-and-earnings-quality.md) (cùng nền tảng từ [Bài 001](001-business-financial-statements.md)). Trả lời trước khi đọc tiếp (đáp án ở mục 9):
 
-1. Nếu phải thu khách hàng tăng 100 trong năm, dòng tiền hoạt động thay đổi bao nhiêu và theo chiều nào?
-2. Vì sao "CFO âm" không đồng nghĩa "doanh nghiệp lỗ"?
-3. Với doanh nghiệp thuê nhiều cửa hàng, vì sao dòng tiền tự do tính bằng `CFO − capex` có thể **cao hơn** tiền thật để lại?
-4. Nêu một lý do cần đọc 5 năm thay vì 1 năm khi đánh giá chất lượng lợi nhuận.
+1. Theo [Bài 004](004-cash-flow-and-earnings-quality.md), nếu phải thu khách hàng tăng 100 trong năm, dòng tiền hoạt động (`CFO`) thay đổi bao nhiêu và theo chiều nào?
+2. Vì sao "`CFO` âm" không đồng nghĩa "doanh nghiệp lỗ" ([Bài 001](001-business-financial-statements.md) & [Bài 004](004-cash-flow-and-earnings-quality.md))?
+3. Với doanh nghiệp thuê nhiều cửa hàng, vì sao dòng tiền tự do tính bằng `CFO − capex` ([Bài 004](004-cash-flow-and-earnings-quality.md)) có thể **cao hơn** tiền thật để lại?
+4. Nêu một lý do cần đọc 5 năm thay vì 1 năm khi đánh giá chất lượng lợi nhuận ([Bài 004](004-cash-flow-and-earnings-quality.md)).
 
 ## Bài này làm gì và chưa làm gì
 

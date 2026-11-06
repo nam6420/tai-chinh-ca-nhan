@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-05 12:30 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Giải phẫu cơ chế khuếch đại hai chiều giữa tín dụng ngân hàng, giá trị tài sản bảo đảm (`collateral value`) và dòng tiền trả nợ trong chu kỳ bất động sản; đọc đúng các chỉ báo cảnh báo sớm (`early warning indicators`) của BIS và nhận diện ranh giới giữa tài sản bảo đảm trên sổ sách với dòng tiền thu hồi thực tế.
 - Bài trước liên quan: [M1](M1-monetary-policy-rates-fx-credit.md), [005](005-debt-liquidity-survival.md), [A3](A3-gold-currency-property-crypto.md), [F3](F3-vietnam-property-developers.md), [F4](F4-vietnam-bank-analysis.md).
-- Thời lượng: Ba phiên học có điểm dừng (mỗi phiên 45 phút) + thực hành đối chiếu trên mô hình [bank.py](../practice/models/bank.py) và [earnings_quality.py](../practice/models/earnings_quality.py).
+- Thời lượng: Ba phiên học có điểm dừng (mỗi phiên 45 phút) + thực hành đối chiếu trên mô hình [Bài F4](F4-vietnam-bank-analysis.md) và [earnings_quality.py](../practice/models/earnings_quality.py).
 - Câu hỏi cốt lõi: **Vì sao một khoản vay có tài sản bảo đảm là bất động sản định giá gấp rưỡi dư nợ gốc vẫn có thể biến thành nợ xấu làm tê liệt thanh khoản của cả chủ đầu tư lẫn ngân hàng khi chu kỳ đảo chiều?**
 - Kiểm nguồn: `ĐẠT`
 - Phản biện rủi ro: `ĐẠT`
@@ -15,6 +15,12 @@
 ## Hiểu bài trong một phút
 
 Bất động sản và hệ thống ngân hàng gắn chặt với nhau qua một vòng lặp phản hồi có điều kiện được gọi là **cơ chế gia tốc tài chính (`financial accelerator`)**. Ở pha đi lên, tín dụng mở rộng làm tăng sức mua và giá đất; giá đất tăng làm phình giá trị tài sản thế chấp (`collateral`), giúp chủ đầu tư và người mua nhà vay được nhiều tiền hơn nữa trên cùng một mảnh đất. Nhưng ở pha đi xuống — khi giá nhà vượt quá xa thu nhập thực tế của người mua ở thực, pháp lý dự án bị tắc nghẽn hoặc lãi suất thả nổi hết thời gian ưu đãi — dòng tiền bán hàng và tiền thuê ngừng chảy. Lúc này, nhà đầu tư nhận ra một sự thật cốt lõi: **Tài sản bảo đảm không tự sinh ra tiền mặt để trả lãi hàng tháng, và giá trị thẩm định lúc thị trường sốt nóng không bao giờ giữ nguyên khi nhiều con nợ buộc phải bán giải chấp cùng một lúc.** Hiểu cơ chế này giúp bạn đọc xuyên qua bảng cân đối kế toán của cả doanh nghiệp bất động sản ([F3](F3-vietnam-property-developers.md)) lẫn ngân hàng thương mại ([F4](F4-vietnam-bank-analysis.md)) mà không rơi vào bẫy dự báo khủng hoảng cực đoan.
+
+---
+
+## Ôn bài cũ
+
+- Trong [Bài M1 — Chính sách tiền tệ, lãi suất, tỷ giá và tín dụng](M1-monetary-policy-rates-fx-credit.md) và [Bài 013 — Ngân hàng và công ty bảo hiểm](013-banks-insurers.md), ta đã hiểu cung tiền và bảng cân đối ngân hàng. Bài M2 phân tích vòng lặp giữa tín dụng ngân hàng và chu kỳ bất động sản.
 
 ---
 
@@ -55,7 +61,7 @@ Khi đọc số liệu "tín dụng bất động sản", cần tách biệt hai
 
 ### 2.1. Ba công thức định lượng sức chịu đựng của khoản vay bất động sản
 
-Để thẩm định khoản vay dự án hoặc đánh giá danh mục cho vay bất động sản của ngân hàng ([bank.py](../practice/models/bank.py)), người phân tích dùng 3 tỷ số:
+Để thẩm định khoản vay dự án hoặc đánh giá danh mục cho vay bất động sản của ngân hàng ([Bài F4](F4-vietnam-bank-analysis.md)), người phân tích dùng 3 tỷ số:
 
 1. **Tỷ lệ Dư nợ trên Giá trị tài sản bảo đảm (`Loan-to-Value — LTV`) và Giá trị thu hồi hiện tại ròng (`Net Present Recovery`):**
    $$\text{LTV} = \frac{\text{Dư nợ vay (Loan)}}{\text{Giá trị tài sản bảo đảm (Collateral Value)}}$$
@@ -91,7 +97,7 @@ Khi đọc số liệu "tín dụng bất động sản", cần tách biệt hai
 
 `SUY_LUẬN` Khi dòng tiền trả nợ (`DSCR`) gãy đổ, **chiết khấu giá bán cưỡng chế (`35%`) cộng thời gian xử lý kéo dài (`2 năm`)** xóa sạch lớp đệm `40%` của tỷ lệ `LTV` ban đầu.
 
-> **Điểm dừng phiên 2:** Mở mô hình [bank.py](../practice/models/bank.py) và giải thích vì sao ngân hàng vẫn phải trích lập dự phòng rủi ro tín dụng (`LLR`) bằng tiền thật dù khoản nợ xấu có tài sản thế chấp là đất đai.
+> **Điểm dừng phiên 2:** Mở mô hình [Bài F4](F4-vietnam-bank-analysis.md) và giải thích vì sao ngân hàng vẫn phải trích lập dự phòng rủi ro tín dụng (`LLR`) bằng tiền thật dù khoản nợ xấu có tài sản thế chấp là đất đai.
 
 ---
 
@@ -104,7 +110,7 @@ Khi đọc số liệu "tín dụng bất động sản", cần tách biệt hai
 | **1. Khoảng cách tín dụng/GDP (`Credit-to-GDP gap`)** | Độ lệch của tỷ lệ `Tín dụng tư nhân / GDP` so với xu hướng dài hạn. | Phản ánh nền kinh tế tăng trưởng dựa quá nặng vào đòn bẩy nợ trong nhiều năm. | Nền kinh tế đang tài chính hóa hợp thức (`financial deepening`) có thể có tín dụng/GDP tăng mà chưa xảy ra đổ vỡ ngay. |
 | **2. Tỷ số chi phí trả nợ (`Debt Service Ratio — DSR`)** | Tỷ lệ thu nhập khu vực tư nhân phải trích ra để trả gốc và lãi vay định kỳ. | Khi `DSR` vượt ngưỡng lịch sử (nhất là khi lãi suất nhích tăng), báo hiệu dòng tiền bị vắt kiệt trong 1–2 năm tới. | Số tổng hợp cấp quốc gia có thể che khuất sự phân hóa giữa doanh nghiệp xuất khẩu ít vay nợ và nhóm bất động sản đòn bẩy cao. |
 | **3. Giá nhà/Thu nhập & Lợi suất cho thuê (`Rental yield`)** | `Giá nhà / Thu nhập hộ gia đình`; `Lợi suất cho thuê` so với `Lãi vay mua nhà`. | Khi `Lợi suất cho thuê` (`2%–3%/năm`) thấp xa `Lãi vay` (`9%–11%/năm`), người mua chịu dòng tiền âm nặng (`negative carry`). | Giá nhà tại đô thị thiếu cung có thể neo cao kéo dài (thanh khoản đóng băng nhưng không giảm đồng loạt nếu ít dùng đòn bẩy). |
-| **4. Chỉ báo vi mô trên BCTC Chủ đầu tư & Ngân hàng** | `Lãi phải thu / Tài sản sinh lời` ([bank.py](../practice/models/bank.py)); `Tồn kho dở dang + Phải thu BCC` và `CFO` ([earnings_quality.py](../practice/models/earnings_quality.py)). | Lãi dự thu ngân hàng phình to; chủ đầu tư báo lãi kế toán nhưng `CFO` âm liên tục và nợ ngắn hạn vượt tiền mặt. | Cơ chế cơ cấu lại thời hạn trả nợ có thể làm độ trễ ghi nhận nợ xấu trên báo cáo kéo dài 4–8 quý. |
+| **4. Chỉ báo vi mô trên BCTC Chủ đầu tư & Ngân hàng** | `Lãi phải thu / Tài sản sinh lời` ([Bài F4](F4-vietnam-bank-analysis.md)); `Tồn kho dở dang + Phải thu BCC` và `CFO` ([earnings_quality.py](../practice/models/earnings_quality.py)). | Lãi dự thu ngân hàng phình to; chủ đầu tư báo lãi kế toán nhưng `CFO` âm liên tục và nợ ngắn hạn vượt tiền mặt. | Cơ chế cơ cấu lại thời hạn trả nợ có thể làm độ trễ ghi nhận nợ xấu trên báo cáo kéo dài 4–8 quý. |
 
 `SỰ_THẬT` Tại [Cục Thống kê — Báo cáo Quý III và 9 tháng năm 2026](https://www.nso.gov.vn/bai-top/2026/10/bao-cao-tinh-hinh-kinh-te-xa-hoi-quy-iii-va-9-thang-nam-2026/), tín dụng toàn nền kinh tế đến `28/09/2026` tăng `10,89%` so với cuối năm 2025. `CHƯA_BIẾT` Chỉ tiêu tổng hợp này không tách riêng tín dụng kinh doanh bất động sản hay mua nhà cá nhân; muốn biết tốc độ thực tế của từng mảng phải mở thuyết minh "Cho vay khách hàng theo ngành kinh tế" trên BCTC từng ngân hàng ([F4](F4-vietnam-bank-analysis.md)).
 
@@ -135,7 +141,7 @@ Hãy tự giải 10 bài tập dưới đây trước khi mở phần Đáp án:
 6. **Tính hệ số `DSCR` của dự án bất động sản:** Dự án nhà xưởng cho thuê có doanh thu tiền mặt `150 tỷ VND/năm`, chi phí vận hành bằng tiền `35 tỷ VND/năm`, trả lãi vay `55 tỷ VND` và trả gốc đến hạn `40 tỷ VND`. Tính `NOI` và `DSCR`.
 7. **Stress test `DSCR`:** Cùng dự án ở Bài tập 6 (`Dư nợ 550 tỷ VND`, lãi suất `10,0%/năm` tương ứng lãi `55 tỷ`, gốc đến hạn `40 tỷ`), nếu sang năm tới `NOI` giảm `20%` và lãi vay thả nổi tăng thêm `+2,0 điểm phần trăm/năm` (lên `12,0%/năm`), hệ số `DSCR` mới là bao nhiêu?
 8. **Sai số Loại I và Loại II của chỉ báo cảnh báo sớm:** Theo [BIS (2018)](https://www.bis.org/publications/qr-201803/early-warning-indicators-banking-crises-expanding-family), nếu hạ ngưỡng cảnh báo của `Credit-to-GDP gap` xuống rất thấp để không bỏ sót khủng hoảng, loại sai số nào sẽ tăng lên và ảnh hưởng gì tới phân bổ vốn?
-9. **Đọc xuyên qua tỷ lệ nợ xấu khi lãi dự thu tăng vọt:** Ngân hàng Y báo cáo `NPL` bất động sản giữ ở `1,8%`, nhưng khoản mục **"Các khoản lãi và phí phải thu"** tăng `65%` trong năm khi dư nợ chỉ tăng `12%` ([bank.py](../practice/models/bank.py)). Hiện tượng này cảnh báo điều gì?
+9. **Đọc xuyên qua tỷ lệ nợ xấu khi lãi dự thu tăng vọt:** Ngân hàng Y báo cáo `NPL` bất động sản giữ ở `1,8%`, nhưng khoản mục **"Các khoản lãi và phí phải thu"** tăng `65%` trong năm khi dư nợ chỉ tăng `12%` ([Bài F4](F4-vietnam-bank-analysis.md)). Hiện tượng này cảnh báo điều gì?
 10. **Đối chiếu chất lượng dòng tiền chủ đầu tư qua [earnings_quality.py](../practice/models/earnings_quality.py):** Chủ đầu tư Z báo lãi sau thuế `+1.200 tỷ VND` nhờ bán buôn dự án cho công ty liên kết, nhưng `CFO` âm `-2.800 tỷ VND` và phải thu ngắn hạn tăng `+3.500 tỷ VND`. Tính `CFO / LNST` và giải thích vì sao lợi nhuận này không dùng để trả gốc trái phiếu đến hạn được.
 
 ---

@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-05 10:35 UTC+7 (Asia/Ho_Chi_Minh)`
 - Bậc chiều sâu: `Bậc S — 3 buổi học, 10 bài tập + mô hình Python`
 - Mục tiêu: Đọc và bóc tách hợp đồng bảo hiểm nhân thọ/sức khỏe theo `Luật KDBH (31/VBHN-VPQH)`, `Nghị định 46/2023/NĐ-CP` và `VBHN 44/2026/VBHN-TT-BTC` (`29/09/2026`); phân biệt 5 dòng sản phẩm (`Term Life`, `Whole Life`, `Endowment`, `UL`, `ILP`); tự tính 6 lớp phí (`Mẫu 22-NT`, `Mẫu 23-NT`), Giá trị tài khoản (`Account Value`), Giá trị hoàn lại (`Surrender Value`) và so sánh 10 năm giữa **"Mua bảo hiểm liên kết đầu tư (`UL`)"** với **"Mua bảo hiểm tử kỳ + Tự đầu tư phần chênh lệch (`BTID`)"**.
-- Bài trước liên quan: `P1`, `P2`, `013`, `F8`.
+- Bài trước liên quan: [P1](P1-budget-emergency-fund-insurance.md), [P2](P2-personal-debt.md), [013](013-banks-insurers.md), [F8](F8-vietnam-insurance-analysis.md).
 - Thời lượng: `3 buổi học` + thực hành [`practice/models/insurance.py`](../practice/models/insurance.py).
 - Câu hỏi cốt lõi: **Vì sao đóng `20–30 triệu đồng/năm` vào hợp đồng liên kết đầu tư (`UL`/`ILP`), sau 2 năm hủy hợp đồng chỉ nhận về vài triệu đồng, và làm sao thiết kế lớp bảo vệ tài chính đúng chuẩn cho gia đình mà không nhầm bảo hiểm với sổ tiết kiệm?**
 - Kiểm nguồn: `ĐẠT`
@@ -34,7 +34,7 @@ Quy tắc vàng: **Bảo hiểm bảo vệ thu nhập của người trụ cột
 
 ## Ôn bài cũ và phạm vi bài học
 
-- **Ôn bài cũ:** Bài `P1` yêu cầu có **Quỹ dự phòng khẩn cấp (`Emergency Fund`)** `3–6 tháng` chi phí sinh hoạt trước khi mua bảo hiểm nhân thọ. Bài `F8` giải thích dự phòng toán học và chi phí khai thác năm đầu trên BCTC DNBH.
+- **Ôn bài cũ:** Bài [P1](P1-budget-emergency-fund-insurance.md) yêu cầu có **Quỹ dự phòng khẩn cấp (`Emergency Fund`)** `3–6 tháng` chi phí sinh hoạt và Bài [P2](P2-personal-debt.md)–[P3](P3-goals-risk-ips.md) xử lý nợ lãi cao trước khi mua bảo hiểm nhân thọ. Bài [013](013-banks-insurers.md) & [F8](F8-vietnam-insurance-analysis.md) giải thích dự phòng toán học và chi phí khai thác năm đầu trên BCTC DNBH.
 - **Bài này làm gì:** Buổi 1 phân biệt 5 dòng sản phẩm (`Term Life`, `Whole Life`, `Endowment`, `UL`, `ILP`) và 6 lá chắn pháp lý (`Luật KDBH` & `VBHN 44/2026/VBHN-TT-BTC`); Buổi 2 giải phẫu 6 lớp phí (`Mẫu 22-NT`, `Mẫu 23-NT`, `Điều 22 & 29 VBHN 44`) và công thức $AV_t \to CSV_t$; Buổi 3 chạy mô hình 10 năm so sánh `UL` với `BTID`, tính `Sum Assured` tối ưu và hạn mức `200 triệu đồng` của **Quỹ bảo vệ người được bảo hiểm** (`Điều 95 Nghị định 46/2023/NĐ-CP`).
 - **Bài này chưa làm gì:** Không tư vấn mua hay hủy sản phẩm cụ thể; không thay thế việc đọc Quy tắc và Điều khoản hợp đồng.
 

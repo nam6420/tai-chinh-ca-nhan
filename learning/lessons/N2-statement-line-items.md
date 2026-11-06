@@ -1,50 +1,52 @@
 # Bài N2: Đọc từng dòng ba báo cáo tài chính
 
-- Ngày: `2026-11-05`
-- Chốt dữ liệu lúc: `2026-11-05 12:30 UTC+7 (Asia/Ho_Chi_Minh)`
+- Ngày cập nhật: `2026-11-06`
+- Chốt dữ liệu lúc: `2026-11-06 10:10 UTC+7 (Asia/Ho_Chi_Minh)`
+- Bậc chiều sâu: `Bậc S`
 - Kiểm nguồn: `ĐẠT`
 - Phản biện rủi ro: `ĐẠT`
-- Mục tiêu: Viết được phương trình kế toán và giải thích vì sao nó luôn cân; ghi được một giao dịch vào hai chỗ (bút toán kép theo trực giác); kể đúng thứ tự các tầng lợi nhuận từ doanh thu tới EPS; tính được EBITDA, biên gộp, biên hoạt động, biên ròng, ROA, ROE và phân rã ROE thành ba thừa số; nhận ra khi nào ROE cao là do vốn chủ nhỏ chứ không do kinh doanh giỏi, và khi nào ROE không dùng được.
-- Thời lượng: Ba phiên A/B/C theo điểm dừng bên dưới + thực hành kiểm chứng trên [earnings_quality.py](../practice/models/earnings_quality.py).
-- Vị trí: **bài nền**, đọc sau [Bài 001](001-business-financial-statements.md) và trước [Bài 002](002-finding-a-cheap-stock.md).
-- Câu hỏi cốt lõi: **Mỗi con số trên báo cáo nằm ở tầng nào, và nó đến từ giao dịch nào?**
+- Lộ trình đọc: **Bài 4 / 23 của Nhánh 1 (Hiểu doanh nghiệp & Phân tích cổ phiếu)**.
+  - **Bài trước liên quan:** [Bài 001](001-business-financial-statements.md) (Bước 3/23), [Bài N6](N6-business-model-unit-economics.md) (Bước 2/23) và [Bài N1](N1-market-basics.md) (Bước 1/23).
+  - **Học tiếp theo đúng thứ tự:** [Bài N8 — Tìm và kiểm nguồn](N8-finding-verifying-sources.md) (Bước 5/23), rồi tới [Bài N3 (Phần A) — Tìm đường trên báo cáo Việt Nam](N3-vietnam-vas-statements.md#phần-a--tìm-đường-trên-báo-cáo-sau-n2) (Bước 6/23) và [Bài 002](002-finding-a-cheap-stock.md) (Bước 7/23).
+- Mục tiêu: Viết phương trình kế toán và giải thích vì sao luôn cân; ghi một giao dịch vào hai chỗ (bút toán kép); kể đúng thứ tự các tầng lợi nhuận từ doanh thu tới `EPS`; tính từng bước `EBIT`, `EBITDA`, biên lợi nhuận gộp/hoạt động/ròng, `ROA`, `ROE` và tách `ROE` theo DuPont; nhận diện khi nào `ROE` cao chỉ do vốn chủ mỏng hoặc không dùng được.
+- Thời lượng: Ba phiên A/B/C + thực hành trên [`practice/models/earnings_quality.py`](../practice/models/earnings_quality.py).
+- Câu hỏi cốt lõi: **Mỗi con số trên báo cáo tài chính nằm ở tầng nào, đến từ giao dịch nào, và `EBIT`, `EBITDA`, `EPS`, `ROA`, `ROE` thực chất đo cái gì?**
 
-> Đây là bài học nền tảng, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Ví dụ quán cà phê là hư cấu; ví dụ Apple ở mục 5 lấy từ báo cáo 10-K gốc. Bài này giữ nhãn (`SỰ_THẬT`, `PHÉP_TÍNH`...) cho nhận định trọng yếu và số liệu.
+> Đây là bài học nền tảng, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Ví dụ Quán cà phê Sao Biển là hư cấu (`KỊCH_BẢN`); ví dụ Apple ở mục 5 lấy từ báo cáo `10-K FY2025` gốc.
 
 ## Hiểu bài này trong 1 phút
 
-Hãy hình dung sổ sách của một quán cà phê. Mỗi lần có tiền vào hay ra, hoặc có ai nợ ai, người chủ ghi lại. Ba báo cáo tài chính chỉ là ba cách **xếp lại** cùng một cuốn sổ:
+Hãy hình dung sổ ghi chép hàng ngày của **Quán cà phê Sao Biển** (nối tiếp từ [Bài N1](N1-market-basics.md), [Bài N6](N6-business-model-unit-economics.md) và [Bài 001](001-business-financial-statements.md)). Ba báo cáo tài chính là ba cách **xếp lại** cùng một cuốn sổ gốc:
 
-- **Bảng cân đối kế toán**: chụp ảnh tại một ngày — quán đang có gì, nợ ai, phần còn lại là của chủ.
-- **Báo cáo kết quả kinh doanh**: quay phim một khoảng thời gian — bán được bao nhiêu, tốn bao nhiêu, lãi bao nhiêu.
-- **Báo cáo lưu chuyển tiền tệ**: chỉ theo dõi riêng **tiền** — tiền vào ra từ đâu (xem kiểm chứng chất lượng dòng tiền tại [earnings_quality.py](../practice/models/earnings_quality.py)).
+- **Bảng cân đối kế toán**: chụp ảnh tại một ngày — quán có tài sản gì, nợ ai, và phần vốn còn lại thuộc về chủ là bao nhiêu.
+- **Báo cáo kết quả kinh doanh**: quay phim một kỳ — từ doanh thu bán cà phê, trừ dần nguyên liệu, lương, khấu hao, lãi vay và thuế để xem cuối cùng còn lại bao nhiêu lãi.
+- **Báo cáo lưu chuyển tiền tệ**: chỉ theo dõi **tiền mặt trong két** vào/ra từ đâu (kiểm chứng tại [`practice/models/earnings_quality.py`](../practice/models/earnings_quality.py)).
 
-> Câu cần nhớ: **Mỗi giao dịch luôn chạm ít nhất hai chỗ trong sổ, nên bảng cân đối luôn cân. Lợi nhuận là cây cầu nối báo cáo kết quả kinh doanh với vốn chủ sở hữu.**
+> Câu cần nhớ: **Mỗi giao dịch luôn chạm ít nhất hai chỗ trong sổ sách nên Bảng cân đối luôn cân bằng; còn Lợi nhuận cuối kỳ chảy vào Vốn chủ sở hữu trên Bảng cân đối.**
 
 ## Ôn bài cũ và Chia ba phiên học
 
-`Ý_KIẾN` Không cần đọc hết trong một buổi:
+Ôn lại 3 câu hỏi từ [Bài 001 — Một doanh nghiệp đi qua ba báo cáo tài chính](001-business-financial-statements.md) (đáp án ở mục 9 cuối bài):
+1. Quán Sao Biển giao đơn hàng `100 triệu đồng`, khách mới trả tiền mặt `60 triệu đồng`. Doanh thu kỳ này là bao nhiêu, và `40 triệu đồng` chưa thu nằm ở dòng nào trên báo cáo nào?
+2. Báo cáo nào là "ảnh chụp tại một ngày", báo cáo nào là "cuốn phim quay suốt một kỳ"?
+3. Vì sao chi tiền mua máy pha cà phê dùng 10 năm **không** làm dòng tiền hoạt động (`CFO`) bị âm?
+
+`Ý_KIẾN` Chia bài học làm 3 phiên ngắn:
 
 | Phiên | Phần học chính | Tự kiểm trước khi chuyển tiếp |
 |---|---|---|
-| A — Một giao dịch chạm hai chỗ | Mục 1–2; Bài tập 1–2 | Chủ góp 20 tiền: chỉ đúng hai dòng cùng tăng 20, phương trình vẫn cân |
-| B — Từ doanh thu tới lợi nhuận | Mục 3; Bài tập 3 và 6 | Giải thích vì sao tiền mua máy không bị trừ hết khỏi lợi nhuận ngay lúc mua |
-| C — Từ số tuyệt đối tới tỷ số | Mục 4–5; Bài tập 4–5 và 7–10 | Tính một tỷ số, giải thích mẫu số và một trường hợp tỷ số gây hiểu sai |
-
-Câu hỏi ôn đầu bài (đáp án ở mục 9):
-1. Bán hàng 100 nhưng khách mới trả 60. Doanh thu kỳ này có thể là bao nhiêu, và 40 còn lại nằm ở đâu (Bài 001)?
-2. Báo cáo nào là "ảnh chụp tại một ngày", báo cáo nào là "phim trong một kỳ"?
-3. Vì sao mua một chiếc máy dùng nhiều năm thường **không** làm dòng tiền hoạt động âm (Bài 001)?
+| **Phiên A — Ghi hai chỗ** | Mục 1–2; Bài tập 1–2 | Chủ góp 20 triệu tiền mặt: chỉ ra hai dòng cùng tăng 20 triệu để phương trình cân |
+| **Phiên B — Cầu thang lợi nhuận** | Mục 3; Bài tập 3 và 6 | Giải thích `EBIT`, `EBITDA`, `EPS` và vì sao mua máy không trừ hết ngay vào lợi nhuận |
+| **Phiên C — Sáu tỷ số & DuPont** | Mục 4–5; Bài tập 4–5, 7–10 | Tính `ROA`, `ROE`, tách `ROE` thành 3 phần và nêu trường hợp `ROE` cao gây hiểu sai |
 
 ## Bài này làm gì và chưa làm gì
 
 | Bài này làm | Bài này chưa làm |
 |---|---|
-| Dạy phương trình kế toán và bút toán kép ở mức trực giác | Không dạy định khoản theo hệ thống tài khoản của bất kỳ nước nào |
-| Dạy thứ tự các tầng lợi nhuận và tên gọi EBIT, EBITDA, EPS | Không dạy mẫu biểu báo cáo Việt Nam ([Bài N3](N3-vietnam-vas-statements.md)) |
-| Dạy sáu tỷ số cơ bản và phân rã ROE | Không dạy ROIC (Bài 003), dòng tiền tự do (Bài 004), bội số (Bài 009) |
-| Đọc một báo cáo thật (Apple 10-K) theo các tầng | Không đánh giá doanh nghiệp đó tốt hay xấu |
-| Dành cho doanh nghiệp **phi tài chính** | Không áp nguyên khung cho ngân hàng, bảo hiểm, chứng khoán ([Bài 013](013-financial-institutions-wear-hats.md), [F4](F4-vietnam-bank-analysis.md), [F8](F8-insurance-float-actuarial.md)) |
+| Dạy phương trình kế toán và nguyên tắc "ghi hai chỗ" bằng trực giác | Không dạy định khoản Nợ/Có theo số hiệu tài khoản kế toán |
+| Giải thích từng bậc thang lợi nhuận và ý nghĩa `EBIT`, `EBITDA`, `EPS` | Chưa dạy tra cứu hồ sơ gốc ([Bài N8](N8-finding-verifying-sources.md)) và mã số báo cáo Việt Nam ([Bài N3](N3-vietnam-vas-statements.md)) |
+| Hướng dẫn tính 6 tỷ số cơ bản và phân rã `ROE` theo DuPont | Chưa dạy `ROIC` ([Bài 003](003-business-quality-moat-and-roic.md)), dòng tiền tự do ([Bài 004](004-cash-flow-and-earnings-quality.md)) hay bội số ([Bài 009](009-valuation-multiples.md)) |
+| Thực hành đọc báo cáo thật của Apple (`Form 10-K FY2025`) | Không áp cho ngân hàng và bảo hiểm ([Bài 013](013-banks-insurers.md), [Bài F4](F4-vietnam-bank-analysis.md), [Bài F8](F8-vietnam-insurance-analysis.md)) |
 
 ## 1. Bảng cân đối: phương trình luôn cân
 
@@ -81,46 +83,67 @@ Quy tắc cốt lõi: **mỗi giao dịch làm thay đổi ít nhất hai dòng,
 | 9 | Trả lãi vay 10 | Tiền **−10** | Chi phí lãi → lợi nhuận giữ lại **−10** |
 | 10 | Thuế thu nhập 12, chưa nộp | Thuế phải nộp **+12** | Chi phí thuế → lợi nhuận giữ lại **−12** |
 
-`PHÉP_TÍNH` Bảng cân đối cuối năm:
+`PHÉP_TÍNH` Trước khi lắp vào Bảng cân đối cuối năm, hãy cộng nhẩm từng dòng theo đúng 10 giao dịch trên để thấy mọi con số đều từ các phép cộng trừ đơn giản mà ra:
+- **Tiền mặt trong két cuối năm:** Bắt đầu `0` + Chủ góp vốn `500` (GD 1) + Vay ngân hàng `300` (GD 2) − Mua máy pha cà phê `400` (GD 3) + Tiền mặt thu từ khách mua cà phê `200` (GD 5) − Trả lương nhân viên `60` (GD 7) − Trả lãi vay ngân hàng `10` (GD 9) = **`530 triệu đồng`**.
+- **Khoản phải thu khách hàng:** Khách mua cà phê còn nợ lại **`50 triệu đồng`** (GD 5).
+- **Hàng tồn kho nguyên liệu:** Nhập về `100` (GD 4) − Đã đem pha chế hết `80` (GD 6) = Còn trong kho **`20 triệu đồng`**.
+- **Máy móc thiết bị (giá trị còn lại):** Mua ban đầu `400` (GD 3) − Hao mòn năm đầu `40` (GD 8) = Còn **`360 triệu đồng`**.
+- **Lợi nhuận giữ lại tích lũy cuối năm:** Doanh thu bán hàng `+250` (GD 5) − Giá vốn nguyên liệu `80` (GD 6) − Chi phí lương `60` (GD 7) − Chi phí khấu hao máy `40` (GD 8) − Chi phí lãi vay `10` (GD 9) − Thuế thu nhập `12` (GD 10) = **`+48 triệu đồng`**.
 
-| Tài sản | Số | Nợ phải trả và vốn chủ | Số |
+Bảng cân đối kế toán cuối năm của Quán cà phê Sao Biển:
+
+| Tài sản (Quán đang có gì?) | Số tiền | Nợ phải trả và Vốn chủ sở hữu (Nguồn tiền từ đâu?) | Số tiền |
 |---|---:|---|---:|
-| Tiền `500 + 300 − 400 + 200 − 60 − 10` | 530 | Nợ vay | 300 |
-| Phải thu khách hàng | 50 | Phải trả người bán | 100 |
-| Tồn kho `100 − 80` | 20 | Thuế phải nộp | 12 |
-| Máy móc `400 − 40` | 360 | **Tổng nợ phải trả** | **412** |
-| | | Vốn góp | 500 |
-| | | Lợi nhuận giữ lại `250 − 80 − 60 − 40 − 10 − 12` | 48 |
-| | | **Tổng vốn chủ** | **548** |
-| **Tổng tài sản** | **960** | **Tổng nợ + vốn chủ** | **960** |
+| Tiền mặt (`500 + 300 − 400 + 200 − 60 − 10`) | 530 | Nợ vay ngân hàng (GD 2) | 300 |
+| Phải thu khách hàng (GD 5) | 50 | Phải trả người bán nguyên liệu (GD 4) | 100 |
+| Hàng tồn kho (`100 − 80`) | 20 | Thuế thu nhập còn phải nộp (GD 10) | 12 |
+| Máy móc thiết bị (`400 − 40`) | 360 | **Tổng Nợ phải trả (`300 + 100 + 12`)** | **412** |
+| | | Vốn góp ban đầu của chủ (GD 1) | 500 |
+| | | Lợi nhuận giữ lại (`250 − 80 − 60 − 40 − 10 − 12`) | 48 |
+| | | **Tổng Vốn chủ sở hữu (`500 + 48`)** | **548** |
+| **Tổng Tài sản (`530 + 50 + 20 + 360`)** | **960** | **Tổng Nợ phải trả + Vốn chủ (`412 + 548`)** | **960** |
 
-Ba điều đáng chú ý: (1) Giao dịch 3 (mua máy) **không** làm giảm lợi nhuận ngay lúc mua mà đi vào lợi nhuận dần qua khấu hao (giao dịch 8); (2) Giao dịch 8 (khấu hao) làm giảm lợi nhuận nhưng **không** làm giảm tiền; (3) Giao dịch 4 và 10 tạo nợ mà chưa tốn tiền, nên tiền cuối năm (530) khác hẳn lợi nhuận (48).
+Ba điều đáng chú ý nhất từ bảng trên:
+1. **Giao dịch 3 (mua máy pha cà phê 400 triệu) không làm giảm lợi nhuận ngay lúc mua:** Lúc mới mua, nó chỉ đổi 400 triệu từ dòng "Tiền mặt" sang dòng "Máy móc" (tổng tài sản vẫn không đổi). Chi phí của chiếc máy đi vào lợi nhuận từ từ mỗi năm `40 triệu` thông qua **khấu hao** (Giao dịch 8).
+2. **Giao dịch 8 (khấu hao 40 triệu) làm giảm lợi nhuận nhưng không làm vơi tiền mặt trong năm đó:** Vì tiền mua máy đã trả từ lúc đầu năm rồi!
+3. **Giao dịch 4 (mua chịu nguyên liệu 100 triệu) và Giao dịch 10 (thuế 12 triệu chưa nộp) tạo ra nghĩa vụ nợ mà chưa xuất tiền mặt ngay:** Đó là lý do Tiền mặt cuối năm (`530 triệu`) khác hoàn toàn với Lợi nhuận sau thuế (`48 triệu`).
 
-## 3. Báo cáo kết quả kinh doanh: các tầng lợi nhuận
+## 3. Báo cáo kết quả kinh doanh: Đi xuống từng bậc cầu thang lợi nhuận
 
-`SỰ_THẬT` Theo hướng dẫn của SEC, báo cáo kết quả kinh doanh đi từ trên xuống: doanh thu gộp → trừ giảm trừ → **doanh thu thuần** → trừ giá vốn → **lợi nhuận gộp** → trừ chi phí hoạt động và khấu hao → **lợi nhuận hoạt động** → cộng/trừ thu nhập và chi phí lãi → trừ thuế thu nhập → **lợi nhuận ròng**; EPS là lợi nhuận ròng chia số cổ phiếu lưu hành.
+`SỰ_THẬT` Theo hướng dẫn của [SEC](https://www.sec.gov/reportspubs/investor-publications/investorpubsbegfinstmtguide), Báo cáo kết quả kinh doanh giống như một **cầu thang đi từ trên đỉnh xuống dưới chân**: bắt đầu từ tổng tiền bán hàng trên cùng, mỗi bước đi xuống lại trừ bớt một loại chi phí để ra một tầng lợi nhuận hẹp hơn:
+1. **Doanh thu thuần (`Net Revenue / Net Sales`):** Tổng giá trị hàng bán ra sau khi đã trừ chiết khấu, hàng trả lại.
+2. Trừ **Giá vốn hàng bán (`Cost of Goods Sold — COGS`)** (chi phí nguyên liệu, sản xuất trực tiếp ra món hàng đó) $\to$ còn lại **Lợi nhuận gộp (`Gross Profit`)**.
+3. Trừ tiếp **Chi phí hoạt động (`Operating Expenses`)** (như lương nhân viên bán hàng, quản lý, thuê mặt bằng, nghiên cứu phát triển và khấu hao máy móc) $\to$ còn lại **Lợi nhuận hoạt động (`Operating Income`)**, thường xấp xỉ với chỉ số **`EBIT`** (*Earnings Before Interest and Taxes* — **Lợi nhuận trước lãi vay và thuế**).
+4. Cộng/trừ thu nhập và **Chi phí lãi vay ngân hàng (`Interest Expense`)** $\to$ còn lại **Lợi nhuận trước thuế (`Earnings Before Taxes — EBT`)**.
+5. Trừ **Thuế thu nhập doanh nghiệp (`Income Tax`)** $\to$ còn lại dòng cuối cùng là **Lợi nhuận sau thuế / Lợi nhuận ròng (`Net Income`)**.
 
-`PHÉP_TÍNH` Áp vào quán cà phê:
+`PHÉP_TÍNH` Áp đúng cầu thang này vào Quán cà phê Sao Biển (đơn vị: triệu đồng):
 
 ```text
-Doanh thu thuần                          250
-− Giá vốn hàng bán                       (80)
-= Lợi nhuận gộp                          170
-− Chi phí lương                          (60)
-− Khấu hao                               (40)
-= Lợi nhuận hoạt động (≈ EBIT)            70
-− Chi phí lãi vay                        (10)
-= Lợi nhuận trước thuế                    60
-− Thuế thu nhập 20%                      (12)
-= Lợi nhuận sau thuế                      48
+  Doanh thu thuần (Giao dịch 5)                    250
+− Giá vốn nguyên liệu đã dùng (Giao dịch 6)        (80)
+──────────────────────────────────────────────────────
+= TẦNG 1: Lợi nhuận gộp (Gross Profit)             170   (Biên gộp = 170 / 250 = 68,0%)
+− Chi phí lương nhân viên (Giao dịch 7)            (60)
+− Chi phí khấu hao máy pha cà phê (Giao dịch 8)    (40)
+──────────────────────────────────────────────────────
+= TẦNG 2: Lợi nhuận hoạt động (≈ EBIT)              70   (Biên hoạt động = 70 / 250 = 28,0%)
+− Chi phí lãi vay ngân hàng (Giao dịch 9)          (10)
+──────────────────────────────────────────────────────
+= TẦNG 3: Lợi nhuận trước thuế (EBT)                60
+− Thuế thu nhập doanh nghiệp 20% (Giao dịch 10)    (12)
+──────────────────────────────────────────────────────
+= TẦNG 4: Lợi nhuận sau thuế (Net Income)           48   (Biên ròng = 48 / 250 = 19,2%)
 ```
 
-| Tên | Nghĩa | Quán cà phê |
+Hãy giải nghĩa 4 thuật ngữ viết tắt bạn sẽ gặp suốt khóa học:
+
+| Thuật ngữ viết tắt | Tên đầy đủ và ý nghĩa bình dân | Số của Quán Sao Biển |
 |---|---|---:|
-| **EBIT** | Lợi nhuận trước lãi vay và thuế | 70 |
-| **EBITDA** | EBIT cộng lại khấu hao và phân bổ | `70 + 40 = 110` |
-| **Lợi nhuận thuộc cổ đông công ty mẹ** | Với tập đoàn có công ty con không sở hữu 100%, phần lợi nhuận của cổ đông thiểu số bị tách ra | (không áp dụng) |
-| **EPS** | Lợi nhuận phân bổ cho cổ phiếu phổ thông của công ty mẹ chia số cổ phiếu bình quân. `SỰ_THẬT` Ở Việt Nam, tử số có thể đã trừ **quỹ khen thưởng, phúc lợi**: Vinamilk 2025 trừ 992,8 tỷ đồng khỏi 9.410,2 tỷ lợi nhuận thuộc công ty mẹ, chia 2.089.955.445 cổ phiếu ra EPS 4.028 đồng (thuyết minh VI.11); `PHÉP_TÍNH` không trừ thì ra khoảng 4.503 đồng ([Bài N3](N3-vietnam-vas-statements.md)). | — |
+| **`EBIT`** (*Earnings Before Interest and Taxes*) | **Lợi nhuận trước lãi vay và thuế:** Đo sức kiếm lời của bản thân hoạt động kinh doanh trước khi chia tiền lãi cho ngân hàng và nộp thuế cho Nhà nước. | **`70`** |
+| **`EBITDA`** (*Earnings Before Interest, Taxes, Depreciation, and Amortization*) | **Lợi nhuận trước lãi vay, thuế, khấu hao và phân bổ:** Lấy `EBIT` cộng ngược lại chi phí khấu hao tài sản hữu hình (`Depreciation`) và phân bổ tài sản vô hình (`Amortization`). | `70 + 40 =` **`110`** |
+| **Lợi nhuận thuộc cổ đông công ty mẹ** | Nếu một tập đoàn có các công ty con mà tập đoàn chỉ nắm 70%–80% vốn, phần lợi nhuận thuộc về 20%–30% cổ đông bên ngoài (gọi là **cổ đông không kiểm soát — `NCI`**) phải được tách riêng ra. | *(Không áp dụng vì quán chưa có công ty con)* |
+| **`EPS`** (*Earnings Per Share*) | **Lãi cơ bản trên mỗi cổ phiếu:** Lấy phần lợi nhuận ròng dành cho cổ đông phổ thông chia cho số lượng cổ phiếu phổ thông đang lưu hành bình quân trong kỳ. `SỰ_THẬT` Tại Việt Nam, tử số tính `EPS` thường phải trừ thêm khoản trích **quỹ khen thưởng, phúc lợi** (ví dụ: Vinamilk năm 2025 trừ `992,8 tỷ đồng` quỹ khen thưởng phúc lợi khỏi `9.410,2 tỷ đồng` lợi nhuận thuộc công ty mẹ rồi mới chia cho `2.089.955.445` cổ phiếu để ra `EPS = 4.028 đồng/cp`; nếu quên trừ sẽ tính nhầm thành `4.503 đồng/cp` — sẽ học kỹ ở **[Bài N3](N3-vietnam-vas-statements.md)**). | — |
 
 `SỰ_THẬT` EBITDA **không** phải chỉ tiêu do chuẩn mực quy định. Điều chỉnh thêm bất cứ khoản nào ngoài lãi vay, thuế, khấu hao, phân bổ thì đó là "EBITDA điều chỉnh", không còn là EBITDA.
 
@@ -235,38 +258,35 @@ Ba bài học từ Apple FY2025:
 
 ## Bài làm với dữ liệu thiếu hoặc lệch
 
-Khi đọc báo cáo tài chính thực tế để tính các tỷ số ở bài `N2`, bạn thường gặp hai tình huống dữ liệu lệch hoặc thiếu:
-1. **Khấu hao nằm ẩn trong Giá vốn và Chi phí hoạt động:** Báo cáo kết quả kinh doanh (cả US GAAP như Apple lẫn VAS ở Việt Nam) thường không tách một dòng riêng tên là "Chi phí khấu hao" ngay trên mặt bảng kết quả kinh doanh, nên người mới không biết lấy số khấu hao ở đâu để tính `EBITDA`.
-2. **Lệch mẫu số Vốn chủ sở hữu (`Đầu kỳ`, `Cuối kỳ`, `Bình quân`) và Lợi ích cổ đông không kiểm soát (`NCI`):** Các trang web tài chính tự động tính `ROE` bằng nhiều công thức khác nhau mà không ghi chú.
+Khi đọc báo cáo thực tế để tính tỷ số ở bài `N2`, bạn thường gặp hai tình huống dữ liệu lệch hoặc thiếu:
+1. **Khấu hao nằm ẩn trong Giá vốn và Chi phí hoạt động:** Báo cáo kết quả kinh doanh (cả US GAAP như Apple lẫn VAS ở Việt Nam) thường không tách dòng riêng "Chi phí khấu hao" trên mặt bảng kết quả kinh doanh.
+2. **Lệch mẫu số Vốn chủ (`Đầu kỳ`, `Cuối kỳ`, `Bình quân`) và Lợi ích cổ đông không kiểm soát (`NCI`):** Các trang web tự động tính `ROE` bằng nhiều công thức khác nhau mà không ghi chú.
 
-**Quy trình xử lý chuẩn Bậc S:**
-- **Bước 1 — Lấy số Khấu hao và Phân bổ (`D&A`) từ Báo cáo lưu chuyển tiền tệ (phương pháp gián tiếp) hoặc Thuyết minh chi phí theo yếu tố:** Như đã làm với Apple FY2025 (`11.698 triệu USD` trên báo cáo dòng tiền), luôn mở Báo cáo lưu chuyển tiền tệ phần điều chỉnh khấu hao để cộng vào `EBIT`. Nếu báo cáo lập theo phương pháp trực tiếp và thiếu thuyết minh chi tiết, gắn nhãn `CHƯA_BIẾT` đối với `EBITDA` thay vì tự đoán.
-- **Bước 2 — Chuẩn hóa mẫu số và kiểm tra chất lượng thu nhập qua [earnings_quality.py](../practice/models/earnings_quality.py):** Luôn ghi rõ quy ước mẫu số (`ROE đầu kỳ` hay `ROE bình quân`), tách `Lợi ích cổ đông không kiểm soát` khỏi mẫu số vốn chủ của cổ đông công ty mẹ, và kiểm tra tỷ số `CFO / Lợi nhuận ròng` trước khi tin vào `ROE`.
+**Quy trình xử lý chuẩn:**
+- **Bước 1 — Lấy Khấu hao & Phân bổ (`D&A`) từ Báo cáo lưu chuyển tiền tệ (phương pháp gián tiếp) hoặc Thuyết minh chi phí theo yếu tố:** Như với Apple FY2025 (`11.698 triệu USD` trên báo cáo dòng tiền), luôn mở Báo cáo dòng tiền phần điều chỉnh khấu hao để cộng vào `EBIT`. Nếu thiếu thuyết minh, gắn nhãn `CHƯA_BIẾT` đối với `EBITDA`.
+- **Bước 2 — Chuẩn hóa mẫu số và kiểm tra chất lượng thu nhập qua [earnings_quality.py](../practice/models/earnings_quality.py):** Ghi rõ quy ước mẫu số (`ROE đầu kỳ` hay `bình quân`), tách `NCI` khỏi vốn chủ cổ đông công ty mẹ, và kiểm tra `CFO / Lợi nhuận ròng`.
 
 ## Sai ở đâu
 
-### Sai lầm 1: Lọc cổ phiếu theo "ROE cao nhất sàn" mà không phân rã DuPont và không kiểm tra vốn chủ
-- **Bối cảnh:** Nhà đầu tư dùng bộ lọc tự động chọn các công ty có `ROE > 40%` vì tin rằng đó là những doanh nghiệp có lợi thế cạnh tranh mạnh nhất.
-- **Sai ở đâu:** Bỏ qua thừa số thứ ba trong hằng đẳng thức DuPont (`Hệ số nhân vốn chủ = Tài sản / Vốn chủ`). Một doanh nghiệp có vốn chủ bị bào mòn mỏng dính do thua lỗ lũy kế những năm trước hoặc vay nợ cực cao chỉ cần báo lãi nhẹ một quý là `ROE` vọt lên `50%–100%`; ngược lại, doanh nghiệp chất lượng cao mua lại cổ phiếu mạnh như McDonald's có vốn chủ âm (`-3.797 triệu USD`) sẽ có `ROE` âm (`-216,6%`) và bị bộ lọc loại bỏ.
-- **Cách sửa:** Luôn phân rã `ROE` thành 3 thừa số (`Biên ròng × Vòng quay tài sản × Hệ số nhân vốn chủ`) và kết hợp với `ROA`, `ROIC`.
+### Sai lầm 1: Lọc cổ phiếu theo "ROE cao nhất sàn" mà không phân rã DuPont
+- **Sai ở đâu:** Bỏ qua `Hệ số nhân vốn chủ = Tài sản / Vốn chủ`. Doanh nghiệp có vốn chủ mỏng dính do lỗ lũy kế hoặc vay nợ cao chỉ cần lãi nhẹ là `ROE` vọt lên `50%–100%`; ngược lại, công ty mua lại cổ phiếu mạnh như McDonald's có vốn chủ âm (`-3.797 triệu USD`) có `ROE` âm (`-216,6%`).
+- **Cách sửa:** Luôn phân rã `ROE = Biên ròng × Vòng quay tài sản × Hệ số nhân vốn chủ` và kết hợp với `ROA`, `ROIC`.
 
-### Sai lầm 2: Trừ khấu hao hai lần khi tính `EBIT` hoặc coi `EBITDA` là tiền mặt sẵn có để trả nợ
-- **Bối cảnh:** Khi thấy chi phí khấu hao `50 tỷ` trong thuyết minh, người phân tích lấy `Lợi nhuận gộp − Chi phí bán hàng − Chi phí quản lý − Khấu hao` để tính `EBIT`, sau đó lại dùng `EBITDA` làm số tiền mặt có thể rút ra trả nợ gốc ngân hàng.
-- **Sai ở đâu:** (1) Chi phí khấu hao đã nằm sẵn bên trong Giá vốn, Chi phí bán hàng và Chi phí quản lý, nên trừ thêm một lần nữa là tính trùng; (2) `EBITDA` chưa trừ thuế thu nhập, chưa trừ vốn lưu động tăng thêm (phải thu, tồn kho) và chưa trừ chi tiêu mua sắm máy móc (`CapEx`).
-- **Cách sửa:** Kiểm tra cầu nối từ Lợi nhuận sang `CFO` và `FCF` bằng mô hình [earnings_quality.py](../practice/models/earnings_quality.py).
+### Sai lầm 2: Trừ khấu hao hai lần khi tính `EBIT` hoặc coi `EBITDA` là tiền mặt trả nợ
+- **Sai ở đâu:** (1) Khấu hao đã nằm sẵn trong Giá vốn, Chi phí bán hàng và Quản lý nên trừ thêm là tính trùng; (2) `EBITDA` chưa trừ thuế, biến động vốn lưu động và `CapEx`.
+- **Cách sửa:** Kiểm tra cầu nối từ Lợi nhuận sang `CFO` và `FCF` bằng [earnings_quality.py](../practice/models/earnings_quality.py).
 
-### Sai lầm 3: Áp dụng nguyên xi công thức Biên lợi nhuận gộp và `EBITDA` của bài `N2` cho Ngân hàng và Bảo hiểm
-- **Bối cảnh:** Người học mở báo cáo của Vietcombank (`VCB`) hoặc Tập đoàn Bảo Việt (`BVH`) để tìm dòng "Giá vốn hàng bán" và tính `EBITDA`.
-- **Sai ở đâu:** Ngân hàng và bảo hiểm có cấu trúc bảng cân đối và báo cáo kết quả kinh doanh đặc thù: với ngân hàng, lãi vay là chi phí vốn đầu vào để tạo ra thu nhập lãi thuần (`NII`), không tồn tại khái niệm `EBITDA`.
-- **Cách sửa:** Chỉ dùng khung `N2` cho doanh nghiệp phi tài chính; với ngân hàng và bảo hiểm, chuyển sang khung chuyên biệt tại [Bài 013](013-financial-institutions-wear-hats.md), [F4](F4-vietnam-bank-analysis.md) và [F8](F8-insurance-float-actuarial.md).
+### Sai lầm 3: Áp dụng Biên lợi nhuận gộp và `EBITDA` của bài `N2` cho Ngân hàng và Bảo hiểm
+- **Sai ở đâu:** Với ngân hàng, lãi vay là chi phí đầu vào để tạo thu nhập lãi thuần (`NII`), không tồn tại khái niệm `EBITDA`.
+- **Cách sửa:** Với ngân hàng và bảo hiểm, dùng khung riêng tại [Bài 013](013-banks-insurers.md), [Bài F4](F4-vietnam-bank-analysis.md) và [Bài F8](F8-vietnam-insurance-analysis.md).
 
 ## Kiểm tra chuyển bài
 
-Trước khi chuyển sang [Bài N3 — Đọc báo cáo tài chính Việt Nam theo VAS](N3-vietnam-vas-statements.md), hãy tự trả lời 3 câu hỏi kiểm tra năng lực chuyển giao dưới đây:
+Trước khi chuyển sang [Bài N8 — Tìm và kiểm nguồn](N8-finding-verifying-sources.md) (Bước 5/23) và [Bài N3 (Phần A) — Tìm đường trên báo cáo Việt Nam](N3-vietnam-vas-statements.md#phần-a--tìm-đường-trên-báo-cáo-sau-n2) (Bước 6/23), hãy trả lời 3 câu hỏi sau:
 
-1. **Chuyển giao sang mẫu biểu VAS ([Bài N3](N3-vietnam-vas-statements.md)):** Vì sao khi mở Báo cáo kết quả hoạt động kinh doanh của một doanh nghiệp Việt Nam, bạn **không được** lấy dòng "Lợi nhuận thuần từ hoạt động kinh doanh" (mã 30) làm `EBIT`?
-2. **Chuyển giao sang Phân tích Hiệu quả vốn ([Bài 003](003-roic-moat.md)):** Qua ví dụ Apple FY2025 (`ROE đầu kỳ = 196,7%`, tiền mặt và đầu tư tài chính `132.420 triệu USD`), vì sao chúng ta cần học thêm chỉ số `ROIC` ở Bài 003 để đánh giá hiệu quả đồng vốn kinh doanh cốt lõi mà không bị nhiễu bởi cấu trúc tài trợ và cổ phiếu quỹ?
-3. **Chuyển giao sang Kiểm định Chất lượng lợi nhuận ([earnings_quality.py](../practice/models/earnings_quality.py)):** Nếu một doanh nghiệp ghi nhận doanh thu và lợi nhuận ròng tăng vọt nhờ bút toán bán chịu (`Phải thu khách hàng` tăng, `Lợi nhuận giữ lại` tăng), dòng nào trên Báo cáo lưu chuyển tiền tệ theo phương pháp gián tiếp sẽ tự động phơi bày việc doanh nghiệp chưa thu được tiền mặt?
+1. **Chuyển giao sang [Bài N8](N8-finding-verifying-sources.md) & [Bài N3](N3-vietnam-vas-statements.md):** Vì sao trên Báo cáo kết quả kinh doanh Việt Nam bạn **không được** lấy dòng "Lợi nhuận thuần từ hoạt động kinh doanh" (mã 30) làm `EBIT`?
+2. **Chuyển giao sang [Bài 003](003-business-quality-moat-and-roic.md):** Qua ví dụ Apple FY2025 (`ROE đầu kỳ = 196,7%`), vì sao cần học thêm chỉ số `ROIC` ở Bài 003?
+3. **Chuyển giao sang [`practice/models/earnings_quality.py`](../practice/models/earnings_quality.py):** Nếu lợi nhuận tăng vọt nhờ bán chịu (`Phải thu khách hàng` tăng), dòng nào trên Báo cáo lưu chuyển tiền tệ gián tiếp sẽ phơi bày việc chưa thu được tiền mặt?
 
 ## 11. Ranh giới an toàn và Điều chưa hiểu
 

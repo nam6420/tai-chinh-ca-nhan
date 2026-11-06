@@ -13,6 +13,12 @@
 
 Một tiêu đề “công ty sẽ chia cổ tức” và một sao kê tiền đã nhận trả lời hai câu khác nhau. Tìm văn bản của người ra quyết định, kiểm thông báo thực hiện quyền, ghi ngày và phiên bản; đừng biến một kế hoạch thành kết quả đã xảy ra.
 
+## Ôn bài cũ
+
+- Trong [Bài V3 — Sự kiện quyền của cổ đông tại Việt Nam](V3-corporate-actions.md) và [Bài N8 — Tìm và kiểm chứng nguồn thông tin](N8-finding-verifying-sources.md), bạn đã biết các sự kiện doanh nghiệp và nguyên tắc nguồn gốc. Bài V4 hướng dẫn tra cứu công bố thông tin chính thức tại thị trường Việt Nam.
+
+---
+
 ## 1. Các nơi tìm và vai trò
 
 | Nguồn | Điều có thể tìm | Giới hạn |

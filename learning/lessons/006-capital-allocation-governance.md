@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 09:02 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Kể lại được năm lựa chọn phân bổ vốn và cách chúng xuất hiện trên báo cáo tài chính; đo được chất lượng phân bổ qua ROIC sau thương vụ, goodwill và số cổ phiếu lưu hành; tính được tác động pha loãng lên EPS; đọc được bốn điểm quản trị trọng yếu (thù lao ban điều hành, giao dịch bên liên quan, cấu trúc sở hữu, thay đổi kiểm toán viên).
 - Thời lượng: 35 phút đọc + 40 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 003](003-business-quality-moat-and-roic.md) (ROIC), [Bài 004](004-cash-flow-and-earnings-quality.md) (dòng tiền), [Bài 005](005-debt-liquidity-survival.md) (nợ)
+- Bài trước liên quan: Thứ tự đọc **Bước 12/23 của Nhánh 1** — học ngay sau [Bài 005: Nợ, thanh khoản và khả năng sống sót](005-debt-liquidity-survival.md) (kế thừa [Bài 004](004-cash-flow-and-earnings-quality.md) và [Bài 003](003-business-quality-moat-and-roic.md)). Học tiếp: [Bài 007: Đọc thuyết minh và cờ đỏ kế toán](007-notes-and-accounting-red-flags.md) (Bước 13/23).
 - Câu hỏi cốt lõi: **Ban điều hành đã dùng tiền của cổ đông như thế nào trong 5–10 năm, và kết quả đo được là gì?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Mọi ví dụ số học là hư cấu. Bài này không kết luận "quản trị tốt/xấu" cho doanh nghiệp nào; nó dạy **cách đọc bằng chứng**.
@@ -17,12 +17,12 @@
 
 ## Ôn bài cũ (5 phút)
 
-Đáp án ở mục 9.
+Ôn lại các bài liền trước theo đúng thứ tự Nhánh 1 ([Bài 003](003-business-quality-moat-and-roic.md) → [Bài 004](004-cash-flow-and-earnings-quality.md) → [Bài 005](005-debt-liquidity-survival.md)). Đáp án ở mục 9:
 
-1. ROIC được tính thế nào, và vì sao phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị?
-2. Khi doanh nghiệp mua lại một công ty khác với giá cao hơn giá trị tài sản thuần, khoản chênh lệch được ghi vào đâu?
-3. Vì sao "lợi nhuận tăng" chưa chắc là "EPS tăng"?
-4. Nêu một cách doanh nghiệp có thể làm CFO đẹp lên mà không cải thiện hoạt động kinh doanh.
+1. `ROIC` ở [Bài 003](003-business-quality-moat-and-roic.md) được tính thế nào, và vì sao phải so với chi phí vốn mới biết tăng trưởng tạo hay phá giá trị?
+2. Khi doanh nghiệp dùng tiền hoặc vay nợ ([Bài 005](005-debt-liquidity-survival.md)) mua lại một công ty khác với giá cao hơn giá trị tài sản thuần, khoản chênh lệch được ghi vào đâu?
+3. Vì sao "lợi nhuận tăng" chưa chắc là "`EPS` tăng" ([Bài N1](N1-market-basics.md) & [Bài N2](N2-statement-line-items.md))?
+4. Nêu một cách doanh nghiệp có thể làm `CFO` đẹp lên mà không cải thiện hoạt động kinh doanh ([Bài 004](004-cash-flow-and-earnings-quality.md)).
 
 ## Bài này làm gì và chưa làm gì
 

@@ -13,6 +13,12 @@
 
 Một quyết định có thể sai dù giá tăng ngay sau đó; một quyết định đúng quy trình vẫn có thể gặp kết quả xấu. Nhật ký giúp tách điều biết tại thời điểm quyết định, giả định và kết quả về sau. Nó không loại bỏ bất định và không chứng minh người ghi không có thiên kiến.
 
+## Ôn bài cũ
+
+- Trong [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), ta đã thấy đám đông hưng phấn ở đỉnh và hoảng loạn ở đáy. Bài H1 mở đầu **Tầng H (Tâm lý, Rủi ro & Đo lường hiệu quả)** bằng cách nhận diện các thiên kiến hành vi phổ biến nhất.
+
+---
+
 ## 1. Các kiểu hành vi cần tự hỏi
 
 `SỰ_THẬT` [SEC — Behavioral Patterns of U.S. Investors](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-72), 16/06/2014, tóm tắt nghiên cứu Thư viện Quốc hội Hoa Kỳ về các hành vi có thể làm giảm hiệu quả, gồm giao dịch quá thường xuyên, bán bên thắng quá sớm và giữ bên thua quá lâu, chạy theo kết quả quá khứ và bỏ qua phí. SEC nêu nghiên cứu không nhất thiết phản ánh quan điểm của cơ quan. Không suy mọi nhà đầu tư hoặc mọi thị trường hành xử giống mẫu nghiên cứu.

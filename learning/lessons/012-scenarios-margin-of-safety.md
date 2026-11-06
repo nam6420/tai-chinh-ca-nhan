@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
 - Nguồn số Apple: Form 10-K FY2025 mở ngày `2026-10-31`.
 - Mục tiêu: Biến một mô hình DCF thành ba kịch bản có điều kiện; hiểu vì sao xác suất gán cho kịch bản là giả định; tính biên an toàn và nhìn thấy giới hạn của nó; viết điều kiện bác bỏ đo được; tính tác động của chi phí giao dịch.
-- Bài trước liên quan: [011](011-dcf-reverse-dcf.md), [010](010-cost-of-capital.md), N7, 009. Học tiếp 015, 016.
+- Bài trước liên quan: Thứ tự đọc **Bước 21/23 của Nhánh 1** — học ngay sau [Bài 011: DCF và định giá ngược](011-dcf-reverse-dcf.md) (kế thừa [Bài 010](010-cost-of-capital.md), [Bài N7](N7-data-probability-uncertainty.md) và [Bài 009](009-valuation-multiples.md)). Học tiếp: chuỗi thực hành định lượng [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md) → [Bài Q2](Q2-sbc-dilution-buybacks-dividends.md) → [Bài Q1](Q1-earnings-quality-toolkit.md) → [Bài Q3](Q3-normalizing-earnings-cyclical.md), hoặc sang thẳng [Bài 015: Tâm lý, bảng tự kiểm và nhật ký quyết định](015-behavior-decision-journal.md) (Bước 22/23) và [Bài 016: Bài tổng kết nghiên cứu doanh nghiệp](016-company-research-capstone.md) (Bước 23/23).
 - Thời lượng: 2–3 phiên (A: mục 1–3; B: mục 4–6; C: bài tập).
 - Tệp thực hành: [valuation.py](../practice/models/valuation.py) (hàm `dcf`, `per_share`, `sensitivity`).
 - Kiểm nguồn: `ĐẠT`
@@ -18,10 +18,11 @@ Một mô hình chỉ cho một con số, nhưng tương lai không có một co
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-1. 011: TV chiếm khoảng bao nhiêu phần EV trong mô hình Apple của bài đó, và điều đó cảnh báo điều gì?
-2. 011: nếu g tiến sát WACC thì giá trị mô hình đổi thế nào?
-3. N7: xác suất tự gán 30% cho một kịch bản có phải số đo từ dữ liệu không?
-4. 010: vì sao WACC nên báo khoảng thay vì một số?
+Ôn lại các bài liền trước trong Nhánh 1 ([Bài N7](N7-data-probability-uncertainty.md) → [Bài 010](010-cost-of-capital.md) → [Bài 011](011-dcf-reverse-dcf.md)):
+1. [Bài 011](011-dcf-reverse-dcf.md): `TV` chiếm khoảng bao nhiêu phần `EV` trong mô hình Apple của bài đó, và điều đó cảnh báo điều gì?
+2. [Bài 011](011-dcf-reverse-dcf.md): nếu `g` tiến sát `WACC` thì giá trị mô hình đổi thế nào?
+3. [Bài N7](N7-data-probability-uncertainty.md): xác suất tự gán 30% cho một kịch bản có phải số đo từ dữ liệu không?
+4. [Bài 010](010-cost-of-capital.md): vì sao `WACC` nên báo khoảng thay vì một số?
 
 <details>
 <summary>Mở sau khi tự làm</summary>

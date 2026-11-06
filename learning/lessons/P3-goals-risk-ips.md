@@ -15,7 +15,7 @@ Hai người cùng "không sợ rủi ro" có thể cần cách quản lý rất
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-Đầu vào: nhắc lại từ P1 và P2. Vì sao tiền cần dùng sớm không nên để ở tài sản dao động mạnh, và vì sao nợ lãi cao thường cần xem trước? Đáp án: giá có thể giảm đúng lúc cần tiền, buộc bán ở điều kiện xấu; nợ lãi cao là chi phí gần chắc chắn. `Ý_KIẾN` **Điều kiện tiên quyết** (quan điểm của giáo trình, xem P1 và P2): hãy xem xét quỹ khẩn cấp và nợ lãi cao trước khi chọn phân bổ hay tài sản. Bạn vẫn có thể ghi mục tiêu, nghĩa vụ và dự thảo IPS song song để nhìn rõ các ưu tiên.
+Ôn lại [Bài P1 — Ngân sách, quỹ khẩn cấp và bảo hiểm](P1-budget-emergency-fund-insurance.md) và [Bài P2 — Nợ cá nhân](P2-personal-debt.md): vì sao tiền cần dùng sớm không nên để ở tài sản dao động mạnh, và vì sao nợ lãi cao thường cần xem trước? Đáp án: giá có thể giảm đúng lúc cần tiền, buộc bán ở điều kiện xấu; nợ lãi cao là chi phí gần chắc chắn. `Ý_KIẾN` **Điều kiện tiên quyết** (quan điểm của giáo trình, xem [Bài P1](P1-budget-emergency-fund-insurance.md) và [Bài P2](P2-personal-debt.md)): hãy xem xét quỹ khẩn cấp và nợ lãi cao trước khi chọn phân bổ hay tài sản. Bạn vẫn có thể ghi mục tiêu, nghĩa vụ và dự thảo IPS song song để nhìn rõ các ưu tiên.
 
 ## Bài này làm gì và chưa làm gì
 

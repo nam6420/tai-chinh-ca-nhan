@@ -13,6 +13,12 @@
 
 Sàng lọc là cách giảm số câu hỏi cần xem trước, không phải máy tìm cổ phiếu nên mua. Danh sách theo dõi là hàng đợi nghiên cứu có lý do, nguồn và ngày xem lại; một tiêu chí số có thể bỏ sót công ty tốt hoặc giữ lại công ty có rủi ro.
 
+## Ôn bài cũ
+
+- Trong [Bài 016 — Bài tổng kết nghiên cứu doanh nghiệp](016-company-research-capstone.md) và [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), bạn đã nắm quy trình phân tích một doanh nghiệp. Bài K1 mở đầu **Tầng K (Thực hành nghiên cứu)** bằng cách lọc cổ phiếu và quản lý danh sách theo dõi (`Watchlist`).
+
+---
+
 ## 1. Xác định phạm vi trước khi lọc
 
 `Ý_KIẾN` Ghi thị trường, loại chứng khoán, thời điểm và nguồn dữ liệu; chọn tiêu chí phục vụ câu hỏi như tính đầy đủ báo cáo, thanh khoản cần kiểm hoặc đặc điểm mô hình kinh doanh. Không dùng một ngưỡng tùy ý như chuẩn đúng cho tất cả. Ghi cả đối tượng bị loại và lý do để xem có thiên lệch sống sót hoặc thiếu dữ liệu.

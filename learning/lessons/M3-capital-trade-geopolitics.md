@@ -21,6 +21,12 @@ Việt Nam là một trong những nền kinh tế có độ mở thương mại
 
 ---
 
+## Ôn bài cũ
+
+- Trong [Bài M1 — Chính sách tiền tệ, lãi suất, tỷ giá và tín dụng](M1-monetary-policy-rates-fx-credit.md) và [Bài M2 — Chu kỳ tín dụng và bất động sản](M2-credit-real-estate-cycle.md), ta đã xét vĩ mô nội địa. Bài M3 khép lại **Tầng M** bằng cán cân thanh toán (`BOP`), thương mại quốc tế, dòng vốn `FDI / FII` và địa chính trị.
+
+---
+
 ## Phiên 1 — Giải phẫu Cán cân thanh toán (`BOP`), Thương mại hàng hóa và Dòng vốn `FDI / FII`
 
 ### 1.1. Bốn mảnh ghép của Cán cân thanh toán quốc tế theo chuẩn IMF

@@ -13,6 +13,12 @@
 
 Hậu kiểm không phải kể lại câu chuyện như thể mọi dấu hiệu đều rõ ràng từ đầu. Chọn một mốc, chỉ dùng thông tin có thể biết tại mốc đó, rồi so với những gì xuất hiện sau này. Phân biệt hồ sơ công ty, cáo buộc của cơ quan quản lý và phán quyết đã xác minh.
 
+## Ôn bài cũ
+
+- Trong [Bài K1 — Lọc cổ phiếu và xây danh sách theo dõi](K1-screening-watchlist.md) và [Bài 015 — Tâm lý hành vi và nhật ký quyết định](015-behavior-decision-journal.md), bạn đã biết lập hồ sơ theo dõi và ghi nhật ký. Bài K2 hướng dẫn mổ xẻ một ca đầu tư thất bại (`Postmortem`) để rút ra quy tắc phòng vệ.
+
+---
+
 ## 1. Hai tài liệu, hai phạm vi
 
 `SỰ_THẬT` [Báo cáo Form 10-K của Portland General Electric lưu tại SEC](https://www.sec.gov/Archives/edgar/data/784977/000078497703000004/final10k.htm) cho biết Enron và một số công ty con bắt đầu nộp đơn theo Chapter 11 của luật phá sản Hoa Kỳ trong tháng 12/2001; [Tòa Phá sản Southern District of New York](https://www.nysb.uscourts.gov/node/1491) xác nhận Enron nộp đơn ngày 02/12/2001. Portland General Electric không nằm trong thủ tục phá sản đó. Đây là tài liệu của một công ty liên quan, không phải phán quyết về mọi cá nhân.

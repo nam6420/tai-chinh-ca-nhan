@@ -3,7 +3,7 @@
 - Ngày: `2026-11-05`
 - Chốt dữ liệu lúc: `2026-11-05 12:30 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Tách biệt bốn biến số kinh tế ngành gồm Giá bán (`Price`), Sản lượng (`Volume`), Chi phí biến đổi/cố định (`Variable/Fixed Cost`) và Công suất (`Capacity`); tính điểm hòa vốn khai thác và đòn bẩy hoạt động (`DOL`); giải phẫu cơ chế Chu kỳ vốn (`Capital Cycle`) với độ trễ đầu tư tài sản cố định (`CapEx lag`) và tránh bẫy định giá đỉnh chu kỳ (`Peak-earnings P/E trap`).
-- Bài trước liên quan: [N6](N6-cost-volume-profit-leverage.md), [003](003-roic-moat.md), [008](008-macro-transmission.md), [F5](F5-vietnam-industry-research-framework.md).
+- Bài trước liên quan: [N6](N6-business-model-unit-economics.md), [003](003-business-quality-moat-and-roic.md), [008](008-macro-transmission.md), [Q3](Q3-normalizing-earnings-cyclical.md), [F5](F5-vietnam-industry-research-framework.md).
 - Thời lượng: Ba phiên học có điểm dừng (mỗi phiên 45 phút) + thực hành chạy kiểm chứng trên mô hình [cyclical.py](../practice/models/cyclical.py) và dữ liệu [hpg_cycle_inputs.csv](../practice/models/hpg_cycle_inputs.csv).
 - Câu hỏi cốt lõi: **Khi lợi nhuận của một doanh nghiệp tăng gấp đôi trong một năm, làm sao phân biệt được đó là nhờ lợi thế cạnh tranh bền vững (`Moat`) hay chỉ là pha thuận lợi tạm thời của chu kỳ công suất và giá nguyên liệu đầu vào?**
 - Kiểm nguồn: `ĐẠT`
@@ -19,6 +19,12 @@ Trong các ngành thâm dụng vốn như thép, hàng không, vận tải biể
 2. Lợi nhuận kỷ lục kích thích các công ty trong ngành đồng loạt vay tiền mở rộng nhà máy (`CapEx boom`).
 3. Ba năm sau, khi công suất mới đồng loạt đi vào vận hành thì nhu cầu đã hạ nhiệt; nguồn cung dư thừa ép giá bán rơi xuống sát biến phí, trong khi định phí khấu hao và lãi vay của nhà máy mới đè nặng lên báo cáo kết quả kinh doanh.
 Nhà đầu tư không hiểu chu kỳ vốn sẽ mắc sai lầm kinh điển: **Mua cổ phiếu chu kỳ khi `P/E` nhìn có vẻ cực rẻ (`5x–6x`) ngay tại đỉnh lợi nhuận chu kỳ, và bán tháo khi `P/E` vọt lên `25x–30x` (do mẫu số lợi nhuận co lại) ngay tại đáy chu kỳ.**
+
+---
+
+## Ôn bài cũ
+
+- Trong [Bài 003 — Lợi thế cạnh tranh và ROIC](003-business-quality-moat-and-roic.md) và [Bài 012 — Kịch bản và biên an toàn](012-scenarios-margin-of-safety.md), ta đã phân tích cấu trúc ngành và tâm lý chu kỳ; nếu vừa đọc [Bài 013 — Ngân hàng và công ty bảo hiểm](013-banks-insurers.md), bạn đã tách riêng nhóm tài chính. Bài 014 đi sâu vào **chu kỳ vốn (`Capital Cycle`)** của các ngành sản xuất thâm dụng tài sản cố định.
 
 ---
 
@@ -105,7 +111,7 @@ Khung phân tích **Chu kỳ vốn (`Capital Cycle`)** tập trung vào **phản
 2. **`P/E` tính trên lợi nhuận Đáy (`2023: 6.800 tỷ VND`):** `180.000 / 6.800 ≈ 26,47 lần` (nhìn rất đắt nhưng mẫu số `E` đang bị nén ở đáy biên lợi nhuận `8,4%`).
 3. **`P/E` tính trên Lợi nhuận chuẩn hóa (`15.581,98 tỷ VND`):** `180.000 / 15.581,98 ≈ 11,55 lần`.
 
-`SUY_LUẬN` Quy tắc định giá doanh nghiệp chu kỳ ([016](016-valuation-methods-multiples-scenarios.md)): **Không bao giờ nhân bội số trung bình ngành với lợi nhuận năm đỉnh (`Peak E`) hay năm đáy (`Trough E`).** Luôn định giá trên **Lợi nhuận chuẩn hóa giữa chu kỳ (`Normalized Mid-Cycle Earnings`)**.
+`SUY_LUẬN` Quy tắc định giá doanh nghiệp chu kỳ ([012](012-scenarios-margin-of-safety.md) và [Q3](Q3-normalizing-earnings-cyclical.md)): **Không bao giờ nhân bội số trung bình ngành với lợi nhuận năm đỉnh (`Peak E`) hay năm đáy (`Trough E`).** Luôn định giá trên **Lợi nhuận chuẩn hóa giữa chu kỳ (`Normalized Mid-Cycle Earnings`)**.
 
 ### 3.2. Năm tiêu chí lọc Nhóm so sánh (`Peer Group`)
 
@@ -210,9 +216,9 @@ Khi phân tích kinh tế ngành tại Việt Nam, bạn thường gặp hai kho
 
 ## Kiểm tra chuyển bài
 
-Trước khi chuyển sang bài [016](016-valuation-methods-multiples-scenarios.md) và [N2](N2-statement-line-items.md), hãy trả lời 3 câu hỏi dưới đây:
+Trước khi chuyển sang bài [012](012-scenarios-margin-of-safety.md), [016](016-company-research-capstone.md) và [N2](N2-statement-line-items.md), hãy trả lời 3 câu hỏi dưới đây:
 
-1. **Chuyển giao sang Định giá kịch bản ([016](016-valuation-methods-multiples-scenarios.md)):** Khi lập 3 kịch bản cho doanh nghiệp chu kỳ như `HPG`, vì sao phải cho cả tỷ lệ vận hành công suất ($u$) và biên đóng góp ($P - v$) biến động đồng thời?
+1. **Chuyển giao sang Định giá kịch bản ([012](012-scenarios-margin-of-safety.md)):** Khi lập 3 kịch bản cho doanh nghiệp chu kỳ như `HPG`, vì sao phải cho cả tỷ lệ vận hành công suất ($u$) và biên đóng góp ($P - v$) biến động đồng thời?
 2. **Chuyển giao sang Kế toán TSCĐ & Lãi vay ([N2](N2-statement-line-items.md), [N3](N3-vietnam-vas-statements.md)):** Khi tổ hợp nhà máy mới chuyển từ "Xây dựng cơ bản dở dang" sang vận hành thương mại năm đầu với tỷ lệ lấp đầy `50%`, điều gì xảy ra ngay với **Chi phí khấu hao** và **Chi phí lãi vay** trên Báo cáo kết quả kinh doanh?
 3. **Kết nối với bài [M3](M3-capital-trade-geopolitics.md):** Khi ngành thép/hóa chất nước láng giềng dư thừa công suất (`014`) và xuất khẩu giá rẻ sang Đông Nam Á, chính sách Phòng vệ thương mại (`M3`) đóng vai trò gì trong việc bảo vệ biên lợi nhuận nội địa?
 

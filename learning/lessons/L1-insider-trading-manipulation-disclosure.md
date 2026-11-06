@@ -13,6 +13,12 @@
 
 Ai cũng có thể phân tích một tài liệu công khai và đi đến kết luận khác nhau. Nhưng một tin quan trọng chưa công bố, việc phát tán thông tin sai hoặc phối hợp giao dịch tạo cung cầu giả đặt ra vấn đề khác. Không thể xác định vi phạm chỉ từ một biểu đồ hay một tin đồn: cần làm rõ dữ kiện, hành vi, bối cảnh và quy định áp dụng.
 
+## Ôn bài cũ
+
+- Trong [Bài V4 — Công bố thông tin và truy nguồn tại Việt Nam](V4-disclosure-and-source-tracing.md) và [Bài 006 — Phân bổ vốn và quản trị](006-capital-allocation-governance.md), bạn đã biết chuẩn công bố thông tin. Bài L1 mở đầu **Tầng L (Pháp lý, Quyền cổ đông & Thuế)** bằng ranh giới pháp lý về giao dịch nội gián và thao túng thị trường.
+
+---
+
 ## 1. Thông tin nội bộ và người nội bộ
 
 `SỰ_THẬT` Khoản 44 Điều 4 [Luật Chứng khoán, bản hợp nhất 24/VBHN-VPQH](https://ssc.gov.vn/cs/idcplg?IdcService=GET_FILE&allowInterrupt=1&dDocName=APPSSCGOVVN1620154051&dID=159939&filename=Van+ban+hop+nhat+so+24.VBHN-VPQH.pdf) định nghĩa thông tin nội bộ là thông tin chưa công bố về các tổ chức/quỹ thuộc phạm vi luật, nếu được công bố có thể ảnh hưởng lớn đến giá chứng khoán liên quan. Khoản 2 Điều 12 cấm sử dụng thông tin nội bộ để mua, bán cho mình hoặc người khác; tiết lộ, cung cấp hoặc tư vấn giao dịch trên cơ sở thông tin nội bộ. Bản hợp nhất nêu sửa đổi đến Luật 56/2024; phải kiểm thay đổi sau đó.

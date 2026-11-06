@@ -4,10 +4,11 @@
 - Chốt dữ liệu lúc: `2026-11-05 12:05 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Vẽ bản đồ cấu trúc sở hữu (tách bạch tỷ lệ lợi ích kinh tế `Cash-Flow Rights` với tỷ lệ quyền biểu quyết `Control Rights` trong mô hình tháp sở hữu); đọc và chấm điểm rủi ro Thuyết minh Giao dịch bên liên quan (`Related-Party Transactions — RPT`); phân biệt 4 loại ý kiến kiểm toán độc lập và đoạn "Vấn đề cần nhấn mạnh" (`Emphasis of Matter`) theo Luật Kiểm toán độc lập và chuẩn mực kiểm toán Việt Nam (`VSA 700/705/706`).
 - Thời lượng dự kiến: `3 buổi học (~270 phút)`
-  - **Buổi 1 (90 phút):** Cấu trúc quyền kiểm soát — Tháp sở hữu (`Ownership Pyramid`), khoảng cách giữa Quyền biểu quyết và Quyền hưởng lợi kinh tế (`Control–Cash Flow Wedge`), cổ đông lớn, cổ đông nhà nước (`SCIC`/Tập đoàn mẹ) và chi phí đại diện (`Agency Cost`).
-  - **Buổi 2 (90 phút):** Giải phẫu Thuyết minh Giao dịch và Số dư với các bên liên quan (`VAS 26`) — Nhận diện giao dịch thương mại nội bộ hợp lý so với hành vi rút ruột lợi nhuận (`Tunneling`), cho vay/đặt cọc sân sau và pha loãng qua `ESOP` / phát hành riêng lẻ.
-  - **Buổi 3 (90 phút):** Đọc Báo cáo kiểm toán độc lập, điều chỉnh hồi tố theo Kiểm toán Nhà nước, thực hành trên dữ liệu thực của `FPT` và `BIC – BIDV`, xử lý dữ liệu bẩn và làm 10 bài tập định lượng.
-- Bài trước liên quan: [006 — Phân bổ vốn và quản trị](006-capital-allocation-governance.md), [007 — Thuyết minh và cờ đỏ kế toán](007-notes-and-accounting-red-flags.md), [L2 — Quyền của cổ đông thiểu số](L2-minority-shareholder-rights.md), [F5 — Khung nghiên cứu sáu ngành Việt Nam](F5-vietnam-industry-research-framework.md).
+  - **Buổi 1 (90 phút):** Tháp sở hữu (`Ownership Pyramid`), độ lệch quyền biểu quyết – lợi ích kinh tế (`Control–Cash Flow Wedge`) và chi phí đại diện.
+  - **Buổi 2 (90 phút):** Thuyết minh Giao dịch bên liên quan (`VAS 26`), nhận diện rút ruột lợi nhuận (`Tunneling`) và pha loãng `ESOP`.
+  - **Buổi 3 (90 phút):** Báo cáo kiểm toán độc lập, điều chỉnh hồi tố, dữ liệu thực `FPT` và `BIC – BIDV`, và 10 bài tập.
+- Bài trước liên quan: [Bài F5 — Khung nghiên cứu sáu ngành Việt Nam](F5-vietnam-industry-research-framework.md), [Bài 006 — Phân bổ vốn và quản trị](006-capital-allocation-governance.md), [Bài 007 — Thuyết minh và cờ đỏ kế toán](007-notes-and-accounting-red-flags.md).
+- Học tiếp: [Bài F7 — Tình huống đặc biệt, M&A và tái cơ cấu](F7-special-situations-restructuring.md).
 - Mô hình thực hành và hồ sơ đi kèm: [`../practice/models/earnings_quality.py`](../practice/models/earnings_quality.py), [`../practice/models/capital_return.py`](../practice/models/capital_return.py) và hai hồ sơ thực chiến [`../../research/companies/VN/FPT/report.md`](../../research/companies/VN/FPT/report.md), [`../../research/companies/VN/BIC/report.md`](../../research/companies/VN/BIC/report.md).
 - Câu hỏi cốt lõi: Làm sao để biết một doanh nghiệp làm ra `1.000 tỷ VND` lợi nhuận thật sự để lại giá trị cho cổ đông phổ thông, hay đang âm thầm chuyển lợi nhuận và tiền mặt sang túi các công ty riêng của nhóm cổ đông kiểm soát?
 - Kiểm nguồn: `ĐẠT`
@@ -18,10 +19,16 @@
 
 ## Hiểu bài trong một phút
 
-Trong đầu tư cổ phiếu tại Việt Nam, rủi ro lớn nhất thường là **đồng hành với một nhóm cổ đông kiểm soát có lợi ích đối kháng với cổ đông thiểu số**. Để tự bảo vệ bằng bằng chứng tài liệu, bạn cần thành thạo **3 công cụ kiểm định quản trị**:
-1. **Đo "Độ lệch quyền kiểm soát – quyền hưởng lợi kinh tế" (`Control–Cash Flow Wedge`):** Khi nhóm cổ đông lớn nắm quyền chi phối (`>50%` biểu quyết) ở công ty con cấp 2–3 nhưng tỷ lệ sở hữu kinh tế (`Cash-Flow Rights`) chỉ còn `15%–25%`, họ có động cơ lớn để chuyển lợi nhuận về công ty riêng sở hữu `100%` (`SUY_LUẬN`).
-2. **Đọc Thuyết minh Giao dịch bên liên quan (`VAS 26`):** Phân loại giao dịch thuộc **luồng kinh doanh cốt lõi minh bạch** (như `BIC` gửi tiền và trả hoa hồng đại lý cho ngân hàng mẹ `BIDV`) hay thuộc **luồng rút tiền tài chính bất thường** (cho công ty liên quan vay tín chấp, đặt cọc M&A treo nhiều năm, mua tài sản giá đắt) (`SUY_LUẬN`).
-3. **Đọc giới hạn của Báo cáo kiểm toán độc lập:** Ý kiến kiểm toán **Chấp nhận toàn phần (`Unqualified Opinion`)** chỉ xác nhận BCTC phản ánh trung thực, hợp lý theo chuẩn mực kế toán trên khía cạnh trọng yếu, **không bảo đảm giao dịch bên liên quan tối ưu cho cổ đông thiểu số** (`SỰ_THẬT`).
+Trong đầu tư cổ phiếu tại Việt Nam, rủi ro lớn nhất thường là **đồng hành với nhóm cổ đông kiểm soát có lợi ích đối kháng với cổ đông thiểu số**. Để tự bảo vệ bằng bằng chứng, bạn cần thành thạo **3 công cụ kiểm định quản trị**:
+1. **Đo "Độ lệch quyền kiểm soát – lợi ích kinh tế" (`Control–Cash Flow Wedge`):** Khi cổ đông lớn nắm quyền chi phối (`>50%` biểu quyết) ở công ty con cấp 2–3 nhưng sở hữu kinh tế (`Cash-Flow Rights`) chỉ còn `15%–25%`, họ có động cơ chuyển lợi nhuận về công ty riêng sở hữu `100%` (`SUY_LUẬN`).
+2. **Đọc Thuyết minh Giao dịch bên liên quan (`VAS 26`):** Phân loại giao dịch thuộc **luồng kinh doanh cốt lõi minh bạch** (như `BIC` gửi tiền và trả hoa hồng đại lý cho ngân hàng mẹ `BIDV`) hay **luồng rút tiền bất thường** (cho bên liên quan vay tín chấp, đặt cọc M&A treo nhiều năm, mua tài sản giá đắt) (`SUY_LUẬN`).
+3. **Đọc giới hạn của Báo cáo kiểm toán độc lập:** Ý kiến **Chấp nhận toàn phần (`Unqualified Opinion`)** chỉ xác nhận BCTC phản ánh trung thực, hợp lý theo chuẩn mực kế toán trên khía cạnh trọng yếu, **không bảo đảm giao dịch bên liên quan tối ưu cho cổ đông thiểu số** (`SỰ_THẬT`).
+
+---
+
+## Ôn bài cũ
+
+- Trong [Bài F5 — Khung nghiên cứu sáu ngành Việt Nam](F5-vietnam-industry-research-framework.md), [Bài 006 — Phân bổ vốn và quản trị](006-capital-allocation-governance.md) và [Bài 007 — Thuyết minh và cờ đỏ kế toán](007-notes-and-accounting-red-flags.md), ta đã phân tích kinh tế ngành và dấu hiệu kế toán. Bài F6 kiểm định tháp sở hữu, giao dịch bên liên quan và báo cáo kiểm toán.
 
 ---
 

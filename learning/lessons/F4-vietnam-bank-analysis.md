@@ -4,10 +4,11 @@
 - Chốt dữ liệu lúc: `2026-11-05 12:00 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Đọc thông suốt báo cáo tài chính và thuyết minh quản trị rủi ro của ngân hàng thương mại Việt Nam; tính chính xác `NIM`, `CASA`, `CIR`, tỷ lệ nợ xấu (`NPL` nhóm 3–5), tỷ lệ nợ cần chú ý (nhóm 2), tỷ lệ bao phủ nợ xấu (`LLR`) và cầu nối biến động dự phòng rủi ro tín dụng; hiểu cơ chế phân loại nợ theo Thông tư `31/2024/TT-NHNN` (sửa đổi bởi Thông tư `37/2025/TT-NHNN`) và định giá ngân hàng bằng `Justified P/B`.
 - Thời lượng dự kiến: `3 buổi học (~270 phút)`
-  - **Buổi 1 (90 phút):** Kinh tế học bảng cân đối ngân hàng Việt Nam — Cấu trúc huy động (`CASA` vs. Tiền gửi kỳ hạn), Tài sản sinh lời (`IEA`), Biên lãi ròng (`NIM`) và Tỷ lệ chi phí trên thu nhập (`CIR`).
-  - **Buổi 2 (90 phút):** Giải phẫu chất lượng tài sản theo 5 nhóm nợ, liên thông `CIC`, cầu nối dự phòng chung – dự phòng cụ thể – xử lý nợ xấu (`Write-off`) và bẫy "lãi dự thu" (`Accrued Interest Receivable`).
-  - **Buổi 3 (90 phút):** Đọc hồ sơ thực tế của Vietcombank (`VCB`) và Techcombank (`TCB`), phân tích tỷ lệ an toàn vốn (`CAR`), xử lý dữ liệu bẩn và giải 10 bài tập định lượng.
-- Bài trước liên quan: [013 — Ngân hàng và công ty bảo hiểm](013-banks-insurers.md), [005 — Nợ, thanh khoản và khả năng sống sót](005-debt-liquidity-survival.md), [F2 — Định giá DDM, Thu nhập thặng dư và SOTP](F2-valuation-ddm-residual-sotp.md), [F3 — Phân tích doanh nghiệp bất động sản Việt Nam](F3-vietnam-property-developers.md).
+  - **Buổi 1 (90 phút):** Kinh tế học bảng cân đối ngân hàng (`CASA`, `IEA`, `NIM`, `CIR`).
+  - **Buổi 2 (90 phút):** Phân loại 5 nhóm nợ, liên thông `CIC`, cầu nối dự phòng – xử lý nợ (`Write-off`) và lãi dự thu.
+  - **Buổi 3 (90 phút):** Hồ sơ thực tế `VCB` và `TCB`, an toàn vốn (`CAR`), xử lý dữ liệu bẩn và 10 bài tập.
+- Bài trước liên quan: [Bài F3 — Doanh nghiệp bất động sản Việt Nam](F3-vietnam-property-developers.md), [Bài 013 — Ngân hàng và bảo hiểm](013-banks-insurers.md), [Bài F2 — Định giá DDM, RI và SOTP](F2-valuation-ddm-residual-sotp.md).
+- Học tiếp: [Bài F5 — Khung nghiên cứu sáu ngành Việt Nam](F5-vietnam-industry-research-framework.md).
 - Mô hình thực hành và hồ sơ đi kèm: [`../practice/models/valuation.py`](../practice/models/valuation.py), [`../practice/models/earnings_quality.py`](../practice/models/earnings_quality.py) và hồ sơ thực chiến [`../../research/companies/VN/VCB/report.md`](../../research/companies/VN/VCB/report.md).
 - Câu hỏi cốt lõi: Vì sao hai ngân hàng có cùng mức tăng trưởng tín dụng `15%/năm` và cùng báo cáo tỷ lệ nợ xấu `1,2%`, nhưng một ngân hàng tạo ra lợi nhuận bền vững với `P/B = 2,2x` còn ngân hàng kia thực chất đang ăn mòn vốn chủ sở hữu?
 - Kiểm nguồn: `ĐẠT`
@@ -23,6 +24,12 @@ Phân tích một ngân hàng thương mại Việt Nam trên sàn `HOSE` (`VCB`
 2. **Phân loại 5 nhóm nợ và liên thông `CIC`:** Theo Thông tư `31/2024/TT-NHNN` và Thông tư `37/2025/TT-NHNN`, nợ cho vay chia thành 5 nhóm; **Nợ xấu (`NPL`) là tổng Nhóm 3 + Nhóm 4 + Nhóm 5** (`SỰ_THẬT`). Nếu một doanh nghiệp bị nợ xấu Nhóm 4 tại Ngân hàng X, Trung tâm Thông tin Tín dụng Quốc gia (`CIC`) buộc Ngân hàng Y cũng phải hạ nhóm nợ của doanh nghiệp đó xuống Nhóm 4 (`SỰ_THẬT`).
 3. **Cầu nối Dự phòng (`LLR` và `Write-off`):** Tỷ lệ nợ xấu cuối kỳ thấp có thể nhờ xóa nợ bằng dự phòng (`Write-off`) hoặc giữ nợ ở Nhóm 2. Phải đọc đồng thời Nợ nhóm 2, Nợ nhóm 3–5, tỷ lệ bao phủ nợ xấu (`LLR`) và cầu nối trích lập – xử lý nợ trên Thuyết minh BCTC (`SUY_LUẬN`).
 4. **Cảnh báo sớm từ Lãi và phí phải thu (`Accrued Interest`):** Khi khách hàng chưa trả lãi bằng tiền mặt nhưng khoản vay còn ở Nhóm 1–2, ngân hàng vẫn ghi "lãi dự thu" vào Thu nhập lãi. Nếu `Lãi và phí phải thu` phình to nhanh hơn dư nợ, lợi nhuận đang chứa "lãi giấy" sẽ phải thoái thu khi nợ rơi xuống Nhóm 3 (`SUY_LUẬN`).
+
+---
+
+## Ôn bài cũ
+
+- Trong [Bài F3 — Doanh nghiệp bất động sản Việt Nam](F3-vietnam-property-developers.md) và [Bài 013 — Ngân hàng và công ty bảo hiểm](013-banks-insurers.md), ta đã thấy mối liên hệ giữa chu kỳ tín dụng – bất động sản và bảng cân đối ngân hàng. Bài F4 đi sâu vào chuẩn phân loại nợ, dự phòng và định giá ngân hàng Việt Nam.
 
 ---
 

@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-02 (Asia/Ho_Chi_Minh)`
 - Nguồn: trang SEC, `companyfacts` của Apple, BCTC kiểm toán FY2025 của Hòa Phát, bản đăng lại Thông tư 96/2020/TT-BTC; mở `2026-11-01` và `2026-11-02` (bảng cuối bài).
 - Mục tiêu: Lấy số từ EDGAR bằng API mà không dính lỗi kỳ, trùng lặp, đơn vị, đổi tag; biết báo cáo Việt Nam nằm ở đâu và vì sao phải chép tay có kiểm; dựng bảng tính có phép kiểm đẳng thức; ghi chỗ chưa biết.
-- Bài liên quan: N8, V4, 004; Q1–Q3 nếu muốn tái lập số của chúng.
+- Bài trước liên quan: Chuỗi định lượng thực hành sau [Bài 012: Kịch bản, biên an toàn và điều kiện bác bỏ](012-scenarios-margin-of-safety.md) (**Bước 1/4 của chuỗi `Q4 → Q2 → Q1 → Q3`**; kế thừa [Bài N8: Tìm và kiểm nguồn](N8-finding-verifying-sources.md), [Bài N3](N3-vietnam-vas-statements.md), [Bài V4](V4-disclosure-and-source-tracing.md) và [Bài 004](004-cash-flow-and-earnings-quality.md)). Học tiếp: [Bài Q2: Cổ phiếu thưởng nhân viên, pha loãng, mua lại và cổ tức](Q2-sbc-dilution-buybacks-dividends.md).
 - Thời lượng: 3 phiên.
 - Tệp thực hành: [data_pull.py](../practice/models/data_pull.py), [apple_xbrl_subset.json](../practice/models/apple_xbrl_subset.json) và [hpg_fy2025_transcription.csv](../practice/models/hpg_fy2025_transcription.csv); kiểm bằng `python3 -m unittest discover tests`.
 - Kiểm nguồn: `ĐẠT`
@@ -18,8 +18,8 @@ Lấy dữ liệu giống nhặt nấm: quan trọng là biết cái nào ăn đ
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N8: vì sao hai trang chép cùng một thông cáo không là hai nguồn độc lập?
-Bài dạy gọi API XBRL của SEC, chép và kiểm báo cáo Việt Nam, dựng bảng tính tự báo lỗi, với số Apple (Q2) và Hòa Phát (Q1, Q3).
+Ôn lại [Bài N8 — Tìm và kiểm nguồn](N8-finding-verifying-sources.md) và [Bài 012 — Kịch bản, biên an toàn và điều kiện bác bỏ](012-scenarios-margin-of-safety.md): vì sao hai trang web chép cùng một thông cáo báo chí không được tính là hai nguồn độc lập?
+Bài này dạy gọi API XBRL của SEC, chép và kiểm báo cáo Việt Nam, dựng bảng tính tự báo lỗi, chuẩn bị đầu vào số thật của Apple cho [Bài Q2](Q2-sbc-dilution-buybacks-dividends.md) và Hòa Phát cho [Bài Q1](Q1-earnings-quality-toolkit.md), [Bài Q3](Q3-normalizing-earnings-cyclical.md).
 
 ## 1. Ba lớp dữ liệu
 

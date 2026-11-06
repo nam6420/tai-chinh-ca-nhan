@@ -3,7 +3,7 @@
 - Ngày: `2026-10-26`
 - Chốt dữ liệu lúc: `2026-10-26 17:12 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Nhận diện ba kiểu thiên lệch; viết dự đoán có thể kiểm lại; tách quy trình với kết quả và lưu phản chứng.
-- Bài trước liên quan: Có thể dùng nghi thức nhật ký từ 001; học sâu sau 012. Học tiếp 016.
+- Bài trước liên quan: Thứ tự đọc **Bước 22/23 của Nhánh 1** — học sâu ngay sau [Bài 012: Kịch bản, biên an toàn và điều kiện bác bỏ](012-scenarios-margin-of-safety.md) (và chuỗi thực hành [Bài Q4](Q4-getting-data-edgar-xbrl-vietnam.md) → [Bài Q2](Q2-sbc-dilution-buybacks-dividends.md) → [Bài Q1](Q1-earnings-quality-toolkit.md) → [Bài Q3](Q3-normalizing-earnings-cyclical.md); có thể dùng nghi thức nhật ký ngay từ [Bài 001](001-business-financial-statements.md)). Học tiếp: [Bài 016: Bài tổng kết nghiên cứu doanh nghiệp](016-company-research-capstone.md) (Bước 23/23).
 - Thời lượng: Hai hoặc ba phiên ngắn theo điểm dừng; chưa đo thời gian học thực tế.
 - Câu hỏi cốt lõi: **Làm sao biết mình đang tìm sự thật hay chỉ bảo vệ ý kiến ban đầu?**
 - Kiểm nguồn: `ĐẠT`
@@ -15,7 +15,7 @@ Một lần đúng có thể do may mắn; một quyết định có cơ sở v�
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-N7: tránh dùng thông tin tương lai để đánh giá hiểu biết quá khứ. 012: điều kiện bác bỏ gắn với cơ chế, không chỉ giá. Nhớ hai điều này trước khi viết nhật ký.
+Ôn lại [Bài N7 — Đọc dữ liệu và bất định](N7-data-probability-uncertainty.md) (tránh dùng thông tin tương lai để đánh giá hiểu biết quá khứ) và [Bài 012 — Kịch bản, biên an toàn và điều kiện bác bỏ](012-scenarios-margin-of-safety.md) (điều kiện bác bỏ phải gắn với cơ chế kinh doanh, không chỉ nhìn giá cổ phiếu). Nhớ hai điều này trước khi viết nhật ký.
 
 ## Bài này làm gì và chưa làm gì
 

@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-11-05 10:35 UTC+7 (Asia/Ho_Chi_Minh)`
 - Bậc chiều sâu: `Bậc S — 3 buổi học, 10 bài tập + mô hình Python`
 - Mục tiêu: Đọc và kiểm toán chéo BCTC doanh nghiệp bảo hiểm Việt Nam theo `Thông tư 232/2012/TT-BTC`, `Thông tư 199/2014/TT-BTC`, `Luật KDBH (31/VBHN-VPQH)`, `Nghị định 46/2023/NĐ-CP` và `VBHN 44/2026/VBHN-TT-BTC` (`29/09/2026`); chạy tam giác `Chain-Ladder` chuẩn Bộ Tài chính; tính tỷ lệ giữ lại, hiệu quả nhượng tái, trần đầu tư, biên khả năng thanh toán (`Mẫu 7-PNT`) và vốn `RBC` trên số liệu `FY2025` của **`BVH`**, **`PVI`** và **`BIC`**.
-- Bài trước liên quan: `013`, `F2`, `F4`, `F7`; dẫn tiếp sang `P4`.
+- Bài trước liên quan: [013](013-banks-insurers.md), [F2](F2-valuation-ddm-residual-sotp.md), [F4](F4-vietnam-bank-analysis.md), [F7](F7-special-situations-restructuring.md); dẫn tiếp sang [P4](P4-personal-insurance-contracts-and-costs.md).
 - Thời lượng: `3 buổi học` + thực hành [`practice/models/insurance.py`](../practice/models/insurance.py) và [`geico_berkshire_fy2025_inputs.csv`](../practice/models/geico_berkshire_fy2025_inputs.csv).
 - Câu hỏi cốt lõi: **Làm sao phân biệt doanh nghiệp bảo hiểm có kỷ luật khai thác thật sự với doanh nghiệp báo lãi ảo nhờ trích thiếu dự phòng `IBNR`, phụ thuộc hoa hồng nhượng tái hoặc đầu tư vượt trần pháp định?**
 - Kiểm nguồn: `ĐẠT`
@@ -26,7 +26,7 @@ Bốn trụ cột phân tích: (1) Dự phòng nghiệp vụ và tam giác `Chai
 
 ## Ôn bài cũ và phạm vi bài học
 
-- **Ôn bài cũ:** Bài `013` xây dựng cầu nối `GWP` $\to$ `NWP` $\to$ `UPR` $\to$ `NEP`, `Combined Ratio`, `Insurance Float` và `RIM`. Bài `F2` & `F4` đối chiếu chéo Bảng CĐKT, BCKQKD và Thuyết minh.
+- **Ôn bài cũ:** Bài [013](013-banks-insurers.md) xây dựng cầu nối `GWP` $\to$ `NWP` $\to$ `UPR` $\to$ `NEP`, `Combined Ratio`, `Insurance Float` và `RIM`. Bài [F2](F2-valuation-ddm-residual-sotp.md) & [F4](F4-vietnam-bank-analysis.md) đối chiếu chéo Bảng CĐKT, BCKQKD và Thuyết minh.
 - **Bài này làm gì:** Buổi 1 giải phẫu kế toán bảo hiểm (`Thông tư 232/2012/TT-BTC`, `Thông tư 199/2014/TT-BTC`), dự phòng theo `Nghị định 46/2023/NĐ-CP` & `VBHN 44/2026/VBHN-TT-BTC` và tam giác `Chain-Ladder`; Buổi 2 phân tích tái bảo hiểm, trần đầu tư (`Điều 43 NĐ 46`), độ nhạy lãi suất dự phòng toán học (`vn_life_max_tech_rate()`, `math_reserve_rate_sensitivity()`) và BCTC `FY2025` của `BVH`, `PVI`, `BIC`; Buổi 3 phân tích vốn pháp định (`Điều 35 NĐ 46`), Biên KNTT (`Mẫu 7-PNT`), `RBC` (`01/01/2028`) và `RIM`.
 - **Bài này chưa làm gì:** Chưa bóc tách hợp đồng bảo hiểm cá nhân (xem **[Bài P4](P4-personal-insurance-contracts-and-costs.md)**).
 

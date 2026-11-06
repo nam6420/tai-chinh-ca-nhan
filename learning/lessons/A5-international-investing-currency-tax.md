@@ -13,6 +13,12 @@
 
 Một tài sản tăng giá bằng USD vẫn có thể giảm khi quy đổi sang VND nếu USD mất giá đủ mạnh so với VND. Ngoài tỷ giá, cần kiểm quyền đầu tư, nơi tài sản lưu ký, thuế, phí và cách giải quyết tranh chấp. Ví dụ dưới là mô hình học, không hướng dẫn chuyển tiền ra nước ngoài hay mở tài khoản.
 
+## Ôn bài cũ
+
+- Trong [Bài A4 — Phân bổ tài sản, tương quan và tái cân bằng](A4-allocation-correlation-rebalancing.md) và [Bài A2 — Quỹ mở, ETF và phí](A2-mutual-funds-etfs-fees.md), ta đã thiết kế danh mục trong một đồng tiền. Bài A5 khép lại **Tầng A** bằng bài toán đầu tư quốc tế: rủi ro tỷ giá và thuế khấu trừ tại nguồn.
+
+---
+
 ## 1. Hai nguồn thay đổi giá trị
 
 `SỰ_THẬT` [SEC — International Investing](https://www.investor.gov/introduction-investing/investing-basics/investment-products/international-investing), tài liệu giáo dục Hoa Kỳ, nêu tỷ giá có thể làm tăng hoặc giảm lợi suất bằng đồng tiền nhà đầu tư; rủi ro còn gồm thông tin, chi phí, kiểm soát tiền tệ, thanh khoản và khả năng thực thi quyền. Không suy quy tắc dành cho nhà đầu tư Hoa Kỳ thành quyền đầu tư của người cư trú Việt Nam.

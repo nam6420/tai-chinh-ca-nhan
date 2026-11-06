@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-31 (Asia/Ho_Chi_Minh)`
 - Nguồn số Apple: Form 10-K FY2025 mở ngày `2026-10-31`.
 - Mục tiêu: Tính chi phí vốn cổ đông bằng CAPM, nợ sau thuế, WACC theo trọng số thị trường; gỡ và gắn lại beta theo đòn bẩy; kiểm nhất quán tiền tệ, thực/danh nghĩa; đọc độ nhạy.
-- Bài trước liên quan: N4, N7, 003, 008. Học tiếp [011](011-dcf-reverse-dcf.md).
+- Bài trước liên quan: Thứ tự đọc **Bước 19/23 của Nhánh 1** — học ngay sau [Bài N5: Danh mục, đa dạng hóa và đầu tư theo chỉ số](N5-portfolio-index-investing.md) và [Bài N7: Đọc dữ liệu và bất định](N7-data-probability-uncertainty.md) (kế thừa [Bài N4](N4-time-value-returns.md), [Bài 003](003-business-quality-moat-and-roic.md), [Bài 005](005-debt-liquidity-survival.md) và [Bài 008](008-macro-transmission.md)). Học tiếp: [Bài 011: DCF và định giá ngược](011-dcf-reverse-dcf.md) (Bước 20/23).
 - Thời lượng: 2–3 phiên (A: mục 1–3; B: mục 4–6; C: bài tập).
 - Tệp thực hành: [valuation.py](../practice/models/valuation.py) (hàm `capm`, `unlever`, `relever`, `wacc`, `convert_rate`) và [số Apple](../practice/models/apple_fy2025_inputs.csv).
 - Kiểm nguồn: `ĐẠT`
@@ -18,10 +18,11 @@ Vay tiền có lãi vay nhìn thấy trên hóa đơn. Vốn cổ đông không 
 
 ## Ôn bài cũ hoặc kiểm tra đầu vào
 
-1. N4: tăng tỷ lệ chiết khấu thì giá trị hiện tại của khoản nhận trong tương lai tăng hay giảm?
-2. N7: xác suất do mình tự gán có phải dữ kiện đã kiểm chứng không?
-3. 003: ROIC cần được so với đại lượng nào để kết luận có tạo giá trị không?
-4. 008: lạm phát kỳ vọng ảnh hưởng thế nào tới lãi suất danh nghĩa?
+Ôn lại chuỗi bài trước theo thứ tự Nhánh 1 ([Bài N4](N4-time-value-returns.md) → [Bài 003](003-business-quality-moat-and-roic.md) → [Bài 008](008-macro-transmission.md) → [Bài N7](N7-data-probability-uncertainty.md) → [Bài N5](N5-portfolio-index-investing.md)):
+1. [Bài N4](N4-time-value-returns.md): tăng tỷ lệ chiết khấu thì giá trị hiện tại của khoản nhận trong tương lai tăng hay giảm?
+2. [Bài N7](N7-data-probability-uncertainty.md) & [Bài N5](N5-portfolio-index-investing.md): xác suất do mình tự gán có phải dữ kiện đã kiểm chứng không, và rủi ro chung của thị trường khác rủi ro riêng từng mã ở điểm nào?
+3. [Bài 003](003-business-quality-moat-and-roic.md): `ROIC` cần được so với đại lượng nào để kết luận có tạo giá trị không?
+4. [Bài 008](008-macro-transmission.md): lạm phát kỳ vọng ảnh hưởng thế nào tới lãi suất danh nghĩa?
 
 <details>
 <summary>Mở sau khi tự làm</summary>

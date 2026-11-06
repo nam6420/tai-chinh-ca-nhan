@@ -4,7 +4,7 @@
 - Chốt dữ liệu lúc: `2026-10-26 09:02 UTC+7 (Asia/Ho_Chi_Minh)`
 - Mục tiêu: Dựng lại được cầu nối từ lợi nhuận kế toán sang dòng tiền hoạt động; tính và đọc được tỷ lệ chuyển hoá tiền mặt qua nhiều năm; phân biệt ba định nghĩa dòng tiền tự do đang lưu hành; tính chu kỳ chuyển đổi tiền mặt và biết khi nào nó cảnh báo điều xấu; nêu được ba câu hỏi phải hỏi khi lợi nhuận và tiền lệch nhau.
 - Thời lượng: 35 phút đọc + 40 phút bài tập (2 phiên)
-- Bài trước liên quan: [Bài 001](001-business-financial-statements.md) (ba báo cáo), [Bài 003](003-business-quality-moat-and-roic.md) (ROIC)
+- Bài trước liên quan: Thứ tự đọc **Bước 10/23 của Nhánh 1** — học ngay sau [Bài 003: Chất lượng doanh nghiệp — lợi thế cạnh tranh, ROIC và khả năng tái đầu tư](003-business-quality-moat-and-roic.md) (kế thừa [Bài 001](001-business-financial-statements.md) và [Bài N2](N2-statement-line-items.md)). Học tiếp: [Bài 005: Nợ, thanh khoản và khả năng sống sót](005-debt-liquidity-survival.md) (Bước 11/23).
 - Câu hỏi cốt lõi: **Lợi nhuận kế toán này có chuyển thành tiền không, và phần nào là tiền thật?**
 
 > Đây là bài học nền tảng toàn cầu, không phải khuyến nghị mua, bán hay nắm giữ chứng khoán. Mọi ví dụ số học đều là doanh nghiệp hư cấu, trừ mục 4 có một ví dụ doanh nghiệp thật (đã đối chiếu với báo cáo 10-K gốc nộp SEC). Bài này kế thừa Bài 001 (cách ba báo cáo nối với nhau) và chuẩn bị cho Bài 005 (nợ) và Bài 010 (chi phí vốn).
@@ -19,12 +19,12 @@ Với doanh nghiệp cũng vậy: lợi nhuận là **một quy ước kế toá
 
 ## Ôn bài cũ (5 phút, làm trước khi đọc tiếp)
 
-Trả lời bằng lời của bạn, không nhìn tài liệu. Đáp án ở mục 9, cuối bài.
+Ôn lại kiến thức từ [Bài 003 — Chất lượng doanh nghiệp, moat và ROIC](003-business-quality-moat-and-roic.md), [Bài N2 — Đọc từng dòng ba báo cáo tài chính](N2-statement-line-items.md) và [Bài 001 — Một doanh nghiệp đi qua ba báo cáo tài chính](001-business-financial-statements.md). Trả lời bằng lời của bạn, không nhìn tài liệu (đáp án ở mục 9, cuối bài):
 
-1. Trong ba báo cáo tài chính, báo cáo nào cho biết doanh nghiệp **đã thực thu** tiền trong kỳ?
-2. Nếu một doanh nghiệp bán chịu, khoản phải thu tăng lên thì tài sản tăng hay giảm? Đối ứng bên kia của bút toán là gì?
-3. ROIC của Bài 003 được tính bằng công thức nào, và mẫu số lấy giá trị đầu kỳ hay cuối kỳ?
-4. Nêu một lý do khiến ROIC cao **chưa chắc** là doanh nghiệp tốt.
+1. Trong ba báo cáo tài chính ([Bài 001](001-business-financial-statements.md)), báo cáo nào cho biết doanh nghiệp **đã thực thu** tiền trong kỳ?
+2. Nếu một doanh nghiệp bán chịu, khoản phải thu tăng lên thì tài sản tăng hay giảm ([Bài N2](N2-statement-line-items.md))? Đối ứng bên kia của bút toán là gì?
+3. `ROIC` của [Bài 003](003-business-quality-moat-and-roic.md) được tính bằng công thức nào, và mẫu số lấy giá trị đầu kỳ hay cuối kỳ?
+4. Nêu một lý do khiến `ROIC` cao trên sổ sách ([Bài 003](003-business-quality-moat-and-roic.md)) **chưa chắc** đã tạo ra tiền mặt thật.
 
 ## Bài này làm gì và chưa làm gì
 

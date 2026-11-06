@@ -14,6 +14,12 @@ Một tài sản có thể ít đổi giá vì lâu không có giao dịch, như
 
 Bài chia ba phiên. Phiên đầu tính trên một chuỗi giá trị; phiên hai đọc số lịch sử thật; phiên ba xử lý nhu cầu tiền và dữ liệu bẩn. Điểm dừng là lúc bạn giải thích được kết quả bằng lời mình, không phải lúc đã bấm ra một số phần trăm. Mọi ví dụ hư cấu được đánh dấu `KỊCH_BẢN`; chúng không phải danh mục được đề xuất.
 
+## Ôn bài cũ
+
+- Trong [Bài H2 — Ra quyết định dưới áp lực và quy mô vị thế](H2-decisions-stress-position-size.md) và [Bài A4 — Phân bổ tài sản, tương quan và tái cân bằng](A4-allocation-correlation-rebalancing.md), ta đã bàn về giới hạn vị thế. Bài H3 định lượng rủi ro qua độ biến động, sụt giảm tối đa (`Max Drawdown`) và thanh khoản.
+
+---
+
 ## Phiên 1 — Đường đi của cùng một đồng vốn
 
 ### Từ số tiền sang lợi suất
