@@ -1,0 +1,554 @@
+{
+  "_meta": {
+    "entity": "MIXUE Group (蜜雪冰城股份有限公司), HKEX: 2097",
+    "chot_du_lieu_luc": "2026-11-25 08:11 +07",
+    "currency_unit": "RMB nghìn (RMB'000) trừ khi ghi khác",
+    "accounting_standard": "IFRS Accounting Standards",
+    "auditor": "Ernst & Young (Hong Kong)",
+    "note": "Số liệu trích tay từ PDF gốc trên HKEXnews (pdftotext -layout). Tệp PDF gốc và mã băm SHA-256 nằm ở data/raw/mixue-hkex/. Số 2022-2023 là số kiểm toán trong cáo bạch; số 2024-2025 là số kiểm toán trong báo cáo thường niên; H1 là số chưa kiểm toán.",
+    "pdf_dir": "data/raw/mixue-hkex/"
+  },
+  "sources": {
+    "S1": {
+      "file": "2025-02-21_prospectus_financial-information_2025022100039.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0221/11543478/2025022100039.pdf",
+      "published": "2025-02-21",
+      "covers": "FY2021-FY2023 + 9T2023/9T2024 (chương Financial Information của cáo bạch)",
+      "sha256": "aa34ed515b65bc778b077685c55daf7799f44ae8644d78443ec10f221a3ad290"
+    },
+    "S2": {
+      "file": "2025-03-26_results-announcement-fy2024_2025032601256.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0326/2025032601256.pdf",
+      "published": "2025-03-26",
+      "covers": "FY2024 vs FY2023",
+      "sha256": "a938dc2fe2e650b70ac88f29531cfcba98a2a0d0ff28da917336c1de18b7e352"
+    },
+    "S3": {
+      "file": "2025-04-23_annual-report-2024_2025042301969.pdf",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0423/2025042301969.pdf",
+      "published": "2025-04-23",
+      "covers": "Báo cáo thường niên 2024 (tóm tắt 2021-2024)",
+      "sha256": "1596169b5d001af2cabe6e45e7be1a8e985b5a54d4cfb8f3a9b1aac96831811f"
+    },
+    "S4": {
+      "file": "2026-03-24_results-announcement-fy2025_2026032400179.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0324/2026032400179.pdf",
+      "published": "2026-03-24",
+      "covers": "FY2025 vs FY2024",
+      "sha256": "1bd2d9a1c9076afea7c084bf5657462b044c866671948987f6ebce49c031fc1e"
+    },
+    "S5": {
+      "file": "2026-04-23_annual-report-2025_2026042301901.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0423/2026042301901.pdf",
+      "published": "2026-04-23",
+      "covers": "Báo cáo thường niên 2025 (tóm tắt 2021-2025, dòng tiền 2025/2024)",
+      "sha256": "55f7ed40812f4579fda9f90fa9f98694610cd8537d2adb54f7e3b52fd36f85f0"
+    },
+    "S6": {
+      "file": "2025-08-27_interim-announcement-h1-2025_2025082700283.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0827/2025082700283.pdf",
+      "published": "2025-08-27",
+      "covers": "H1 2025 (chưa kiểm toán)",
+      "sha256": "b37764ea229a11deb30e1f2cae0be623124a62d61745ae517c0431c57e7e2211"
+    },
+    "S7": {
+      "file": "2026-08-27_interim-announcement-h1-2026_2026082700177.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700177.pdf",
+      "published": "2026-08-27",
+      "covers": "H1 2026 vs H1 2025 (chưa kiểm toán)",
+      "sha256": "c2f83a7dceb8b6fd585243f87cc52982a7a12e20db4d1c28cd0ac326377a81f4"
+    },
+    "S9": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062602855.pdf",
+      "published": "2026-06-26",
+      "note": "Đã lưu trong data/raw/mixue-hkex/ (SHA-256 5fc40111…)"
+    },
+    "S10": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700183.pdf",
+      "published": "2026-08-27",
+      "note": "Đã lưu trong data/raw/mixue-hkex/ (SHA-256 82814b83…); bên kiểm nguồn đã mở bản tải trực tuyến"
+    },
+    "S11": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0930/2026093002215.pdf",
+      "published": "2026-09-30",
+      "note": "Kết quả biểu quyết ĐHĐCĐ bất thường (bản HKEXnews gốc); đã lưu, SHA-256 6f6805fe…"
+    },
+    "S12": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0911/2026091101193.pdf",
+      "published": "2026-09-11",
+      "note": "Thông báo họp cổ đông bất thường; đã lưu, SHA-256 ab600329…"
+    },
+    "S13": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0923/2026092300280.pdf",
+      "published": "2026-09-23",
+      "note": "Interim Report 2026 đầy đủ (86 trang); đã lưu, SHA-256 0e1ddcd2…"
+    },
+    "S14": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0221/2025022100009.pdf",
+      "published": "2025-02-21",
+      "note": "Cáo bạch đầy đủ (558 trang); đã lưu, SHA-256 c9014020…"
+    },
+    "S15": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0928/2026092801979.pdf",
+      "published": "2026-09-28",
+      "note": "Cấp 12.023.300 quyền thưởng; đã lưu, SHA-256 bcd2952b…"
+    },
+    "S16": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0503/2026050300001.pdf",
+      "published": "2026-05-03",
+      "note": "Lưu hành toàn phần cổ phiếu H (22.823.988); đã lưu, SHA-256 193e50b6…"
+    },
+    "S17": {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0324/2026032400173.pdf",
+      "published": "2026-03-24",
+      "note": "Thay đổi HĐQT/quản lý; đã lưu, SHA-256 e68a4068…"
+    }
+  },
+  "income_statement": {
+    "source": "S1 (2021-2023), S4 (2024-2025)",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "revenue": [
+      10350986,
+      13575577,
+      20302465,
+      24828874,
+      33559923
+    ],
+    "cost_of_sales": [
+      7107124,
+      9728740,
+      14303498,
+      16768667,
+      23108161
+    ],
+    "gross_profit": [
+      3243862,
+      3846837,
+      5998967,
+      8060207,
+      10451762
+    ],
+    "other_income_and_gains_net": [
+      135181,
+      127915,
+      247632,
+      219547,
+      347626
+    ],
+    "selling_and_distribution": [
+      405766,
+      774431,
+      1318588,
+      1599474,
+      2036880
+    ],
+    "administrative": [
+      374665,
+      496506,
+      610622,
+      755115,
+      1081535
+    ],
+    "research_and_development": [
+      17151,
+      32304,
+      85000,
+      104870,
+      101348
+    ],
+    "finance_costs": [
+      5973,
+      9190,
+      14697,
+      6367,
+      4931
+    ],
+    "profit_before_tax": [
+      2558874,
+      2658043,
+      4154002,
+      5810583,
+      7550164
+    ],
+    "income_tax": [
+      646932,
+      644952,
+      967397,
+      1356380,
+      1623087
+    ],
+    "profit_for_the_year": [
+      1911942,
+      2013091,
+      3186605,
+      4454203,
+      5927077
+    ],
+    "profit_attributable_to_owners": [
+      1910361,
+      1996715,
+      3137341,
+      4436504,
+      5886704
+    ],
+    "basic_eps_rmb": [
+      5.32,
+      5.55,
+      8.71,
+      12.32,
+      15.65
+    ]
+  },
+  "revenue_by_type": {
+    "source": "S1 (2022-2023), S4 (2024-2025)",
+    "years": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "sales_of_goods": [
+      12551043,
+      19160210,
+      23452457,
+      31439469
+    ],
+    "sales_of_equipment": [
+      748387,
+      736537,
+      756372,
+      1326564
+    ],
+    "franchise_and_related_services": [
+      276147,
+      405718,
+      620045,
+      793890
+    ]
+  },
+  "balance_sheet": {
+    "source": "S5 (tóm tắt 2021-2025), S1 (hàng tồn kho, phải trả 2021-2023), S4 (chi tiết 2024-2025)",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "total_assets": [
+      7316383,
+      9945356,
+      14593566,
+      19783322,
+      30793625
+    ],
+    "total_liabilities": [
+      1773673,
+      2466089,
+      3998101,
+      4722502,
+      6024867
+    ],
+    "total_equity": [
+      5542710,
+      7479267,
+      10595465,
+      15060820,
+      24768758
+    ],
+    "cash_and_bank_balances": [
+      2737692,
+      2829284,
+      6037524,
+      7617853,
+      11054889
+    ],
+    "financial_assets_fvtpl": [
+      900237,
+      1865676,
+      746046,
+      3491643,
+      8935127
+    ],
+    "net_current_assets": [
+      3367588,
+      4217412,
+      5413872,
+      7379213,
+      15918856
+    ],
+    "inventories": [
+      1251915,
+      1541156,
+      2231714,
+      2215352,
+      3673031
+    ],
+    "trade_payables": [
+      596681,
+      881806,
+      1316780,
+      1767263,
+      2212515
+    ],
+    "interest_bearing_bank_borrowings_2025": 28166,
+    "interest_bearing_bank_borrowings_2024": 0
+  },
+  "cash_flow": {
+    "source": "S1 (2021-2023), S5 (2024-2025)",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "net_cash_from_operating": [
+      1692389,
+      2430631,
+      3793872,
+      6008708,
+      6039033
+    ],
+    "purchase_of_ppe_capex": [
+      944523,
+      997293,
+      1685292,
+      1438614,
+      685130
+    ],
+    "net_cash_from_investing": [
+      -1831630,
+      -2201861,
+      -825344,
+      -7018988,
+      -6364092
+    ],
+    "net_cash_from_financing": [
+      726648,
+      -139261,
+      -111319,
+      -277438,
+      3505446
+    ],
+    "proceeds_from_issue_of_shares_2025": 3665070,
+    "note": "Capex PPE 2021-2023 lấy từ bảng Capital expenditures của S1 (944.523 / 997.293 / 1.685.292); 2024-2025 từ báo cáo lưu chuyển tiền tệ S5. Chưa gồm mua tài sản vô hình và quyền sử dụng đất (2022: 253.943 nghìn RMB quyền sử dụng đất).",
+    "H1": {
+      "source": "S13 (Interim Report 2026, báo cáo lưu chuyển tiền tệ, chưa kiểm toán)",
+      "net_cash_from_operating": {
+        "H1_2025": 3275383,
+        "H1_2026": 2049818
+      },
+      "income_tax_paid": {
+        "H1_2025": 567586,
+        "H1_2026": 621884
+      },
+      "increase_in_inventories": {
+        "H1_2025": 808901,
+        "H1_2026": 176121
+      },
+      "change_in_trade_payables": {
+        "H1_2025": 739426,
+        "H1_2026": -378718
+      },
+      "purchase_of_ppe": {
+        "H1_2025": 305841,
+        "H1_2026": 289367
+      }
+    }
+  },
+  "stores": {
+    "source": "S2 (2023-2024), S4 (2024-2025), S7 (H1 2025-H1 2026)",
+    "total_stores": {
+      "2023-12-31": 37565,
+      "2024-12-31": 46479,
+      "2025-12-31": 59823,
+      "2025-06-30": 53014,
+      "2026-06-30": 63987,
+      "2021-12-31": 20001,
+      "2022-12-31": 28983
+    },
+    "mainland_china": {
+      "2023-12-31": 33234,
+      "2024-12-31": 41584,
+      "2025-12-31": 55356,
+      "2025-06-30": 48281,
+      "2026-06-30": 59609
+    },
+    "outside_mainland": {
+      "2023-12-31": 4331,
+      "2024-12-31": 4895,
+      "2025-12-31": 4467,
+      "2025-06-30": 4733,
+      "2026-06-30": 4378,
+      "2021-12-31": 270,
+      "2022-12-31": 1795
+    },
+    "franchised_store_movement": {
+      "2023": {
+        "begin": 28929,
+        "openings": 9894,
+        "closures": 1307,
+        "acquired": 0,
+        "end": 37516
+      },
+      "2024": {
+        "begin": 37516,
+        "openings": 10555,
+        "closures": 1609,
+        "acquired": 0,
+        "end": 46462
+      },
+      "2025": {
+        "begin": 46462,
+        "openings": 14496,
+        "closures": 2527,
+        "acquired": 1354,
+        "end": 59785
+      },
+      "H1 2025": {
+        "begin": 46462,
+        "openings": 7721,
+        "closures": 1187,
+        "end": 52996
+      },
+      "H1 2026": {
+        "begin": 59785,
+        "openings": 5455,
+        "closures": 1289,
+        "end": 63951
+      }
+    },
+    "franchisees": {
+      "2023-12-31": 16784,
+      "2024-12-31": 20976,
+      "2025-12-31": 27450
+    },
+    "self_operated_stores": {
+      "2024-12-31": 17,
+      "2025-12-31": 38
+    },
+    "total_stores_2022_2021": "Đã bổ sung: 20.001 (2021) và 28.983 (2022) theo S1 (điều phối viên đã tự grep).",
+    "note_2021_2022": "Tổng 20.001/28.983 và ngoài đại lục 270/1.795 theo S1 (trang 333); đại lục 2021–2022 suy ra 19.731/27.188."
+  },
+  "interim": {
+    "source": "S7 (H1 2026 vs H1 2025, chưa kiểm toán)",
+    "revenue": {
+      "H1_2025": 14874809,
+      "H1_2026": 15215804
+    },
+    "gross_profit": {
+      "H1_2025": 4706373,
+      "H1_2026": 4629693
+    },
+    "profit_for_the_period": {
+      "H1_2025": 2718214,
+      "H1_2026": 2319272
+    },
+    "basic_eps_rmb": {
+      "H1_2025": 7.23,
+      "H1_2026": 6.05
+    },
+    "sales_of_goods": {
+      "H1_2025": 13843184,
+      "H1_2026": 14264907
+    },
+    "sales_of_equipment": {
+      "H1_2025": 651504,
+      "H1_2026": 532656
+    },
+    "franchise_and_related_services": {
+      "H1_2025": 380121,
+      "H1_2026": 418241
+    },
+    "selling_and_distribution": {
+      "H1_2025": 913679,
+      "H1_2026": 1122937
+    },
+    "administrative": {
+      "H1_2025": 437650,
+      "H1_2026": 610046
+    },
+    "income_tax": {
+      "H1_2025": 750068,
+      "H1_2026": 656435
+    },
+    "note": "Số H1 lấy từ báo cáo lãi lỗ và thuyết minh của S7 (RMB nghìn); không còn làm tròn từ lời văn.",
+    "profit_before_tax": {
+      "H1_2025": 3468282,
+      "H1_2026": 2975707
+    },
+    "fx_differences_loss": {
+      "H1_2025": 42209,
+      "H1_2026": 153836
+    },
+    "inventories_2026-06-30": 3828176,
+    "employees": {
+      "2025-12-31": 9102,
+      "2026-06-30": 10374
+    },
+    "franchisees": {
+      "2025-06-30": 23404,
+      "2026-06-30": 29775
+    }
+  },
+  "ipo": {
+    "source": "listing_date, net_proceeds: S4. offer_price_hkd HK$202,5: S1, S2, S3, S5. shares: S5 và S9 (379.618.800 = 228.735.742 chưa niêm yết + 150.883.058 H). S9 đã lưu trong data/raw/mixue-hkex/.",
+    "listing_date": "2025-03-03",
+    "offer_price_hkd": 202.5,
+    "net_proceeds_hkd_million_approx": 3799,
+    "shares_outstanding_at_2026-06-26": 379618800
+  },
+  "overseas_revenue": {
+    "source": "S1",
+    "years": [
+      "2021",
+      "2022",
+      "2023",
+      "9T2023",
+      "9T2024"
+    ],
+    "rmb_thousand": [
+      50069,
+      540640,
+      1486932,
+      1171321,
+      952362
+    ],
+    "pct_of_revenue": [
+      0.5,
+      4.0,
+      7.3,
+      7.6,
+      5.1
+    ]
+  },
+  "dividend": {
+    "special_dividend_rmb_per_share": 2.65,
+    "estimated_total_rmb_million": 1006.0,
+    "payment_date_planned": "2026-11-06",
+    "status": "Đề xuất 2026-08-27 [S7, S10]; ĐHĐCĐ bất thường 2026-09-30 thông qua 342.789.315 phiếu thuận (99,999446%) [S11, HKEXnews gốc]; hai cổ đông/đại diện hiện diện nắm 90,30%; ghi nhận 2026-10-12; HK$ 3,08304/cổ phiếu; việc đã trả CHƯA xác minh"
+  },
+  "ownership": {
+    "source": "S14 (cáo bạch: Concert Party Agreement; Substantial Shareholders), S5",
+    "note": "Hai nhà sáng lập ký thỏa thuận hành động phối hợp từ 9/2022. Mỗi người là chủ sở hữu hưởng lợi riêng 100.098.196 cổ phiếu chưa niêm yết + 53.899.028 cổ phiếu H = 153.997.224 (40,84% vốn lúc IPO; ≈ 40,57% trên 379.618.800), cộng 971.993 + 647.994 qua nền tảng nhân viên. Tổng hai người ≈ 81,13% (trực tiếp) / 81,99% (gồm nền tảng) trên 379.618.800. 315.044.663 cổ phiếu (83,55% lúc IPO) thuộc nhóm core connected persons."
+  },
+  "related_party": {
+    "source": "S5 báo cáo HĐQT, thuyết minh 40-41",
+    "note": "FULU (Fulujia): Mixue góp 285,6 triệu RMB để tăng vốn điều lệ FULU thêm 6.901.740 RMB (51% vốn sau tăng) và mua thêm 2% từ ông Zhao Jie với 11,2 triệu RMB; hoàn tất 2025-12-01. Bà Tian Haixia (vợ ông Zhang Hongfu) ≈ 60,05% và Mailang Tongzhou 20,41% trước giao dịch. Dòng tiền ròng ra khi hợp nhất ≈ 13,7 triệu RMB. Lợi thế thương mại 91,85 triệu RMB. Giá công bằng hay không: CHƯA_BIẾT."
+  },
+  "equity_awards": {
+    "source": "S15",
+    "awards": 12023300,
+    "grantees": 1234,
+    "purchase_price_hkd": 18.47,
+    "closing_price_hkd": 184.7,
+    "pct_of_shares": 3.167
+  }
+}
